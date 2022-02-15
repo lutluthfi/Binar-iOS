@@ -5,3 +5,4 @@ dua
 tiga
 empat
 lima
+enam arif
