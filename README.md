@@ -1,3 +1,4 @@
 # binar-course
 
 satu
+dua
