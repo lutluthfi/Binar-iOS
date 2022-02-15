@@ -5,4 +5,5 @@ dua
 tiga
 empat
 lima
+enam
 enam arif
