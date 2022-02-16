@@ -2,3 +2,4 @@
 
 satu test
 tambah username
+tambah splash
