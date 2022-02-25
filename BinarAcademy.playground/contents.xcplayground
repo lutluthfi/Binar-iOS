@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='DataType Primitive'/>
+        <page name='DataType'/>
+        <page name='ControlFlow For'/>
+        <page name='ControlFlow While'/>
+        <page name='ControlFlow ForEach'/>
+        <page name='Operator'/>
+        <page name='Array'/>
+        <page name='If-Else'/>
+        <page name='Dictionary'/>
+        <page name='Function'/>
+        <page name='Optional'/>
+        <page name='SwitchCase'/>
+        <page name='Object'/>
+        <page name='Challenge OOP'/>
+    </pages>
+</playground>
