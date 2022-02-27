@@ -18,16 +18,14 @@ class Person {
     var salary: Double?
     var jobLevel: String?
     var yearsOfExperience: Int
-    var masteredLanguage: Set<String>
     
    
     
-    init(skinColor: UIColor,eyeColor: UIColor,role: Role,yearsOfExperience: Int, masteredLanguage: Set<String>) {
+    init(skinColor: UIColor,eyeColor: UIColor,role: Role,yearsOfExperience: Int) {
         self.skinColor = skinColor
         self.eyeColor = eyeColor
         self.role = role
         self.yearsOfExperience = yearsOfExperience
-        self.masteredLanguage = masteredLanguage
     }
     
     private func countSalary(n: Int) -> Double? {
@@ -93,19 +91,14 @@ class Person {
         
         return nation
     }
-    
-    func addMasteredLanguage(mastering: String) {
-        masteredLanguage.insert(mastering)
-        
-    }
-    
 }
 
-let indonesian = Person(skinColor: .white,eyeColor: .black,role: Role.iOSDeveloper,yearsOfExperience: 12, masteredLanguage: [])
+let indonesian = Person(skinColor: .white,eyeColor: .black,role: Role.iOSDeveloper,yearsOfExperience: 12)
 
 print(indonesian.identifyPerson())
 
-indonesian.addMasteredLanguage(mastering: "C++")
+
+
 
 
 
