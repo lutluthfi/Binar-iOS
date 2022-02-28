@@ -13,6 +13,10 @@ enum Religion {
   case Islam, Christian, Buddha, other
 }
 
+enum Gender {
+    case Male, Female
+}
+
 
 class Person {
     var skinColor: UIColor
@@ -24,6 +28,8 @@ class Person {
     var yearsOfExperience: Int
     var masteredLanguage: Set<String>
     var religion: Religion?
+    var gender: Gender
+    
     
     var recommendedInd: Bool { // computed property untuk menentukan individual ini berhak untuk di rekomendasi untuk promosi tambahin juga gpp ngab
         return (yearsOfExperience > 3) && (skinColor == .white && eyeColor == .black)
@@ -31,12 +37,13 @@ class Person {
     
    
     
-    init(skinColor: UIColor,eyeColor: UIColor,role: Role,yearsOfExperience: Int, masteredLanguage: Set<String>) {
+    init(skinColor: UIColor,eyeColor: UIColor,role: Role,yearsOfExperience: Int, masteredLanguage: Set<String>, gender: Gender) {
         self.skinColor = skinColor
         self.eyeColor = eyeColor
         self.role = role
         self.yearsOfExperience = yearsOfExperience
         self.masteredLanguage = masteredLanguage
+        self.gender = gender
     }
     
     private func countSalary(n: Int) -> Double? {
@@ -130,7 +137,9 @@ class Person {
     }
     
     func printData(){
-        var temp: String = ""
+        var _: String = ""
+        var _: Int = 0
+        var _: Gender = .Female
         print("\nSkin color : \(skinColor)")
         print("Eye color : \(eyeColor)")
         print("Nation : \(nation!)")
@@ -163,7 +172,7 @@ class Person {
         
 }
 
-let indonesian = Person(skinColor: .white,eyeColor: .black,role: Role.iOSDeveloper,yearsOfExperience: 12, masteredLanguage: [])
+let indonesian = Person(skinColor: .white,eyeColor: .black,role: Role.iOSDeveloper,yearsOfExperience: 12, masteredLanguage: [], gender: .Male)
 
 print(indonesian.identifyPerson())
 print(indonesian.identifyMasteredLanguage())
