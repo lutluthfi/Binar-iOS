@@ -97,11 +97,37 @@ class Person {
     func addMasteredLanguage(mastering: String) {
         masteredLanguage.insert(mastering)
     }
+
+    func identifyMasteredLanguage(masteredLanguage:  Set<String> = ["Javascript", "swift", "kotlin", "python"]){
+        switch Int(masteredLanguage.count) {
+        case 0:
+                print("You're just starting out")
+
+            case 1:
+                print("You just monolingual")
+
+            case 2:
+                print("You just bilingual")
+            case 3:
+                print("You just trilingual")
+            case 4:
+                print("You just Quadrilingual")
+            case 5...:
+                print("You just Polyglot")
+            default:
+                print("Have you done something new?")
+            }
+        
+    }
+
+
+
 }
 
 let indonesian = Person(skinColor: .white,eyeColor: .black,role: Role.iOSDeveloper,yearsOfExperience: 12, masteredLanguage: [])
 
 print(indonesian.identifyPerson())
+print(indonesian.identifyMasteredLanguage())
 
 
 
