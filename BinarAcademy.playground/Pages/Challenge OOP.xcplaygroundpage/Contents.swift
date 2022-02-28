@@ -119,6 +119,18 @@ class Person {
             }
         
     }
+    
+    func printData(){
+        var temp: String = ""
+        print("\nSkin color : \(skinColor)")
+        print("Eye color : \(eyeColor)")
+        print("Nation : \(nation!)")
+        print("Role : \(role)")
+        print("Salary : \(salary!)")
+        print("Job level : \(jobLevel!)")
+        print("Years of experience : \(yearsOfExperience)")
+        print("Mastered Language : \([String](masteredLanguage))")
+    }
 
 
 
@@ -128,6 +140,7 @@ let indonesian = Person(skinColor: .white,eyeColor: .black,role: Role.iOSDevelop
 
 print(indonesian.identifyPerson())
 print(indonesian.identifyMasteredLanguage())
+indonesian.printData()
 
 
 
