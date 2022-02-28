@@ -29,7 +29,18 @@ class Person {
     var masteredLanguage: Set<String>
     var religion: Religion?
     var gender: Gender
+    var shirtSize: String?
+    var pantsSize: String?
     
+    var pantsSizeNumber: Int {
+        if pantsSize == "S" {
+            return 27
+        }
+        return 0
+    }
+    func clothesSize() -> (pantsSizeNumber: Int, shirtSize: String?) {
+        return (pantsSizeNumber, shirtSize)
+    }
     
     var recommendedInd: Bool { // computed property untuk menentukan individual ini berhak untuk di rekomendasi untuk promosi tambahin juga gpp ngab
         return (yearsOfExperience > 3) && (skinColor == .white && eyeColor == .black)
