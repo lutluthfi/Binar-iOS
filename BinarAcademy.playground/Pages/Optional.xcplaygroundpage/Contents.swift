@@ -18,7 +18,7 @@ func sayHello(greeting: String, names: String...) {
 }
 
 
-sayHello(greeting:"Hello", names: "Jon", "Kara")
+sayHello(greeting:"Hello", names: "Jon", "Kara", "Swift")
 
 //Hello Jon
 //Hello Kara
