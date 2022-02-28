@@ -18,10 +18,12 @@ func sayHello(greeting: String, names: String...) {
 }
 
 
-sayHello(greeting:"Hello", names: "Jon", "Kara", "Swift")
+sayHello(greeting:"Hello", names: "Jon", "Kara", "Swift", "Mas Tio")
 
 //Hello Jon
 //Hello Kara
+//Hello Swift
+//Hello Mas Tio
 
 
 //inout parameters
