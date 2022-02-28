@@ -9,6 +9,10 @@ enum Role {
     case iOSDeveloper,androidDeveloper
 }
 
+enum Religion {
+  case Islam, Christian, Buddha, other
+}
+
 
 class Person {
     var skinColor: UIColor
@@ -19,6 +23,7 @@ class Person {
     var jobLevel: String?
     var yearsOfExperience: Int
     var masteredLanguage: Set<String>
+    var religion: Religion?
     
     var recommendedInd: Bool { // computed property untuk menentukan individual ini berhak untuk di rekomendasi untuk promosi tambahin juga gpp ngab
         return (yearsOfExperience > 3) && (skinColor == .white && eyeColor == .black)
@@ -135,6 +140,19 @@ class Person {
         print("Years of experience : \(yearsOfExperience)")
         print("Mastered Language : \([String](masteredLanguage))")
     }
+  
+    func yourReligion(is aChoice: Religion) {
+      switch aChoice {
+      case .Islam:
+        print("Your Religion is \(aChoice)")
+      case .Christian:
+        print("Your Religion is \(aChoice)")
+      case .Buddha:
+        print("Your Religion is \(aChoice)")
+      case .other:
+        print("Your Religion is \(aChoice)")
+      }
+    }
 
 
 
@@ -146,7 +164,7 @@ print(indonesian.identifyPerson())
 print(indonesian.identifyMasteredLanguage())
 indonesian.printData()
 
-
+print(indonesian.yourReligion(is: .Islam))
 
 
 
