@@ -154,8 +154,13 @@ class Person {
       }
     }
 
-
-
+    func continent() -> String{
+        if nation! == "Indonesia"{
+            print("Indonesia is in Asia")
+        }
+        return nation!
+        }
+        
 }
 
 let indonesian = Person(skinColor: .white,eyeColor: .black,role: Role.iOSDeveloper,yearsOfExperience: 12, masteredLanguage: [])
@@ -165,6 +170,7 @@ print(indonesian.identifyMasteredLanguage())
 indonesian.printData()
 
 print(indonesian.yourReligion(is: .Islam))
+indonesian.continent()
 
 
 
