@@ -20,6 +20,10 @@ class Person {
     var yearsOfExperience: Int
     var masteredLanguage: Set<String>
     
+    var recommendedInd: Bool { // computed property untuk menentukan individual ini berhak untuk di rekomendasi untuk promosi tambahin juga gpp ngab
+        return (yearsOfExperience > 3) && (skinColor == .white && eyeColor == .black)
+    }
+    
    
     
     init(skinColor: UIColor,eyeColor: UIColor,role: Role,yearsOfExperience: Int, masteredLanguage: Set<String>) {
