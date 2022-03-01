@@ -35,7 +35,6 @@ class Person {
     var gender: Gender
     var shirtSize: String?
     var pantsSize: String?
-    var Status: String
     
        func yourrelationshipStatus(is aChoice: relationshipStatus) {
           switch aChoice {
