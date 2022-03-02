@@ -7,3 +7,4 @@ empat
 lima
 enam
 enam arif
+tujuh karen

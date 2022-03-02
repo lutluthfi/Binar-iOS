@@ -1,3 +1,0 @@
-# binar-course
-
-satu test
