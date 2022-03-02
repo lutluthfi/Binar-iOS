@@ -17,6 +17,13 @@ enum Gender {
     case Male, Female
 }
 
+enum ClotheSize {
+    case XS, S, M, L, XL, XXL
+}
+
+enum MaritalStatus {
+    case Married, NotMarried
+}
 
 class Person {
     var skinColor: UIColor
@@ -182,17 +189,31 @@ class Person {
         }
         
 }
+let johnCopy = Person(
+    skinColor: .white,
+    eyeColor: .black,
+    role: Role.iOSDeveloper,
+    yearsOfExperience: 12,
+    masteredLanguage: [],
+    gender: .Male
+)
 
-let indonesian = Person(skinColor: .white,eyeColor: .black,role: Role.iOSDeveloper,yearsOfExperience: 12, masteredLanguage: [], gender: .Male)
+let john = Person(
+    skinColor: .white,
+    eyeColor: .black,
+    role: Role.iOSDeveloper,
+    yearsOfExperience: 12,
+    masteredLanguage: [],
+    gender: .Male
+)
+print("John's Skin Color is \(john.gender)")
 
-print(indonesian.identifyPerson())
-print(indonesian.identifyMasteredLanguage())
-indonesian.printData()
-
-print(indonesian.yourReligion(is: .Islam))
-indonesian.continent()
-
-
-
+let firstName: String = "Binar"
+var fullName: String = firstName
+fullName = "Academy"
+print(firstName)
+print(fullName)
+print(Unmanaged.passUnretained(firstName as AnyObject).toOpaque())
+print(Unmanaged.passUnretained(fullName as AnyObject).toOpaque())
 
 //: [Next](@next)

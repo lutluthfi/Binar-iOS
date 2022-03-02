@@ -15,5 +15,7 @@
         <page name='SwitchCase'/>
         <page name='Object'/>
         <page name='Challenge OOP'/>
+        <page name='Subscript'/>
+        <page name='Enum'/>
     </pages>
 </playground>

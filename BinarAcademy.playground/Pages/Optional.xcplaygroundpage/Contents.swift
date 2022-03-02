@@ -17,8 +17,25 @@ func sayHello(greeting: String, names: String...) {
     }
 }
 
+func sayHi(names: [String]) {
+    for name in names {
+        print("Hi \(name)")
+    }
+}
 
+var firstName: String = ""
+var lastName: String = ""
+var email: String = ""
+
+var names: [String] = []
+if greeting == "Hi" {
+    names.append(firstName)
+}
+sayHi(names: names)
+
+sayHello(greeting: "Hello", names: firstName, lastName, email)
 sayHello(greeting:"Hello", names: "Jon", "Kara", "Swift")
+sayHello(greeting: "Hello", names: "")
 
 //Hello Jon
 //Hello Kara

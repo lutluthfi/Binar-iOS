@@ -6,76 +6,15 @@ var greeting = "Hello, playground"
 
 //: [Next](@next)
 
-// Kubus
-// Properties/Attributes
-// Jumlah sisi
-// Panjang sisi
-// Warna
-
-// Balok
-// Jumlah sisi
-// Panjang sisi
-// Warna
-
-// Prisma
-// Jumlah sisi
-// Panjang sisi
-// Warna
-
-// Limas
-// Jumlah sisi
-// Panjang sisi
-// Warna
-
 // Struct / Class
 // Struct -> pass by value
 // Class  -> pass by reference
 
-class BangunDatar {
-    let jumlahSisi: Int
-    let panjangSisi: Int
-    let warna: String
-    
-    init(jumlahSisi: Int, panjangSisi: Int, warna: String) {
-        self.jumlahSisi = jumlahSisi
-        self.panjangSisi = panjangSisi
-        self.warna = warna
-    }
-    
-    func keliling() -> Int {
-        jumlahSisi * panjangSisi
-    }
-    
-    func luas(tinggi: Int? = nil) -> Double {
-        if let tinggi = tinggi {
-            return Double(panjangSisi * tinggi) / 2.0
-        } else {
-            return Double(panjangSisi * panjangSisi)
-        }
-    }
-}
-
-//let persegi = BangunDatar(jumlahSisi: 4, panjangSisi: 4, warna: "biru")
-//let segitiga = BangunDatar(jumlahSisi: 3, panjangSisi: 5, warna: "biru")
-//let segilima = BangunDatar(jumlahSisi: 5, panjangSisi: 10, warna: "biru")
-//persegi.keliling()
-//persegi.luas()
-//segitiga.keliling()
-//segitiga.luas(tinggi: 7)
-//segilima.keliling()
-
 class Hewan {
-    var jumlahKaki: Int
-    var berkembangbiak: String
-    var alatGerak: String
-    var jenisMakanan: String
-    
-    init(jumlahKaki: Int, berkembangbiak: String, alatGerak: String, jenisMakanan: String) {
-        self.jumlahKaki = jumlahKaki
-        self.berkembangbiak = berkembangbiak
-        self.alatGerak = alatGerak
-        self.jenisMakanan = jenisMakanan
-    }
+    var jumlahKaki: Int = 0
+    var berkembangbiak: String = ""
+    var alatGerak: String = ""
+    var jenisMakanan: String = ""
 }
 
 class Person {
@@ -89,15 +28,43 @@ class Person {
     var study: String = ""
     var gender: String = ""
     
+    var child: Person?
+    
     var fullName: String { "\(firstName) \(lastName)" }
+    
+    deinit {
+        print("Child FirstName: \(child?.firstName)")
+    }
 }
 
-var people: [Person] = []
+let person2 = Person()
+person2.firstName = "Person 2"
+var person1: Person? = Person()
+person1?.firstName = "Person 1"
+person1?.child = person2
+print(person1?.firstName)
 
-let arif = Person()
-arif.firstName = "arif"
-arif.lastName = "luthfiansyah"
-arif.fullName
+person1 = nil
+
+//let person1 = Person()
+//let person2 = Person()
+//person1.child = person2
+//person2.firstName = "Person 2"
+//person1.child?.firstName == person2.firstName
+//print(Unmanaged.passUnretained(person2).toOpaque())
+//print(Unmanaged.passUnretained(person1.child!).toOpaque())
+//print(Unmanaged.passUnretained(person1).toOpaque())
+
+//person2.firstName = "Person 2"
+//person1.firstName = "Person 1"
+
+//print("person1.firstName == person2.firstName")
+
+// open > skip
+// public
+// internal >
+// fileprivate
+// private
 
 struct Human {
     var firstName: String = ""
@@ -113,6 +80,28 @@ struct Human {
     var fullName: String { "\(firstName) \(lastName)" }
 }
 
-var luthfi = Human()
-luthfi.firstName = "arif"
-luthfi.lastName = "luthfiansyah"
+//var human1 = Human()
+//human1.nickName = "BA"
+//
+//print(human1.nickName)
+//
+//func alias(human: Human) {
+//    human = Human()
+//    human.nickName = "AB"
+//}
+//
+//alias(human: &human1)
+//print(human1.nickName) // BA atau AB
+
+
+//var person1 = Person()
+//person1.nickName = "BA"
+//print(person1.nickName)
+//
+//func alias(person: inout Person) {
+//    person = Person()
+//    person.nickName = "BAAA"
+//}
+//
+//alias(person: &person1)
+//print(person1.nickName) // BA atau AB
