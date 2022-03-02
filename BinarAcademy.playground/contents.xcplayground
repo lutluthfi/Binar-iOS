@@ -17,5 +17,6 @@
         <page name='Challenge OOP'/>
         <page name='Subscript'/>
         <page name='Enum'/>
+        <page name='Extension'/>
     </pages>
 </playground>
