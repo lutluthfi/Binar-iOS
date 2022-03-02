@@ -13,6 +13,21 @@ enum Religion {
   case Islam, Christian, Buddha, other
 }
 
+enum Gender {
+    case Male, Female
+}
+
+enum relationshipStatus{
+    case Single, Married, Dating, Engaged, Divorced
+}
+
+enum ClotheSize {
+    case XS, S, M, L, XL, XXL
+}
+
+enum MaritalStatus {
+    case Married, NotMarried
+}
 
 class Person {
     var skinColor: UIColor
@@ -24,6 +39,34 @@ class Person {
     var yearsOfExperience: Int
     var masteredLanguage: Set<String>
     var religion: Religion?
+    var gender: Gender
+    var shirtSize: String?
+    var pantsSize: String?
+    
+       func yourrelationshipStatus(is aChoice: relationshipStatus) {
+          switch aChoice {
+          case .Single:
+            print("Your Status is \(aChoice)")
+          case .Married:
+            print("Your Status is \(aChoice)")
+          case .Dating:
+            print("Your Status is \(aChoice)")
+          case .Engaged:
+            print("Your Status is \(aChoice)")
+          case .Divorced:
+            print("Your Status is \(aChoice)")
+          }
+        }
+    
+    var pantsSizeNumber: Int {
+        if pantsSize == "S" {
+            return 27
+        }
+        return 0
+    }
+    func clothesSize() -> (pantsSizeNumber: Int, shirtSize: String?) {
+        return (pantsSizeNumber, shirtSize)
+    }
     
     var recommendedInd: Bool { // computed property untuk menentukan individual ini berhak untuk di rekomendasi untuk promosi tambahin juga gpp ngab
         return (yearsOfExperience > 3) && (skinColor == .white && eyeColor == .black)
@@ -31,13 +74,15 @@ class Person {
     
    
     
-    init(skinColor: UIColor,eyeColor: UIColor,role: Role,yearsOfExperience: Int, masteredLanguage: Set<String>) {
+    init(skinColor: UIColor,eyeColor: UIColor,role: Role,yearsOfExperience: Int, masteredLanguage: Set<String>, gender: Gender) {
         self.skinColor = skinColor
         self.eyeColor = eyeColor
         self.role = role
         self.yearsOfExperience = yearsOfExperience
         self.masteredLanguage = masteredLanguage
+        self.gender = gender
     }
+    
     
     private func countSalary(n: Int) -> Double? {
         if role == .iOSDeveloper {
@@ -130,7 +175,9 @@ class Person {
     }
     
     func printData(){
-        var temp: String = ""
+        var _: String = ""
+        var _: Int = 0
+        var _: Gender = .Female
         print("\nSkin color : \(skinColor)")
         print("Eye color : \(eyeColor)")
         print("Nation : \(nation!)")
@@ -162,17 +209,31 @@ class Person {
         }
         
 }
+let johnCopy = Person(
+    skinColor: .white,
+    eyeColor: .black,
+    role: Role.iOSDeveloper,
+    yearsOfExperience: 12,
+    masteredLanguage: [],
+    gender: .Male
+)
 
-let indonesian = Person(skinColor: .white,eyeColor: .black,role: Role.iOSDeveloper,yearsOfExperience: 12, masteredLanguage: [])
+let john = Person(
+    skinColor: .white,
+    eyeColor: .black,
+    role: Role.iOSDeveloper,
+    yearsOfExperience: 12,
+    masteredLanguage: [],
+    gender: .Male
+)
+print("John's Skin Color is \(john.gender)")
 
-print(indonesian.identifyPerson())
-print(indonesian.identifyMasteredLanguage())
-indonesian.printData()
-
-print(indonesian.yourReligion(is: .Islam))
-indonesian.continent()
-
-
-
+let firstName: String = "Binar"
+var fullName: String = firstName
+fullName = "Academy"
+print(firstName)
+print(fullName)
+print(Unmanaged.passUnretained(firstName as AnyObject).toOpaque())
+print(Unmanaged.passUnretained(fullName as AnyObject).toOpaque())
 
 //: [Next](@next)
