@@ -33,12 +33,15 @@ if greeting == "Hi" {
 }
 sayHi(names: names)
 
+sayHello(greeting:"Hello", names: "Jon", "Kara", "Swift", "Mas Tio")
 sayHello(greeting: "Hello", names: firstName, lastName, email)
 sayHello(greeting:"Hello", names: "Jon", "Kara", "Swift")
 sayHello(greeting: "Hello", names: "")
 
 //Hello Jon
 //Hello Kara
+//Hello Swift
+//Hello Mas Tio
 
 
 //inout parameters
