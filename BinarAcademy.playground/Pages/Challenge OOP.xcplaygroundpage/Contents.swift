@@ -17,6 +17,10 @@ enum Gender {
     case Male, Female
 }
 
+enum relationshipStatus{
+    case Single, Married, Dating, Engaged, Divorced
+}
+
 enum ClotheSize {
     case XS, S, M, L, XL, XXL
 }
@@ -38,6 +42,21 @@ class Person {
     var gender: Gender
     var shirtSize: String?
     var pantsSize: String?
+    
+       func yourrelationshipStatus(is aChoice: relationshipStatus) {
+          switch aChoice {
+          case .Single:
+            print("Your Status is \(aChoice)")
+          case .Married:
+            print("Your Status is \(aChoice)")
+          case .Dating:
+            print("Your Status is \(aChoice)")
+          case .Engaged:
+            print("Your Status is \(aChoice)")
+          case .Divorced:
+            print("Your Status is \(aChoice)")
+          }
+        }
     
     var pantsSizeNumber: Int {
         if pantsSize == "S" {
@@ -63,6 +82,7 @@ class Person {
         self.masteredLanguage = masteredLanguage
         self.gender = gender
     }
+    
     
     private func countSalary(n: Int) -> Double? {
         if role == .iOSDeveloper {
