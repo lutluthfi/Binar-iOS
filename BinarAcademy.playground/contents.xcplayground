@@ -18,8 +18,5 @@
         <page name='Optional'/>
         <page name='Subscript'/>
         <page name='SwitchCase'/>
-        <page name='Inheritance'/>
-        <page name='Protocol'/>
-        <page name='Polymorphism'/>
     </pages>
 </playground>

@@ -46,6 +46,9 @@ struct Human: Creature {
     var habitat: Habitat = .ground
 }
 
+//struct People: Human {
+//}
+
 class Cat: Animal {
     override func eat(food: String) {
         name = "Cat \(name)"
@@ -101,6 +104,9 @@ bringToVet(animal: cat)
 bringToVet(animal: bird)
 bringToVet(animal: dog)
 
+let human = Human(name: "Human", habitat: .ground)
+
 goesToPark(creature: cat)
 goesToPark(creature: bird)
+goesToPark(creature: human)
 
