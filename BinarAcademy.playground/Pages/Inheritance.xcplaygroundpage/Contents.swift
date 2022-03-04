@@ -23,12 +23,14 @@ class Creature { // Parent Class
 }
 
 class Animal: Creature { // Child Class
+    //Can't override var because it set as final
     override var fullName: String { "Animal - \(name)" }
     
     override func fromCreature() {
     }
 }
 
+//Can't inheritance Struct from Class
 struct Human: Creature { // Inheritance from non-protocol type
 }
 
