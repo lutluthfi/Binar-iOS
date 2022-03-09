@@ -60,3 +60,33 @@ signInButton.onTap()
 
 let titleLabel = Label()
 titleLabel.text = "Title App"
+
+
+// Keyword Super
+
+
+class Human {
+    var name: String = ""
+    
+    func aboutPerson(){
+        print("Hi my name \(name)")
+    }
+}
+
+class Person: Human {
+    var npm: String = ""
+    
+    override func aboutPerson() {
+        super.aboutPerson()
+        print("I am study Pakuan University with registation number \(npm)")
+    }
+}
+
+
+var dimas = Person()
+dimas.name = "Dimas Purnomo"
+dimas.npm = "065118211"
+dimas.aboutPerson()
+
+var akbar = Human()
+//akbar.npm - tidak bisa

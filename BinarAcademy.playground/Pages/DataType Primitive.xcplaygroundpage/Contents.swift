@@ -16,3 +16,9 @@ func luasPersegi(sisi: Int) -> Int {
 }
 
 luasPersegi(sisi: 6)
+
+
+// Show max Datatype
+var rangeDouble = Double.greatestFiniteMagnitude
+var rangeFloat = Float.greatestFiniteMagnitude
+var rangeInt = Int.max
