@@ -66,19 +66,10 @@ func loopContinue() {
 func findMin() {
     let array = [4, 6, 7, 1, 2, 5, 8, -1]
     var res = array[0]
-    for number in array where number > res {
-        print(number)
+    for number in array where number < res {
         res = number
     }
-    print("---")
-    var res2 = array[0]
-    for number in array {
-        print(number)
-        if number > res2 {
-            res2 = number
-        }
-    }
-    print("hasil: \(res) & \(res2)")
+    print("hasil: \(res)")
 }
 
 findMin()

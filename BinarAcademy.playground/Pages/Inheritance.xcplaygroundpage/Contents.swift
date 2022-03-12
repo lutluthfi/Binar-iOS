@@ -91,3 +91,17 @@ dimas.aboutPerson()
 
 var akbar = Human()
 //akbar.npm - tidak bisa
+
+protocol NumberProtocol {
+    func doSomething()
+}
+
+enum Number: Int, NumberProtocol {
+    case one = 1
+    case two = 2
+    case three = 3
+    
+    func doSomething() {
+        
+    }
+}
