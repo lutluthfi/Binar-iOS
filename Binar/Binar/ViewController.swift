@@ -30,15 +30,10 @@ class ViewController: UIViewController {
         switch segue.destination {
         case is NextViewController:
             let viewController = segue.destination as? NextViewController
-            let username: String = usernameTextField.text ?? ""
-            viewController?.username = username
+            prepareForNextViewController(viewController)
         default:
             break
         }
-    }
-
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        print("ViewController: performSegue")
     }
 
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -60,6 +55,11 @@ class ViewController: UIViewController {
         }
         return true
     }
+    
+    func prepareForNextViewController(_ viewController: NextViewController?) {
+        let username: String = usernameTextField.text ?? ""
+        viewController?.username = username
+    }
 }
 
 class NextViewController: UIViewController {
@@ -70,15 +70,6 @@ class NextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameLabel.text = username
-    }
-    
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        print("NextViewController: performSegue")
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        print("NextViewController: shouldPerformSegue")
-        return true
     }
 }
 
