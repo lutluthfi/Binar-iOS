@@ -44,7 +44,10 @@ class ViewController: UIViewController {
             return true
         }
     }
-    
+}
+
+// MARK: GoToNextViewController
+extension ViewController {
     func goToNextViewContollerIfPassed() -> Bool {
         if isUsernameEmpty {
             let alert = UIAlertController(title: "Sign In Alert", message: "User name could not be empty", preferredStyle: .alert)
