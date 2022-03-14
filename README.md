@@ -1,10 +1,4 @@
-# binar-course
+# Binar-iOS
 
-satu
-dua
-tiga
-empat
-lima
-enam
-enam arif
-tujuh karen
+### Initial Feature Contract
+AR = Arif Feature
