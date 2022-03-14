@@ -7,78 +7,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var signInButton: UIButton!
-    
-    var isUsernameEmpty: Bool {
-        let username: String = usernameTextField.text ?? ""
-        let trimmedUsername: String = username.trimmingCharacters(in: .whitespacesAndNewlines)
-        let isUsernameEmpty: Bool = trimmedUsername.isEmpty
-        return isUsernameEmpty
-    }
+class DashboardViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func onSignInButtonTap(_ sender: UIButton) {
+    
+    // Return the number of rows for the table.
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.destination {
-        case is NextViewController:
-            let viewController = segue.destination as? NextViewController
-            prepareForNextViewController(viewController)
-        default:
-            break
-        }
-    }
-
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        switch identifier {
-        case "goToNext":
-            return goToNextViewContollerIfPassed()
-        default:
-            return true
-        }
+    // Provide a cell object for each row.
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Fetch a cell of the appropriate type.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellTypeIdentifier", for: indexPath)
+        
+        // Configure the cell’s contents.
+        cell.textLabel!.text = "Cell text"
+        
+        return cell
     }
 }
-
-// MARK: GoToNextViewController
-extension ViewController {
-    func goToNextViewContollerIfPassed() -> Bool {
-        if isUsernameEmpty {
-            let alert = UIAlertController(title: "Sign In Alert", message: "User name could not be empty", preferredStyle: .alert)
-            let okAlertAction = UIAlertAction(title: "OK", style: .default)
-            alert.addAction(okAlertAction)
-            present(alert, animated: true)
-            return false
-        }
-        return true
-    }
-    
-    func prepareForNextViewController(_ viewController: NextViewController?) {
-        let username: String = usernameTextField.text ?? ""
-        viewController?.username = username
-    }
-}
-
-class NextViewController: UIViewController {
-    @IBOutlet weak var usernameLabel: UILabel!
-    
-    var username: String?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        usernameLabel.text = username
-    }
-}
-
-// UINavigationController = Toples
-
-// Biskuit 1
-// Biskuit 2
-// Biskuit 3
-// Paling bawah
