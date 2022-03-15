@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97633737-a91d-468e-858d-eec067af6c8e" name="Changes" comment="" />
+    <list default="true" id="97633737-a91d-468e-858d-eec067af6c8e" name="Changes" comment="a">
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/AK/AKMain.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/AK/AKViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/DashboardViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/DashboardViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +22,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="26QJL62e5jbwuO3Cq9lEIQn7Vhb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -34,7 +43,19 @@
       <option name="presentableId" value="Default" />
       <updated>1647349818180</updated>
       <workItem from="1647349819744" duration="264000" />
+      <workItem from="1647350590408" duration="290000" />
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
