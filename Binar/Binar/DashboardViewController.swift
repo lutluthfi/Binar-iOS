@@ -35,6 +35,8 @@ final class DashboardViewController: UITableViewController {
         switch selectedStudent {
         case .ArifLuthfi:
             goToARViewController()
+        case .MaulanaFrasha:
+            goToMFVC()
         default:
             break
         }
@@ -47,6 +49,18 @@ extension DashboardViewController {
         guard let selectedStudet = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "ARMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController else {
+            return
+        }
+        viewController.name = selectedStudet.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension DashboardViewController {
+    func goToMFVC() {
+        guard let selectedStudet = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "MFMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "MFVC") as? MFVC else {
             return
         }
         viewController.name = selectedStudet.name
