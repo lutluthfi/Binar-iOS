@@ -8,6 +8,8 @@
 import UIKit
 
 final class DashboardViewController: UITableViewController {
+    var selectedStudent: Student?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -25,5 +27,29 @@ final class DashboardViewController: UITableViewController {
         cell.textLabel?.text = student.name
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row: Int = indexPath.row // selected row
+        selectedStudent = Student.sorted[row] // get Student from sorted at number of row
+        switch selectedStudent {
+        case .ArifLuthfi:
+            goToARViewController()
+        default:
+            break
+        }
+    }
+}
+
+// MARK: goToARViewController
+extension DashboardViewController {
+    func goToARViewController() {
+        guard let selectedStudet = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "ARMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController else {
+            return
+        }
+        viewController.name = selectedStudet.name
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

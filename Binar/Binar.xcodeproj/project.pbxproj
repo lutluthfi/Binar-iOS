@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A40E27DF8AF700C9E2F7 /* Student.swift */; };
+		4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */; };
+		4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F78A41527E0455300C9E2F7 /* ARMain.storyboard */; };
 		4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234CD27DAB530007514BA /* AppDelegate.swift */; };
 		4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234CF27DAB530007514BA /* SceneDelegate.swift */; };
 		4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234D127DAB530007514BA /* DashboardViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		4F78A41527E0455300C9E2F7 /* ARMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARMain.storyboard; sourceTree = "<group>"; };
 		4FD234CA27DAB530007514BA /* Binar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Binar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD234CD27DAB530007514BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD234CF27DAB530007514BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F78A41227DF8C5F00C9E2F7 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */,
+				4F78A41527E0455300C9E2F7 /* ARMain.storyboard */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
 		4FD234C127DAB530007514BA = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +71,7 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+				4F78A41227DF8C5F00C9E2F7 /* AR */,
 				4FD234CD27DAB530007514BA /* AppDelegate.swift */,
 				4FD234CF27DAB530007514BA /* SceneDelegate.swift */,
 				4FD234D127DAB530007514BA /* DashboardViewController.swift */,
@@ -128,6 +142,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */,
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
 				4FD234D527DAB530007514BA /* Main.storyboard in Resources */,
@@ -145,6 +160,7 @@
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
+				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
