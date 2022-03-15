@@ -11,8 +11,8 @@
 **PR** = Prana Apsara Wijaya  
 **DP** = Dimas Purnomo  
 **DS** = Daffashiddiq Nur Awan  
-**TS** = Tatang Sulaeman
-**AD** = Aiedyl Dava
-**DB** = Dhani bukhory
-**AT** = Nuzulul Athaya
-**YA** = Yuda Aqil Siraj
+**TS** = Tatang Sulaeman  
+**AD** = Aiedyl Dava  
+**DB** = Dhani bukhory  
+**AT** = Nuzulul Athaya  
+**YA** = Yuda Aqil Siraj  
