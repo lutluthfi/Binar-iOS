@@ -47,6 +47,8 @@ final class DashboardViewController: UITableViewController {
             goToPWViewController()
         case .RadenDimas:
             goToRDViewController()
+        case .DimasPurnomo:
+            goToDPViewController()
         default:
             break
         }
@@ -138,6 +140,19 @@ extension DashboardViewController {
 //            return
 //        }
         let viewController = RDViewController()
+        viewController.name = selectedStudet.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: goToDPViewController
+extension DashboardViewController {
+    func goToDPViewController() {
+        guard let selectedStudet = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "DPMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DPViewController") as? DPViewController else {
+            return
+        }
         viewController.name = selectedStudet.name
         navigationController?.pushViewController(viewController, animated: true)
     }
