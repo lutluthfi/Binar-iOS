@@ -1,7 +1,7 @@
 # Binar-iOS
 
 ### Initial Feature Contract
-**AR** = Arif Feature  
+**AR** = Arif  
 **MF** = Maulana Frasha  
 **AK** = Adrian Kurniawan  
 **AI** = Akbar Idris  
