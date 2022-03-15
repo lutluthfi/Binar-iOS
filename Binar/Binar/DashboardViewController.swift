@@ -41,6 +41,8 @@ final class DashboardViewController: UITableViewController {
             goToMFVC()
         case .AdrianKurniawan:
             goToAKViewController()
+        case .AiedylDava:
+            goToADViewController()
         case .PranaApsara:
             goToPWViewController()
         default:
@@ -114,4 +116,14 @@ extension DashboardViewController {
     }
 }
 
-
+extension DashboardViewController {
+    func goToADViewController() {
+        guard let selectedStudet = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "ADMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ADViewController") as? ADViewController else {
+            return
+        }
+        viewController.name = selectedStudet.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
