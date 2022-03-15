@@ -6,7 +6,7 @@
 **AK** = Adrian Kurniawan  
 **AI** = Akbar Idris  
 **RD** = Raden Dimas  
-**BI** = Bagas Ilham
-**TH** = Tio Hardadi
-**PR** = Prana Apsara Wijaya
-**DP** = Dimas Purnomo
+**BI** = Bagas Ilham  
+**TH** = Tio Hardadi  
+**PR** = Prana Apsara Wijaya  
+**DP** = Dimas Purnomo  
