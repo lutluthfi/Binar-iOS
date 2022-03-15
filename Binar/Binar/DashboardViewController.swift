@@ -41,6 +41,8 @@ final class DashboardViewController: UITableViewController {
             goToMFVC()
         case .AdrianKurniawan:
             goToAKViewController()
+        case .PranaApsara:
+            goToPWViewController()
         default:
             break
         }
@@ -73,6 +75,20 @@ extension DashboardViewController {
     }
 }
 
+// MARK: goToPWViewController
+extension DashboardViewController{
+    func goToPWViewController(){
+        guard let selectedStudent = selectedStudent else {return}
+        let storyboard = UIStoryboard(name: "PWMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "PWViewController") as? PWViewController else{
+            return
+        }
+        viewController.name = selectedStudent.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+
 extension DashboardViewController {
     func goToMFVC() {
         guard let selectedStudet = selectedStudent else { return }
@@ -97,3 +113,5 @@ extension DashboardViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
+
+

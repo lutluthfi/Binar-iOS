@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97633737-a91d-468e-858d-eec067af6c8e" name="Changes" comment="a">
-      <change afterPath="$PROJECT_DIR$/Binar/Binar/AK/AKMain.storyboard" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Binar/Binar/AK/AKViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="97633737-a91d-468e-858d-eec067af6c8e" name="Changes" comment="add git ignore">
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PW/PWMain.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PW/PWViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binar/Binar.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binar/Binar/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/AppDelegate.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binar/Binar/DashboardViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/DashboardViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,16 @@
       <updated>1647349818180</updated>
       <workItem from="1647349819744" duration="264000" />
       <workItem from="1647350590408" duration="290000" />
+      <workItem from="1647351157110" duration="968000" />
     </task>
+    <task id="LOCAL-00001" summary="add git ignore">
+      <created>1647351802628</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647351802628</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -57,5 +64,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="add git ignore" />
   </component>
 </project>
