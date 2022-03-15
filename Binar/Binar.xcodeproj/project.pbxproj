@@ -24,6 +24,8 @@
 		4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD234D827DAB531007514BA /* LaunchScreen.storyboard */; };
 		592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592D89A127E0CAC200FCE74D /* ADMain.storyboard */; };
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
+		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
+		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
 		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
 		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
@@ -51,6 +53,8 @@
 		4FD234DB27DAB531007514BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		592D89A127E0CAC200FCE74D /* ADMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ADMain.storyboard; sourceTree = "<group>"; };
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
+		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
 		CEDF88CE27E0CFB300388847 /* PWMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PWMain.storyboard; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+				72565B0C27E0DAA600EAF51C /* TS */,
 				22DD5C8027E0D580003024DC /* DP */,
 				E940649D27E0D43700D8204C /* RD */,
 				CEDF88CD27E0CF9200388847 /* PW */,
@@ -151,6 +156,15 @@
 				592D89A327E0CB0200FCE74D /* ADViewController.swift */,
 			);
 			path = AD;
+			sourceTree = "<group>";
+		};
+		72565B0C27E0DAA600EAF51C /* TS */ = {
+			isa = PBXGroup;
+			children = (
+				72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */,
+				72565B0F27E0DB4300EAF51C /* TSViewController.swift */,
+			);
+			path = TS;
 			sourceTree = "<group>";
 		};
 		A4D3AA5327E0C8A900565DEE /* AK */ = {
@@ -242,6 +256,7 @@
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
 				A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */,
+				72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */,
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
@@ -257,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
