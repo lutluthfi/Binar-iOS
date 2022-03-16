@@ -11,8 +11,10 @@
 		01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DBD36227E0C4C400C69237 /* THViewController.swift */; };
 		22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DD5C8127E0D59C003024DC /* DPMain.storyboard */; };
 		22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD5C8327E0D5BA003024DC /* DPViewController.swift */; };
-		318D72D527E0C53700ACAACF /* MFVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D72D427E0C53700ACAACF /* MFVC.swift */; };
+		318D72D527E0C53700ACAACF /* MFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D72D427E0C53700ACAACF /* MFViewController.swift */; };
 		318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318D72D727E0C55E00ACAACF /* MFMain.storyboard */; };
+		319CD7D127E28B1A007F8239 /* BinarChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319CD7D027E28B1A007F8239 /* BinarChallenge.swift */; };
+		319CD7D327E28B25007F8239 /* FasilChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319CD7D227E28B25007F8239 /* FasilChallenge.swift */; };
 		4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A40E27DF8AF700C9E2F7 /* Student.swift */; };
 		4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */; };
 		4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F78A41527E0455300C9E2F7 /* ARMain.storyboard */; };
@@ -39,8 +41,10 @@
 		01DBD36227E0C4C400C69237 /* THViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewController.swift; sourceTree = "<group>"; };
 		22DD5C8127E0D59C003024DC /* DPMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DPMain.storyboard; sourceTree = "<group>"; };
 		22DD5C8327E0D5BA003024DC /* DPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPViewController.swift; sourceTree = "<group>"; };
-		318D72D427E0C53700ACAACF /* MFVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFVC.swift; sourceTree = "<group>"; };
+		318D72D427E0C53700ACAACF /* MFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFViewController.swift; sourceTree = "<group>"; };
 		318D72D727E0C55E00ACAACF /* MFMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MFMain.storyboard; sourceTree = "<group>"; };
+		319CD7D027E28B1A007F8239 /* BinarChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarChallenge.swift; sourceTree = "<group>"; };
+		319CD7D227E28B25007F8239 /* FasilChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FasilChallenge.swift; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		4F78A41527E0455300C9E2F7 /* ARMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARMain.storyboard; sourceTree = "<group>"; };
@@ -96,7 +100,9 @@
 		318D72D627E0C54100ACAACF /* MF */ = {
 			isa = PBXGroup;
 			children = (
-				318D72D427E0C53700ACAACF /* MFVC.swift */,
+				318D72D427E0C53700ACAACF /* MFViewController.swift */,
+				319CD7D027E28B1A007F8239 /* BinarChallenge.swift */,
+				319CD7D227E28B25007F8239 /* FasilChallenge.swift */,
 				318D72D727E0C55E00ACAACF /* MFMain.storyboard */,
 			);
 			path = MF;
@@ -276,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
+				319CD7D327E28B25007F8239 /* FasilChallenge.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
@@ -287,8 +294,9 @@
 				592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
+				319CD7D127E28B1A007F8239 /* BinarChallenge.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
-				318D72D527E0C53700ACAACF /* MFVC.swift in Sources */,
+				318D72D527E0C53700ACAACF /* MFViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5U7M39KWXM;
+				DEVELOPMENT_TEAM = UT5GP7P326;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Binar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -466,7 +474,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5U7M39KWXM;
+				DEVELOPMENT_TEAM = UT5GP7P326;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Binar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
