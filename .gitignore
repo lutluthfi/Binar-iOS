@@ -103,6 +103,7 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 ### Others ###
+.DS_Store
 */.DS_Store
 */.idea
 
