@@ -15,7 +15,7 @@ final class ARViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
+        setupNavigationItem()
     }
     
     @IBAction func onAlertButtonTap(_ sender: UIButton) {
@@ -51,5 +51,20 @@ final class ARViewController: UIViewController {
         if let selectedTitle = selectedTitle {
             alertButton.setTitle(selectedTitle, for: .normal)
         }
+    }
+    
+    @objc func onAddBarButtonItemTap(_ sender: UIBarButtonItem) {
+        print("onAddBarButtonItemTap")
+    }
+    
+    private func setupNavigationItem() {
+        navigationItem.title = name
+        
+        let addBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: #selector(onAddBarButtonItemTap)
+        )
+        navigationItem.leftBarButtonItems = [addBarButtonItem]
     }
 }
