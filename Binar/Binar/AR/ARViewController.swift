@@ -8,6 +8,7 @@
 import UIKit
 
 final class ARViewController: UIViewController {
+    @IBOutlet weak var alertButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     
     var name: String?
@@ -37,5 +38,18 @@ final class ARViewController: UIViewController {
         alertController.addAction(confirm)
         
         present(alertController, animated: true)
+    }
+    
+    @IBAction func onSegmentValueChanged(_ sender: UISegmentedControl) {
+        let selectedIndex: Int = sender.selectedSegmentIndex
+        let selectedImage: UIImage? = sender.imageForSegment(at: selectedIndex)
+        let selectedTitle: String? = sender.titleForSegment(at: selectedIndex)
+        
+        if let selectedImage = selectedImage {
+            alertButton.setImage(selectedImage, for: .normal)
+        }
+        if let selectedTitle = selectedTitle {
+            alertButton.setTitle(selectedTitle, for: .normal)
+        }
     }
 }

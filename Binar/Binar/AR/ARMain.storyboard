@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-WF-za9">
+                                <rect key="frame" x="16" y="100" width="382" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="0Gn-h0-n3f"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="flame.fill" catalog="system" title="Alert">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onAlertButtonTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eqc-bE-uLl"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gj0-Kw-kiK">
                                 <rect key="frame" x="16" y="60" width="382" height="24"/>
                                 <constraints>
@@ -25,20 +40,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nte-WF-za9">
-                                <rect key="frame" x="16" y="100" width="382" height="44"/>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="0Gn-h0-n3f"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Alert">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DHk-Ne-ioA">
+                                <rect key="frame" x="16" y="160" width="382" height="32"/>
+                                <segments>
+                                    <segment title="Red"/>
+                                    <segment title="">
+                                        <imageReference key="image" image="globe.asia.australia.fill" catalog="system" symbolScale="default"/>
+                                    </segment>
+                                    <segment title="Green"/>
+                                    <segment title="">
+                                        <imageReference key="image" image="globe.americas.fill" catalog="system" symbolScale="default"/>
+                                    </segment>
+                                    <segment title="Blue"/>
+                                </segments>
                                 <connections>
-                                    <action selector="onAlertButtonTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eqc-bE-uLl"/>
+                                    <action selector="onSegmentValueChanged:" destination="Y6W-OH-hqX" eventType="valueChanged" id="ADJ-pE-ywV"/>
                                 </connections>
-                            </button>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -46,12 +64,16 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="gj0-Kw-kiK" secondAttribute="trailing" constant="16" id="DF6-BZ-463"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Nte-WF-za9" secondAttribute="trailing" constant="16" id="FMZ-Pt-InQ"/>
                             <constraint firstItem="Nte-WF-za9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="Oyq-mC-19W"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DHk-Ne-ioA" secondAttribute="trailing" constant="16" id="SRc-kB-JOW"/>
+                            <constraint firstItem="DHk-Ne-ioA" firstAttribute="top" secondItem="Nte-WF-za9" secondAttribute="bottom" constant="16" id="WIJ-et-cZK"/>
                             <constraint firstItem="gj0-Kw-kiK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="YbM-wK-Hqm"/>
                             <constraint firstItem="Nte-WF-za9" firstAttribute="top" secondItem="gj0-Kw-kiK" secondAttribute="bottom" constant="16" id="YfX-OD-ns7"/>
                             <constraint firstItem="gj0-Kw-kiK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="ocX-Iw-iZy"/>
+                            <constraint firstItem="DHk-Ne-ioA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="xHS-cH-8j1"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="alertButton" destination="Nte-WF-za9" id="O7D-5L-tG7"/>
                         <outlet property="textLabel" destination="gj0-Kw-kiK" id="sOc-kx-Zer"/>
                     </connections>
                 </viewController>
@@ -61,6 +83,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="flame.fill" catalog="system" width="108" height="128"/>
+        <image name="globe.americas.fill" catalog="system" width="128" height="121"/>
+        <image name="globe.asia.australia.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
