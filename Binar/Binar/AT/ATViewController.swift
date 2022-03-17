@@ -9,10 +9,10 @@ import UIKit
 
 class ATViewController: UIViewController {
 
-    var age : Int = 10
+    var name : String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = name
         // Do any additional setup after loading the view.
     }
     

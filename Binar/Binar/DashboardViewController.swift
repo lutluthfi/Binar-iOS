@@ -212,7 +212,7 @@ extension DashboardViewController{
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "ATViewController") as? ATViewController else{
             return
         }
-        viewController.age = 11
+        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
