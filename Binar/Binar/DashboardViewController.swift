@@ -53,6 +53,8 @@ final class DashboardViewController: UITableViewController {
             goToDPViewController()
         case .TatangSulaeman:
             goToTSViewController()
+        case .NuzululAthaya:
+            goToATViewController()
         default:
             break
         }
@@ -198,6 +200,19 @@ extension DashboardViewController {
             return
         }
 
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: goToATViewController
+extension DashboardViewController{
+    func goToATViewController(){
+        guard let selectedStudent = selectedStudent else {return}
+        let storyboard = UIStoryboard(name: "ATMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ATViewController") as? ATViewController else{
+            return
+        }
+        viewController.age = 11
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

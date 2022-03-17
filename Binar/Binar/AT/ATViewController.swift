@@ -9,6 +9,7 @@ import UIKit
 
 class ATViewController: UIViewController {
 
+    var age : Int = 10
     override func viewDidLoad() {
         super.viewDidLoad()
 
