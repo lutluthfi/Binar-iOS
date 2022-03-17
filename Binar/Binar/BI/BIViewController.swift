@@ -39,7 +39,7 @@ final class BIViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AnimalTableCell", for: indexPath)
 
-        cell.textLabel?.text = Animal.list[indexPath.row]
+        cell.textLabel?.text = displayedAnimals[indexPath.row]
         
         return cell
     }
@@ -53,9 +53,9 @@ extension BIViewController: UISearchBarDelegate {
         let animals: [String] = Animal.list
         if isSearchTextNotEmpty {
             let searchedAnimals: [String] = animals.filter {
-                let animalSearch: String = animalSearchText.lowercased()
+                let animalSearchText: String = searchText.lowercased()
                 let animalName: String = $0.lowercased()
-                return animalName.contains(animalSearch)
+                return animalName.contains(animalSearchText)
             }
             displayedAnimals = searchedAnimals
         } else {
