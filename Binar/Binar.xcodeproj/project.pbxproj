@@ -29,6 +29,8 @@
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
 		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
 		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
+		B90B6F1F27E36AF5008294B1 /* ZKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90B6F1E27E36AF5008294B1 /* ZKMain.storyboard */; };
+		B90B6F2127E36B27008294B1 /* ZKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B6F2027E36B27008294B1 /* ZKViewController.swift */; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
 		E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940649E27E0D44E00D8204C /* RDViewController.swift */; };
@@ -59,6 +61,8 @@
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
+		B90B6F1E27E36AF5008294B1 /* ZKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZKMain.storyboard; sourceTree = "<group>"; };
+		B90B6F2027E36B27008294B1 /* ZKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZKViewController.swift; sourceTree = "<group>"; };
 		CEDF88CE27E0CFB300388847 /* PWMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PWMain.storyboard; sourceTree = "<group>"; };
 		CEDF88D027E0CFC800388847 /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
 		E940649E27E0D44E00D8204C /* RDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+				B90B6F1D27E3693E008294B1 /* ZK */,
 				72565B0C27E0DAA600EAF51C /* TS */,
 				22DD5C8027E0D580003024DC /* DP */,
 				E940649D27E0D43700D8204C /* RD */,
@@ -177,6 +182,15 @@
 				A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */,
 			);
 			path = AK;
+			sourceTree = "<group>";
+		};
+		B90B6F1D27E3693E008294B1 /* ZK */ = {
+			isa = PBXGroup;
+			children = (
+				B90B6F1E27E36AF5008294B1 /* ZKMain.storyboard */,
+				B90B6F2027E36B27008294B1 /* ZKViewController.swift */,
+			);
+			path = ZK;
 			sourceTree = "<group>";
 		};
 		CEDF88CD27E0CF9200388847 /* PW */ = {
@@ -260,6 +274,7 @@
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
 				A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */,
 				72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */,
+				B90B6F1F27E36AF5008294B1 /* ZKMain.storyboard in Resources */,
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
@@ -277,6 +292,7 @@
 			files = (
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
+				B90B6F2127E36B27008294B1 /* ZKViewController.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
