@@ -29,6 +29,8 @@
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
 		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
 		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
+		C8A6942827E374B000BF09C7 /* NBMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A6942727E374B000BF09C7 /* NBMain.storyboard */; };
+		C8A6942A27E374E600BF09C7 /* NBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A6942927E374E600BF09C7 /* NBViewController.swift */; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
 		E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940649E27E0D44E00D8204C /* RDViewController.swift */; };
@@ -59,6 +61,8 @@
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
+		C8A6942727E374B000BF09C7 /* NBMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NBMain.storyboard; sourceTree = "<group>"; };
+		C8A6942927E374E600BF09C7 /* NBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBViewController.swift; sourceTree = "<group>"; };
 		CEDF88CE27E0CFB300388847 /* PWMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PWMain.storyboard; sourceTree = "<group>"; };
 		CEDF88D027E0CFC800388847 /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
 		E940649E27E0D44E00D8204C /* RDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+				C8A6942627E3745400BF09C7 /* NB */,
 				72565B0C27E0DAA600EAF51C /* TS */,
 				22DD5C8027E0D580003024DC /* DP */,
 				E940649D27E0D43700D8204C /* RD */,
@@ -179,6 +184,15 @@
 			path = AK;
 			sourceTree = "<group>";
 		};
+		C8A6942627E3745400BF09C7 /* NB */ = {
+			isa = PBXGroup;
+			children = (
+				C8A6942727E374B000BF09C7 /* NBMain.storyboard */,
+				C8A6942927E374E600BF09C7 /* NBViewController.swift */,
+			);
+			path = NB;
+			sourceTree = "<group>";
+		};
 		CEDF88CD27E0CF9200388847 /* PW */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,7 +236,6 @@
 		4FD234C227DAB530007514BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
@@ -255,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */,
+				C8A6942827E374B000BF09C7 /* NBMain.storyboard in Resources */,
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
@@ -278,6 +292,7 @@
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
+				C8A6942A27E374E600BF09C7 /* NBViewController.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
