@@ -12,34 +12,101 @@
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="PWViewController" id="Y6W-OH-hqX" customClass="PWViewController" customModule="Binar" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="PWViewController" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKI-27-PVG">
-                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IKEA-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="bWM-i7-DzR">
+                                <rect key="frame" x="24" y="98" width="149" height="35"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="v8A-rH-kEx">
+                                <rect key="frame" x="316.5" y="108.5" width="20.5" height="18.5"/>
+                                <color key="tintColor" red="0.12549019607843137" green="0.054901960784313725" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Welcome Back," textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="023-5s-5cb">
+                                <rect key="frame" x="24" y="177" width="218" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="3vZ-1m-GhO"/>
+                                    <constraint firstAttribute="height" constant="40" id="Ef3-wa-SIp"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ideas For Your Day" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IFV-v8-sRC">
+                                <rect key="frame" x="24" y="222" width="218" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218" id="d62-w5-tyg"/>
+                                    <constraint firstAttribute="height" constant="40" id="rE8-ee-26R"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xcK-uG-67q" customClass="RatingView" customModule="CardSlider">
+                                <rect key="frame" x="24" y="302" width="366" height="372"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FbJ-Xr-kto">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="372"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.  Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. </string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WvR-IX-lR4">
+                                <rect key="frame" x="24" y="714" width="366" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nwD-Qh-Hqe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton:" destination="Y6W-OH-hqX" eventType="touchDown" id="Jtf-w7-wsF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nKI-27-PVG" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="pYc-BM-xzN"/>
-                            <constraint firstItem="nKI-27-PVG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="tP0-xx-xvB"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xcK-uG-67q" secondAttribute="trailing" constant="24" id="1KR-Bd-K5G"/>
+                            <constraint firstItem="WvR-IX-lR4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="2MT-jj-Sde"/>
+                            <constraint firstItem="bWM-i7-DzR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="6Qi-Qt-lv4"/>
+                            <constraint firstItem="xcK-uG-67q" firstAttribute="top" secondItem="IFV-v8-sRC" secondAttribute="bottom" constant="40" id="DHp-yE-ODn"/>
+                            <constraint firstItem="v8A-rH-kEx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="DWz-ht-mpm"/>
+                            <constraint firstItem="v8A-rH-kEx" firstAttribute="leading" secondItem="bWM-i7-DzR" secondAttribute="trailing" constant="143.5" id="PI6-GX-ITL"/>
+                            <constraint firstItem="023-5s-5cb" firstAttribute="top" secondItem="bWM-i7-DzR" secondAttribute="bottom" constant="44" id="VRO-nA-mWA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xcK-uG-67q" secondAttribute="bottom" constant="188" id="Yk8-H6-BdO"/>
+                            <constraint firstItem="023-5s-5cb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="b2v-Xn-kS9"/>
+                            <constraint firstItem="xcK-uG-67q" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="c8t-D6-n3r"/>
+                            <constraint firstItem="IFV-v8-sRC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="ddZ-EH-3pu"/>
+                            <constraint firstItem="IFV-v8-sRC" firstAttribute="top" secondItem="023-5s-5cb" secondAttribute="bottom" constant="5" id="fNS-hs-Deg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WvR-IX-lR4" secondAttribute="trailing" constant="24" id="mtj-OE-b9M"/>
+                            <constraint firstItem="WvR-IX-lR4" firstAttribute="top" secondItem="FbJ-Xr-kto" secondAttribute="bottom" constant="40" id="z4w-mf-vdY"/>
+                            <constraint firstItem="bWM-i7-DzR" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="54" id="zYK-UP-Ssp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myName" destination="nKI-27-PVG" id="hhm-gt-6A1"/>
+                        <outlet property="showButton" destination="WvR-IX-lR4" id="iqp-uq-Obd"/>
+                        <outlet property="view" destination="5EZ-qb-Rvc" id="SKJ-cC-LQM"/>
+                        <outlet property="welcomeView2" destination="023-5s-5cb" id="T2Z-QG-N9k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="98"/>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="IKEA-Logo" width="149" height="35"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
