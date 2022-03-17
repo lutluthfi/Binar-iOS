@@ -12,6 +12,12 @@ final class DashboardViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedStudent = Student.PranaApsara
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.goToPWViewController()
+        selectedStudent = Student.PranaApsara
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,12 +32,18 @@ final class DashboardViewController: UITableViewController {
         let student: Student = Student.sorted[row]
         cell.textLabel?.text = student.name
         
+        
         return cell
     }
+    
+    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row: Int = indexPath.row // selected row
         selectedStudent = Student.sorted[row] // get Student from sorted at number of row
+        
+    
+       
         switch selectedStudent {
         case .ArifLuthfi:
             goToARViewController()
@@ -91,7 +103,6 @@ extension DashboardViewController{
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "PWViewController") as? PWViewController else{
             return
         }
-        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
