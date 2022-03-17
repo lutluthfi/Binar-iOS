@@ -30,9 +30,9 @@ final class BC: UIViewController {
     }
     
     @IBAction func hitung(_ sender: Any) {
-        let a = Int(a.text!)
-        let b = Int(b.text!)
-        let total = a! + b!
+        let a = Int(a.text!) ?? 0
+        let b = Int(b.text!) ?? 0
+        let total = a + b
         hasil.text = String(total)
         
         let img1 = UIImage(systemName: "sun.min")
