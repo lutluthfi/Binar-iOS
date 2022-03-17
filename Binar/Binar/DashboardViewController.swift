@@ -10,6 +10,8 @@ import UIKit
 final class DashboardViewController: UITableViewController {
     var selectedStudent: Student?
     
+    var displayedStudents: [Student] = Student.sorted
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedStudent = Student.PranaApsara
@@ -21,7 +23,7 @@ final class DashboardViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let studentCount: Int = Student.sorted.count
+        let studentCount: Int = displayedStudents.count
         return studentCount
     }
     
@@ -29,7 +31,7 @@ final class DashboardViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentTableCell", for: indexPath)
         
         let row: Int = indexPath.row
-        let student: Student = Student.sorted[row]
+        let student: Student = displayedStudents[row]
         cell.textLabel?.text = student.name
         
         
@@ -69,15 +71,42 @@ final class DashboardViewController: UITableViewController {
     }
 }
 
+extension DashboardViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        tableView.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let _searchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        let isSearchTextNotEmpty = !_searchText.isEmpty
+        let students: [Student] = Student.sorted
+        if isSearchTextNotEmpty {
+            let searchedStudents: [Student] = students.filter {
+                let _searchText: String = searchText.lowercased()
+                let _name: String = $0.name.lowercased()
+                return _name.contains(_searchText)
+            }
+            displayedStudents = searchedStudents
+        } else {
+            displayedStudents = students
+        }
+        tableView.reloadData()
+    }
+}
+
 // MARK: goToARViewController
 extension DashboardViewController {
     func goToARViewController() {
-        guard let selectedStudet = selectedStudent else { return }
+        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "ARMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController else {
             return
         }
-        viewController.name = selectedStudet.name
+        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -85,12 +114,12 @@ extension DashboardViewController {
 // MARK: goToTHViewController
 extension DashboardViewController {
     func goToTHViewController() {
-        guard let selectedStudet = selectedStudent else { return }
+        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "THMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "THViewController") as? THViewController else {
             return
         }
-        viewController.name = selectedStudet.name
+        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -110,12 +139,12 @@ extension DashboardViewController{
 
 extension DashboardViewController {
     func goToMFVC() {
-        guard let selectedStudet = selectedStudent else { return }
+        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "MFMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "MFVC") as? MFVC else {
             return
         }
-        viewController.name = selectedStudet.name
+        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -123,37 +152,37 @@ extension DashboardViewController {
 // MARK: goToAKViewController
 extension DashboardViewController {
     func goToAKViewController() {
-        guard let selectedStudet = selectedStudent else { return }
+        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "AKMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "AKViewController") as? AKViewController else {
             return
         }
-        viewController.name = selectedStudet.name
+        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
 extension DashboardViewController {
     func goToADViewController() {
-        guard let selectedStudet = selectedStudent else { return }
+        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "ADMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "ADViewController") as? ADViewController else {
             return
         }
-        viewController.name = selectedStudet.name
+        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
 extension DashboardViewController {
     func goToRDViewController() {
-        guard let selectedStudet = selectedStudent else { return }
+        guard let selectedStudent = selectedStudent else { return }
 //        let storyboard = UIStoryboard(name: "ADMain", bundle: nil)
 //        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ADViewController") as? ADViewController else {
 //            return
 //        }
         let viewController = RDViewController()
-        viewController.name = selectedStudet.name
+        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -161,12 +190,12 @@ extension DashboardViewController {
 // MARK: goToDPViewController
 extension DashboardViewController {
     func goToDPViewController() {
-        guard let selectedStudet = selectedStudent else { return }
+        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "DPMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "DPViewController") as? DPViewController else {
             return
         }
-        viewController.name = selectedStudet.name
+        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -174,7 +203,7 @@ extension DashboardViewController {
 // MARK: goToTSViewController
 extension DashboardViewController {
     func goToTSViewController() {
-        guard let selectedStudet = selectedStudent else { return }
+        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "TSMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "TSViewController") as? TSViewController else {
             return
