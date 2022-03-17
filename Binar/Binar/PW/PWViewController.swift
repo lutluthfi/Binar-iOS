@@ -32,7 +32,6 @@ class PWViewController: UIViewController, CardSliderDataSource {
         let elm = Animal.list
         let mirror = Mirror(reflecting: elm)
         for child in mirror.children  {
-            print(child.value)
             data.append(Item( image: UIImage(systemName: "heart.fill")!, title: child.value as! String , rating: 4, subtitle: "test", description: "test"))
             
         }
@@ -41,11 +40,6 @@ class PWViewController: UIViewController, CardSliderDataSource {
             return
         }
         
-        let vc = CardSliderViewController.with(dataSource: self)
-        vc.title = "Welcome!"
-//        vc.modalPresentationStyle = .fullScreen
-//        present(vc, animated: true)
-
         
 //        welcomeView1.font = UIFont(name: "circular-std-medium-500", size: 24)
 //        welcomeView2.font = UIFont(name: "circular-std-medium-500", size: 24.0)
@@ -54,7 +48,10 @@ class PWViewController: UIViewController, CardSliderDataSource {
     }
     
     @IBAction func didTapButton(_ sender: Any) {
-        print("clicked")
+        let vc = CardSliderViewController.with(dataSource: self)
+        vc.title = "Welcome!"
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func item(for index: Int) -> CardSliderItem {
