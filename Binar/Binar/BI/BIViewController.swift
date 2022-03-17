@@ -11,25 +11,8 @@ final class BIViewController: UITableViewController {
     @IBOutlet weak var AnimalSearchBar: UISearchBar!
     @IBOutlet weak var randomAnimal: UIBarButtonItem!
     var name: String?
-
-
-    @IBAction func onRandomizeTouchUpInside(_ sender: UIButton) {
-        let randomAnimal: String = Animal.list.randomElement()!.lowercased()
-        let alertController = UIAlertController(title: "Wow!", message: "You are a \(randomAnimal)!", preferredStyle: .alert)
-        
-        let cancel = UIAlertAction(title: "Great!", style: .default)
-        alertController.addAction(cancel)
-                
-        present(alertController, animated: true)
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = name! + " Animal List"
-    }
     var selectedAnimal: Animal?
-    var displayedAnimals: [String] = Animal.list
+    var displayedAnimals: [String] = Animal.list.sorted()
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         let animalCount: Int = displayedAnimals.count
@@ -43,6 +26,22 @@ final class BIViewController: UITableViewController {
         
         return cell
     }
+
+    @IBAction func onRandomizeTouchUpInside(_ sender: UIButton) {
+        let randomAnimal: String = Animal.list.randomElement()!.lowercased()
+        let alertController = UIAlertController(title: "Wow!", message: "You are a \(randomAnimal)!", preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "Great!", style: .default)
+        alertController.addAction(cancel)
+                
+        present(alertController, animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = name! + "'s Animal List"
+    }
+
 }
 
 extension BIViewController: UISearchBarDelegate {
@@ -64,4 +63,7 @@ extension BIViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
     
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        tableView.endEditing(true)
+    }
 }
