@@ -6,9 +6,6 @@
 //
 
 import UIKit
-import CardSlider
-import Kingfisher
-
 
 class PWViewController: UIViewController, UITableViewDataSource {
     
@@ -21,8 +18,7 @@ class PWViewController: UIViewController, UITableViewDataSource {
     
     
     var data: [AnimalName] = [];
-    
-    let url = URL(string: "https://cdn.cocoacasts.com/cc00ceb0c6bff0d536f25454d50223875d5c79f1/above-the-clouds.jpg")!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +26,10 @@ class PWViewController: UIViewController, UITableViewDataSource {
         
        
         
-       
-        
         let elm = Animal.list
         let mirror = Mirror(reflecting: elm)
         for child in mirror.children  {
-            data.append(AnimalName(tilte: child.value as! String, imageName: "IKEA-Logo"))
+            data.append(AnimalName(tilte: child.value as! String, imageName: "\(child.value).jpg"))
         }
 
     }
@@ -50,7 +44,10 @@ class PWViewController: UIViewController, UITableViewDataSource {
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         
         cell.label.text = animal.tilte
-        cell.iconImageView.image = UIImage(named: animal.imageName)
+        
+        cell.iconImageView.image = UIImage(named: animal.imageName) ?? UIImage(named: "150x150")
+//        let url = URL(string:  animal.imageName)!
+//        cell.iconImageView.kf.setImage(with: url)
 //        if let data = try? Data(contentsOf: url) {
 //            // Create Image and Update Image View
 //

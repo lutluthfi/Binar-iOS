@@ -29,9 +29,9 @@
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
 		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
 		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
-		CE1C52AC27E37374005F29B7 /* Pods_Binar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1C52AB27E37374005F29B7 /* Pods_Binar.framework */; };
 		CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */; };
 		CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */; };
+		CE49848227E4926800DB9546 /* CardSlider in Frameworks */ = {isa = PBXBuildFile; productRef = CE49848127E4926800DB9546 /* CardSlider */; };
 		CED7918A27E36D2400725B8A /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
@@ -80,6 +80,7 @@
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
+		CE0385D427E4912400DBB6E5 /* Pods_Binar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Binar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1C52A927E37363005F29B7 /* CardSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CardSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1C52AB27E37374005F29B7 /* Pods_Binar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Binar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1C52AC27E37374005F29B7 /* Pods_Binar.framework in Frameworks */,
+				CE49848227E4926800DB9546 /* CardSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +214,7 @@
 		91AFCF00E44EB4084FF9AB92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE0385D427E4912400DBB6E5 /* Pods_Binar.framework */,
 				CE1C52AB27E37374005F29B7 /* Pods_Binar.framework */,
 				CE1C52A927E37363005F29B7 /* CardSlider.framework */,
 				16DB018F1E99F82360C01A87 /* Pods_Binar.framework */,
@@ -275,6 +277,9 @@
 			dependencies = (
 			);
 			name = Binar;
+			packageProductDependencies = (
+				CE49848127E4926800DB9546 /* CardSlider */,
+			);
 			productName = Binar;
 			productReference = 4FD234CA27DAB530007514BA /* Binar.app */;
 			productType = "com.apple.product-type.application";
@@ -303,6 +308,9 @@
 				Base,
 			);
 			mainGroup = 4FD234C127DAB530007514BA;
+			packageReferences = (
+				CE49848027E4926700DB9546 /* XCRemoteSwiftPackageReference "cardslider" */,
+			);
 			productRefGroup = 4FD234CB27DAB530007514BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -621,6 +629,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE49848027E4926700DB9546 /* XCRemoteSwiftPackageReference "cardslider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ramotion/cardslider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE49848127E4926800DB9546 /* CardSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE49848027E4926700DB9546 /* XCRemoteSwiftPackageReference "cardslider" */;
+			productName = CardSlider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4FD234C227DAB530007514BA /* Project object */;
 }
