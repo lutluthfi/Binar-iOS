@@ -29,19 +29,37 @@
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
 		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
 		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
+		CE1C52AC27E37374005F29B7 /* Pods_Binar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1C52AB27E37374005F29B7 /* Pods_Binar.framework */; };
+		CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */; };
+		CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */; };
+		CED7918A27E36D2400725B8A /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
 		CEEACC5F27E24FCD00445147 /* circular-std-medium-500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEEACC5D27E24D6D00445147 /* circular-std-medium-500.ttf */; };
 		E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940649E27E0D44E00D8204C /* RDViewController.swift */; };
-		F130EA3101E41D7CC1974498 /* Pods_Binar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24426B19CA238733BE6A9683 /* Pods_Binar.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CED7918B27E36D2400725B8A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CED7918A27E36D2400725B8A /* (null) in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		01DBD36027E0C48800C69237 /* THMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = THMain.storyboard; sourceTree = "<group>"; };
 		01DBD36227E0C4C400C69237 /* THViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewController.swift; sourceTree = "<group>"; };
+		16DB018F1E99F82360C01A87 /* Pods_Binar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Binar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2030AB7DB4E117943F258AE9 /* Pods-Binar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Binar.release.xcconfig"; path = "Target Support Files/Pods-Binar/Pods-Binar.release.xcconfig"; sourceTree = "<group>"; };
 		22DD5C8127E0D59C003024DC /* DPMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DPMain.storyboard; sourceTree = "<group>"; };
 		22DD5C8327E0D5BA003024DC /* DPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPViewController.swift; sourceTree = "<group>"; };
-		24426B19CA238733BE6A9683 /* Pods_Binar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Binar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		318D72D427E0C53700ACAACF /* MFVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFVC.swift; sourceTree = "<group>"; };
 		318D72D727E0C55E00ACAACF /* MFMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MFMain.storyboard; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -60,13 +78,16 @@
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
-		8AD4F634CE033AEC333B2C15 /* Pods-Binar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Binar.debug.xcconfig"; path = "Target Support Files/Pods-Binar/Pods-Binar.debug.xcconfig"; sourceTree = "<group>"; };
 		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
-		BF66EA2197D49FF8854BB65C /* Pods-Binar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Binar.release.xcconfig"; path = "Target Support Files/Pods-Binar/Pods-Binar.release.xcconfig"; sourceTree = "<group>"; };
+		CE1C52A927E37363005F29B7 /* CardSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CardSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1C52AB27E37374005F29B7 /* Pods_Binar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Binar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		CEDF88CE27E0CFB300388847 /* PWMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PWMain.storyboard; sourceTree = "<group>"; };
 		CEDF88D027E0CFC800388847 /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
 		CEEACC5D27E24D6D00445147 /* circular-std-medium-500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "circular-std-medium-500.ttf"; sourceTree = "<group>"; };
+		E05A4EEAB8EF819F5E915F84 /* Pods-Binar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Binar.debug.xcconfig"; path = "Target Support Files/Pods-Binar/Pods-Binar.debug.xcconfig"; sourceTree = "<group>"; };
 		E940649E27E0D44E00D8204C /* RDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F130EA3101E41D7CC1974498 /* Pods_Binar.framework in Frameworks */,
+				CE1C52AC27E37374005F29B7 /* Pods_Binar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +130,15 @@
 			path = MF;
 			sourceTree = "<group>";
 		};
+		43F5A83D2A8AAB5A784AE258 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E05A4EEAB8EF819F5E915F84 /* Pods-Binar.debug.xcconfig */,
+				2030AB7DB4E117943F258AE9 /* Pods-Binar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4F78A41227DF8C5F00C9E2F7 /* AR */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +153,8 @@
 			children = (
 				4FD234CC27DAB530007514BA /* Binar */,
 				4FD234CB27DAB530007514BA /* Products */,
-				B21F72AEFEFB179CBD9122D2 /* Pods */,
-				50029D50934AC9F851C366F6 /* Frameworks */,
+				43F5A83D2A8AAB5A784AE258 /* Pods */,
+				91AFCF00E44EB4084FF9AB92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,14 +192,6 @@
 			path = Binar;
 			sourceTree = "<group>";
 		};
-		50029D50934AC9F851C366F6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				24426B19CA238733BE6A9683 /* Pods_Binar.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		592D89A027E0CA5C00FCE74D /* AD */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +210,16 @@
 			path = TS;
 			sourceTree = "<group>";
 		};
+		91AFCF00E44EB4084FF9AB92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE1C52AB27E37374005F29B7 /* Pods_Binar.framework */,
+				CE1C52A927E37363005F29B7 /* CardSlider.framework */,
+				16DB018F1E99F82360C01A87 /* Pods_Binar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A4D3AA5327E0C8A900565DEE /* AK */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,21 +229,13 @@
 			path = AK;
 			sourceTree = "<group>";
 		};
-		B21F72AEFEFB179CBD9122D2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8AD4F634CE033AEC333B2C15 /* Pods-Binar.debug.xcconfig */,
-				BF66EA2197D49FF8854BB65C /* Pods-Binar.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		CEDF88CD27E0CF9200388847 /* PW */ = {
 			isa = PBXGroup;
 			children = (
 				CEDF88CE27E0CFB300388847 /* PWMain.storyboard */,
 				CEDF88D027E0CFC800388847 /* PWViewController.swift */,
+				CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */,
+				CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */,
 			);
 			path = PW;
 			sourceTree = "<group>";
@@ -239,11 +263,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4FD234DE27DAB531007514BA /* Build configuration list for PBXNativeTarget "Binar" */;
 			buildPhases = (
-				D851DF14E3D51D36276C7D53 /* [CP] Check Pods Manifest.lock */,
+				A284B258D6E6D528789882FD /* [CP] Check Pods Manifest.lock */,
 				4FD234C627DAB530007514BA /* Sources */,
 				4FD234C727DAB530007514BA /* Frameworks */,
 				4FD234C827DAB530007514BA /* Resources */,
-				69C930FB83E9E420D773B57E /* [CP] Embed Pods Frameworks */,
+				CED7918B27E36D2400725B8A /* Embed Frameworks */,
+				96A8E8CC9E729CFEE50D6891 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,6 +317,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */,
 				4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */,
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
@@ -310,7 +336,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		69C930FB83E9E420D773B57E /* [CP] Embed Pods Frameworks */ = {
+		96A8E8CC9E729CFEE50D6891 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -327,7 +353,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Binar/Pods-Binar-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D851DF14E3D51D36276C7D53 /* [CP] Check Pods Manifest.lock */ = {
+		A284B258D6E6D528789882FD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -362,6 +388,7 @@
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
+				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
 				01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */,
@@ -513,13 +540,14 @@
 		};
 		4FD234DF27DAB531007514BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8AD4F634CE033AEC333B2C15 /* Pods-Binar.debug.xcconfig */;
+			baseConfigurationReference = E05A4EEAB8EF819F5E915F84 /* Pods-Binar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5U7M39KWXM;
+				DEVELOPMENT_TEAM = WKCCA28NK8;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Binar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -527,7 +555,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -543,13 +571,13 @@
 		};
 		4FD234E027DAB531007514BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF66EA2197D49FF8854BB65C /* Pods-Binar.release.xcconfig */;
+			baseConfigurationReference = 2030AB7DB4E117943F258AE9 /* Pods-Binar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5U7M39KWXM;
+				DEVELOPMENT_TEAM = WKCCA28NK8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Binar/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -557,7 +585,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

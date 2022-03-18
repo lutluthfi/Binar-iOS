@@ -1,16 +1,20 @@
 PODS:
   - CardSlider (0.1.0)
+  - Kingfisher (7.2.0)
 
 DEPENDENCIES:
   - CardSlider
+  - Kingfisher (~> 7.0)
 
 SPEC REPOS:
   trunk:
     - CardSlider
+    - Kingfisher
 
 SPEC CHECKSUMS:
   CardSlider: 0a8f5f17f5a76701771794b07fdaeddc512358c8
+  Kingfisher: 3ac0b75b155cabc0e544877d1a4deea29feece92
 
-PODFILE CHECKSUM: 309c15798a8b52590f7c13f2b7dbdbcc8c1f74cf
+PODFILE CHECKSUM: ea219aa7b4620382212f508c8564cfc02e61e1fe
 
 COCOAPODS: 1.11.2
