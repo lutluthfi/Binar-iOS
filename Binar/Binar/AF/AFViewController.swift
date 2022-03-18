@@ -8,24 +8,78 @@
 import UIKit
 
 class AFViewController: UIViewController {
-    @IBOutlet weak var nameLabel: UILabel!
-    var name: String?
+  var name: String?
+  var animal: [String] = Animal.list
+  var searchController: UISearchController = {
+    let _searchController = UISearchController()
+    _searchController.searchBar.placeholder = "Search animal name"
+    return _searchController
+  }()
+  
+  var tableView: UITableView = {
+    var _tableView = UITableView()
+    return _tableView
+  }()
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      nameLabel.text = name
+      setupAllComponent()
+      searchController.searchResultsUpdater = self
+      searchController.delegate = self
+      
         // Do any additional setup after loading the view.
     }
+  
+  func setupAllComponent() {
+    navigationItem.title = "Animal"
+    navigationItem.searchController = searchController
+    navigationController?.navigationBar.prefersLargeTitles = true
     
+    self.tableView.delegate = self
+    self.tableView.dataSource = self
+    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "animalCell")
+    self.tableView.frame = view.bounds
+    
+    view.addSubview(tableView)
+  }
+  
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension AFViewController: UISearchControllerDelegate, UISearchResultsUpdating {
+  
+  func updateSearchResults(for searchController: UISearchController) {
+    guard let searchText = searchController.searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
+    
+    print(searchText)
+    let isAnimalNotEmpty = !searchText.isEmpty
+    let defaultAnimal = animal.sorted {$0 < $1}
+    if isAnimalNotEmpty {
+      let animal: [String] = Animal.list.filter {
+        let searchTextLower = searchText.lowercased()
+        let animal = $0.lowercased()
+        return animal.contains(searchTextLower)
+      }
+      self.animal = animal
+    } else {
+      self.animal = defaultAnimal
     }
-    */
+    tableView.reloadData()
+  }
 
+}
+
+extension AFViewController: UITableViewDelegate, UITableViewDataSource {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return animal.count
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath)
+    let row = indexPath.row
+    let data = animal[row]
+    cell.textLabel?.text = data
+    
+    return cell
+  }
+  
 }
