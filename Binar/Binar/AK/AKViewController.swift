@@ -10,13 +10,12 @@ import UIKit
 final class AKViewController: UITableViewController {
     
     @IBOutlet weak var shuffleButton: UIButton!
-    @IBOutlet weak var sortButton: UIButton!
     
     var name: String?
     var count = 0
     
-    var animalAll: [String] = [Animal.list].self[0]
-    var displayedAnimals: [String] = [Animal.list][0]
+    var animalAll: [String] = [Animal.list].self[0].sorted()
+    var displayedAnimals: [String] = [Animal.list][0].sorted()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,20 +23,6 @@ final class AKViewController: UITableViewController {
 
     }
     
-    
-    @IBAction func onSortButtonTap(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Message", message: "Are you sure want to sort data ?", preferredStyle: .alert)
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .destructive)
-        alertController.addAction(cancel)
-        let confirm = UIAlertAction(title: "Confirm", style: .default) { action in
-            self.animalAll = self.displayedAnimals.sorted()
-            
-            self.tableView.reloadData()
-        }
-        alertController.addAction(confirm)
-        present(alertController, animated: true)
-    }
     
     @IBAction func onShuffleButtonTap(_ sender: UIButton) {
         let alertController = UIAlertController(title: "Message", message: "Are you sure want to shuffle ?", preferredStyle: .alert)
