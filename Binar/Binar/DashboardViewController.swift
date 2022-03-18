@@ -33,12 +33,12 @@ final class DashboardViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row: Int = indexPath.row // selected row
-        selectedStudent = Student.sorted[row] // get Student from sorted at number of row
+        selectedStudent = displayedStudents[row] // get Student from sorted at number of row
         switch selectedStudent {
         case .ArifLuthfi:
             goToARViewController()
         case .TioHardadi:
-            goToARViewController()
+            goToTHViewController()
         case .MaulanaFrasha:
             goToMFVC()
         case .AdrianKurniawan:
@@ -55,6 +55,8 @@ final class DashboardViewController: UITableViewController {
             goToTSViewController()
         case .AdjiFirmansyah:
             goToAFViewController()
+        case .BagasIlham:
+            goToBIViewController()
         default:
             break
         }
@@ -214,4 +216,15 @@ extension DashboardViewController {
     
     navigationController?.pushViewController(viewController, animated: true)
   }
+// MARK: goToBIViewController
+extension DashboardViewController {
+    func goToBIViewController() {
+        guard let selectedStudent = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "BIViewController") as? BIViewController else {
+            return
+        }
+        viewController.name = selectedStudent.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }

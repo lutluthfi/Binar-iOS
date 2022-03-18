@@ -17,6 +17,8 @@
 		318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318D72D727E0C55E00ACAACF /* MFMain.storyboard */; };
 		319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319CD7D027E28B1A007F8239 /* MFBinarChallengeViewController.swift */; };
 		319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319CD7D227E28B25007F8239 /* MFFasilChallengeViewController.swift */; };
+		38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0C76C27E32498009D7A82 /* BIViewController.swift */; };
+		38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E0C76E27E324A2009D7A82 /* BIMain.storyboard */; };
 		4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A40E27DF8AF700C9E2F7 /* Student.swift */; };
 		4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */; };
 		4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F78A41527E0455300C9E2F7 /* ARMain.storyboard */; };
@@ -49,6 +51,8 @@
 		318D72D727E0C55E00ACAACF /* MFMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MFMain.storyboard; sourceTree = "<group>"; };
 		319CD7D027E28B1A007F8239 /* MFBinarChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFBinarChallengeViewController.swift; sourceTree = "<group>"; };
 		319CD7D227E28B25007F8239 /* MFFasilChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFFasilChallengeViewController.swift; sourceTree = "<group>"; };
+		38E0C76C27E32498009D7A82 /* BIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIViewController.swift; sourceTree = "<group>"; };
+		38E0C76E27E324A2009D7A82 /* BIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BIMain.storyboard; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		4F78A41527E0455300C9E2F7 /* ARMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARMain.storyboard; sourceTree = "<group>"; };
@@ -121,6 +125,15 @@
 			path = MF;
 			sourceTree = "<group>";
 		};
+		38E0C76B27E3248B009D7A82 /* BI */ = {
+			isa = PBXGroup;
+			children = (
+				38E0C76E27E324A2009D7A82 /* BIMain.storyboard */,
+				38E0C76C27E32498009D7A82 /* BIViewController.swift */,
+			);
+			path = BI;
+			sourceTree = "<group>";
+		};
 		4F78A41227DF8C5F00C9E2F7 /* AR */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+				38E0C76B27E3248B009D7A82 /* BI */,
 				72565B0C27E0DAA600EAF51C /* TS */,
 				22DD5C8027E0D580003024DC /* DP */,
 				E940649D27E0D43700D8204C /* RD */,
@@ -282,6 +296,7 @@
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
 				0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */,
+				38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
 				318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */,
 				4FD234D527DAB530007514BA /* Main.storyboard in Resources */,
@@ -313,6 +328,8 @@
 				318D72D527E0C53700ACAACF /* MFViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
 				318D72D527E0C53700ACAACF /* MFViewController.swift in Sources */,
+				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,
+				318D72D527E0C53700ACAACF /* MFVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
