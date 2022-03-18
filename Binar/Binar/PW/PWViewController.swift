@@ -14,6 +14,7 @@ class PWViewController: UIViewController, UITableViewDataSource {
     struct AnimalName {
         let tilte: String
         let imageName: String
+        let description: String
     }
     
     
@@ -29,7 +30,7 @@ class PWViewController: UIViewController, UITableViewDataSource {
         let elm = Animal.list
         let mirror = Mirror(reflecting: elm)
         for child in mirror.children  {
-            data.append(AnimalName(tilte: child.value as! String, imageName: "\(child.value).jpg"))
+            data.append(AnimalName(tilte: child.value as! String, imageName: "\(child.value).jpg", description: "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."))
         }
 
     }
@@ -46,6 +47,7 @@ class PWViewController: UIViewController, UITableViewDataSource {
         cell.label.text = animal.tilte
         
         cell.iconImageView.image = UIImage(named: animal.imageName) ?? UIImage(named: "150x150")
+        cell.textField.text = animal.description
 //        let url = URL(string:  animal.imageName)!
 //        cell.iconImageView.kf.setImage(with: url)
 //        if let data = try? Data(contentsOf: url) {
