@@ -33,7 +33,7 @@ final class DashboardViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row: Int = indexPath.row // selected row
-        selectedStudent = Student.sorted[row] // get Student from sorted at number of row
+        selectedStudent = displayedStudents[row] // get Student from sorted at number of row
         switch selectedStudent {
         case .ArifLuthfi:
             goToARViewController()
