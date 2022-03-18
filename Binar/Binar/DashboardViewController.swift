@@ -132,7 +132,7 @@ extension DashboardViewController {
     func goToMFVC() {
         guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "MFMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "MFVC") as? MFVC else {
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "MFViewController") as? MFViewController else {
             return
         }
         viewController.name = selectedStudent.name
