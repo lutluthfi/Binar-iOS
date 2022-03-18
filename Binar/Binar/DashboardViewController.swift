@@ -38,7 +38,7 @@ final class DashboardViewController: UITableViewController {
         case .ArifLuthfi:
             goToARViewController()
         case .TioHardadi:
-            goToARViewController()
+            goToTHViewController()
         case .MaulanaFrasha:
             goToMFVC()
         case .AdrianKurniawan:
