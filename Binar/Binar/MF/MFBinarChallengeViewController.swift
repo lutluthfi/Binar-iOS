@@ -7,18 +7,18 @@
 
 import UIKit
 
-final class BC: UIViewController {
+final class MFBinarChallengeViewController: UIViewController {
     
-    @IBOutlet weak var a: UITextField!
-    @IBOutlet weak var b: UITextField!
-    @IBOutlet weak var hasil: UILabel!
-    @IBOutlet weak var gambar: UIImageView!
+    @IBOutlet weak var valueALabel: UITextField!
+    @IBOutlet weak var valueBLabel: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        a.keyboardType = .numberPad
-        b.keyboardType = .numberPad
+        valueALabel.keyboardType = .numberPad
+        valueBLabel.keyboardType = .numberPad
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
@@ -29,18 +29,18 @@ final class BC: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func hitung(_ sender: Any) {
-        let a = Int(a.text!) ?? 0
-        let b = Int(b.text!) ?? 0
-        let total = a + b
-        hasil.text = String(total)
+    @IBAction func summary(_ sender: Any) {
+        let valueA = Int(valueALabel.text!) ?? 0
+        let valueB = Int(valueBLabel.text!) ?? 0
+        let summary = valueA + valueB
+        resultLabel.text = String(summary)
         
         let img1 = UIImage(systemName: "sun.min")
         let img2 = UIImage(systemName: "moon")
         let img3 = UIImage(systemName: "cloud")
         let randomImage = [img1, img2, img3]
         
-        gambar.image = randomImage.randomElement()!!
+        imageView.image = randomImage.randomElement()!!
         
     }
 }

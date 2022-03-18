@@ -14,7 +14,7 @@
         <!--MVFC-->
         <scene sceneID="FCV-xG-SJu">
             <objects>
-                <tabBarController storyboardIdentifier="MFVC" title="MVFC" id="aQW-eA-dYD" customClass="MFVC" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MFViewController" title="MVFC" id="aQW-eA-dYD" customClass="MFViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wnS-Dt-umR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -67,10 +67,10 @@
             </objects>
             <point key="canvasLocation" x="-313" y="131"/>
         </scene>
-        <!--FC-->
+        <!--Fasil Challenge View Controller-->
         <scene sceneID="l49-6c-vTu">
             <objects>
-                <viewController id="261-5n-XWZ" customClass="FC" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="261-5n-XWZ" customClass="MFFasilChallengeViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aj9-f1-cPq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="654" y="131"/>
         </scene>
-        <!--BC-->
+        <!--Binar Challenge View Controller-->
         <scene sceneID="XFx-20-trb">
             <objects>
-                <viewController id="1gy-1j-JyQ" customClass="BC" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1gy-1j-JyQ" customClass="MFBinarChallengeViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PVa-BG-Z3h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +172,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="hitung:" destination="1gy-1j-JyQ" eventType="touchUpInside" id="7fb-5n-oWW"/>
+                                    <action selector="summary:" destination="1gy-1j-JyQ" eventType="touchUpInside" id="R2H-wC-g0B"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HASIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t15-PU-qei">
@@ -218,10 +218,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="ks4-5T-FuA"/>
                     <connections>
-                        <outlet property="a" destination="REt-2v-mjQ" id="YkU-NT-oLX"/>
-                        <outlet property="b" destination="t1s-zC-Fbz" id="qMz-5z-IJq"/>
-                        <outlet property="gambar" destination="jRP-U7-7Ah" id="e5t-pA-0yr"/>
-                        <outlet property="hasil" destination="t15-PU-qei" id="ESM-F6-TBR"/>
+                        <outlet property="imageView" destination="jRP-U7-7Ah" id="7hh-GB-fCr"/>
+                        <outlet property="resultLabel" destination="t15-PU-qei" id="WSi-2s-sZg"/>
+                        <outlet property="valueALabel" destination="REt-2v-mjQ" id="WnN-tl-thr"/>
+                        <outlet property="valueBLabel" destination="t1s-zC-Fbz" id="jKD-WO-uDw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBD-fa-6Mv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

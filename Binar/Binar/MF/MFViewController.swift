@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MFVC: UITabBarController {
+final class MFViewController: UITabBarController {
     var name: String?
     
     override func viewDidLoad() {

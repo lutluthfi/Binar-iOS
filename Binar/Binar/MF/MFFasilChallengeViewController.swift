@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class FC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+final class MFFasilChallengeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var animalList = Animal.list
     @IBOutlet weak var sortButton: UIButton!
