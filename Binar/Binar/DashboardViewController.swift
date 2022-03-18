@@ -53,6 +53,8 @@ final class DashboardViewController: UITableViewController {
             goToDPViewController()
         case .TatangSulaeman:
             goToTSViewController()
+        case .BagasIlham:
+            goToBIViewController()
         default:
             break
         }
@@ -198,6 +200,19 @@ extension DashboardViewController {
             return
         }
 
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: goToBIViewController
+extension DashboardViewController {
+    func goToBIViewController() {
+        guard let selectedStudent = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "BIViewController") as? BIViewController else {
+            return
+        }
+        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
