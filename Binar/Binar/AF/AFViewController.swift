@@ -26,7 +26,7 @@ class AFViewController: UIViewController {
       setupAllComponent()
       searchController.searchResultsUpdater = self
       searchController.delegate = self
-      
+      searchController.searchBar.delegate = self
         // Do any additional setup after loading the view.
     }
   
@@ -45,7 +45,7 @@ class AFViewController: UIViewController {
   
 }
 
-extension AFViewController: UISearchControllerDelegate, UISearchResultsUpdating {
+extension AFViewController: UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
   
   func updateSearchResults(for searchController: UISearchController) {
     guard let searchText = searchController.searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
@@ -64,6 +64,13 @@ extension AFViewController: UISearchControllerDelegate, UISearchResultsUpdating 
       self.animal = defaultAnimal
     }
     tableView.reloadData()
+  }
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    let animal: [String] = Animal.list.sorted()
+    self.animal = animal
+    tableView.reloadData()
+    
   }
 
 }

@@ -216,6 +216,7 @@ extension DashboardViewController {
     
     navigationController?.pushViewController(viewController, animated: true)
   }
+}
 // MARK: goToBIViewController
 extension DashboardViewController {
     func goToBIViewController() {
