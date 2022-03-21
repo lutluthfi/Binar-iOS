@@ -88,6 +88,15 @@ extension RDViewController: UITableViewDelegate,UITableViewDataSource {
         cell.textLabel?.text = displayedStudents[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alertController = UIAlertController(title: "Touch", message: "You are touching a \(displayedStudents[indexPath.row])!", preferredStyle: .alert)
+        
+        let cancel = UIAlertAction(title: "Back", style: .default)
+        alertController.addAction(cancel)
+        
+        present(alertController, animated: true)
+    }
 }
 
 class ThirtyDayCell: UITableViewCell {
