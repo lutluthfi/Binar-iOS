@@ -2,7 +2,7 @@
 //  AIViewController.swift
 //  Binar
 //
-//  Created by Akbar on 17/03/22.
+//  Created by Akbar on 21/03/22.
 //
 
 import UIKit

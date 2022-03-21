@@ -23,8 +23,10 @@
 		4FD234D527DAB530007514BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD234D327DAB530007514BA /* Main.storyboard */; };
 		4FD234D727DAB531007514BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD234D627DAB531007514BA /* Assets.xcassets */; };
 		4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FD234D827DAB531007514BA /* LaunchScreen.storyboard */; };
+		5401EB8B27E876B9009026E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5401EB8A27E876B9009026E4 /* Default-568h@2x.png */; };
+		5401EB8D27E878A1009026E4 /* AnimalAITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */; };
+		5401EB8F27E8791E009026E4 /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5401EB8E27E8791E009026E4 /* AIViewController.swift */; };
 		54751E3927E36AF100536139 /* AIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54751E3827E36AF100536139 /* AIMain.storyboard */; };
-		54751E3B27E36B2400536139 /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54751E3A27E36B2400536139 /* AIViewController.swift */; };
 		592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592D89A127E0CAC200FCE74D /* ADMain.storyboard */; };
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
@@ -55,8 +57,10 @@
 		4FD234D627DAB531007514BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FD234D927DAB531007514BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FD234DB27DAB531007514BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5401EB8A27E876B9009026E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAITableViewController.swift; sourceTree = "<group>"; };
+		5401EB8E27E8791E009026E4 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		54751E3827E36AF100536139 /* AIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
-		54751E3A27E36B2400536139 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		592D89A127E0CAC200FCE74D /* ADMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ADMain.storyboard; sourceTree = "<group>"; };
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 		4FD234C127DAB530007514BA = {
 			isa = PBXGroup;
 			children = (
+				5401EB8A27E876B9009026E4 /* Default-568h@2x.png */,
 				4FD234CC27DAB530007514BA /* Binar */,
 				4FD234CB27DAB530007514BA /* Products */,
 			);
@@ -161,7 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				54751E3827E36AF100536139 /* AIMain.storyboard */,
-				54751E3A27E36B2400536139 /* AIViewController.swift */,
+				5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */,
+				5401EB8E27E8791E009026E4 /* AIViewController.swift */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
 				54751E3927E36AF100536139 /* AIMain.storyboard in Resources */,
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
+				5401EB8B27E876B9009026E4 /* Default-568h@2x.png in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
 				318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */,
 				4FD234D527DAB530007514BA /* Main.storyboard in Resources */,
@@ -294,15 +301,16 @@
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
-				54751E3B27E36B2400536139 /* AIViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
 				01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */,
 				592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */,
+				5401EB8F27E8791E009026E4 /* AIViewController.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
+				5401EB8D27E878A1009026E4 /* AnimalAITableViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				318D72D527E0C53700ACAACF /* MFVC.swift in Sources */,
 			);

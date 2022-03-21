@@ -53,6 +53,8 @@ final class DashboardViewController: UITableViewController {
             goToDPViewController()
         case .TatangSulaeman:
             goToTSViewController()
+        case .AkbarIdris:
+            goToAIViewController()
         default:
             break
         }
@@ -192,7 +194,7 @@ extension DashboardViewController {
 // MARK: goToTSViewController
 extension DashboardViewController {
     func goToTSViewController() {
-        guard let selectedStudent = selectedStudent else { return }
+        guard selectedStudent != nil else { return }
         let storyboard = UIStoryboard(name: "TSMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "TSViewController") as? TSViewController else {
             return
@@ -206,7 +208,7 @@ extension DashboardViewController {
 // MARK: goToAIViewController
 extension DashboardViewController {
     func goToAIViewController() {
-        guard let selectedStudent = selectedStudent else { return }
+        guard selectedStudent != nil else { return }
         let storyboard = UIStoryboard(name: "AIMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "AIViewController") as? AIViewController else {
             return

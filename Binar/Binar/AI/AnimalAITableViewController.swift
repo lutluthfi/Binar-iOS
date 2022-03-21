@@ -1,0 +1,69 @@
+//
+//  AnimalAITableViewController.swift
+//  Binar
+//
+//  Created by Akbar on 21/03/22.
+//
+
+import UIKit
+
+  final class AnimalAITableViewController: UITableViewController {
+      @IBOutlet weak var AnimalSearchBar: UISearchBar!
+      @IBOutlet weak var randomAnimal: UIBarButtonItem!
+      var name: String?
+      var selectedAnimal: Animal?
+      var displayedAnimals: [String] = Animal.list.sorted()
+      override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+          let animalCount: Int = displayedAnimals.count
+          return animalCount
+      }
+      
+      override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+          let cell = tableView.dequeueReusableCell(withIdentifier: "AnimalTableCell", for: indexPath)
+
+          cell.textLabel?.text = displayedAnimals[indexPath.row]
+          
+          return cell
+      }
+
+      @IBAction func onRandomizeTouchUpInside(_ sender: UIButton) {
+          let randomAnimal: String = Animal.list.randomElement()!.lowercased()
+          let alertController = UIAlertController(title: "Hii!", message: "You are a \(randomAnimal)!", preferredStyle: .alert)
+          
+          let cancel = UIAlertAction(title: "Good Jobs!", style: .default)
+          alertController.addAction(cancel)
+                  
+          present(alertController, animated: true)
+      }
+      
+      override func viewDidLoad() {
+          super.viewDidLoad()
+          title = name! + "Animal List"
+      }
+
+  }
+
+  extension AnimalAITableViewController: UISearchBarDelegate {
+
+      func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+          let animalSearchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+          let isSearchTextNotEmpty = !animalSearchText.isEmpty
+          let animals: [String] = Animal.list
+          if isSearchTextNotEmpty {
+              let searchedAnimals: [String] = animals.filter {
+                  let animalSearchText: String = searchText.lowercased()
+                  let animalName: String = $0.lowercased()
+                  return animalName.contains(animalSearchText)
+              }
+              displayedAnimals = searchedAnimals
+          } else {
+              displayedAnimals = animals
+          }
+          tableView.reloadData()
+      }
+      
+      func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+          tableView.endEditing(true)
+      }
+  }
