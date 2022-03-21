@@ -37,6 +37,10 @@
 		4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B32427EB540400CAF144 /* NBViewController.swift */; };
 		4FF0B32A27EB542200CAF144 /* AIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0B32827EB542100CAF144 /* AIMain.storyboard */; };
 		4FF0B32B27EB542200CAF144 /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B32927EB542100CAF144 /* AIViewController.swift */; };
+		5401EB8B27E876B9009026E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5401EB8A27E876B9009026E4 /* Default-568h@2x.png */; };
+		5401EB8D27E878A1009026E4 /* AnimalAITableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */; };
+		5401EB8F27E8791E009026E4 /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5401EB8E27E8791E009026E4 /* AIViewController.swift */; };
+		54751E3927E36AF100536139 /* AIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54751E3827E36AF100536139 /* AIMain.storyboard */; };
 		592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592D89A127E0CAC200FCE74D /* ADMain.storyboard */; };
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
@@ -86,8 +90,10 @@
 		4FF0B32427EB540400CAF144 /* NBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBViewController.swift; sourceTree = "<group>"; };
 		4FF0B32827EB542100CAF144 /* AIMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
 		4FF0B32927EB542100CAF144 /* AIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
+		5401EB8A27E876B9009026E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAITableViewController.swift; sourceTree = "<group>"; };
+		5401EB8E27E8791E009026E4 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		54751E3827E36AF100536139 /* AIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
-		54751E3A27E36B2400536139 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		592D89A127E0CAC200FCE74D /* ADMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ADMain.storyboard; sourceTree = "<group>"; };
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
@@ -176,6 +182,7 @@
 		4FD234C127DAB530007514BA = {
 			isa = PBXGroup;
 			children = (
+				5401EB8A27E876B9009026E4 /* Default-568h@2x.png */,
 				4FD234CC27DAB530007514BA /* Binar */,
 				4FD234CB27DAB530007514BA /* Products */,
 				91AFCF00E44EB4084FF9AB92 /* Frameworks */,
@@ -262,11 +269,12 @@
 			path = NB;
 			sourceTree = "<group>";
 		};
-		4FF0B32727EB542100CAF144 /* AI */ = {
+		54751E3727E36A9900536139 /* AI */ = {
 			isa = PBXGroup;
 			children = (
-				4FF0B32827EB542100CAF144 /* AIMain.storyboard */,
-				4FF0B32927EB542100CAF144 /* AIViewController.swift */,
+				54751E3827E36AF100536139 /* AIMain.storyboard */,
+				5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */,
+				5401EB8E27E8791E009026E4 /* AIViewController.swift */,
 			);
 			path = AI;
 			sourceTree = "<group>";
@@ -417,6 +425,7 @@
 				0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */,
 				38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */,
 				CEEACC5F27E24FCD00445147 /* circular-std-medium-500.ttf in Resources */,
+				5401EB8B27E876B9009026E4 /* Default-568h@2x.png in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
 				318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */,
 				FF98B2DF27E3643300830B07 /* ATMain.storyboard in Resources */,
@@ -448,11 +457,13 @@
 				592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */,
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,
 				4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */,
+				5401EB8F27E8791E009026E4 /* AIViewController.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
 				4FF0B32B27EB542200CAF144 /* AIViewController.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
+				5401EB8D27E878A1009026E4 /* AnimalAITableViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
 				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,

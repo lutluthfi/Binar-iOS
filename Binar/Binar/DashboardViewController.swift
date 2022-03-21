@@ -65,6 +65,8 @@ final class DashboardViewController: UITableViewController {
             goToBIViewController()
         case .NurinBerlianna:
             goToNBViewController()
+        case .AkbarIdris:
+            goToAIViewController()
         default:
             break
         }
@@ -259,7 +261,7 @@ extension DashboardViewController{
 // MARK: goToAIViewController
 extension DashboardViewController {
     func goToAIViewController() {
-        guard let selectedStudent = selectedStudent else { return }
+        guard selectedStudent != nil else { return }
         let storyboard = UIStoryboard(name: "AIMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "AIViewController") as? AIViewController else {
             return
