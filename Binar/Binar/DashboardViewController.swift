@@ -118,13 +118,11 @@ extension DashboardViewController {
 
 // MARK: goToPWViewController
 extension DashboardViewController{
-    func goToPWViewController(){
-        guard let selectedStudent = selectedStudent else {return}
+    func goToPWViewController() {
         let storyboard = UIStoryboard(name: "PWMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "PWViewController") as? PWViewController else{
             return
         }
-        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -193,7 +191,6 @@ extension DashboardViewController {
 // MARK: goToTSViewController
 extension DashboardViewController {
     func goToTSViewController() {
-        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "TSMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "TSViewController") as? TSViewController else {
             return
