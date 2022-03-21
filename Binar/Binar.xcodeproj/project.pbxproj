@@ -33,6 +33,9 @@
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
+		7B1CE0BF27E369FE000046A6 /* DSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1CE0BE27E369FE000046A6 /* DSViewController.swift */; };
+		7B1CE0C127E36A24000046A6 /* DSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1CE0C027E36A24000046A6 /* DSMain.storyboard */; };
+		7B1CE0C427E3741A000046A6 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1CE0C327E3741A000046A6 /* AnimalTableViewCell.swift */; };
 		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
 		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
 		CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */; };
@@ -72,6 +75,9 @@
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
+		7B1CE0BE27E369FE000046A6 /* DSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSViewController.swift; sourceTree = "<group>"; };
+		7B1CE0C027E36A24000046A6 /* DSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DSMain.storyboard; sourceTree = "<group>"; };
+		7B1CE0C327E3741A000046A6 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
 		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
 		CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -169,8 +175,12 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+
+				7B1CE0C227E36A30000046A6 /* DS */,
+
 				CEEACC5C27E24D5400445147 /* Fonts */,
 				38E0C76B27E3248B009D7A82 /* BI */,
+
 				72565B0C27E0DAA600EAF51C /* TS */,
 				22DD5C8027E0D580003024DC /* DP */,
 				E940649D27E0D43700D8204C /* RD */,
@@ -212,11 +222,22 @@
 			path = TS;
 			sourceTree = "<group>";
 		};
+
+		7B1CE0C227E36A30000046A6 /* DS */ = {
+			isa = PBXGroup;
+			children = (
+				7B1CE0BE27E369FE000046A6 /* DSViewController.swift */,
+				7B1CE0C027E36A24000046A6 /* DSMain.storyboard */,
+				7B1CE0C327E3741A000046A6 /* AnimalTableViewCell.swift */,
+			);
+			path = DS;
+
 		91AFCF00E44EB4084FF9AB92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+
 			sourceTree = "<group>";
 		};
 		A4D3AA5327E0C8A900565DEE /* AK */ = {
@@ -321,6 +342,7 @@
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
+				7B1CE0C127E36A24000046A6 /* DSMain.storyboard in Resources */,
 				A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */,
 				72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */,
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
@@ -353,6 +375,8 @@
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
 				01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */,
+				7B1CE0C427E3741A000046A6 /* AnimalTableViewCell.swift in Sources */,
+				7B1CE0BF27E369FE000046A6 /* DSViewController.swift in Sources */,
 				592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
