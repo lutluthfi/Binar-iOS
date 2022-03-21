@@ -70,8 +70,8 @@ final class THViewController: UIViewController {
         let confirm = UIAlertAction(title: "add", style: .default) { [self] action in
             guard alertController.textFields?.isEmpty == false else { return }
             let textField: UITextField? = alertController.textFields?[0]
-            guard let textField = textField else { return }
-            let text: String? = textField.text
+            guard let _textField = textField else { return }
+            let text: String? = _textField.text
             animalList.append(text!.capitalized)
             animalList = animalList.sorted { $0 < $1 }
             reloadAnimalList()
@@ -129,8 +129,8 @@ extension THViewController: UITableViewDataSource, UITableViewDelegate {
         let save = UIAlertAction(title: "Save", style: .default) { [self] action in
             guard alertController.textFields?.isEmpty == false else { return }
             let textField: UITextField? = alertController.textFields?[0]
-            guard let textField = textField else { return }
-            let text: String? = textField.text
+            guard let _textField = textField else { return }
+            let text: String? = _textField.text
             animalList.append(text!.capitalized)
             if let index = animalList.firstIndex(of: animalName) {
                 animalList.remove(at: index)
