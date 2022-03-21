@@ -47,6 +47,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="animalSearchBar" destination="1pH-6g-DpZ" id="LRz-km-mxV"/>
                         <outlet property="animalTable" destination="jdU-8B-vyI" id="4Rx-Cj-lak"/>
                     </connections>
                 </viewController>
