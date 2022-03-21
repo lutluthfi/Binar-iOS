@@ -54,14 +54,24 @@ final class DashboardViewController: UITableViewController {
         case .TatangSulaeman:
             goToTSViewController()
 <<<<<<< HEAD
+<<<<<<< HEAD
         case .NurinBerlianna:
             goToNBViewController()
 =======
+=======
+        case .Daffashiddiq:
+            goToDSViewController()
+>>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
         case .AdjiFirmansyah:
             goToAFViewController()
         case .BagasIlham:
             goToBIViewController()
+<<<<<<< HEAD
 >>>>>>> master
+=======
+        case .NurinBerlianna:
+            goToNBViewController()
+>>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
         default:
             break
         }
@@ -123,13 +133,11 @@ extension DashboardViewController {
 
 // MARK: goToPWViewController
 extension DashboardViewController{
-    func goToPWViewController(){
-        guard let selectedStudent = selectedStudent else {return}
+    func goToPWViewController() {
         let storyboard = UIStoryboard(name: "PWMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "PWViewController") as? PWViewController else{
             return
         }
-        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -198,7 +206,6 @@ extension DashboardViewController {
 // MARK: goToTSViewController
 extension DashboardViewController {
     func goToTSViewController() {
-        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "TSMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "TSViewController") as? TSViewController else {
             return
@@ -209,16 +216,25 @@ extension DashboardViewController {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /// MARK: goToNBViewController
+=======
+
+// MARK: goToDSViewController
+>>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
 extension DashboardViewController {
-    func goToNBViewController() {
+    func goToDSViewController() {
         guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "NBMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "NBViewController") as? NBViewController else {
+        let storyboard = UIStoryboard(name: "DSMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DSViewController") as? DSViewController else {
             return
         }
 
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
 extension DashboardViewController {
   func goToAFViewController() {
     guard let selectedStudent = selectedStudent else { return }
@@ -239,7 +255,10 @@ extension DashboardViewController {
             return
         }
         viewController.name = selectedStudent.name
+<<<<<<< HEAD
 >>>>>>> master
+=======
+>>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
