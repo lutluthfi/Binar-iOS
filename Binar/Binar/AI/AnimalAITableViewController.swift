@@ -7,10 +7,12 @@
 
 import UIKit
 
-  final class AnimalAITableViewController: UITableViewController {
-      @IBOutlet weak var AnimalSearchBar: UISearchBar!
-      @IBOutlet weak var randomAnimal: UIBarButtonItem!
-      var name: String?
+  final class AIAnimalTableViewController: UITableViewController {
+   
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet var tableViewAnimal: UITableView!
+    
+    var name: String?
       var selectedAnimal: Animal?
       var displayedAnimals: [String] = Animal.list.sorted()
       override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,12 +41,12 @@ import UIKit
       
       override func viewDidLoad() {
           super.viewDidLoad()
-          title = name! + "Animal List"
+        title = "Name's Animal List"
       }
 
   }
 
-  extension AnimalAITableViewController: UISearchBarDelegate {
+  extension AIAnimalTableViewController: UISearchBarDelegate {
 
       func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
           let animalSearchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -66,4 +68,5 @@ import UIKit
       func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
           tableView.endEditing(true)
       }
+    
   }

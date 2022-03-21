@@ -263,7 +263,7 @@ extension DashboardViewController {
     func goToAIViewController() {
         guard selectedStudent != nil else { return }
         let storyboard = UIStoryboard(name: "AIMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AIViewController") as? AIViewController else {
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AIAnimalTableViewController") as? AIAnimalTableViewController else {
             return
         }
 
