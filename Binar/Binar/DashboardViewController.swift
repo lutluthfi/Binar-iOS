@@ -124,7 +124,7 @@ extension DashboardViewController{
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "PWViewController") as? PWViewController else{
             return
         }
-        viewController.name = selectedStudent.name
+//        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
