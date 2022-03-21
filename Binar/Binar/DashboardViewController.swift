@@ -96,8 +96,7 @@ extension DashboardViewController: UISearchBarDelegate {
 extension DashboardViewController {
     func goToARViewController() {
         guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "ARMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController else {
+        guard let viewController = ARViewController.initViewController(from: "ARMain") else {
             return
         }
         viewController.name = selectedStudent.name

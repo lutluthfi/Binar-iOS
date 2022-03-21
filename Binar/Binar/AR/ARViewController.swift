@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ARViewController: UIViewController {
+final class ARViewController: UIViewController, StoryboardInstantiable {
     @IBOutlet weak var alertButton: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var firstStackViewLabel: UILabel!
