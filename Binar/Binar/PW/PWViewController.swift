@@ -46,14 +46,16 @@ class PWViewController: UIViewController, UITableViewDataSource {
         
         cell.label.text = animal.tilte
         
-        cell.iconImageView.image = UIImage(named: animal.imageName) ?? UIImage(named: "150x150")
+        let imageView = UIImage(named: animal.imageName) ?? UIImage(named: "150x150")
+        
+        cell.iconImageView.image = imageView
+        cell.iconImageView.layer.masksToBounds = true;
+        cell.iconImageView.layer.cornerRadius = 25
         cell.textField.text = animal.description
-//        let url = URL(string:  animal.imageName)!
-//        cell.iconImageView.kf.setImage(with: url)
-//        if let data = try? Data(contentsOf: url) {
-//            // Create Image and Update Image View
-//
-//        }
+        cell.textField.clipsToBounds = true;
+        cell.textField.layer.cornerRadius = 10
+        cell.textField.textContainer.lineFragmentPadding = 10
+
     
         
         return cell
