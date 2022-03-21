@@ -7,17 +7,28 @@
 
 import UIKit
 
-class ZKViewController: UIViewController {
+final class ZKViewController: UITableViewController {
 
-    @IBOutlet weak var titleLabel: UILabel!
     var name: String?
+    var selectedAnimal: Animal?
+    
+    var displayedAnimal: [String] = Animal.list.sorted()
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleLabel.text = name
         // Do any additional setup after loading the view.
     }
-    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            let displayedAnimal : Int = displayedAnimal.count
+              return displayedAnimal
+          }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath)
 
+            cell.textLabel?.text = displayedAnimal[indexPath.row]
+
+            return cell
+        }
+   
     /*
     // MARK: - Navigation
 
