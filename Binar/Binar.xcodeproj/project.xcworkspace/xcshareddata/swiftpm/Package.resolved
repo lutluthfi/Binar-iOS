@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "cardslider",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Ramotion/cardslider",
+      "state" : {
+        "revision" : "016e2996d9f9fc20ac108ad82fd9fce007546be1",
+        "version" : "0.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
