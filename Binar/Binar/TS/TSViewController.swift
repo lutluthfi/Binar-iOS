@@ -9,9 +9,13 @@ import UIKit
 
 class TSViewController: UIViewController {
 
+    @IBOutlet weak var animalTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        animalTable.delegate = self
+        animalTable.dataSource = self
         // Do any additional setup after loading the view.
     }
     
@@ -26,4 +30,23 @@ class TSViewController: UIViewController {
     }
     */
 
+}
+
+extension TSViewController: UITableViewDelegate,UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Animal.list.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = animalTable.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath)
+        cell.textLabel!.text = Animal.list[indexPath.row]
+        return cell
+    }
+    
+    
 }
