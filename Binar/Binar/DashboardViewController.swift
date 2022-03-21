@@ -53,15 +53,12 @@ final class DashboardViewController: UITableViewController {
             goToDPViewController()
         case .TatangSulaeman:
             goToTSViewController()
-
         case .Daffashiddiq:
             goToDSViewController()
-
         case .AdjiFirmansyah:
             goToAFViewController()
         case .BagasIlham:
             goToBIViewController()
-
         default:
             break
         }
@@ -209,24 +206,26 @@ extension DashboardViewController {
 // MARK: goToDSViewController
 extension DashboardViewController {
     func goToDSViewController() {
-        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "DSMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "DSViewController") as? DSViewController else {
             return
         }
-
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
 
 extension DashboardViewController {
-  func goToAFViewController() {
-    guard let selectedStudent = selectedStudent else { return }
-    let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
-    
-    guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
-    viewController.name = selectedStudent.name
-    
-    navigationController?.pushViewController(viewController, animated: true)
-  }
+    func goToAFViewController() {
+        guard let selectedStudent = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
+        viewController.name = selectedStudent.name
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
+        
 // MARK: goToBIViewController
 extension DashboardViewController {
     func goToBIViewController() {
