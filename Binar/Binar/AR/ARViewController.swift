@@ -31,8 +31,8 @@ final class ARViewController: UIViewController {
         let confirm = UIAlertAction(title: "Confirm", style: .default) { action in
             guard alertController.textFields?.isEmpty == false else { return }
             let textField: UITextField? = alertController.textFields?[0]
-            guard let textField = textField else { return }
-            let text: String? = textField.text
+            guard let _textField = textField else { return }
+            let text: String? = _textField.text
             self.textLabel.text = text
         }
         alertController.addAction(confirm)

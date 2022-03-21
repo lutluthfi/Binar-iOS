@@ -9,28 +9,28 @@ import UIKit
 
 final class DashboardViewController: UITableViewController {
     var selectedStudent: Student?
-
+    
     var displayedStudents: [Student] = Student.sorted
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let studentCount: Int = displayedStudents.count
         return studentCount
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentTableCell", for: indexPath)
-
+        
         let row: Int = indexPath.row
         let student: Student = displayedStudents[row]
         cell.textLabel?.text = student.name
-
+        
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row: Int = indexPath.row // selected row
         selectedStudent = displayedStudents[row] // get Student from sorted at number of row
@@ -65,13 +65,13 @@ final class DashboardViewController: UITableViewController {
 
 extension DashboardViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-
+        
     }
-
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         tableView.endEditing(true)
     }
-
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let _searchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isSearchTextNotEmpty = !_searchText.isEmpty
@@ -207,15 +207,15 @@ extension DashboardViewController {
 }
 
 extension DashboardViewController {
-    func goToAFViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
-
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
-        viewController.name = selectedStudent.name
-
-        navigationController?.pushViewController(viewController, animated: true)
-    }
+  func goToAFViewController() {
+    guard let selectedStudent = selectedStudent else { return }
+    let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
+    
+    guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
+    viewController.name = selectedStudent.name
+    
+    navigationController?.pushViewController(viewController, animated: true)
+  }
 }
 // MARK: goToBIViewController
 extension DashboardViewController {

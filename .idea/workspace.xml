@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="666ea3f9-92fb-453f-8a14-468557b03761" name="Changes" comment="third init for CardSlider">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BinarAcademy.playground/Pages/Challenge OOP.xcplaygroundpage/Contents.swift" beforeDir="false" afterPath="$PROJECT_DIR$/BinarAcademy.playground/Pages/Challenge OOP.xcplaygroundpage/Contents.swift" afterDir="false" />
-    </list>
+    <list default="true" id="666ea3f9-92fb-453f-8a14-468557b03761" name="Changes" comment="RESOLVE CONFLICT" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +74,7 @@
       <workItem from="1647520236244" duration="186000" />
       <workItem from="1647594789177" duration="27000" />
       <workItem from="1647858537479" duration="1758000" />
+      <workItem from="1647860546413" duration="398000" />
     </task>
     <task id="LOCAL-00001" summary="second commit">
       <created>1644932088877</created>
@@ -106,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647520341338</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init back DashboardViewController.swift">
+      <created>1647860604386</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647860604386</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +133,8 @@
     <MESSAGE value="add changes" />
     <MESSAGE value="challenge" />
     <MESSAGE value="third init for CardSlider" />
-    <option name="LAST_COMMIT_MESSAGE" value="third init for CardSlider" />
+    <MESSAGE value="init back DashboardViewController.swift" />
+    <MESSAGE value="RESOLVE CONFLICT" />
+    <option name="LAST_COMMIT_MESSAGE" value="RESOLVE CONFLICT" />
   </component>
 </project>
