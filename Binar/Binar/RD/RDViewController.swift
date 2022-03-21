@@ -11,8 +11,6 @@ final class RDViewController: UIViewController {
     var name: String?
     private var displayedAnimals: [String] = Animal.list.sorted()
     
- 
-    
     private let tableView: UITableView = {
           let tv = UITableView()
           tv.backgroundColor = UIColor.white
@@ -21,13 +19,11 @@ final class RDViewController: UIViewController {
           return tv
       }()
 
-    
     private let searchVC = UISearchController(searchResultsController: nil)
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
+        setupNavigationBarItem()
         setupTableView()
         createSearchBar()
     }
@@ -56,6 +52,18 @@ final class RDViewController: UIViewController {
     private func reloadDataTableView() {
         let animals: [String] = Animal.list.sorted()
         displayedAnimals = animals
+        tableView.reloadData()
+    }
+    
+    private func setupNavigationBarItem() {
+        navigationItem.title = name
+        let sortedBtn = UIBarButtonItem(image: UIImage(systemName: "list.bullet"), style: .plain, target: self, action: #selector(onAddBarButtonItemTap))
+        
+        navigationItem.rightBarButtonItems = [sortedBtn]
+    }
+    
+    @objc func onAddBarButtonItemTap(_ sender: UIBarButtonItem) {
+        displayedAnimals = Animal.list.sorted().reversed()
         tableView.reloadData()
     }
     
@@ -114,7 +122,7 @@ extension RDViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 85
     }
 }
 
