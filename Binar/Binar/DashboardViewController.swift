@@ -167,13 +167,10 @@ extension DashboardViewController {
     }
 }
 
+// MARK: goToRDViewController
 extension DashboardViewController {
     func goToRDViewController() {
         guard let selectedStudent = selectedStudent else { return }
-//        let storyboard = UIStoryboard(name: "ADMain", bundle: nil)
-//        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ADViewController") as? ADViewController else {
-//            return
-//        }
         let viewController = RDViewController()
         viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
