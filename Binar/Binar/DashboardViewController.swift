@@ -53,25 +53,16 @@ final class DashboardViewController: UITableViewController {
             goToDPViewController()
         case .TatangSulaeman:
             goToTSViewController()
-<<<<<<< HEAD
-<<<<<<< HEAD
-        case .NurinBerlianna:
-            goToNBViewController()
-=======
-=======
         case .Daffashiddiq:
             goToDSViewController()
->>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
+        case .Daffashiddiq:
+            goToDSViewController()
         case .AdjiFirmansyah:
             goToAFViewController()
         case .BagasIlham:
             goToBIViewController()
-<<<<<<< HEAD
->>>>>>> master
-=======
         case .NurinBerlianna:
             goToNBViewController()
->>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
         default:
             break
         }
@@ -109,8 +100,7 @@ extension DashboardViewController: UISearchBarDelegate {
 extension DashboardViewController {
     func goToARViewController() {
         guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "ARMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController else {
+        guard let viewController = ARViewController.initViewController(from: "ARMain") else {
             return
         }
         viewController.name = selectedStudent.name
@@ -215,37 +205,29 @@ extension DashboardViewController {
     }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/// MARK: goToNBViewController
-=======
-
 // MARK: goToDSViewController
->>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
 extension DashboardViewController {
     func goToDSViewController() {
-        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "DSMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "DSViewController") as? DSViewController else {
             return
         }
-
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
-extension DashboardViewController {
-  func goToAFViewController() {
-    guard let selectedStudent = selectedStudent else { return }
-    let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
-    
-    guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
-    viewController.name = selectedStudent.name
-    
-    navigationController?.pushViewController(viewController, animated: true)
-  }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
+
+extension DashboardViewController {
+    func goToAFViewController() {
+        guard let selectedStudent = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
+        viewController.name = selectedStudent.name
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+        
 // MARK: goToBIViewController
 extension DashboardViewController {
     func goToBIViewController() {
@@ -255,10 +237,6 @@ extension DashboardViewController {
             return
         }
         viewController.name = selectedStudent.name
-<<<<<<< HEAD
->>>>>>> master
-=======
->>>>>>> b51bc70182c5ce7682b325c6ed37358e69111187
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
