@@ -18,6 +18,8 @@
 		319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319CD7D227E28B25007F8239 /* MFFasilChallengeViewController.swift */; };
 		38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0C76C27E32498009D7A82 /* BIViewController.swift */; };
 		38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E0C76E27E324A2009D7A82 /* BIMain.storyboard */; };
+		47A0AD1E27E9F53900E2E4D3 /* DMMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A0AD1D27E9F53900E2E4D3 /* DMMain.storyboard */; };
+		47A0AD2027E9F54F00E2E4D3 /* DMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A0AD1F27E9F54F00E2E4D3 /* DMViewController.swift */; };
 		4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D72D427E0C53700ACAACF /* MFViewController.swift */; };
 		4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A40E27DF8AF700C9E2F7 /* Student.swift */; };
 		4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */; };
@@ -60,6 +62,8 @@
 		319CD7D227E28B25007F8239 /* MFFasilChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFFasilChallengeViewController.swift; sourceTree = "<group>"; };
 		38E0C76C27E32498009D7A82 /* BIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIViewController.swift; sourceTree = "<group>"; };
 		38E0C76E27E324A2009D7A82 /* BIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BIMain.storyboard; sourceTree = "<group>"; };
+		47A0AD1D27E9F53900E2E4D3 /* DMMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DMMain.storyboard; sourceTree = "<group>"; };
+		47A0AD1F27E9F54F00E2E4D3 /* DMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMViewController.swift; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		4F78A41527E0455300C9E2F7 /* ARMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARMain.storyboard; sourceTree = "<group>"; };
@@ -148,6 +152,15 @@
 			path = BI;
 			sourceTree = "<group>";
 		};
+		47A0AD1C27E9F4CD00E2E4D3 /* DM */ = {
+			isa = PBXGroup;
+			children = (
+				47A0AD1D27E9F53900E2E4D3 /* DMMain.storyboard */,
+				47A0AD1F27E9F54F00E2E4D3 /* DMViewController.swift */,
+			);
+			path = DM;
+			sourceTree = "<group>";
+		};
 		4F78A41227DF8C5F00C9E2F7 /* AR */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +190,7 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+				47A0AD1C27E9F4CD00E2E4D3 /* DM */,
 				4FD234DB27DAB531007514BA /* Info.plist */,
 				4F78A44827E2123300C9E2F7 /* Animal.swift */,
 				4FD234CD27DAB530007514BA /* AppDelegate.swift */,
@@ -346,6 +360,7 @@
 			files = (
 				CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */,
 				4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */,
+				47A0AD1E27E9F53900E2E4D3 /* DMMain.storyboard in Resources */,
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				4FF0B30E27E8DFD400CAF144 /* DSMain.storyboard in Resources */,
@@ -377,6 +392,7 @@
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
+				47A0AD2027E9F54F00E2E4D3 /* DMViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
