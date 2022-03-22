@@ -8,7 +8,7 @@
 **RD** = Raden Dimas  
 **BI** = Bagas Ilham  
 **TH** = Tio Hardadi  
-**PR** = Prana Apsara Wijaya  
+**PW** = Prana Apsara Wijaya  
 **DP** = Dimas Purnomo  
 **DS** = Daffashiddiq Nur Awan  
 **TS** = Tatang Sulaeman  
