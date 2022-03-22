@@ -27,19 +27,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GRp-11-2jF" id="kvO-jX-MRK">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1m0-Hj-5O1" userLabel="Title">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="1m0-Hj-5O1" firstAttribute="top" secondItem="kvO-jX-MRK" secondAttribute="topMargin" id="OxV-So-Wtm"/>
-                                                <constraint firstItem="1m0-Hj-5O1" firstAttribute="leading" secondItem="kvO-jX-MRK" secondAttribute="leadingMargin" id="WLb-un-BuU"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="1m0-Hj-5O1" secondAttribute="trailing" id="dSh-le-ooo"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -55,7 +42,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="table" destination="Jz1-It-8BK" id="Dzi-FQ-7Gb"/>
+                        <outlet property="tableView" destination="Jz1-It-8BK" id="mIs-CH-ccU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
