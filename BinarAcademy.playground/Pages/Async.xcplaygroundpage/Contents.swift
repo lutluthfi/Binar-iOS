@@ -4,7 +4,9 @@ import Foundation
 
 //: [Next](@next)
 
-
+func syncFunc() {
+    print("Doing sync work")
+}
 
 func asyncFunc() async {
     print("Doing async work")
@@ -18,15 +20,17 @@ func doRegularWork() {
     }
 }
 
-doRegularWork()
 
-
-func syncFunc() {
-    print("Doing sync work")
+func syncFunc2() {
+    print("Doing absolutely sync work")
 }
 
 
+
+
 syncFunc()
+doRegularWork()
+syncFunc2()
 
 
 
