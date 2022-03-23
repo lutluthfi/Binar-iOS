@@ -1,5 +1,5 @@
 //
-//  AnimalAITableViewController.swift
+//  AIAnimalTableViewController.swift
 //  Binar
 //
 //  Created by Akbar on 21/03/22.
