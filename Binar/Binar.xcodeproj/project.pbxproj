@@ -33,13 +33,16 @@
 		4FF0B30E27E8DFD400CAF144 /* DSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0B30B27E8DFD400CAF144 /* DSMain.storyboard */; };
 		4FF0B30F27E8DFD400CAF144 /* DSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B30C27E8DFD400CAF144 /* DSViewController.swift */; };
 		4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B31127E8E0A500CAF144 /* StoryboardInstantiable.swift */; };
+		4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B31D27EAB1D900CAF144 /* ARAnimalTableViewController.swift */; };
+		4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */; };
 		4FF0B32527EB540400CAF144 /* NBMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0B32327EB540400CAF144 /* NBMain.storyboard */; };
 		4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B32427EB540400CAF144 /* NBViewController.swift */; };
 		4FF0B33027EB561900CAF144 /* AIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0B32D27EB561900CAF144 /* AIMain.storyboard */; };
 		4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B32E27EB561900CAF144 /* AIViewController.swift */; };
 		4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B32F27EB561900CAF144 /* AIAnimalTableViewController.swift */; };
-		4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B31D27EAB1D900CAF144 /* ARAnimalTableViewController.swift */; };
-		4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */; };
+		4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33527EB6C4900CAF144 /* ARAnimalTableCell.swift */; };
+		4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */; };
+		4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */; };
 		592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592D89A127E0CAC200FCE74D /* ADMain.storyboard */; };
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
@@ -84,6 +87,8 @@
 		4FF0B30B27E8DFD400CAF144 /* DSMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DSMain.storyboard; sourceTree = "<group>"; };
 		4FF0B30C27E8DFD400CAF144 /* DSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewController.swift; sourceTree = "<group>"; };
 		4FF0B31127E8E0A500CAF144 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		4FF0B31D27EAB1D900CAF144 /* ARAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAnimalTableViewController.swift; sourceTree = "<group>"; };
+		4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		4FF0B32327EB540400CAF144 /* NBMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NBMain.storyboard; sourceTree = "<group>"; };
 		4FF0B32427EB540400CAF144 /* NBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBViewController.swift; sourceTree = "<group>"; };
 		4FF0B32827EB542100CAF144 /* AIMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
@@ -91,11 +96,12 @@
 		4FF0B32D27EB561900CAF144 /* AIMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
 		4FF0B32E27EB561900CAF144 /* AIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		4FF0B32F27EB561900CAF144 /* AIAnimalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIAnimalTableViewController.swift; sourceTree = "<group>"; };
+		4FF0B33527EB6C4900CAF144 /* ARAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAnimalTableCell.swift; sourceTree = "<group>"; };
+		4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARAnimalTableCell.xib; sourceTree = "<group>"; };
+		4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAITableViewController.swift; sourceTree = "<group>"; };
 		5401EB8E27E8791E009026E4 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		54751E3827E36AF100536139 /* AIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
-		4FF0B31D27EAB1D900CAF144 /* ARAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAnimalTableViewController.swift; sourceTree = "<group>"; };
-		4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		592D89A127E0CAC200FCE74D /* ADMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ADMain.storyboard; sourceTree = "<group>"; };
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
@@ -175,8 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				4F78A41527E0455300C9E2F7 /* ARMain.storyboard */,
-				4FF0B31D27EAB1D900CAF144 /* ARAnimalTableViewController.swift */,
 				4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */,
+				4FF0B33327EB6BEA00CAF144 /* Animal */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -246,6 +252,7 @@
 			children = (
 				4FF0B31127E8E0A500CAF144 /* StoryboardInstantiable.swift */,
 				4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */,
+				4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -281,6 +288,24 @@
 				4FF0B32F27EB561900CAF144 /* AIAnimalTableViewController.swift */,
 			);
 			path = AI;
+			sourceTree = "<group>";
+		};
+		4FF0B33327EB6BEA00CAF144 /* Animal */ = {
+			isa = PBXGroup;
+			children = (
+				4FF0B33427EB6BFC00CAF144 /* Cell */,
+				4FF0B31D27EAB1D900CAF144 /* ARAnimalTableViewController.swift */,
+			);
+			path = Animal;
+			sourceTree = "<group>";
+		};
+		4FF0B33427EB6BFC00CAF144 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4FF0B33527EB6C4900CAF144 /* ARAnimalTableCell.swift */,
+				4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		592D89A027E0CA5C00FCE74D /* AD */ = {
@@ -414,6 +439,7 @@
 				4FF0B30E27E8DFD400CAF144 /* DSMain.storyboard in Resources */,
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
 				A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */,
+				4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */,
 				72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */,
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
@@ -436,6 +462,7 @@
 			files = (
 				4FF0B30F27E8DFD400CAF144 /* DSViewController.swift in Sources */,
 				4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */,
+				4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */,
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
@@ -448,6 +475,7 @@
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
 				4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */,
 				01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */,
+				4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */,
 				592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */,
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,
 				4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */,
