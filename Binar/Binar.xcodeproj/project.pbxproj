@@ -209,6 +209,7 @@
 		};
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
+			children = (
 				2504065227EAF51200186517 /* RN */,
 				FF98B2DD27E363EE00830B07 /* AT */,
 				4FD234DB27DAB531007514BA /* Info.plist */,
