@@ -11,7 +11,7 @@ class ADViewController: UIViewController {
    
     
     var name: String?
-    var displayAnimal: [String] = Animal.list
+    var displayAnimal: [String] = Animal.listV1()
     var animalSectionTitles = [String]()
     var animalDictionary = [String:[String]]()
     

@@ -9,7 +9,7 @@ import UIKit
 
 final class MFFasilChallengeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    var animalList = Animal.list
+    var animalList = Animal.listV1()
     @IBOutlet weak var sortButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     

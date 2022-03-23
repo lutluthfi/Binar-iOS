@@ -33,7 +33,7 @@ final class DPViewController: UIViewController {
         }
     }
     
-    var displayAnimals: [String] = Animal.list
+    var displayAnimals: [String] = Animal.listV1()
     var name: String?
     
     override func viewDidLoad() {
@@ -72,7 +72,7 @@ extension DPViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let _searchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isSearchTextNotEmpty = !_searchText.isEmpty
-        let animals: [String] = Animal.list.sorted()
+        let animals: [String] = Animal.listV1().sorted()
         if isSearchTextNotEmpty {
             let searchedAnimals: [String] = animals.filter {
                 let _searchText: String = searchText.lowercased()

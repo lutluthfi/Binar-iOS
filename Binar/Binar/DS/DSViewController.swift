@@ -12,7 +12,7 @@ class DSViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
 
-    var animals = Animal.list
+    var animals = Animal.listV1()
     
     var sectionTitle = [String]()
     

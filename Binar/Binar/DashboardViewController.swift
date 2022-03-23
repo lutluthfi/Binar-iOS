@@ -95,11 +95,9 @@ extension DashboardViewController: UISearchBarDelegate {
 // MARK: goToARViewController
 extension DashboardViewController {
     func goToARViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        guard let viewController = ARViewController.initViewController(from: "ARMain") else {
+        guard let viewController = ARAnimalTableViewController.initViewController(from: "ARMain") else {
             return
         }
-        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
