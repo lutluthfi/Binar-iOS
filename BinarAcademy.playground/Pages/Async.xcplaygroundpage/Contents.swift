@@ -5,6 +5,7 @@ import Foundation
 //: [Next](@next)
 
 
+
 func asyncFunc() async {
     print("Doing async work")
 }
@@ -12,11 +13,20 @@ func asyncFunc() async {
 
 func doRegularWork() {
     Task {
+        try await Task.sleep(nanoseconds: 1_000_000_000)
         await asyncFunc()
     }
 }
 
-print(doRegularWork())
+doRegularWork()
+
+
+func syncFunc() {
+    print("Doing sync work")
+}
+
+
+syncFunc()
 
 
 
@@ -47,12 +57,7 @@ func getData() {
 getData()
 
 
-func syncFunc() {
-    print("Doing sync work")
-}
 
-
-print(syncFunc())
 
 struct MyJsonModel: Codable {
     var userId: Int = 0
@@ -89,23 +94,25 @@ goGrabSomething { result, Error in
         return
     }
     
-    print(data[0].title)
+    print("Name DispatchQueue: \(data[0].title)")
 }
 
 
-func goGrabSomethingAsyncAwait() async throws -> MyJsonModel? {
-    var model: MyJsonModel? = nil
+func goGrabSomethingAsyncAwait() async throws -> [MyJsonModel]? {
+    var model: [MyJsonModel]? = nil
     let ourl = URL(string: "https://jsonplaceholder.typicode.com/posts")
     if let url = ourl {
         let req = URLRequest(url: url)
         let (data, _) = try await URLSession.shared.data(for: req)
-        model = try JSONDecoder().decode(MyJsonModel.self, from: data)
+        model = try JSONDecoder().decode([MyJsonModel].self, from: data)
     }
     return model
 }
 
 
-async {
+
+Task{
     var myModel = try await goGrabSomethingAsyncAwait()
-    print("Name: \(myModel.)")
+    print("Name Async Await: \(myModel?[0].title)")
+
 }
