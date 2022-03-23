@@ -8,17 +8,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--RN View Controller-->
         <scene sceneID="QU2-Wv-Rg1">
             <objects>
-                <tableViewController storyboardIdentifier="RNViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2zp-QX-9b6" customClass="RNViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RNViewController" title="RN View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2zp-QX-9b6" customClass="RNViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bdn-qX-mQO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="aiN-Bz-GuC">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="2zp-QX-9b6" id="zTb-W7-Qq0"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnimalTableCell" id="D6o-Vz-kWT">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D6o-Vz-kWT" id="dni-eH-rAO">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -31,6 +39,9 @@
                             <outlet property="delegate" destination="2zp-QX-9b6" id="veM-N1-lfN"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="animalSearchBar" destination="aiN-Bz-GuC" id="Kyg-4m-HJo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ck3-09-kPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
