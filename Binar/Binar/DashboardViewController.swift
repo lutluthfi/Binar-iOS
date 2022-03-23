@@ -61,6 +61,8 @@ final class DashboardViewController: UITableViewController {
             goToAFViewController()
         case .BagasIlham:
             goToBIViewController()
+        case .RandySetiawan:
+            goToRNViewController()
         default:
             break
         }
@@ -252,3 +254,17 @@ extension DashboardViewController{
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
+
+// MARK: goToRNViewController
+extension DashboardViewController{
+    func goToRNViewController(){
+        guard let selectedStudent = selectedStudent else {return}
+        let storyboard = UIStoryboard(name: "RNMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RNViewController") as? RNViewController else{
+            return
+        }
+        viewController.name = selectedStudent.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
