@@ -45,6 +45,8 @@
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
 		CEEACC5F27E24FCD00445147 /* circular-std-medium-500.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CEEACC5D27E24D6D00445147 /* circular-std-medium-500.ttf */; };
 		E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940649E27E0D44E00D8204C /* RDViewController.swift */; };
+		FF98B2DF27E3643300830B07 /* ATMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF98B2DE27E3643300830B07 /* ATMain.storyboard */; };
+		FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF98B2E027E3646000830B07 /* ATViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,8 @@
 		CEDF88D027E0CFC800388847 /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
 		CEEACC5D27E24D6D00445147 /* circular-std-medium-500.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "circular-std-medium-500.ttf"; sourceTree = "<group>"; };
 		E940649E27E0D44E00D8204C /* RDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewController.swift; sourceTree = "<group>"; };
+		FF98B2DE27E3643300830B07 /* ATMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ATMain.storyboard; sourceTree = "<group>"; };
+		FF98B2E027E3646000830B07 /* ATViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,7 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+				FF98B2DD27E363EE00830B07 /* AT */,
 				4FD234DB27DAB531007514BA /* Info.plist */,
 				4F78A44827E2123300C9E2F7 /* Animal.swift */,
 				4FD234CD27DAB530007514BA /* AppDelegate.swift */,
@@ -283,6 +288,15 @@
 			path = RD;
 			sourceTree = "<group>";
 		};
+		FF98B2DD27E363EE00830B07 /* AT */ = {
+			isa = PBXGroup;
+			children = (
+				FF98B2DE27E3643300830B07 /* ATMain.storyboard */,
+				FF98B2E027E3646000830B07 /* ATViewController.swift */,
+			);
+			path = AT;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,6 +325,7 @@
 		4FD234C227DAB530007514BA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
@@ -359,6 +374,7 @@
 				CEEACC5F27E24FCD00445147 /* circular-std-medium-500.ttf in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
 				318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */,
+				FF98B2DF27E3643300830B07 /* ATMain.storyboard in Resources */,
 				4FD234D527DAB530007514BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +403,7 @@
 				592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */,
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
+				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
