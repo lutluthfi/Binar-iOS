@@ -255,3 +255,28 @@ extension DashboardViewController{
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
+
+// MARK: goToAIViewController
+extension DashboardViewController {
+    func goToAIViewController() {
+        guard let selectedStudent = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "AIMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AIViewController") as? AIViewController else {
+            return
+        }
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: goToNBViewController
+extension DashboardViewController {
+    func goToNBViewController() {
+        let storyboard = UIStoryboard(name: "NBMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "NBViewController") as? NBViewController else {
+            return
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
