@@ -65,6 +65,8 @@ final class DashboardViewController: UITableViewController {
             goToBIViewController()
         case .NurinBerlianna:
             goToNBViewController()
+        case .AkbarIdris:
+            goToAIViewController()
         default:
             break
         }
@@ -252,6 +254,31 @@ extension DashboardViewController{
             return
         }
         viewController.name = selectedStudent.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: goToAIViewController
+extension DashboardViewController {
+    func goToAIViewController() {
+        guard selectedStudent != nil else { return }
+        let storyboard = UIStoryboard(name: "AIMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AIAnimalTableViewController") as? AIAnimalTableViewController else {
+            return
+        }
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: goToNBViewController
+extension DashboardViewController {
+    func goToNBViewController() {
+        let storyboard = UIStoryboard(name: "NBMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "NBViewController") as? NBViewController else {
+            return
+        }
+        
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
