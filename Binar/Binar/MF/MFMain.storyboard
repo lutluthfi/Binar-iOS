@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dxj-IC-n1w">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -75,28 +75,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzs-Nm-x98">
-                                <rect key="frame" x="10" y="738" width="394" height="50"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="vKc-XQ-3FN"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sort"/>
-                                <connections>
-                                    <action selector="sortButtonTap:" destination="261-5n-XWZ" eventType="touchUpInside" id="SAo-A7-wvL"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yoX-oY-3Df">
-                                <rect key="frame" x="10" y="88" width="394" height="625"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yoX-oY-3Df">
+                                <rect key="frame" x="16" y="104" width="382" height="693"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="animalCell" id="V8z-By-FuW">
-                                        <rect key="frame" x="0.0" y="44.5" width="394" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="V8z-By-FuW" customClass="MFAnimalTableCell" customModule="Binar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="382" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="V8z-By-FuW" id="RHD-LI-Xew">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -106,18 +94,14 @@
                         <viewLayoutGuide key="safeArea" id="Tsa-Gr-KDN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Wzs-Nm-x98" firstAttribute="top" secondItem="yoX-oY-3Df" secondAttribute="bottom" constant="25" id="3Rm-S8-fRu"/>
-                            <constraint firstItem="Tsa-Gr-KDN" firstAttribute="bottom" secondItem="Wzs-Nm-x98" secondAttribute="bottom" constant="25" id="65i-FY-73X"/>
-                            <constraint firstItem="yoX-oY-3Df" firstAttribute="top" secondItem="Tsa-Gr-KDN" secondAttribute="top" id="AwE-CV-P1h"/>
-                            <constraint firstItem="Tsa-Gr-KDN" firstAttribute="trailing" secondItem="yoX-oY-3Df" secondAttribute="trailing" constant="10" id="GBv-Vq-nVR"/>
-                            <constraint firstItem="Tsa-Gr-KDN" firstAttribute="trailing" secondItem="Wzs-Nm-x98" secondAttribute="trailing" constant="10" id="NIH-94-waP"/>
-                            <constraint firstItem="yoX-oY-3Df" firstAttribute="leading" secondItem="Tsa-Gr-KDN" secondAttribute="leading" constant="10" id="ghG-Sb-YNF"/>
-                            <constraint firstItem="Wzs-Nm-x98" firstAttribute="leading" secondItem="Tsa-Gr-KDN" secondAttribute="leading" constant="10" id="ya7-SM-hLb"/>
+                            <constraint firstItem="Tsa-Gr-KDN" firstAttribute="bottom" secondItem="yoX-oY-3Df" secondAttribute="bottom" constant="16" id="FOq-jb-Uc6"/>
+                            <constraint firstItem="yoX-oY-3Df" firstAttribute="top" secondItem="Tsa-Gr-KDN" secondAttribute="top" constant="16" id="WpQ-lz-S5b"/>
+                            <constraint firstItem="Tsa-Gr-KDN" firstAttribute="trailing" secondItem="yoX-oY-3Df" secondAttribute="trailing" constant="16" id="erM-8I-kVs"/>
+                            <constraint firstItem="yoX-oY-3Df" firstAttribute="leading" secondItem="Tsa-Gr-KDN" secondAttribute="leading" constant="16" id="xLg-dI-EWg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ytW-tp-y6a"/>
                     <connections>
-                        <outlet property="sortButton" destination="Wzs-Nm-x98" id="TyC-5S-HTt"/>
                         <outlet property="tableView" destination="yoX-oY-3Df" id="5LW-Te-6ea"/>
                     </connections>
                 </viewController>
@@ -238,6 +222,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
