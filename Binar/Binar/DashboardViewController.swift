@@ -57,10 +57,14 @@ final class DashboardViewController: UITableViewController {
             goToATViewController()
         case .Daffashiddiq:
             goToDSViewController()
+        case .Daffashiddiq:
+            goToDSViewController()
         case .AdjiFirmansyah:
             goToAFViewController()
         case .BagasIlham:
             goToBIViewController()
+        case .NurinBerlianna:
+            goToNBViewController()
         default:
             break
         }
@@ -202,7 +206,6 @@ extension DashboardViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
-
 
 // MARK: goToDSViewController
 extension DashboardViewController {
