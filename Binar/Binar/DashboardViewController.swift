@@ -118,8 +118,7 @@ extension DashboardViewController {
 // MARK: goToPWViewController
 extension DashboardViewController{
     func goToPWViewController() {
-        let storyboard = UIStoryboard(name: "PWMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "PWViewController") as? PWViewController else{
+        guard let viewController = PWViewController.initViewController(from: "PWMain") else{
             return
         }
         navigationController?.pushViewController(viewController, animated: true)

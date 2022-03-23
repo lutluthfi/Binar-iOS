@@ -29,6 +29,7 @@ final class ARAnimalTableViewController: UITableViewController, StoryboardInstan
         cell.textLabel?.text = animal.name
         cell.detailTextLabel?.text = animal.description
         cell.imageView?.loadImage(resource: animal.photoUrlString)
+        cell.imageView?.backgroundColor = .gray
         
         return cell
     }

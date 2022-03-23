@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PWViewController: UIViewController, UITableViewDataSource {
+class PWViewController: UIViewController, UITableViewDataSource, StoryboardInstantiable {
     
     @IBOutlet weak var table: UITableView!
     
