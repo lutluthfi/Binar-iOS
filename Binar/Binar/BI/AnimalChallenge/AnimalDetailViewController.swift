@@ -18,6 +18,7 @@ final class AnimalDetail: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = name?.capitalized
         animalNameLabel.text = name
         animalDescLabel.text = desc
         animalImageView.loadImage(resource: imageUrlString)

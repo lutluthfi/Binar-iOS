@@ -161,9 +161,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="Vje-KL-dse">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Lfe-bX-E7M" id="k8m-L8-uon"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BIAnimalTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="100" rowHeight="100" id="vzb-Ov-K2v" customClass="BIAnimalTableCell" customModule="Binar" customModuleProvider="target">
-                                <rect key="frame" x="20" y="49.5" width="374" height="100"/>
+                                <rect key="frame" x="20" y="93.5" width="374" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vzb-Ov-K2v" id="mjx-Al-ePL">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
@@ -177,6 +185,9 @@
                             <outlet property="delegate" destination="Lfe-bX-E7M" id="QLO-G7-lC5"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="animalSearchBar" destination="Vje-KL-dse" id="P0y-lU-6rS"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvX-fJ-9dY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

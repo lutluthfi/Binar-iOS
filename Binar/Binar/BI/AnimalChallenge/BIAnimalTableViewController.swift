@@ -10,9 +10,11 @@ import UIKit
 final class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable {
     var displayedAnimals: [Animal] = Animal.listV2()
     var selectedAnimal: Animal?
-
+    @IBOutlet weak var animalSearchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Animal List"
         tableView.registerCell(BIAnimalTableCell.self)
     }
 
@@ -59,3 +61,28 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
         }
     }
 }
+
+extension BIAnimalTableViewController: UISearchBarDelegate {
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let animalSearchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        let isSearchTextNotEmpty = !animalSearchText.isEmpty
+        let animals: [Animal] = Animal.listV2()
+        if isSearchTextNotEmpty {
+            let searchedAnimals: [Animal] = animals.filter {
+                let animalSearchText: String = searchText.lowercased()
+                let animalName: String = $0.name.lowercased()
+                return animalName.contains(animalSearchText)
+            }
+            displayedAnimals = searchedAnimals
+        } else {
+            displayedAnimals = animals
+        }
+        tableView.reloadData()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        tableView.endEditing(true)
+    }
+}
+
