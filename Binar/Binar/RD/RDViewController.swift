@@ -9,7 +9,7 @@ import UIKit
 
 final class RDViewController: UIViewController {
     var name: String?
-    private var displayedAnimals: [String] = Animal.list.sorted()
+    private var displayedAnimals: [String] = Animal.listV1().sorted()
     
     private let tableView: UITableView = {
           let tv = UITableView()
@@ -50,7 +50,7 @@ final class RDViewController: UIViewController {
     }
     
     private func reloadDataTableView() {
-        let animals: [String] = Animal.list.sorted()
+        let animals: [String] = Animal.listV1().sorted()
         displayedAnimals = animals
         tableView.reloadData()
     }
@@ -63,7 +63,7 @@ final class RDViewController: UIViewController {
     }
     
     @objc func onAddBarButtonItemTap(_ sender: UIBarButtonItem) {
-        displayedAnimals = Animal.list.sorted().reversed()
+        displayedAnimals = Animal.listV1().sorted().reversed()
         tableView.reloadData()
     }
     
@@ -79,7 +79,7 @@ extension RDViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let _searchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isSearchTextNotEmpty = !_searchText.isEmpty
-        let animals: [String] = Animal.list.sorted()
+        let animals: [String] = Animal.listV1().sorted()
         if isSearchTextNotEmpty {
             let searchedAnimals: [String] = animals.filter {
                 let _searchText: String = searchText.lowercased()

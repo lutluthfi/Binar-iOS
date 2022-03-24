@@ -14,8 +14,8 @@ final class AKViewController: UITableViewController {
     var name: String?
     var count = 0
     
-    var animalAll: [String] = [Animal.list].self[0].sorted()
-    var displayedAnimals: [String] = [Animal.list][0].sorted()
+    var animalAll: [String] = [Animal.listV1()].self[0].sorted()
+    var displayedAnimals: [String] = [Animal.listV1()][0].sorted()
     
     override func viewDidLoad() {
         super.viewDidLoad()
