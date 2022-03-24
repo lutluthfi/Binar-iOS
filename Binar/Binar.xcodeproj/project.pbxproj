@@ -208,9 +208,17 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		383935B627ECFF000051A89C /* ChapterChallenge */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChapterChallenge;
+			sourceTree = "<group>";
+		};
 		38E0C76B27E3248B009D7A82 /* BI */ = {
 			isa = PBXGroup;
 			children = (
+				383935B627ECFF000051A89C /* ChapterChallenge */,
 				383935AB27ECE25B0051A89C /* AnimalChallenge */,
 				38E0C76E27E324A2009D7A82 /* BIMain.storyboard */,
 				38E0C76C27E32498009D7A82 /* BIViewController.swift */,
