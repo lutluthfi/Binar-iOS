@@ -14,7 +14,7 @@ class TSViewController: UIViewController {
     
     var selectedAnimal: Animal?
     
-    var displayedAnimal: [String] = Animal.list.sorted()
+    var displayedAnimal: [String] = Animal.listV1().sorted()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +71,7 @@ extension TSViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let _searchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isSearchTextNoEmpty = !_searchText.isEmpty
-        let animals: [String] = Animal.list.sorted()
+        let animals: [String] = Animal.listV1().sorted()
         if isSearchTextNoEmpty {
             let searchedAnimal: [String] = animals.filter {
                 let _searchText: String = searchText.lowercased()

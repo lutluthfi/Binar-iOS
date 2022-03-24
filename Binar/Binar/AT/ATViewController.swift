@@ -15,7 +15,7 @@ final class ATViewController: UITableViewController {
     
     var selectedAnimal: Animal?
     
-    var displayAnimals: [String] = Animal.list.sorted()
+    var displayAnimals: [String] = Animal.listV1().sorted()
     
    
     override func viewDidLoad() {
@@ -43,7 +43,7 @@ final class ATViewController: UITableViewController {
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             let findAnimal: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
             let isSearchTextNotEmpty = !findAnimal.isEmpty
-            let animals: [String] = Animal.list.sorted()
+            let animals: [String] = Animal.listV1().sorted()
             if isSearchTextNotEmpty {
                 let searchedAnimals: [String] = animals.filter {
                     let findAnimal : String = findAnimal.lowercased()

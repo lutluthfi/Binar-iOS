@@ -103,11 +103,9 @@ extension DashboardViewController: UISearchBarDelegate {
 // MARK: goToARViewController
 extension DashboardViewController {
     func goToARViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        guard let viewController = ARViewController.initViewController(from: "ARMain") else {
+        guard let viewController = ARAnimalTableViewController.initViewController(from: "ARMain") else {
             return
         }
-        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -128,8 +126,7 @@ extension DashboardViewController {
 // MARK: goToPWViewController
 extension DashboardViewController{
     func goToPWViewController() {
-        let storyboard = UIStoryboard(name: "PWMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "PWViewController") as? PWViewController else{
+        guard let viewController = PWViewController.initViewController(from: "PWMain") else{
             return
         }
         navigationController?.pushViewController(viewController, animated: true)
