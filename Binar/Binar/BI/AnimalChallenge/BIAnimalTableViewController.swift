@@ -9,6 +9,7 @@ import UIKit
 
 final class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable {
     var displayedAnimals: [Animal] = Animal.listV2()
+    var selectedAnimal: Animal?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,5 +41,21 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row: Int = indexPath.row
+        selectedAnimal = displayedAnimals[row]
+        for animal in Animal.listV2() {
+            switch selectedAnimal?.name{
+            case animal.name:
+                guard let selectedAnimal = selectedAnimal else { return }
+                let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
+                guard let viewController = storyboard.instantiateViewController(withIdentifier: "AnimalDetail") as? AnimalDetail else {return}
+                viewController.name = selectedAnimal.name
+                viewController.desc = selectedAnimal.description
+                viewController.imageUrlString = selectedAnimal.photoUrlString
+                navigationController?.pushViewController(viewController, animated: true)
+
+            default:
+            break
+            }
+        }
     }
 }

@@ -21,6 +21,7 @@
 		383935AE27ECE27A0051A89C /* BIAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935AD27ECE27A0051A89C /* BIAnimalTableViewController.swift */; };
 		383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935AF27ECE2950051A89C /* BIAnimalTableCell.swift */; };
 		383935B227ECE2A40051A89C /* BIAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */; };
+		383935B527ECEC550051A89C /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935B427ECEC550051A89C /* AnimalDetailViewController.swift */; };
 		38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0C76C27E32498009D7A82 /* BIViewController.swift */; };
 		38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E0C76E27E324A2009D7A82 /* BIMain.storyboard */; };
 		4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D72D427E0C53700ACAACF /* MFViewController.swift */; };
@@ -79,6 +80,7 @@
 		383935AD27ECE27A0051A89C /* BIAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAnimalTableViewController.swift; sourceTree = "<group>"; };
 		383935AF27ECE2950051A89C /* BIAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAnimalTableCell.swift; sourceTree = "<group>"; };
 		383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BIAnimalTableCell.xib; sourceTree = "<group>"; };
+		383935B427ECEC550051A89C /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		38E0C76C27E32498009D7A82 /* BIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIViewController.swift; sourceTree = "<group>"; };
 		38E0C76E27E324A2009D7A82 /* BIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BIMain.storyboard; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				383935AD27ECE27A0051A89C /* BIAnimalTableViewController.swift */,
+				383935B427ECEC550051A89C /* AnimalDetailViewController.swift */,
 				383935AC27ECE2640051A89C /* Cell */,
 			);
 			path = AnimalChallenge;
@@ -511,6 +514,7 @@
 				319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
+				383935B527ECEC550051A89C /* AnimalDetailViewController.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
