@@ -17,4 +17,5 @@
 **AT** = Nuzulul Athaya  
 **YA** = Yuda Aqil Siraj  
 **AF** = Adji Firmansyah
+**RN** = Randy Setiawan Hoesin
 **MN** = Mohamad Nurhasan

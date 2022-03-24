@@ -20,7 +20,7 @@ enum Student: String, CaseIterable {
     case MaulanaFrasha
     case BagasIlham
     case TatangSulaeman
-    case RandySetiawann
+    case RandySetiawan
     case DimasPurnomo
     case NuzululAthaya
     case PranaApsara
