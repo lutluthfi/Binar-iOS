@@ -37,4 +37,8 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row: Int = indexPath.row
+    }
 }

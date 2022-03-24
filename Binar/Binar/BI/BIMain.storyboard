@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,12 +61,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bagas Ilham's Animal List" leftItemsSupplementBackButton="YES" id="a5Q-AU-Ifw">
-                        <barButtonItem key="rightBarButtonItem" title="Randomize" style="plain" id="IDw-tV-k7F">
+                        <barButtonItem key="rightBarButtonItem" title=" " image="ellipsis.circle" catalog="system" style="plain" id="IDw-tV-k7F">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="zMR-6k-eJt">
-                                <rect key="frame" x="285" y="5" width="109" height="34.5"/>
+                                <rect key="frame" x="339.5" y="5" width="54.5" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Randomize"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle" catalog="system" title=" "/>
                                 <connections>
                                     <action selector="onRandomizeTouchUpInside:" destination="b4B-ab-yjr" eventType="touchUpInside" id="A4W-q1-JBA"/>
                                 </connections>
@@ -83,6 +84,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZH-H4-3N7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-536" y="171"/>
+        </scene>
+        <!--Animal Detail View Controller-->
+        <scene sceneID="lj3-UX-LTO">
+            <objects>
+                <viewController storyboardIdentifier="AnimalDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="brm-jJ-Bkh" customClass="AnimalDetailViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdL-i8-NBw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4g-jW-OKR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="onp-xN-PiQ">
+                                        <rect key="frame" x="0.0" y="92" width="414" height="190"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="onp-xN-PiQ" secondAttribute="height" multiplier="207:95" id="8fq-Mf-CEu"/>
+                                            <constraint firstAttribute="height" constant="190" id="Bzy-eY-Bbp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRH-Bw-ESi">
+                                        <rect key="frame" x="8" y="290" width="82" height="39"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jc3-dD-MS0">
+                                        <rect key="frame" x="8" y="337" width="398" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="leading" secondItem="jc3-dD-MS0" secondAttribute="leading" id="1CW-ff-fXb"/>
+                                    <constraint firstItem="onp-xN-PiQ" firstAttribute="trailing" secondItem="XPa-z8-ITc" secondAttribute="trailing" id="B7h-OJ-VXf"/>
+                                    <constraint firstItem="jc3-dD-MS0" firstAttribute="trailing" secondItem="e4g-jW-OKR" secondAttribute="trailingMargin" id="CIn-SB-NVA"/>
+                                    <constraint firstItem="onp-xN-PiQ" firstAttribute="top" secondItem="XPa-z8-ITc" secondAttribute="top" constant="92" id="Fny-0c-U7O"/>
+                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="top" secondItem="onp-xN-PiQ" secondAttribute="bottom" constant="8" symbolic="YES" id="GtK-u5-0v5"/>
+                                    <constraint firstItem="jc3-dD-MS0" firstAttribute="top" secondItem="pRH-Bw-ESi" secondAttribute="bottom" constant="8" symbolic="YES" id="HeR-Zy-X1b"/>
+                                    <constraint firstItem="jc3-dD-MS0" firstAttribute="centerX" secondItem="onp-xN-PiQ" secondAttribute="centerX" id="P6R-7Z-mAW"/>
+                                    <constraint firstAttribute="width" constant="414" id="dCS-hD-T9W"/>
+                                    <constraint firstItem="onp-xN-PiQ" firstAttribute="leading" secondItem="XPa-z8-ITc" secondAttribute="leading" id="hdp-IV-yc0"/>
+                                    <constraint firstAttribute="bottom" secondItem="jc3-dD-MS0" secondAttribute="bottom" constant="538" id="kGh-DI-kVu"/>
+                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="leading" secondItem="e4g-jW-OKR" secondAttribute="leadingMargin" id="s0f-JG-wya"/>
+                                    <constraint firstAttribute="height" constant="896" id="vPQ-21-Eul"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Hpx-lW-R2K"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="XPa-z8-ITc"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Cw7-fJ-fVN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="e4g-jW-OKR" firstAttribute="top" secondItem="cdL-i8-NBw" secondAttribute="top" id="2tJ-v1-XFX"/>
+                            <constraint firstAttribute="bottom" secondItem="e4g-jW-OKR" secondAttribute="bottom" id="FEA-Tk-4db"/>
+                            <constraint firstItem="e4g-jW-OKR" firstAttribute="leading" secondItem="Cw7-fJ-fVN" secondAttribute="leading" id="HRy-tA-XbS"/>
+                            <constraint firstItem="e4g-jW-OKR" firstAttribute="trailing" secondItem="Cw7-fJ-fVN" secondAttribute="trailing" id="h7T-tn-lmf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AnimalDetailLabel" destination="jc3-dD-MS0" id="hY5-Bw-FQw"/>
+                        <outlet property="AnimalNameLabel" destination="pRH-Bw-ESi" id="Fav-hQ-cep"/>
+                        <outlet property="animalImageView" destination="onp-xN-PiQ" id="fDb-Ta-RZr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vqg-D2-Cja" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.62318840579712" y="170.75892857142856"/>
         </scene>
         <!--Animal Table View Controller-->
         <scene sceneID="YQo-lD-vDV">
@@ -112,8 +181,35 @@
             </objects>
             <point key="canvasLocation" x="-536" y="865"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="fT5-AL-EWr">
+            <objects>
+                <viewController id="IWJ-oo-zFE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tvg-Df-531">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rFB-Eh-XYt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aEW-hA-Rv6"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="CVL-K0-dyp"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ArT-xy-SNO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0f-99-UCk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.62318840579712" y="864.50892857142856"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="ellipsis.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
