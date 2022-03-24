@@ -5,7 +5,7 @@ final class RNViewController: UITableViewController {
     @IBOutlet weak var animalSearchBar: UISearchBar!
     
     var name : String?
-    var listAnimals: [String] = Animal.list.sorted()
+    var listAnimals: [String] = Animal.listV1().sorted()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +38,7 @@ extension RNViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let findAnimal: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isSearchTextNotEmpty = !findAnimal.isEmpty
-        let animals: [String] = Animal.list.sorted()
+        let animals: [String] = Animal.listV1().sorted()
         if isSearchTextNotEmpty {
             let searchedAnimals: [String] = animals.filter {
                 let findAnimal : String = findAnimal.lowercased()
