@@ -7,84 +7,61 @@
 
 import UIKit
 
-class ADViewController: UIViewController {
+class ADViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
     var name: String?
-    var displayAnimal: [String] = Animal.listV1()
-    var animalSectionTitles = [String]()
-    var animalDictionary = [String:[String]]()
+    var displayAnimal: [Animal] = Animal.listV2()
     
-    
+
     @IBOutlet var tableView: UITableView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = name
-        
-        for animal in displayAnimal {
-            let animalKey = String(animal.prefix(1))
-            if var animalValues = animalDictionary[animalKey]{
-                animalValues.append(animal)
-                animalDictionary[animalKey] = animalValues
-            } else {
-                animalDictionary[animalKey] = [animal]
-            }
-        }
-        
-        
-        animalSectionTitles = [String](animalDictionary.keys)
-        animalSectionTitles = animalSectionTitles.sorted(by: {$0 < $1})
-        
+
+        let nib = UINib(nibName: "ADAnimalViewCellViewTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "ADAnimalViewCellViewTableViewCell")
         tableView.delegate = self
         tableView.dataSource = self
-        
-    }
-    
-}
 
 
-extension ADViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tes")
     }
-}
 
-extension ADViewController: UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return animalSectionTitles.count
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let animalKey = animalSectionTitles[section]
-        if let animalValues = animalDictionary[animalKey]{
-            return animalValues.count
-        }
         return displayAnimal.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let animalKey = animalSectionTitles[indexPath.section]
-        
-        
-        
-        if let animalValues = animalDictionary[animalKey]{
-            cell.textLabel?.text = animalValues[indexPath.row]
-            cell.textLabel?.font = UIFont(name: "", size: 18)
-            
+
+        let row: Int = indexPath.row
+        let animal: Animal = displayAnimal[row]
+
+        let reusableCell: UITableViewCell = tableView.dequeueReusableCell(
+            withIdentifier: "ADAnimalViewCellViewTableViewCell",
+            for: indexPath
+        )
+
+        guard let cell = reusableCell as? ADAnimalViewCellViewTableViewCell else {
+            return reusableCell
         }
-        
+
+        cell.animalName.text = animal.name
+        cell.animalImg.loadImage(resource: animal.photoUrlString)
+
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return animalSectionTitles[section]
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
-    
-    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return animalSectionTitles
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ADAnimalViewController {
+            destination.animal = Animal.listV2()[(tableView.indexPathForSelectedRow?.row)!]
+        }
     }
-    
+
 }
+
+
