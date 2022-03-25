@@ -47,6 +47,9 @@
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
+		72ECE2C827EDD4C000E38A6F /* TSAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ECE2C727EDD4C000E38A6F /* TSAnimalTableViewController.swift */; };
+		72ECE2CD27EDD5A700E38A6F /* TSAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ECE2CB27EDD5A700E38A6F /* TSAnimalTableCell.swift */; };
+		72ECE2CE27EDD5A700E38A6F /* TSAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ECE2CC27EDD5A700E38A6F /* TSAnimalTableCell.xib */; };
 		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
 		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
 		CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */; };
@@ -106,6 +109,9 @@
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
+		72ECE2C727EDD4C000E38A6F /* TSAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAnimalTableViewController.swift; sourceTree = "<group>"; };
+		72ECE2CB27EDD5A700E38A6F /* TSAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAnimalTableCell.swift; sourceTree = "<group>"; };
+		72ECE2CC27EDD5A700E38A6F /* TSAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSAnimalTableCell.xib; sourceTree = "<group>"; };
 		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
 		A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
 		C8A6942727E374B000BF09C7 /* NBMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NBMain.storyboard; sourceTree = "<group>"; };
@@ -320,10 +326,29 @@
 		72565B0C27E0DAA600EAF51C /* TS */ = {
 			isa = PBXGroup;
 			children = (
+				72ECE2C927EDD4C500E38A6F /* Animal */,
 				72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */,
 				72565B0F27E0DB4300EAF51C /* TSViewController.swift */,
 			);
 			path = TS;
+			sourceTree = "<group>";
+		};
+		72ECE2C927EDD4C500E38A6F /* Animal */ = {
+			isa = PBXGroup;
+			children = (
+				72ECE2C727EDD4C000E38A6F /* TSAnimalTableViewController.swift */,
+				72ECE2CA27EDD56300E38A6F /* Cell */,
+			);
+			path = Animal;
+			sourceTree = "<group>";
+		};
+		72ECE2CA27EDD56300E38A6F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				72ECE2CB27EDD5A700E38A6F /* TSAnimalTableCell.swift */,
+				72ECE2CC27EDD5A700E38A6F /* TSAnimalTableCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		91AFCF00E44EB4084FF9AB92 /* Frameworks */ = {
@@ -446,6 +471,7 @@
 				0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */,
 				4FF0B33027EB561900CAF144 /* AIMain.storyboard in Resources */,
 				38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */,
+				72ECE2CE27EDD5A700E38A6F /* TSAnimalTableCell.xib in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
 				318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */,
 				FF98B2DF27E3643300830B07 /* ATMain.storyboard in Resources */,
@@ -479,6 +505,7 @@
 				592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */,
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,
 				4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */,
+				72ECE2CD27EDD5A700E38A6F /* TSAnimalTableCell.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
@@ -487,6 +514,7 @@
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
+				72ECE2C827EDD4C000E38A6F /* TSAnimalTableViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,
 				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,

@@ -18,7 +18,6 @@ class TSViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         animalSearchBar.delegate = self
         animalTable.delegate = self
         animalTable.dataSource = self
