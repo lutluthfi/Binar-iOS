@@ -14,13 +14,17 @@ final class AnimalDetail: UIViewController{
     
     var name: String?
     var desc: String?
+    var typeOfFood: Animal.TypeOfFood?
+    var strength: Int?
     var imageUrlString: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = name!.capitalized + " Detail"
         animalNameLabel.text = name
-        animalDescLabel.text = desc
+        animalDescLabel.text = desc! + "\n\n" +
+        "Type of Food\t: \(typeOfFood!) \n" +
+        "Strength\t\t: \(strength!)"
         animalImageView.loadImage(resource: imageUrlString)
     }
     

@@ -240,6 +240,7 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uDo-Wv-U8h">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="uDo-Wv-U8h" secondAttribute="height" multiplier="207:70" id="Q4R-Hy-9zT"/>
                                         </constraints>
@@ -251,7 +252,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="headTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asB-az-RaG">
-                                        <rect key="frame" x="15" y="206.5" width="384" height="20.5"/>
+                                        <rect key="frame" x="14" y="206.5" width="386" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -260,16 +261,16 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="uDo-Wv-U8h" firstAttribute="leading" secondItem="rFB-Eh-XYt" secondAttribute="leading" id="1dG-YB-0GI"/>
+                                    <constraint firstItem="asB-az-RaG" firstAttribute="trailing" secondItem="36u-yU-bfD" secondAttribute="trailing" id="2ou-rS-8B1"/>
                                     <constraint firstAttribute="trailing" secondItem="uDo-Wv-U8h" secondAttribute="trailing" id="9gV-E0-pad"/>
-                                    <constraint firstItem="asB-az-RaG" firstAttribute="top" secondItem="36u-yU-bfD" secondAttribute="bottom" constant="7.5" id="R4x-XG-lnS"/>
-                                    <constraint firstItem="asB-az-RaG" firstAttribute="leading" secondItem="CVL-K0-dyp" secondAttribute="leading" constant="15" id="Syj-AQ-ByJ"/>
                                     <constraint firstItem="uDo-Wv-U8h" firstAttribute="centerX" secondItem="36u-yU-bfD" secondAttribute="centerX" id="ZQ2-3p-Vdo"/>
                                     <constraint firstItem="36u-yU-bfD" firstAttribute="top" secondItem="uDo-Wv-U8h" secondAttribute="bottom" constant="16" id="blX-ze-982"/>
-                                    <constraint firstItem="CVL-K0-dyp" firstAttribute="trailing" secondItem="asB-az-RaG" secondAttribute="trailing" constant="15" id="dJj-Kj-CMw"/>
                                     <constraint firstItem="uDo-Wv-U8h" firstAttribute="top" secondItem="rFB-Eh-XYt" secondAttribute="top" id="dnr-an-dNx"/>
+                                    <constraint firstItem="asB-az-RaG" firstAttribute="top" secondItem="36u-yU-bfD" secondAttribute="bottom" constant="7.5" id="e7C-Di-VPR"/>
+                                    <constraint firstAttribute="bottom" secondItem="asB-az-RaG" secondAttribute="bottom" constant="581" id="hXe-Ws-dOg"/>
+                                    <constraint firstItem="asB-az-RaG" firstAttribute="leading" secondItem="36u-yU-bfD" secondAttribute="leading" id="haR-Zj-7V6"/>
                                     <constraint firstItem="36u-yU-bfD" firstAttribute="leading" secondItem="rFB-Eh-XYt" secondAttribute="leadingMargin" constant="6" id="rVo-pk-sF9"/>
                                     <constraint firstItem="uDo-Wv-U8h" firstAttribute="centerX" secondItem="rFB-Eh-XYt" secondAttribute="centerX" id="wPh-mL-HT7"/>
-                                    <constraint firstAttribute="bottom" secondItem="asB-az-RaG" secondAttribute="bottom" constant="585.5" id="wgt-kv-G6L"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="aEW-hA-Rv6"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="CVL-K0-dyp"/>

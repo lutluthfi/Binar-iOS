@@ -66,6 +66,8 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
                 viewController.name = selectedAnimal.name
                 viewController.desc = selectedAnimal.description
                 viewController.imageUrlString = selectedAnimal.photoUrlString
+                viewController.typeOfFood = selectedAnimal.typeOfFood
+                viewController.strength = selectedAnimal.strength
                 navigationController?.pushViewController(viewController, animated: true)
 
             default:
@@ -78,14 +80,33 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
     // MARK: More Actions Button
     
     @IBAction func onActionsButtonTouchUpInside(_ sender: UIButton) {
+        var choice: String?
         let actionsAlert = UIAlertController(title: "More Actions", message: "What do you want to do?", preferredStyle: .actionSheet)
         
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        let sortAlert = UIAlertController(title: "Sorting Method", message: "What sorting method would you prefer?", preferredStyle: .alert)
+        
         let sortAscending = UIAlertAction(title: "Sort Ascending", style: .default) { _ in
-            self.sortAsc()
+            self.sortAsc(from: choice!)
         }
         
         let sortDescending = UIAlertAction(title: "Sort Descending", style: .default) { _ in
-            self.sortDesc()
+            self.sortDesc(from: choice!)
+        }
+        
+        sortAlert.addAction(sortAscending)
+        sortAlert.addAction(sortDescending)
+        sortAlert.addAction(cancel)
+        
+        let sortByName = UIAlertAction(title: "Sort By Name", style: .default) { _ in
+            choice = "name"
+            self.present(sortAlert, animated: true)
+        }
+        
+        let sortByStrength = UIAlertAction(title: "Sort By Strength", style: .default) { _ in
+            choice = "strength"
+            self.present(sortAlert, animated: true)
         }
         
         let random = UIAlertAction(title: "Generate Random Animal", style: .default) { _ in
@@ -106,6 +127,8 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
             viewController.name = selectedAnimal.name
             viewController.desc = selectedAnimal.description
             viewController.imageUrlString = selectedAnimal.photoUrlString
+            viewController.typeOfFood = selectedAnimal.typeOfFood
+            viewController.strength = selectedAnimal.strength
             self.navigationController?.pushViewController(viewController, animated: true)
             
             let great = UIAlertAction(title: "Great!", style: .cancel)
@@ -114,11 +137,9 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
             
             self.present(randomAlertController, animated: true)
         }
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        actionsAlert.addAction(sortAscending)
-        actionsAlert.addAction(sortDescending)
+
+        actionsAlert.addAction(sortByName)
+        actionsAlert.addAction(sortByStrength)
         actionsAlert.addAction(random)
         actionsAlert.addAction(cancel)
         
@@ -156,17 +177,33 @@ extension BIAnimalTableViewController: UISearchBarDelegate {
 // MARK: Sort Ascending and Descending Functions
 
 extension BIAnimalTableViewController {
-    func sortAsc() {
+    func sortAsc(from choice: String) {
         let animals: [Animal] = displayedAnimals
-        let sortedAsc =  animals.sorted(by: { $0.name < $1.name })
-        displayedAnimals = sortedAsc
+        switch choice{
+        case "name":
+            displayedAnimals = animals.sorted(by: { $0.name < $1.name })
+            
+        case "strength":
+            displayedAnimals = animals.sorted(by: { $0.strength < $1.strength })
+        
+        default:
+            break
+        }
         tableView.reloadData()
     }
     
-    func sortDesc() {
+    func sortDesc(from choice: String) {
         let animals: [Animal] = displayedAnimals
-        let sortedDesc =  animals.sorted(by: { $0.name > $1.name })
-        displayedAnimals = sortedDesc
+        switch choice{
+        case "name":
+            displayedAnimals = animals.sorted(by: { $0.name > $1.name })
+            
+        case "strength":
+            displayedAnimals = animals.sorted(by: { $0.strength > $1.strength })
+        
+        default:
+            break
+        }
         tableView.reloadData()
     }
 }
