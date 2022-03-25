@@ -151,6 +151,7 @@ final class AnimalDetailViewController: UIViewController{
         super.viewDidLoad()
         setupAnimalImageView()
         introduction()
+        navigationController?.navigationBar.prefersLargeTitles = true
         title = name
         AnimalNameLabel.text = name
         AnimalDetailLabel.text = detail

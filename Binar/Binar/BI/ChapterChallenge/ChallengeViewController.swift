@@ -21,7 +21,13 @@ final class ChallengeViewController: UIViewController {
         super.viewDidLoad()
         setupChallengeImageView()
         title = "Challenge Chapter 3"
+        navigationController?.navigationBar.prefersLargeTitles = true
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     private func setupChallengeImageView() {

@@ -245,13 +245,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36u-yU-bfD">
-                                        <rect key="frame" x="14" y="156" width="386" height="38.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                        <rect key="frame" x="14" y="156" width="386" height="43"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="headTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asB-az-RaG">
-                                        <rect key="frame" x="15" y="202" width="384" height="20.5"/>
+                                        <rect key="frame" x="15" y="206.5" width="384" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

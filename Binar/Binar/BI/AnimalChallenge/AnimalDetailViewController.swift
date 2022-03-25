@@ -18,9 +18,14 @@ final class AnimalDetail: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name?.capitalized
+        title = name!.capitalized + " Detail"
         animalNameLabel.text = name
         animalDescLabel.text = desc
         animalImageView.loadImage(resource: imageUrlString)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 }
