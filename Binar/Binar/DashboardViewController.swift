@@ -53,10 +53,22 @@ final class DashboardViewController: UITableViewController {
             goToDPViewController()
         case .TatangSulaeman:
             goToTSViewController()
+        case .NuzululAthaya:
+            goToATViewController()
+        case .Daffashiddiq:
+            goToDSViewController()
+        case .Daffashiddiq:
+            goToDSViewController()
         case .AdjiFirmansyah:
             goToAFViewController()
         case .BagasIlham:
             goToBIViewController()
+        case .NurinBerlianna:
+            goToNBViewController()
+        case .AkbarIdris:
+            goToAIViewController()
+        case .RandySetiawan:
+            goToRNViewController()
         default:
             break
         }
@@ -93,12 +105,9 @@ extension DashboardViewController: UISearchBarDelegate {
 // MARK: goToARViewController
 extension DashboardViewController {
     func goToARViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "ARMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ARViewController") as? ARViewController else {
+        guard let viewController = ARAnimalTableViewController.initViewController(from: "ARMain") else {
             return
         }
-        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -118,13 +127,10 @@ extension DashboardViewController {
 
 // MARK: goToPWViewController
 extension DashboardViewController{
-    func goToPWViewController(){
-        guard let selectedStudent = selectedStudent else {return}
-        let storyboard = UIStoryboard(name: "PWMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "PWViewController") as? PWViewController else{
+    func goToPWViewController() {
+        guard let viewController = PWViewController.initViewController(from: "PWMain") else{
             return
         }
-//        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -167,13 +173,10 @@ extension DashboardViewController {
     }
 }
 
+// MARK: goToRDViewController
 extension DashboardViewController {
     func goToRDViewController() {
         guard let selectedStudent = selectedStudent else { return }
-//        let storyboard = UIStoryboard(name: "ADMain", bundle: nil)
-//        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ADViewController") as? ADViewController else {
-//            return
-//        }
         let viewController = RDViewController()
         viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
@@ -196,7 +199,6 @@ extension DashboardViewController {
 // MARK: goToTSViewController
 extension DashboardViewController {
     func goToTSViewController() {
-        guard let selectedStudent = selectedStudent else { return }
         let storyboard = UIStoryboard(name: "TSMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "TSViewController") as? TSViewController else {
             return
@@ -206,17 +208,29 @@ extension DashboardViewController {
     }
 }
 
+// MARK: goToDSViewController
 extension DashboardViewController {
-  func goToAFViewController() {
-    guard let selectedStudent = selectedStudent else { return }
-    let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
-    
-    guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
-    viewController.name = selectedStudent.name
-    
-    navigationController?.pushViewController(viewController, animated: true)
-  }
+    func goToDSViewController() {
+        let storyboard = UIStoryboard(name: "DSMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DSViewController") as? DSViewController else {
+            return
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
+
+extension DashboardViewController {
+    func goToAFViewController() {
+        guard let selectedStudent = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
+        
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
+        viewController.name = selectedStudent.name
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+        
 // MARK: goToBIViewController
 extension DashboardViewController {
     func goToBIViewController() {
@@ -229,3 +243,55 @@ extension DashboardViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
+
+// MARK: goToATViewController
+extension DashboardViewController{
+    func goToATViewController(){
+        guard let selectedStudent = selectedStudent else {return}
+        let storyboard = UIStoryboard(name: "ATMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ATViewController") as? ATViewController else{
+            return
+        }
+        viewController.name = selectedStudent.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: goToAIViewController
+extension DashboardViewController {
+    func goToAIViewController() {
+        guard selectedStudent != nil else { return }
+        let storyboard = UIStoryboard(name: "AIMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AIAnimalTableViewController") as? AIAnimalTableViewController else {
+            return
+        }
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: goToNBViewController
+extension DashboardViewController {
+    func goToNBViewController() {
+        let storyboard = UIStoryboard(name: "NBMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "NBViewController") as? NBViewController else {
+            return
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: goToRNViewController
+extension DashboardViewController{
+    func goToRNViewController(){
+        guard let selectedStudent = selectedStudent else {return}
+        let storyboard = UIStoryboard(name: "RNMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "RNViewController") as? RNViewController else{
+            return
+        }
+        viewController.name = selectedStudent.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+

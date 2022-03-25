@@ -11,7 +11,7 @@ import UIKit
 final class THViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var animalList: [String] = Animal.list.sorted { $0 < $1 }
+    var animalList: [String] = Animal.listV1().sorted { $0 < $1 }
     var groupedDisplayedAnimals: [[String]] = [[String]]()
     var headerTitles: [String] = [String]()
     var name: String?

@@ -9,7 +9,7 @@ import UIKit
 
 class AFViewController: UIViewController {
   var name: String?
-  var animal: [String] = Animal.list
+  var animal: [String] = Animal.listV1()
   var searchController: UISearchController = {
     let _searchController = UISearchController()
     _searchController.searchBar.placeholder = "Search animal name"
@@ -54,7 +54,7 @@ extension AFViewController: UISearchControllerDelegate, UISearchResultsUpdating,
     let isAnimalNotEmpty = !searchText.isEmpty
     let defaultAnimal = animal.sorted {$0 < $1}
     if isAnimalNotEmpty {
-      let animal: [String] = Animal.list.filter {
+      let animal: [String] = Animal.listV1().filter {
         let searchTextLower = searchText.lowercased()
         let animal = $0.lowercased()
         return animal.contains(searchTextLower)
@@ -67,7 +67,7 @@ extension AFViewController: UISearchControllerDelegate, UISearchResultsUpdating,
   }
   
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-    let animal: [String] = Animal.list.sorted()
+    let animal: [String] = Animal.listV1().sorted()
     self.animal = animal
     tableView.reloadData()
     

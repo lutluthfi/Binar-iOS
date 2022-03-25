@@ -8,7 +8,7 @@
 **RD** = Raden Dimas  
 **BI** = Bagas Ilham  
 **TH** = Tio Hardadi  
-**PR** = Prana Apsara Wijaya  
+**PW** = Prana Apsara Wijaya  
 **DP** = Dimas Purnomo  
 **DS** = Daffashiddiq Nur Awan  
 **TS** = Tatang Sulaeman  
@@ -16,4 +16,6 @@
 **DB** = Dhani bukhory  
 **AT** = Nuzulul Athaya  
 **YA** = Yuda Aqil Siraj  
-**AF** = Adji Firmansyah
+**AF** = Adji Firmansyah  
+**RN** = Randy Setiawan Hoesin  
+**MN** = Mohamad Nurhasan  

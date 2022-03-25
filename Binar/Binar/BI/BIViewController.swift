@@ -12,7 +12,7 @@ final class BIViewController: UITableViewController {
     @IBOutlet weak var randomAnimal: UIBarButtonItem!
     var name: String?
     var selectedAnimal: Animal?
-    var displayedAnimals: [String] = Animal.list.sorted()
+    var displayedAnimals: [String] = Animal.listV1().sorted()
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         let animalCount: Int = displayedAnimals.count
@@ -28,7 +28,7 @@ final class BIViewController: UITableViewController {
     }
 
     @IBAction func onRandomizeTouchUpInside(_ sender: UIButton) {
-        let randomAnimal: String = Animal.list.randomElement()!.lowercased()
+        let randomAnimal: String = Animal.listV1().randomElement()!.lowercased()
         let alertController = UIAlertController(title: "Wow!", message: "You are a \(randomAnimal)!", preferredStyle: .alert)
         
         let cancel = UIAlertAction(title: "Great!", style: .default)
@@ -49,7 +49,7 @@ extension BIViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let animalSearchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isSearchTextNotEmpty = !animalSearchText.isEmpty
-        let animals: [String] = Animal.list
+        let animals: [String] = Animal.listV1()
         if isSearchTextNotEmpty {
             let searchedAnimals: [String] = animals.filter {
                 let animalSearchText: String = searchText.lowercased()
