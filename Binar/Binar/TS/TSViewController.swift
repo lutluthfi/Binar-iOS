@@ -14,11 +14,12 @@ class TSViewController: UIViewController {
     
     var selectedAnimal: Animal?
     
-    var displayedAnimal: [String] = Animal.listV1().sorted()
-    
+//    var displayedAnimal: [String] = Animal.listV1().sorted()
+    var displayedAnimal: [Animal] = Animal.listV2()
     override func viewDidLoad() {
         super.viewDidLoad()
-        animalSearchBar.delegate = self
+        animalTable.registerCell(TSAnimalTableCell.self)
+//        animalSearchBar.delegate = self
         animalTable.delegate = self
         animalTable.dataSource = self
         
@@ -53,8 +54,20 @@ extension TSViewController: UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = animalTable.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath)
-        cell.textLabel?.text = displayedAnimal[indexPath.row]
+        let reusableCell: UITableViewCell = tableView.dequeueReusableCell(
+            withIdentifier: "TSAnimalTableCell",
+            for: indexPath
+        )
+        
+        guard let cell = reusableCell as? TSAnimalTableCell else {
+            return reusableCell
+        }
+        
+        let row: Int = indexPath.row
+        let animal: Animal = displayedAnimal[row]
+        
+        cell.fill(with: animal)
+        
         return cell
         
         
@@ -63,25 +76,25 @@ extension TSViewController: UITableViewDelegate,UITableViewDataSource {
     
 }
 
-extension TSViewController: UISearchBarDelegate {
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        animalTable.endEditing(true)
-    }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let _searchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-        let isSearchTextNoEmpty = !_searchText.isEmpty
-        let animals: [String] = Animal.listV1().sorted()
-        if isSearchTextNoEmpty {
-            let searchedAnimal: [String] = animals.filter {
-                let _searchText: String = searchText.lowercased()
-                let _animal: String = $0.lowercased()
-                return _animal.contains(_searchText)
-                
-            }
-            displayedAnimal = searchedAnimal
-        } else {
-            displayedAnimal = animals
-        }
-        animalTable.reloadData()
-    }
-}
+//extension TSViewController: UISearchBarDelegate {
+//    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+//        animalTable.endEditing(true)
+//    }
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        let _searchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+//        let isSearchTextNoEmpty = !_searchText.isEmpty
+//        let animals: [String] = Animal.listV1().sorted()
+//        if isSearchTextNoEmpty {
+//            let searchedAnimal: [String] = animals.filter {
+//                let _searchText: String = searchText.lowercased()
+//                let _animal: String = $0.lowercased()
+//                return _animal.contains(_searchText)
+//
+//            }
+//            displayedAnimal = searchedAnimal
+//        } else {
+//            displayedAnimal = animals
+//        }
+//        animalTable.reloadData()
+//    }
+//}
