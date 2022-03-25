@@ -48,7 +48,8 @@ class PWViewController: UIViewController, UITableViewDataSource, StoryboardInsta
         
         let imageView = UIImage(named: animal.imageName) ?? UIImage(named: "150x150")
         
-        cell.iconImageView.image = imageView
+        
+        cell.iconImageView.image = imageView?.resized(withPercentage: 0.1)
         cell.iconImageView.layer.masksToBounds = true;
         cell.iconImageView.layer.cornerRadius = 25
         cell.textField.text = animal.description
