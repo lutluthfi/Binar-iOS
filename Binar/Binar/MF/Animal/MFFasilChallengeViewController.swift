@@ -40,25 +40,35 @@ final class MFFasilChallengeViewController: UIViewController, UITableViewDelegat
             tableView.reloadData()
         }
         
-        let swipeUpdate = UIContextualAction(style: .normal, title: "Update") { action, view, completion in
-            self.updateJSON()
-            tableView.reloadData()
-        }
-        
-        let config = UISwipeActionsConfiguration(actions: [swipeDelete, swipeUpdate])
+        let config = UISwipeActionsConfiguration(actions: [swipeDelete])
         return config
     }
+    
+    @IBAction func addDataTap(_ sender: UIButton) {
+        addData()
+    }
+    
 
-    func updateJSON(){
+    func addData(){
         
-        let alert = UIAlertController(title: "Change Name", message: "\n Input a new name.", preferredStyle: .alert)
-        alert.addTextField(configurationHandler: { textField in
-            textField.textAlignment = .center
+        let alert = UIAlertController(title: "Input new data", message: "\n Input a new name.", preferredStyle: .alert)
+    
+        alert.addTextField(configurationHandler: { nameTextField in
+            nameTextField.placeholder = "Input Nama"
+            nameTextField.textAlignment = .center
         })
+        alert.addTextField { descTextField in
+            descTextField.placeholder = "Input Desc"
+            descTextField.textAlignment = .center
+        }
         
-        alert.addAction(UIAlertAction(title: "Update", style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { action in
             let inputNama = alert.textFields![0]
-            self.animalList.append(Animal(name: inputNama.text!, photoUrlString: "", description: "Deskripsi", typeOfFood: .carnivora, strength: 1))
+            let inputDesc = alert.textFields![1]
+            let randomTypeFood = Animal.TypeOfFood.allCases.randomElement()
+            let randomInt = Int.random(in: 0...100)
+            self.animalList.append(Animal(name: String(inputNama.text!), photoUrlString: "https://picsum.photos/200", description: (inputDesc.text!), typeOfFood: randomTypeFood!, strength: randomInt))
+            self.tableView.reloadData()
         }))
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))

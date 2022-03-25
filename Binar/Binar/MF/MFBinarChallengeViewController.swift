@@ -34,13 +34,9 @@ final class MFBinarChallengeViewController: UIViewController {
         let valueB = Int(valueBLabel.text!) ?? 0
         let summary = valueA + valueB
         resultLabel.text = String(summary)
-        
-        let img1 = UIImage(systemName: "sun.min")
-        let img2 = UIImage(systemName: "moon")
-        let img3 = UIImage(systemName: "cloud")
-        let randomImage = [img1, img2, img3]
-        
-        imageView.image = randomImage.randomElement()!!
+        imageView.loadImage(resource: "https://picsum.photos/200")
         
     }
 }
+
+

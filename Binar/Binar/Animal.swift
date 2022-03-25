@@ -14,7 +14,7 @@ struct Animal: Decodable {
     let typeOfFood: TypeOfFood
     let strength: Int
     
-    enum TypeOfFood: String, Decodable {
+    enum TypeOfFood: String, Decodable, CaseIterable {
         case carnivora = "carnivora"
         case herbivora = "herbivora"
         case omnivora = "omnivora"
