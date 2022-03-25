@@ -153,6 +153,22 @@
             </objects>
             <point key="canvasLocation" x="253.62318840579712" y="170.75892857142856"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KMO-pu-5rv">
+            <objects>
+                <navigationController id="d1s-Ru-hI8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wPy-oF-3j1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Lfe-bX-E7M" kind="relationship" relationship="rootViewController" id="3OU-b4-Sw0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="liq-ff-cWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1307" y="865"/>
+        </scene>
         <!--Animal Table View Controller-->
         <scene sceneID="YQo-lD-vDV">
             <objects>
@@ -161,17 +177,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="Vje-KL-dse">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="Search for animal name" id="Vje-KL-dse">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
                             <connections>
                                 <outlet property="delegate" destination="Lfe-bX-E7M" id="k8m-L8-uon"/>
                             </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="BIAnimalTableCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="100" rowHeight="100" id="vzb-Ov-K2v" customClass="BIAnimalTableCell" customModule="Binar" customModuleProvider="target">
-                                <rect key="frame" x="20" y="93.5" width="374" height="100"/>
+                                <rect key="frame" x="20" y="100.5" width="374" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vzb-Ov-K2v" id="mjx-Al-ePL">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
@@ -185,7 +205,21 @@
                             <outlet property="delegate" destination="Lfe-bX-E7M" id="QLO-G7-lC5"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Jqa-qv-u9e">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ktP-NB-iuY">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="DQV-Uc-JJv">
+                                <rect key="frame" x="339.5" y="5" width="54.5" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle" catalog="system" title=" "/>
+                                <connections>
+                                    <action selector="onActionsButtonTouchUpInside:" destination="Lfe-bX-E7M" eventType="touchUpInside" id="nms-pJ-f0U"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="actionsButton" destination="ktP-NB-iuY" id="rIU-l6-qz4"/>
                         <outlet property="animalSearchBar" destination="Vje-KL-dse" id="P0y-lU-6rS"/>
                     </connections>
                 </tableViewController>

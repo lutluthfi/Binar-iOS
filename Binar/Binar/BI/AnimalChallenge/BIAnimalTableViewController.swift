@@ -11,6 +11,7 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
     var displayedAnimals: [Animal] = Animal.listV2()
     var selectedAnimal: Animal?
     @IBOutlet weak var animalSearchBar: UISearchBar!
+    @IBOutlet weak var actionsButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +61,27 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
             }
         }
     }
+    
+    @IBAction func onActionsButtonTouchUpInside(_ sender: UIButton) {
+        let actionsAlert = UIAlertController(title: "More Actions", message: "What do you want to do?", preferredStyle: .actionSheet)
+        
+        let sortAscending = UIAlertAction(title: "Sort Ascending", style: .default) { _ in
+            self.sortAsc()
+        }
+        
+        let sortDescending = UIAlertAction(title: "Sort Descending", style: .default) { _ in
+            self.sortDesc()
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        actionsAlert.addAction(sortAscending)
+        actionsAlert.addAction(sortDescending)
+        actionsAlert.addAction(cancel)
+        
+        present(actionsAlert, animated: true)
+    }
+    
 }
 
 extension BIAnimalTableViewController: UISearchBarDelegate {
@@ -67,7 +89,7 @@ extension BIAnimalTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let animalSearchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isSearchTextNotEmpty = !animalSearchText.isEmpty
-        let animals: [Animal] = Animal.listV2()
+        let animals: [Animal] = displayedAnimals
         if isSearchTextNotEmpty {
             let searchedAnimals: [Animal] = animals.filter {
                 let animalSearchText: String = searchText.lowercased()
@@ -86,3 +108,18 @@ extension BIAnimalTableViewController: UISearchBarDelegate {
     }
 }
 
+extension BIAnimalTableViewController {
+    func sortAsc() {
+        let animals: [Animal] = displayedAnimals
+        let sortedAsc =  animals.sorted(by: { $0.name < $1.name })
+        displayedAnimals = sortedAsc
+        tableView.reloadData()
+    }
+    
+    func sortDesc() {
+        let animals: [Animal] = displayedAnimals
+        let sortedDesc =  animals.sorted(by: { $0.name > $1.name })
+        displayedAnimals = sortedDesc
+        tableView.reloadData()
+    }
+}
