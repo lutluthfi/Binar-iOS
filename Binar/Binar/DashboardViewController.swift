@@ -115,12 +115,15 @@ extension DashboardViewController {
 // MARK: goToTHViewController
 extension DashboardViewController {
     func goToTHViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "THMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "THViewController") as? THViewController else {
+//        guard let selectedStudent = selectedStudent else { return }
+//        let storyboard = UIStoryboard(name: "THMain", bundle: nil)
+//        guard let viewController = storyboard.instantiateViewController(withIdentifier: "THViewController") as? THViewController else {
+//            return
+//        }
+//        viewController.name = selectedStudent.name
+        guard let viewController = THAnimalTableViewController.initViewController(from: "THMain") else {
             return
         }
-        viewController.name = selectedStudent.name
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
