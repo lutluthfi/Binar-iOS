@@ -88,7 +88,7 @@
         <!--Animal Detail View Controller-->
         <scene sceneID="lj3-UX-LTO">
             <objects>
-                <viewController storyboardIdentifier="AnimalDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="brm-jJ-Bkh" customClass="AnimalDetailViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BI2AnimalDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="brm-jJ-Bkh" customClass="BI2AnimalDetailViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cdL-i8-NBw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,9 +98,6 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="onp-xN-PiQ">
                                         <rect key="frame" x="0.0" y="63.5" width="414" height="190"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="414" id="357-rJ-Zgy"/>
-                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="399" translatesAutoresizingMaskIntoConstraints="NO" id="pRH-Bw-ESi">
                                         <rect key="frame" x="8" y="261.5" width="82" height="38.5"/>
@@ -111,7 +108,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="399" translatesAutoresizingMaskIntoConstraints="NO" id="jc3-dD-MS0">
                                         <rect key="frame" x="8" y="308" width="82" height="32"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="Fzf-pT-R12"/>
+                                            <constraint firstAttribute="height" constant="32" id="Dqu-mS-VcI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -119,17 +116,16 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="onp-xN-PiQ" secondAttribute="trailing" id="3Im-Yc-Yri"/>
-                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="firstBaseline" secondItem="onp-xN-PiQ" secondAttribute="baseline" constant="38.5" id="IX2-We-bcu"/>
-                                    <constraint firstItem="onp-xN-PiQ" firstAttribute="top" secondItem="e4g-jW-OKR" secondAttribute="top" constant="63.5" id="L72-GT-4f3"/>
-                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="leading" secondItem="jc3-dD-MS0" secondAttribute="leading" id="LFp-RX-Pd9"/>
-                                    <constraint firstItem="onp-xN-PiQ" firstAttribute="centerX" secondItem="e4g-jW-OKR" secondAttribute="centerX" id="ayi-k2-9lg"/>
-                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="trailing" secondItem="jc3-dD-MS0" secondAttribute="trailing" id="gvL-vc-Re5"/>
-                                    <constraint firstItem="jc3-dD-MS0" firstAttribute="top" secondItem="pRH-Bw-ESi" secondAttribute="bottom" constant="8" symbolic="YES" id="j1c-GN-LpG"/>
-                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="leading" secondItem="e4g-jW-OKR" secondAttribute="leadingMargin" id="jwc-y6-FhF"/>
-                                    <constraint firstAttribute="bottom" secondItem="jc3-dD-MS0" secondAttribute="bottom" constant="556" id="k8c-TS-WZz"/>
-                                    <constraint firstItem="XPa-z8-ITc" firstAttribute="bottom" secondItem="jc3-dD-MS0" secondAttribute="bottom" constant="556" id="pTl-ht-zUK"/>
-                                    <constraint firstItem="onp-xN-PiQ" firstAttribute="leading" secondItem="e4g-jW-OKR" secondAttribute="leading" id="y52-I5-8Ym"/>
+                                    <constraint firstAttribute="bottom" secondItem="jc3-dD-MS0" secondAttribute="bottom" constant="556" id="1ba-P0-rRg"/>
+                                    <constraint firstItem="jc3-dD-MS0" firstAttribute="top" secondItem="pRH-Bw-ESi" secondAttribute="bottom" constant="8" id="8s6-Jg-zSv"/>
+                                    <constraint firstAttribute="trailing" secondItem="pRH-Bw-ESi" secondAttribute="trailing" constant="324" id="AbA-64-aPy"/>
+                                    <constraint firstItem="onp-xN-PiQ" firstAttribute="centerX" secondItem="e4g-jW-OKR" secondAttribute="centerX" id="CpT-RI-7dE"/>
+                                    <constraint firstItem="onp-xN-PiQ" firstAttribute="top" secondItem="e4g-jW-OKR" secondAttribute="top" constant="63.5" id="Inm-Vp-ykg"/>
+                                    <constraint firstItem="XPa-z8-ITc" firstAttribute="bottom" secondItem="jc3-dD-MS0" secondAttribute="bottom" constant="556" id="N7E-ec-jH1"/>
+                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="trailing" secondItem="jc3-dD-MS0" secondAttribute="trailing" id="QZo-gV-G5P"/>
+                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="top" secondItem="onp-xN-PiQ" secondAttribute="bottom" constant="8" id="fR9-Cl-4Bf"/>
+                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="leading" secondItem="jc3-dD-MS0" secondAttribute="leading" id="kIS-ZR-nMu"/>
+                                    <constraint firstItem="pRH-Bw-ESi" firstAttribute="leading" secondItem="e4g-jW-OKR" secondAttribute="leadingMargin" id="ocw-qc-lc0"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Hpx-lW-R2K"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="XPa-z8-ITc"/>
@@ -138,9 +134,11 @@
                         <viewLayoutGuide key="safeArea" id="Cw7-fJ-fVN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="e4g-jW-OKR" secondAttribute="bottom" id="S9z-3D-tHs"/>
-                            <constraint firstItem="e4g-jW-OKR" firstAttribute="top" secondItem="cdL-i8-NBw" secondAttribute="top" id="lBs-tH-Yoa"/>
-                            <constraint firstItem="e4g-jW-OKR" firstAttribute="leading" secondItem="cdL-i8-NBw" secondAttribute="leading" id="trA-bv-lZN"/>
+                            <constraint firstItem="e4g-jW-OKR" firstAttribute="leading" secondItem="Cw7-fJ-fVN" secondAttribute="leading" id="Lyw-8w-TMx"/>
+                            <constraint firstItem="e4g-jW-OKR" firstAttribute="top" secondItem="cdL-i8-NBw" secondAttribute="topMargin" constant="-44" id="n89-lO-ofk"/>
+                            <constraint firstItem="e4g-jW-OKR" firstAttribute="centerX" secondItem="cdL-i8-NBw" secondAttribute="centerX" id="oyx-O1-Vzi"/>
+                            <constraint firstItem="e4g-jW-OKR" firstAttribute="centerY" secondItem="cdL-i8-NBw" secondAttribute="centerY" id="uB9-in-gwZ"/>
+                            <constraint firstItem="onp-xN-PiQ" firstAttribute="leading" secondItem="Cw7-fJ-fVN" secondAttribute="leading" id="wVn-dY-oV7"/>
                         </constraints>
                     </view>
                     <connections>
@@ -227,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="-536" y="865"/>
         </scene>
-        <!--Animal Detail-->
+        <!--Animal Detail View Controller-->
         <scene sceneID="fT5-AL-EWr">
             <objects>
-                <viewController storyboardIdentifier="AnimalDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IWJ-oo-zFE" customClass="AnimalDetail" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BIAnimalDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IWJ-oo-zFE" customClass="BIAnimalDetailViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tvg-Df-531">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -298,7 +296,7 @@
         <!--Challenge View Controller-->
         <scene sceneID="Stw-ue-Nhu">
             <objects>
-                <viewController storyboardIdentifier="ChallengeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K7n-v6-TTZ" customClass="ChallengeViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BIChallengeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K7n-v6-TTZ" customClass="BIChallengeViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hto-G1-PMu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>

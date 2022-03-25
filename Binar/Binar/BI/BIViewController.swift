@@ -63,7 +63,7 @@ final class BIViewController: UITableViewController {
             
                 guard let selectedAnimal = randomAnimal else { return }
                 let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
-                guard let viewController = storyboard.instantiateViewController(withIdentifier: "AnimalDetailViewController") as? AnimalDetailViewController else {return}
+                guard let viewController = storyboard.instantiateViewController(withIdentifier: "BI2AnimalDetailViewController") as? BI2AnimalDetailViewController else {return}
                 viewController.name = selectedAnimal
             self.navigationController?.pushViewController(viewController, animated: true)
             
@@ -92,7 +92,7 @@ final class BIViewController: UITableViewController {
             case animal:
                 guard let selectedAnimal = selectedAnimal else { return }
                 let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
-                guard let viewController = storyboard.instantiateViewController(withIdentifier: "AnimalDetailViewController") as? AnimalDetailViewController else {return}
+                guard let viewController = storyboard.instantiateViewController(withIdentifier: "BI2AnimalDetailViewController") as? BI2AnimalDetailViewController else {return}
                 viewController.name = selectedAnimal
                 navigationController?.pushViewController(viewController, animated: true)
 
@@ -128,7 +128,7 @@ extension BIViewController: UISearchBarDelegate {
     }
 }
 
-final class AnimalDetailViewController: UIViewController{
+final class BI2AnimalDetailViewController: UIViewController{
     var name: String?
     var detail: String?
     var urlString: String?

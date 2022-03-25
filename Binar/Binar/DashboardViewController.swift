@@ -273,7 +273,7 @@ extension DashboardViewController {
     
     func goToBI3() {
         let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ChallengeViewController") as? ChallengeViewController else {
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "BIChallengeViewController") as? BIChallengeViewController else {
             return
         }
         navigationController?.pushViewController(viewController, animated: true)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AnimalDetail: UIViewController{
+final class BIAnimalDetailViewController: UIViewController{
     @IBOutlet weak var animalImageView: UIImageView!
     @IBOutlet weak var animalNameLabel: UILabel!
     @IBOutlet weak var animalDescLabel: UILabel!

@@ -17,6 +17,8 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
         super.viewDidLoad()
         title = "Animal List"
         tableView.registerCell(BIAnimalTableCell.self)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +64,7 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
             case animal.name:
                 guard let selectedAnimal = selectedAnimal else { return }
                 let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
-                guard let viewController = storyboard.instantiateViewController(withIdentifier: "AnimalDetail") as? AnimalDetail else {return}
+                guard let viewController = storyboard.instantiateViewController(withIdentifier: "BIAnimalDetailViewController") as? BIAnimalDetailViewController else {return}
                 viewController.name = selectedAnimal.name
                 viewController.desc = selectedAnimal.description
                 viewController.imageUrlString = selectedAnimal.photoUrlString
@@ -123,7 +125,7 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
             
                 guard let selectedAnimal = randomAnimal else { return }
                 let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
-                guard let viewController = storyboard.instantiateViewController(withIdentifier: "AnimalDetail") as? AnimalDetail else {return}
+                guard let viewController = storyboard.instantiateViewController(withIdentifier: "BIAnimalDetailViewController") as? BIAnimalDetailViewController else {return}
             viewController.name = selectedAnimal.name
             viewController.desc = selectedAnimal.description
             viewController.imageUrlString = selectedAnimal.photoUrlString
@@ -207,3 +209,44 @@ extension BIAnimalTableViewController {
         tableView.reloadData()
     }
 }
+
+extension BIAnimalTableViewController {
+    private func handleEdit(){
+        let editAlert = UIAlertController(title: "Edit", message: "Edit this animal's name or strength.", preferredStyle: .alert)
+        
+        editAlert.addTextField { [self] textField in
+            textField.placeholder = selectedAnimal?.name
+            textField.text = selectedAnimal?.name
+            
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        let confirm = UIAlertAction(title: "Confirm", style: .default) { _ in
+//            guard editAlert.textFields?.isEmpty == false else { return }
+//            let textField: UITextField? = editAlert.textFields?[0]
+        }
+        
+        editAlert.addAction(cancel)
+        editAlert.addAction(confirm)
+        
+        present(editAlert, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView,
+                   leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .normal,
+                                        title: "Edit") { [weak self] (action, view, completionHandler) in
+                                            self?.handleEdit()
+                                            completionHandler(true)
+        }
+        action.backgroundColor = .systemBlue
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+override func tableView(_ tableView: UITableView,
+                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+}
+
