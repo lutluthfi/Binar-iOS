@@ -59,7 +59,7 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row: Int = indexPath.row
         selectedAnimal = displayedAnimals[row]
-        for animal in Animal.listV2() {
+        for animal in displayedAnimals {
             switch selectedAnimal?.name{
             case animal.name:
                 guard let selectedAnimal = selectedAnimal else { return }
@@ -208,45 +208,77 @@ extension BIAnimalTableViewController {
         }
         tableView.reloadData()
     }
+    
 }
 
 extension BIAnimalTableViewController {
-    private func handleEdit(){
-        let editAlert = UIAlertController(title: "Edit", message: "Edit this animal's name or strength.", preferredStyle: .alert)
+
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        editAlert.addTextField { [self] textField in
-            textField.placeholder = selectedAnimal?.name
-            textField.text = selectedAnimal?.name
+        func handleDelete() {
+//            displayedAnimals.remove(at: indexPath.row)
+            let deleteAlert = UIAlertController(title: "Alert", message: "Are you sure want to delete this animal?", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            let delete = UIAlertAction(title: "Delete", style: .destructive) { [self] _ in
+                self.displayedAnimals.remove(at: indexPath.row)
+                tableView.reloadData()
+            }
+            deleteAlert.addAction(cancel)
+            deleteAlert.addAction(delete)
+            present(deleteAlert, animated: true)
             
         }
         
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-        
-        let confirm = UIAlertAction(title: "Confirm", style: .default) { _ in
-//            guard editAlert.textFields?.isEmpty == false else { return }
-//            let textField: UITextField? = editAlert.textFields?[0]
+        func handleEdit() {
+            let swipedAnimal = displayedAnimals[indexPath.row]
+            let editAlert = UIAlertController(title: "Edit Name", message: "Change this animal's name", preferredStyle: .alert)
+            
+            editAlert.addTextField()
+            let textField: UITextField = editAlert.textFields![0]
+            textField.text = swipedAnimal.name
+            
+            let confirm = UIAlertAction(title: "Confirm", style: .default) { [self] _ in
+                guard !textField.text!.isEmpty else {
+                    let empty = UIAlertController(title: "Name is empty", message: "Please provide a name.", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "OK", style: .default)
+                    empty.addAction(ok)
+                    present(empty, animated: true)
+                    return handleEdit()
+                }
+                displayedAnimals[indexPath.row].name = textField.text!
+                tableView.reloadData()
+            }
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .destructive)
+            
+            editAlert.addAction(cancel)
+            editAlert.addAction(confirm)
+            present(editAlert, animated: true)
         }
         
-        editAlert.addAction(cancel)
-        editAlert.addAction(confirm)
-        
-        present(editAlert, animated: true)
+        // Trash action
+        let delete = UIContextualAction(style: .destructive,
+                                       title: "Delete") { (action, view, completionHandler) in
+                                        handleDelete()
+                                        completionHandler(true)
+        }
+        delete.backgroundColor = .systemRed
+
+        // Unread action
+        let edit = UIContextualAction(style: .normal,title: "Edit") {(action, view, completionHandler) in
+            handleEdit()
+            completionHandler(true)
+        }
+        edit.backgroundColor = .systemBlue
+
+        let configuration = UISwipeActionsConfiguration(actions: [delete, edit])
+
+        return configuration
     }
     
     override func tableView(_ tableView: UITableView,
-                   leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .normal,
-                                        title: "Edit") { [weak self] (action, view, completionHandler) in
-                                            self?.handleEdit()
-                                            completionHandler(true)
-        }
-        action.backgroundColor = .systemBlue
-        return UISwipeActionsConfiguration(actions: [action])
-    }
-    
-override func tableView(_ tableView: UITableView,
                    editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .none
     }
+    
 }
-

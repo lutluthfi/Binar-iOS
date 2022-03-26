@@ -8,7 +8,7 @@
 import Foundation
 
 struct Animal: Decodable {
-    let name: String
+    var name: String
     let photoUrlString: String
     let description: String
     let typeOfFood: TypeOfFood
