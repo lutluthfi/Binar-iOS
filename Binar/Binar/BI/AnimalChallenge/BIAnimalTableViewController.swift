@@ -19,6 +19,7 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
         tableView.registerCell(BIAnimalTableCell.self)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.keyboardDismissMode = .onDrag
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -171,9 +172,18 @@ extension BIAnimalTableViewController: UISearchBarDelegate {
         tableView.reloadData()
     }
     
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        tableView.endEditing(true)
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
     }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+            searchBar.setShowsCancelButton(true, animated: true)
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+            searchBar.setShowsCancelButton(false, animated: true)
+    }
+    
 }
 
 // MARK: Sort Ascending and Descending Functions
@@ -210,6 +220,8 @@ extension BIAnimalTableViewController {
     }
     
 }
+
+// MARK: Swipe Actions
 
 extension BIAnimalTableViewController {
 
