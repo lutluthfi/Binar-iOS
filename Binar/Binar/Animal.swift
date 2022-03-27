@@ -14,10 +14,18 @@ struct Animal: Decodable {
     let typeOfFood: TypeOfFood
     let strength: Int
     
-    enum TypeOfFood: String, Decodable {
+    enum TypeOfFood: String, Decodable, CaseIterable {
         case carnivora = "carnivora"
         case herbivora = "herbivora"
         case omnivora = "omnivora"
+    }
+    
+    init(name: String, desc: String, strength: Int, url: String, food: TypeOfFood){
+        self.name = name
+        self.description = desc
+        self.strength = strength
+        self.photoUrlString = url
+        self.typeOfFood = food
     }
 }
 

@@ -7,12 +7,30 @@
 
 import UIKit
 
-final class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable {
+
+var newAnimalName: String?
+var newAnimalDetail: String?
+var newAnimalStrength: Int?
+var newAnimalUrl: String?
+
+class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable {
     var displayedAnimals: [Animal] = Animal.listV2()
     var selectedAnimal: Animal?
-    var lastStateDisplayedAnimals: [Animal]?
+    var editedAnimals: [Animal]?
+    var searchingAnimal: [Animal]?
+    var toggleAddAnimal: Bool?
     @IBOutlet weak var animalSearchBar: UISearchBar!
     @IBOutlet weak var actionsButton: UIBarButtonItem!
+    
+    func addNewAnimal() {
+        let newAnimal = Animal(name: newAnimalName ?? "", desc: newAnimalDetail ?? "", strength: newAnimalStrength ?? 0, url: newAnimalUrl ?? "", food: Animal.TypeOfFood.allCases.randomElement()!)
+        
+        displayedAnimals.insert(newAnimal, at: 0)
+        editedAnimals?.insert(newAnimal, at: 0)
+        toggleAddAnimal = false
+        newAnimalName = nil
+        tableView.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +45,11 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
         super.viewWillAppear(true)
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Animal List"
+        
+        guard newAnimalName != nil else {return}
+        
+        toggleAddAnimal = true
+        addNewAnimal()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -51,7 +74,12 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
         }
         
         let row: Int = indexPath.row
-        let animal: Animal = displayedAnimals[row]
+        let animal: Animal
+        if editedAnimals != nil {
+            animal = editedAnimals![row]
+        } else {
+            animal = displayedAnimals[row]
+        }
         
         cell.fill(with: animal)
         
@@ -103,17 +131,23 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
         sortAlert.addAction(sortDescending)
         sortAlert.addAction(cancel)
         
-        let sortByName = UIAlertAction(title: "Sort By Name", style: .default) { _ in
+        let addNewAnimal = UIAlertAction(title: "Add a new animal", style: .default) { _ in
+            let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(withIdentifier: "AddAnimalViewController") as? AddAnimalViewController else {return}
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        let sortByName = UIAlertAction(title: "Sort by name", style: .default) { _ in
             choice = "name"
             self.present(sortAlert, animated: true)
         }
         
-        let sortByStrength = UIAlertAction(title: "Sort By Strength", style: .default) { _ in
+        let sortByStrength = UIAlertAction(title: "Sort by strength", style: .default) { _ in
             choice = "strength"
             self.present(sortAlert, animated: true)
         }
         
-        let random = UIAlertAction(title: "Generate Random Animal", style: .default) { _ in
+        let random = UIAlertAction(title: "Generate a random animal", style: .default) { _ in
             let singular: String?
             let animals: [Animal] = Animal.listV2()
             let randomAnimal: Animal? = animals.randomElement()!
@@ -142,6 +176,7 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
             self.present(randomAlertController, animated: true)
         }
 
+        actionsAlert.addAction(addNewAnimal)
         actionsAlert.addAction(sortByName)
         actionsAlert.addAction(sortByStrength)
         actionsAlert.addAction(random)
@@ -159,7 +194,7 @@ extension BIAnimalTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let animalSearchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isSearchTextNotEmpty = !animalSearchText.isEmpty
-        let animals: [Animal] = displayedAnimals
+        let animals: [Animal] = editedAnimals ?? displayedAnimals
         if isSearchTextNotEmpty {
             let searchedAnimals: [Animal] = animals.filter {
                 let animalSearchText: String = searchText.lowercased()
@@ -168,7 +203,8 @@ extension BIAnimalTableViewController: UISearchBarDelegate {
             }
             displayedAnimals = searchedAnimals
         } else {
-            displayedAnimals = lastStateDisplayedAnimals!
+            displayedAnimals = editedAnimals ?? Animal.listV2()
+            editedAnimals = displayedAnimals
         }
         tableView.reloadData()
     }
@@ -229,14 +265,14 @@ extension BIAnimalTableViewController {
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         func handleDelete() {
-//            displayedAnimals.remove(at: indexPath.row)
+
             let deleteAlert = UIAlertController(title: "Alert", message: "Are you sure want to delete this animal?", preferredStyle: .alert)
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             let delete = UIAlertAction(title: "Delete", style: .destructive) { [self] _ in
                 self.displayedAnimals.remove(at: indexPath.row)
                 self.tableView.deleteRows(at: [indexPath], with: .right)
-                lastStateDisplayedAnimals = displayedAnimals
                 self.tableView.reloadData()
+                editedAnimals = displayedAnimals
             }
             deleteAlert.addAction(cancel)
             deleteAlert.addAction(delete)
@@ -244,36 +280,23 @@ extension BIAnimalTableViewController {
             
         }
         
-        func handleEdit() {
-            lastStateDisplayedAnimals = displayedAnimals
-            let swipedAnimal = lastStateDisplayedAnimals![indexPath.row]
-            let editAlert = UIAlertController(title: "Edit Name", message: "Change this animal's name", preferredStyle: .alert)
-            
-            editAlert.addTextField()
-            let textField: UITextField = editAlert.textFields![0]
-            textField.text = swipedAnimal.name
-            
-            let confirm = UIAlertAction(title: "Confirm", style: .default) { [self] _ in
-                guard !textField.text!.isEmpty else {
-                    let empty = UIAlertController(title: "Name is empty", message: "Please provide a name.", preferredStyle: .alert)
-                    let ok = UIAlertAction(title: "OK", style: .default)
-                    empty.addAction(ok)
-                    present(empty, animated: true)
-                    return handleEdit()
-                }
-                displayedAnimals[indexPath.row].name = textField.text!
-                lastStateDisplayedAnimals![indexPath.row].name = textField.text!
-                tableView.reloadData()
+        func handleFavorite() {
+            let swipedAnimal: Animal?
+            if editedAnimals != nil {
+                swipedAnimal = editedAnimals![indexPath.row]
+                editedAnimals?.remove(at: 0)
+                editedAnimals?.insert(swipedAnimal!, at: 0)
             }
-            
-            let cancel = UIAlertAction(title: "Cancel", style: .destructive)
-            
-            editAlert.addAction(cancel)
-            editAlert.addAction(confirm)
-            present(editAlert, animated: true)
+            else {
+                swipedAnimal = displayedAnimals[indexPath.row]
+                displayedAnimals.remove(at: indexPath.row)
+                displayedAnimals.insert(swipedAnimal!, at: 0)
+                
+            }
+            tableView.reloadData()
         }
         
-        // Trash action
+        // Delete action
         let delete = UIContextualAction(style: .destructive,
                                        title: "Delete") { (action, view, completionHandler) in
                                         handleDelete()
@@ -281,14 +304,14 @@ extension BIAnimalTableViewController {
         }
         delete.backgroundColor = .systemRed
 
-        // Unread action
-        let edit = UIContextualAction(style: .normal,title: "Edit") {(action, view, completionHandler) in
-            handleEdit()
+        // Edit action
+        let favorite = UIContextualAction(style: .normal,title: "Favorite") {(action, view, completionHandler) in
+            handleFavorite()
             completionHandler(true)
         }
-        edit.backgroundColor = .systemBlue
+        favorite.backgroundColor = .systemYellow
 
-        let configuration = UISwipeActionsConfiguration(actions: [delete, edit])
+        let configuration = UISwipeActionsConfiguration(actions: [delete, favorite])
 
         return configuration
     }

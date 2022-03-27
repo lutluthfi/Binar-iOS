@@ -94,7 +94,7 @@ final class BIViewController: UITableViewController {
                 let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
                 guard let viewController = storyboard.instantiateViewController(withIdentifier: "BI2AnimalDetailViewController") as? BI2AnimalDetailViewController else {return}
                 viewController.name = selectedAnimal
-                navigationController?.pushViewController(viewController, animated: true)
+                navigationController?.showDetailViewController(viewController, sender: Any.self)
 
             default:
             break

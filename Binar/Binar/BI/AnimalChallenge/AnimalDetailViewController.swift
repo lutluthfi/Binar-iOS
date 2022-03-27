@@ -33,3 +33,32 @@ final class BIAnimalDetailViewController: UIViewController{
         navigationController?.navigationBar.prefersLargeTitles = false
     }
 }
+//
+//func handleEdit() {
+//    lastStateDisplayedAnimals = displayedAnimals
+//    let swipedAnimal = lastStateDisplayedAnimals![indexPath.row]
+//    let editAlert = UIAlertController(title: "Edit Name", message: "Change this animal's name", preferredStyle: .alert)
+//    
+//    editAlert.addTextField()
+//    let textField: UITextField = editAlert.textFields![0]
+//    textField.text = swipedAnimal.name
+//    
+//    let confirm = UIAlertAction(title: "Confirm", style: .default) { [self] _ in
+//        guard !textField.text!.isEmpty else {
+//            let empty = UIAlertController(title: "Name is empty", message: "Please provide a name.", preferredStyle: .alert)
+//            let ok = UIAlertAction(title: "OK", style: .default)
+//            empty.addAction(ok)
+//            present(empty, animated: true)
+//            return handleEdit()
+//        }
+//        displayedAnimals[indexPath.row].name = textField.text!
+//        lastStateDisplayedAnimals![indexPath.row].name = textField.text!
+//        tableView.reloadData()
+//    }
+//    
+//    let cancel = UIAlertAction(title: "Cancel", style: .destructive)
+//    
+//    editAlert.addAction(cancel)
+//    editAlert.addAction(confirm)
+//    present(editAlert, animated: true)
+//}

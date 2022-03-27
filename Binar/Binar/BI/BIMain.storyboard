@@ -79,6 +79,7 @@
                     <connections>
                         <outlet property="AnimalSearchBar" destination="RJf-zq-sWG" id="j9b-t2-I3I"/>
                         <outlet property="randomAnimal" destination="IDw-tV-k7F" id="fYQ-eL-BAJ"/>
+                        <segue destination="brm-jJ-Bkh" kind="showDetail" id="JER-ke-Zx9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZH-H4-3N7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,23 +91,23 @@
             <objects>
                 <viewController storyboardIdentifier="BI2AnimalDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="brm-jJ-Bkh" customClass="BI2AnimalDetailViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cdL-i8-NBw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e4g-jW-OKR">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="onp-xN-PiQ">
-                                        <rect key="frame" x="0.0" y="63.5" width="414" height="190"/>
+                                        <rect key="frame" x="0.0" y="63.5" width="414" height="136"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="399" translatesAutoresizingMaskIntoConstraints="NO" id="pRH-Bw-ESi">
-                                        <rect key="frame" x="8" y="261.5" width="82" height="38.5"/>
+                                        <rect key="frame" x="8" y="207.5" width="82" height="38.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="399" translatesAutoresizingMaskIntoConstraints="NO" id="jc3-dD-MS0">
-                                        <rect key="frame" x="8" y="308" width="82" height="32"/>
+                                        <rect key="frame" x="8" y="254" width="82" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="32" id="Dqu-mS-VcI"/>
                                         </constraints>
@@ -224,6 +225,118 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gvX-fJ-9dY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-536" y="865"/>
+        </scene>
+        <!--Add Animal View Controller-->
+        <scene sceneID="hOT-P9-rPB">
+            <objects>
+                <viewController storyboardIdentifier="AddAnimalViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f6S-VU-bf4" customClass="AddAnimalViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mzr-BU-irP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8v-3M-zyf">
+                                <rect key="frame" x="0.0" y="111" width="414" height="785"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert new animal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qOO-by-mxe">
+                                        <rect key="frame" x="8" y="20" width="398" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="uet-94-3uQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert new animal detail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZBU-WB-TyS">
+                                        <rect key="frame" x="8" y="62" width="398" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="SZ2-Np-bBD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert new animal strength" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mz5-gZ-uni">
+                                        <rect key="frame" x="8" y="104" width="398" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="bio-lG-g04"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Insert new animal image URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KEk-6Q-jCB">
+                                        <rect key="frame" x="8" y="146" width="398" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="CEb-vZ-YlN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9Q-ME-Mzb">
+                                        <rect key="frame" x="316" y="203" width="90" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="TfU-Lp-se4"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                        <connections>
+                                            <action selector="onAddButtonTouch:" destination="f6S-VU-bf4" eventType="touchUpInside" id="Dz1-lf-kkX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-Jg-9tF">
+                                        <rect key="frame" x="8" y="202" width="90" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="gXl-CP-yfq"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Cancel"/>
+                                        <connections>
+                                            <action selector="onCancelButtonTouch:" destination="f6S-VU-bf4" eventType="touchUpInside" id="3G8-Tk-U5M"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mz5-gZ-uni" firstAttribute="top" secondItem="ZBU-WB-TyS" secondAttribute="bottom" constant="8" symbolic="YES" id="D1I-AR-s7J"/>
+                                    <constraint firstItem="qOO-by-mxe" firstAttribute="leading" secondItem="ZBU-WB-TyS" secondAttribute="leading" id="DIe-tN-PRv"/>
+                                    <constraint firstItem="qOO-by-mxe" firstAttribute="trailing" secondItem="G8v-3M-zyf" secondAttribute="trailingMargin" id="JOm-J8-zXt"/>
+                                    <constraint firstItem="KEk-6Q-jCB" firstAttribute="leading" secondItem="G8v-3M-zyf" secondAttribute="leading" constant="8" id="N04-Rc-B7r"/>
+                                    <constraint firstItem="KEk-6Q-jCB" firstAttribute="trailing" secondItem="w9Q-ME-Mzb" secondAttribute="trailing" id="O7f-l9-ITm"/>
+                                    <constraint firstItem="mz5-gZ-uni" firstAttribute="leading" secondItem="ZBU-WB-TyS" secondAttribute="leading" id="PUF-qK-ely"/>
+                                    <constraint firstAttribute="trailing" secondItem="KEk-6Q-jCB" secondAttribute="trailing" constant="8" id="UoE-BR-F1n"/>
+                                    <constraint firstItem="qOO-by-mxe" firstAttribute="centerX" secondItem="G8v-3M-zyf" secondAttribute="centerX" id="Voa-pH-y8v"/>
+                                    <constraint firstAttribute="bottom" secondItem="KEk-6Q-jCB" secondAttribute="bottom" constant="551" id="bZY-qc-uyR"/>
+                                    <constraint firstItem="KEk-6Q-jCB" firstAttribute="leading" secondItem="WDM-Jg-9tF" secondAttribute="leading" id="cYU-th-TT7"/>
+                                    <constraint firstItem="WDM-Jg-9tF" firstAttribute="top" secondItem="KEk-6Q-jCB" secondAttribute="bottom" constant="22" id="dID-On-dux"/>
+                                    <constraint firstItem="w9Q-ME-Mzb" firstAttribute="top" secondItem="KEk-6Q-jCB" secondAttribute="bottom" constant="23" id="fbY-Wg-hVc"/>
+                                    <constraint firstItem="KEk-6Q-jCB" firstAttribute="top" secondItem="mz5-gZ-uni" secondAttribute="bottom" constant="8" symbolic="YES" id="kHt-xg-eRH"/>
+                                    <constraint firstItem="qOO-by-mxe" firstAttribute="trailing" secondItem="ZBU-WB-TyS" secondAttribute="trailing" id="l7w-79-gmg"/>
+                                    <constraint firstItem="qOO-by-mxe" firstAttribute="top" secondItem="G8v-3M-zyf" secondAttribute="topMargin" constant="12" id="lvF-bx-iNI"/>
+                                    <constraint firstItem="qOO-by-mxe" firstAttribute="leading" secondItem="G8v-3M-zyf" secondAttribute="leadingMargin" id="qa6-If-Ij6"/>
+                                    <constraint firstItem="ZBU-WB-TyS" firstAttribute="top" secondItem="qOO-by-mxe" secondAttribute="bottom" constant="8" symbolic="YES" id="uHp-se-5cC"/>
+                                    <constraint firstItem="mz5-gZ-uni" firstAttribute="centerX" secondItem="ZBU-WB-TyS" secondAttribute="centerX" id="yX2-1p-hyM"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zhl-Hi-yzE"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="wKb-aV-BYR"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RZe-Ac-Q5c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="G8v-3M-zyf" secondAttribute="bottom" id="2hh-HK-IQ1"/>
+                            <constraint firstItem="G8v-3M-zyf" firstAttribute="centerX" secondItem="Mzr-BU-irP" secondAttribute="centerX" id="5EO-Qu-hgc"/>
+                            <constraint firstItem="G8v-3M-zyf" firstAttribute="top" secondItem="RZe-Ac-Q5c" secondAttribute="top" constant="67" id="QX8-1z-7Y5"/>
+                            <constraint firstItem="G8v-3M-zyf" firstAttribute="leading" secondItem="Mzr-BU-irP" secondAttribute="leading" id="vX8-oK-1aX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="w9Q-ME-Mzb" id="057-G0-fPE"/>
+                        <outlet property="cancelButton" destination="WDM-Jg-9tF" id="Alo-Ct-7GJ"/>
+                        <outlet property="newAnimalDescTextField" destination="ZBU-WB-TyS" id="3aT-pq-B2P"/>
+                        <outlet property="newAnimalImageTextField" destination="KEk-6Q-jCB" id="3je-4O-e7t"/>
+                        <outlet property="newAnimalNameTextField" destination="qOO-by-mxe" id="r2R-cl-1Yd"/>
+                        <outlet property="newAnimalStrengthTextField" destination="mz5-gZ-uni" id="h9k-Ak-5pG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3FR-Xp-g8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-536" y="1548"/>
         </scene>
         <!--Animal Detail View Controller-->
         <scene sceneID="fT5-AL-EWr">
