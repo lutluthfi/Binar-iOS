@@ -10,6 +10,7 @@ import UIKit
 final class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable {
     var displayedAnimals: [Animal] = Animal.listV2()
     var selectedAnimal: Animal?
+    var lastStateDisplayedAnimals: [Animal]?
     @IBOutlet weak var animalSearchBar: UISearchBar!
     @IBOutlet weak var actionsButton: UIBarButtonItem!
     
@@ -158,7 +159,7 @@ extension BIAnimalTableViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         let animalSearchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
         let isSearchTextNotEmpty = !animalSearchText.isEmpty
-        let animals: [Animal] = Animal.listV2()
+        let animals: [Animal] = displayedAnimals
         if isSearchTextNotEmpty {
             let searchedAnimals: [Animal] = animals.filter {
                 let animalSearchText: String = searchText.lowercased()
@@ -167,7 +168,7 @@ extension BIAnimalTableViewController: UISearchBarDelegate {
             }
             displayedAnimals = searchedAnimals
         } else {
-            displayedAnimals = animals
+            displayedAnimals = lastStateDisplayedAnimals!
         }
         tableView.reloadData()
     }
@@ -233,7 +234,9 @@ extension BIAnimalTableViewController {
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             let delete = UIAlertAction(title: "Delete", style: .destructive) { [self] _ in
                 self.displayedAnimals.remove(at: indexPath.row)
-                tableView.reloadData()
+                self.tableView.deleteRows(at: [indexPath], with: .right)
+                lastStateDisplayedAnimals = displayedAnimals
+                self.tableView.reloadData()
             }
             deleteAlert.addAction(cancel)
             deleteAlert.addAction(delete)
@@ -242,7 +245,8 @@ extension BIAnimalTableViewController {
         }
         
         func handleEdit() {
-            let swipedAnimal = displayedAnimals[indexPath.row]
+            lastStateDisplayedAnimals = displayedAnimals
+            let swipedAnimal = lastStateDisplayedAnimals![indexPath.row]
             let editAlert = UIAlertController(title: "Edit Name", message: "Change this animal's name", preferredStyle: .alert)
             
             editAlert.addTextField()
@@ -258,6 +262,7 @@ extension BIAnimalTableViewController {
                     return handleEdit()
                 }
                 displayedAnimals[indexPath.row].name = textField.text!
+                lastStateDisplayedAnimals![indexPath.row].name = textField.text!
                 tableView.reloadData()
             }
             
