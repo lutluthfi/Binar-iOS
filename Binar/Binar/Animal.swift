@@ -8,7 +8,7 @@
 import Foundation
 
 struct Animal: Decodable {
-    let name: String
+    var name: String
     let photoUrlString: String
     let description: String
     let typeOfFood: TypeOfFood
@@ -18,6 +18,14 @@ struct Animal: Decodable {
         case carnivora = "carnivora"
         case herbivora = "herbivora"
         case omnivora = "omnivora"
+    }
+    
+    init(name: String, desc: String, strength: Int, url: String, food: TypeOfFood){
+        self.name = name
+        self.description = desc
+        self.strength = strength
+        self.photoUrlString = url
+        self.typeOfFood = food
     }
 }
 

@@ -8,22 +8,84 @@
 import UIKit
 
 final class ARViewController: UIViewController, StoryboardInstantiable {
-    @IBOutlet weak var alertButton: UIButton!
+    lazy var alertButton: UIButton = {
+        let view = UIButton(type: .system)
+        view.setTitle("Alert Button", for: .normal)
+        view.setTitleColor(.white, for: .normal)
+        view.backgroundColor = .systemBlue
+        view.addTarget(self, action: #selector(onAlertButtonTap), for: .touchUpInside)
+        view.rounded(cornerRadius: 8)
+        return view
+    }()
+    lazy var scrollView: UIScrollView = {
+        let view = UIScrollView()
+        view.alwaysBounceVertical = true
+        view.showsVerticalScrollIndicator = true
+        return view
+    }()
+    lazy var contentView: UIView = UIView()
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var firstStackViewLabel: UILabel!
     @IBOutlet weak var stepperValueLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
     
-    var name: String?
+    private let name: String
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    init(name: String) {
+        self.name = name
+        super.init(nibName: nil, bundle: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationItem()
-        setupToolbar()
-        setupPosterImageView()
+        setupAddView()
+        setupConstraint()
+        viewDidLoadPreparation()
     }
     
-    @IBAction func onAlertButtonTap(_ sender: UIButton) {
+    func setupAddView() {
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(alertButton)
+    }
+    
+    func setupConstraint() {
+        scrollView.makeConstraint(
+            scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            scrollView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
+            scrollView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        )
+        let contentHeightConstraint = contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor)
+        contentHeightConstraint.priority = .defaultLow
+        let contentWidthConstraint = contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor)
+//        contentWidthConstraint.priority = .defaultLow
+        contentView.makeConstraint(
+            contentHeightConstraint,
+            contentWidthConstraint,
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.leftAnchor.constraint(equalTo: scrollView.leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: scrollView.rightAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
+        )
+        alertButton.makeConstraint(
+            alertButton.heightAnchor.constraint(equalToConstant: 44),
+            alertButton.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor, constant: 16),
+            alertButton.leftAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.leftAnchor, constant: 16),
+            alertButton.rightAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.rightAnchor, constant: -16)
+        )
+    }
+    
+    func viewDidLoadPreparation() {
+        title = name
+        view.backgroundColor = .white
+    }
+    
+    @objc func onAlertButtonTap(_ sender: UIButton) {
         let alertController = UIAlertController(
             title: "Alert",
             message: "This is message's alert",
@@ -118,26 +180,6 @@ final class ARViewController: UIViewController, StoryboardInstantiable {
     
     private func setupPosterImageView() {
         let imageUrlString = "https://locate.apple.com/resources/images/widgets/sales_locator_long_2x.jpg"
-        guard let url = URL(string: imageUrlString) else {
-            print("Failed to load image")
-            return
-        }
-        
-//        Materi Raja Terakhir
-//        DispatchQueue.global(qos: .background).async {
-//            if let data = try? Data(contentsOf: url) {
-//                DispatchQueue.main.async {
-//                    self.posterImageView.image = UIImage(data: data)
-//                }
-//            } else {
-//                self.posterImageView.image = UIImage(systemName: "photo.fill")
-//            }
-//        }
-        
-        if let data = try? Data(contentsOf: url) {
-            posterImageView.image = UIImage(data: data)
-        } else {
-            posterImageView.image = UIImage(systemName: "photo.fill")
-        }
+        posterImageView.loadImage(resource: imageUrlString)
     }
 }

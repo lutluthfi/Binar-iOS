@@ -7,24 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		013165EC27ED71BF00CB0BD7 /* THAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013165EB27ED71BF00CB0BD7 /* THAnimalTableViewController.swift */; };
+		013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013165EE27ED903500CB0BD7 /* THAnimalTableCell.swift */; };
+		013165F127ED903500CB0BD7 /* THAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013165EF27ED903500CB0BD7 /* THAnimalTableCell.xib */; };
+		013165F727EDE6D500CB0BD7 /* THDetailAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013165F527EDE6D500CB0BD7 /* THDetailAnimalViewController.swift */; };
+		013165F827EDE6D500CB0BD7 /* THDetailAnimalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013165F627EDE6D500CB0BD7 /* THDetailAnimalViewController.xib */; };
 		01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD36027E0C48800C69237 /* THMain.storyboard */; };
 		01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DBD36227E0C4C400C69237 /* THViewController.swift */; };
 		0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A40550D27E2033F003E754D /* AFMain.storyboard */; };
 		0A40551027E20353003E754D /* AFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A40550F27E20353003E754D /* AFViewController.swift */; };
 		22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DD5C8127E0D59C003024DC /* DPMain.storyboard */; };
 		22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD5C8327E0D5BA003024DC /* DPViewController.swift */; };
+		2504065427EAF52800186517 /* RNMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2504065327EAF52800186517 /* RNMain.storyboard */; };
+		2504065627EAF53E00186517 /* RNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2504065527EAF53E00186517 /* RNViewController.swift */; };
 		31597C1F27EBA104008C20C4 /* MFAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31597C1D27EBA104008C20C4 /* MFAnimalTableCell.swift */; };
 		31597C2027EBA104008C20C4 /* MFAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31597C1E27EBA104008C20C4 /* MFAnimalTableCell.xib */; };
 		318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318D72D727E0C55E00ACAACF /* MFMain.storyboard */; };
 		319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319CD7D027E28B1A007F8239 /* MFBinarChallengeViewController.swift */; };
 		319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319CD7D227E28B25007F8239 /* MFFasilChallengeViewController.swift */; };
+		383935AE27ECE27A0051A89C /* BIAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935AD27ECE27A0051A89C /* BIAnimalTableViewController.swift */; };
+		383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935AF27ECE2950051A89C /* BIAnimalTableCell.swift */; };
+		383935B227ECE2A40051A89C /* BIAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */; };
+		383935B527ECEC550051A89C /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935B427ECEC550051A89C /* AnimalDetailViewController.swift */; };
+		38550CC927ECFF77004269C8 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550CC827ECFF77004269C8 /* ChallengeViewController.swift */; };
+		3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */; };
 		38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0C76C27E32498009D7A82 /* BIViewController.swift */; };
 		38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E0C76E27E324A2009D7A82 /* BIMain.storyboard */; };
 		4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D72D427E0C53700ACAACF /* MFViewController.swift */; };
 		4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A40E27DF8AF700C9E2F7 /* Student.swift */; };
 		4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */; };
-		4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F78A41527E0455300C9E2F7 /* ARMain.storyboard */; };
 		4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A44827E2123300C9E2F7 /* Animal.swift */; };
+		4F83BB6F27EDFA2A00690F01 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83BB6E27EDFA2A00690F01 /* UIView+Extension.swift */; };
 		4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234CD27DAB530007514BA /* AppDelegate.swift */; };
 		4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234CF27DAB530007514BA /* SceneDelegate.swift */; };
 		4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234D127DAB530007514BA /* DashboardViewController.swift */; };
@@ -47,10 +60,17 @@
 		4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */; };
 		592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592D89A127E0CAC200FCE74D /* ADMain.storyboard */; };
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
+		59D4282227EDBAFB00AE8C50 /* ADAnimalV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */; };
+		59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */; };
+		59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */; };
+		59D4282827EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
+		A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */; };
+		A406D3E927EDEA3C001DE178 /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A406D3E827EDEA3C001DE178 /* AKMain.storyboard */; };
+		A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */; };
+		A406D3EE27EDEA52001DE178 /* AKAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A406D3EC27EDEA52001DE178 /* AKAnimalTableCell.xib */; };
 		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
-		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
 		CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */; };
 		CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
@@ -61,24 +81,37 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		013165EB27ED71BF00CB0BD7 /* THAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THAnimalTableViewController.swift; sourceTree = "<group>"; };
+		013165EE27ED903500CB0BD7 /* THAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THAnimalTableCell.swift; sourceTree = "<group>"; };
+		013165EF27ED903500CB0BD7 /* THAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THAnimalTableCell.xib; sourceTree = "<group>"; };
+		013165F527EDE6D500CB0BD7 /* THDetailAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THDetailAnimalViewController.swift; sourceTree = "<group>"; };
+		013165F627EDE6D500CB0BD7 /* THDetailAnimalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THDetailAnimalViewController.xib; sourceTree = "<group>"; };
 		01DBD36027E0C48800C69237 /* THMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = THMain.storyboard; sourceTree = "<group>"; };
 		01DBD36227E0C4C400C69237 /* THViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewController.swift; sourceTree = "<group>"; };
 		0A40550D27E2033F003E754D /* AFMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AFMain.storyboard; sourceTree = "<group>"; };
 		0A40550F27E20353003E754D /* AFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFViewController.swift; sourceTree = "<group>"; };
 		22DD5C8127E0D59C003024DC /* DPMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DPMain.storyboard; sourceTree = "<group>"; };
 		22DD5C8327E0D5BA003024DC /* DPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPViewController.swift; sourceTree = "<group>"; };
+		2504065327EAF52800186517 /* RNMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RNMain.storyboard; sourceTree = "<group>"; };
+		2504065527EAF53E00186517 /* RNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewController.swift; sourceTree = "<group>"; };
 		31597C1D27EBA104008C20C4 /* MFAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAnimalTableCell.swift; sourceTree = "<group>"; };
 		31597C1E27EBA104008C20C4 /* MFAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MFAnimalTableCell.xib; sourceTree = "<group>"; };
 		318D72D427E0C53700ACAACF /* MFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFViewController.swift; sourceTree = "<group>"; };
 		318D72D727E0C55E00ACAACF /* MFMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MFMain.storyboard; sourceTree = "<group>"; };
 		319CD7D027E28B1A007F8239 /* MFBinarChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFBinarChallengeViewController.swift; sourceTree = "<group>"; };
 		319CD7D227E28B25007F8239 /* MFFasilChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFFasilChallengeViewController.swift; sourceTree = "<group>"; };
+		383935AD27ECE27A0051A89C /* BIAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAnimalTableViewController.swift; sourceTree = "<group>"; };
+		383935AF27ECE2950051A89C /* BIAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAnimalTableCell.swift; sourceTree = "<group>"; };
+		383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BIAnimalTableCell.xib; sourceTree = "<group>"; };
+		383935B427ECEC550051A89C /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
+		38550CC827ECFF77004269C8 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAddAnimalViewController.swift; sourceTree = "<group>"; };
 		38E0C76C27E32498009D7A82 /* BIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIViewController.swift; sourceTree = "<group>"; };
 		38E0C76E27E324A2009D7A82 /* BIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BIMain.storyboard; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
-		4F78A41527E0455300C9E2F7 /* ARMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ARMain.storyboard; sourceTree = "<group>"; };
 		4F78A44827E2123300C9E2F7 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		4F83BB6E27EDFA2A00690F01 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		4FD234CA27DAB530007514BA /* Binar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Binar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD234CD27DAB530007514BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD234CF27DAB530007514BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,10 +141,17 @@
 		54751E3827E36AF100536139 /* AIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
 		592D89A127E0CAC200FCE74D /* ADMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ADMain.storyboard; sourceTree = "<group>"; };
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalV1.swift; sourceTree = "<group>"; };
+		59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewController.swift; sourceTree = "<group>"; };
+		59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewCellViewTableViewCell.swift; sourceTree = "<group>"; };
+		59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADAnimalViewCellViewTableViewCell.xib; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
+		A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKDetailViewController.swift; sourceTree = "<group>"; };
+		A406D3E827EDEA3C001DE178 /* AKMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
+		A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKAnimalTableCell.swift; sourceTree = "<group>"; };
+		A406D3EC27EDEA52001DE178 /* AKAnimalTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKAnimalTableCell.xib; sourceTree = "<group>"; };
 		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
-		A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
 		C8A6942727E374B000BF09C7 /* NBMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NBMain.storyboard; sourceTree = "<group>"; };
 		C8A6942927E374E600BF09C7 /* NBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBViewController.swift; sourceTree = "<group>"; };
 		CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,9 +174,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		013165E827ED714B00CB0BD7 /* Animal */ = {
+			isa = PBXGroup;
+			children = (
+				013165F427EDE65400CB0BD7 /* Detail */,
+				013165ED27ED8FF300CB0BD7 /* Cell */,
+				013165EB27ED71BF00CB0BD7 /* THAnimalTableViewController.swift */,
+			);
+			path = Animal;
+			sourceTree = "<group>";
+		};
+		013165ED27ED8FF300CB0BD7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				013165EE27ED903500CB0BD7 /* THAnimalTableCell.swift */,
+				013165EF27ED903500CB0BD7 /* THAnimalTableCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		013165F427EDE65400CB0BD7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				013165F527EDE6D500CB0BD7 /* THDetailAnimalViewController.swift */,
+				013165F627EDE6D500CB0BD7 /* THDetailAnimalViewController.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		01DBD35F27E0C45200C69237 /* TH */ = {
 			isa = PBXGroup;
 			children = (
+				013165E827ED714B00CB0BD7 /* Animal */,
 				01DBD36027E0C48800C69237 /* THMain.storyboard */,
 				01DBD36227E0C4C400C69237 /* THViewController.swift */,
 			);
@@ -161,7 +230,16 @@
 			path = DP;
 			sourceTree = "<group>";
 		};
-		31597C1B27EBA0BE008C20C4 /* Animal */ = {
+		2504065227EAF51200186517 /* RN */ = {
+			isa = PBXGroup;
+			children = (
+				2504065327EAF52800186517 /* RNMain.storyboard */,
+				2504065527EAF53E00186517 /* RNViewController.swift */,
+			);
+			path = RN;
+			sourceTree = "<group>";
+		};
+		318D72D627E0C54100ACAACF /* MF */ = {
 			isa = PBXGroup;
 			children = (
 				31597C1C27EBA0E9008C20C4 /* Cell */,
@@ -190,9 +268,39 @@
 			path = MF;
 			sourceTree = "<group>";
 		};
+		383935AB27ECE25B0051A89C /* AnimalChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				383935AD27ECE27A0051A89C /* BIAnimalTableViewController.swift */,
+				383935B427ECEC550051A89C /* AnimalDetailViewController.swift */,
+				3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */,
+				383935AC27ECE2640051A89C /* Cell */,
+			);
+			path = AnimalChallenge;
+			sourceTree = "<group>";
+		};
+		383935AC27ECE2640051A89C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				383935AF27ECE2950051A89C /* BIAnimalTableCell.swift */,
+				383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		383935B627ECFF000051A89C /* ChapterChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				38550CC827ECFF77004269C8 /* ChallengeViewController.swift */,
+			);
+			path = ChapterChallenge;
+			sourceTree = "<group>";
+		};
 		38E0C76B27E3248B009D7A82 /* BI */ = {
 			isa = PBXGroup;
 			children = (
+				383935B627ECFF000051A89C /* ChapterChallenge */,
+				383935AB27ECE25B0051A89C /* AnimalChallenge */,
 				38E0C76E27E324A2009D7A82 /* BIMain.storyboard */,
 				38E0C76C27E32498009D7A82 /* BIViewController.swift */,
 			);
@@ -202,7 +310,6 @@
 		4F78A41227DF8C5F00C9E2F7 /* AR */ = {
 			isa = PBXGroup;
 			children = (
-				4F78A41527E0455300C9E2F7 /* ARMain.storyboard */,
 				4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */,
 				4FF0B33327EB6BEA00CAF144 /* Animal */,
 			);
@@ -230,6 +337,7 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+				2504065227EAF51200186517 /* RN */,
 				4FD234DB27DAB531007514BA /* Info.plist */,
 				4F78A44827E2123300C9E2F7 /* Animal.swift */,
 				4FD234CD27DAB530007514BA /* AppDelegate.swift */,
@@ -275,6 +383,7 @@
 				4FF0B31127E8E0A500CAF144 /* StoryboardInstantiable.swift */,
 				4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */,
 				4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */,
+				4F83BB6E27EDFA2A00690F01 /* UIView+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -335,6 +444,10 @@
 			children = (
 				592D89A127E0CAC200FCE74D /* ADMain.storyboard */,
 				592D89A327E0CB0200FCE74D /* ADViewController.swift */,
+				59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */,
+				59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */,
+				59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */,
+				59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */,
 			);
 			path = AD;
 			sourceTree = "<group>";
@@ -355,11 +468,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A406D3EA27EDEA52001DE178 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */,
+				A406D3EC27EDEA52001DE178 /* AKAnimalTableCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A4D3AA5327E0C8A900565DEE /* AK */ = {
 			isa = PBXGroup;
 			children = (
+				A406D3EA27EDEA52001DE178 /* Cell */,
+				A406D3E827EDEA3C001DE178 /* AKMain.storyboard */,
+				A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */,
 				A4D3AA5427E0C8C600565DEE /* AKViewController.swift */,
-				A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */,
 			);
 			path = AK;
 			sourceTree = "<group>";
@@ -455,17 +579,22 @@
 			files = (
 				CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */,
 				4FF0B32527EB540400CAF144 /* NBMain.storyboard in Resources */,
-				4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */,
+				2504065427EAF52800186517 /* RNMain.storyboard in Resources */,
 				31597C2027EBA104008C20C4 /* MFAnimalTableCell.xib in Resources */,
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
+				013165F127ED903500CB0BD7 /* THAnimalTableCell.xib in Resources */,
+				A406D3EE27EDEA52001DE178 /* AKAnimalTableCell.xib in Resources */,
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				4FF0B30E27E8DFD400CAF144 /* DSMain.storyboard in Resources */,
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
-				A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */,
 				4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */,
+				A406D3E927EDEA3C001DE178 /* AKMain.storyboard in Resources */,
+				59D4282827EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib in Resources */,
 				72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */,
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
+				383935B227ECE2A40051A89C /* BIAnimalTableCell.xib in Resources */,
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
+				013165F827EDE6D500CB0BD7 /* THDetailAnimalViewController.xib in Resources */,
 				0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */,
 				4FF0B33027EB561900CAF144 /* AIMain.storyboard in Resources */,
 				38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */,
@@ -483,16 +612,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383935AE27ECE27A0051A89C /* BIAnimalTableViewController.swift in Sources */,
+				2504065627EAF53E00186517 /* RNViewController.swift in Sources */,
 				4FF0B30F27E8DFD400CAF144 /* DSViewController.swift in Sources */,
+				59D4282227EDBAFB00AE8C50 /* ADAnimalV1.swift in Sources */,
 				4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */,
+				013165F727EDE6D500CB0BD7 /* THDetailAnimalViewController.swift in Sources */,
 				4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */,
+				383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */,
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
+				A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */,
+				4F83BB6F27EDFA2A00690F01 /* UIView+Extension.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
+				383935B527ECEC550051A89C /* AnimalDetailViewController.swift in Sources */,
+				38550CC927ECFF77004269C8 /* ChallengeViewController.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
+				3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */,
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
@@ -503,6 +642,7 @@
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,
 				4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
+				A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */,
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
@@ -511,8 +651,12 @@
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
+				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
+				013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,
+				013165EC27ED71BF00CB0BD7 /* THAnimalTableViewController.swift in Sources */,
+				59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */,
 				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

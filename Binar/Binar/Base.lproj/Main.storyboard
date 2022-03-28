@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,6 +66,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13f-Cg-1Uo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="168" y="122"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9IL-is-iYh">
+            <objects>
+                <viewController id="bNR-Zs-oux" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P9V-wm-7ab">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzF-m8-6O2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZL-QC-PWJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6ZL-QC-PWJ" secondAttribute="bottom" id="4gq-e5-QZV"/>
+                                    <constraint firstItem="6ZL-QC-PWJ" firstAttribute="top" secondItem="hzF-m8-6O2" secondAttribute="top" id="6ai-21-xyf"/>
+                                    <constraint firstItem="6ZL-QC-PWJ" firstAttribute="height" secondItem="hzF-m8-6O2" secondAttribute="height" priority="250" id="O2j-yD-UO7"/>
+                                    <constraint firstItem="6ZL-QC-PWJ" firstAttribute="width" secondItem="hzF-m8-6O2" secondAttribute="width" id="Srp-VN-idE"/>
+                                    <constraint firstAttribute="trailing" secondItem="6ZL-QC-PWJ" secondAttribute="trailing" id="rrk-we-T1W"/>
+                                    <constraint firstItem="6ZL-QC-PWJ" firstAttribute="leading" secondItem="hzF-m8-6O2" secondAttribute="leading" id="urm-yo-IQy"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="OYv-6P-IbV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Z7k-VL-ihH"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MaH-vw-GQh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MaH-vw-GQh" firstAttribute="bottom" secondItem="hzF-m8-6O2" secondAttribute="bottom" id="1BH-6D-iYm"/>
+                            <constraint firstItem="MaH-vw-GQh" firstAttribute="trailing" secondItem="hzF-m8-6O2" secondAttribute="trailing" id="CTg-mS-xOu"/>
+                            <constraint firstItem="hzF-m8-6O2" firstAttribute="top" secondItem="MaH-vw-GQh" secondAttribute="top" id="gsq-bq-GkP"/>
+                            <constraint firstItem="hzF-m8-6O2" firstAttribute="leading" secondItem="MaH-vw-GQh" secondAttribute="leading" id="z3m-IH-Azt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0G-NC-g8u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="105"/>
         </scene>
     </scenes>
     <resources>
