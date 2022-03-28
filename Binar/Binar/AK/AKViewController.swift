@@ -7,73 +7,53 @@
 
 import UIKit
 
-final class AKViewController: UITableViewController {
-    
-    @IBOutlet weak var shuffleButton: UIButton!
-    
+final class AKViewController: UITableViewController, StoryboardInstantiable {
     var name: String?
-    var count = 0
+    var selectedAnimal: Animal?
     
-    var animalAll: [String] = [Animal.listV1()].self[0].sorted()
-    var displayedAnimals: [String] = [Animal.listV1()][0].sorted()
-    
+    var displayedAnimals: [Animal] = Animal.listV2()
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
-
-    }
-    
-    
-    @IBAction func onShuffleButtonTap(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Message", message: "Are you sure want to shuffle ?", preferredStyle: .alert)
+        tableView.registerCell(AKAnimalTableCell.self)
         
-        let cancel = UIAlertAction(title: "Cancel", style: .destructive)
-        alertController.addAction(cancel)
-        let confirm = UIAlertAction(title: "Confirm", style: .default) { action in
-            self.animalAll.shuffle()
-            self.tableView.reloadData()
-        }
-        alertController.addAction(confirm)
-        present(alertController, animated: true)
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let count: Int = displayedAnimals.count
+        return count
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let animalCount: Int = animalAll.count
-        return animalCount
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let row: Int = indexPath.row
+        selectedAnimal = displayedAnimals[row]
+        let controller = UIStoryboard(name: "AKMain", bundle: nil).instantiateViewController(withIdentifier: "AKDetailViewController") as! AKDetailViewController
+        controller.animalName = selectedAnimal?.name
+        controller.animalUrl = selectedAnimal?.photoUrlString
+        controller.animalDescription = selectedAnimal?.description
+        controller.animalTipe = selectedAnimal?.typeOfFood
+        controller.animalStat = selectedAnimal?.strength
+        navigationController?.pushViewController(controller, animated: true)
     }
+    
+
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AnimalTableCell", for: indexPath)
+        let reusableCell: UITableViewCell = tableView.dequeueReusableCell(
+            withIdentifier: "AKAnimalTableCell",
+            for: indexPath
+        )
+        
+        guard let cell = reusableCell as? AKAnimalTableCell else {
+            return reusableCell
+        }
+        
         let row: Int = indexPath.row
-        let animal = animalAll[row]
-        cell.textLabel?.text = animal
+        let animal: Animal = displayedAnimals[row]
+        
+        cell.fill(with: animal)
         
         return cell
     }
-    
-    
 }
-
-extension AKViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let _searchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-        let isSearchTextNotEmpty = !_searchText.isEmpty
-        let animals = displayedAnimals
-        if isSearchTextNotEmpty {
-            let searchedAnimals = animals.filter{
-                let _searchText: String = searchText.lowercased()
-                let _name: String = $0.lowercased()
-                return _name.contains(_searchText)
-            }
-            animalAll = searchedAnimals
-        }else{
-            animalAll = animals
-        }
-        tableView.reloadData()
-    }
-    
-}
-
-
-
 
