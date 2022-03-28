@@ -69,6 +69,9 @@
 		A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */; };
 		A406D3EE27EDEA52001DE178 /* AKAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A406D3EC27EDEA52001DE178 /* AKAnimalTableCell.xib */; };
 		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
+		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
+		B90B6F1F27E36AF5008294B1 /* ZKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90B6F1E27E36AF5008294B1 /* ZKMain.storyboard */; };
+		B90B6F2127E36B27008294B1 /* ZKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90B6F2027E36B27008294B1 /* ZKViewController.swift */; };
 		CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */; };
 		CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
@@ -148,6 +151,9 @@
 		A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKAnimalTableCell.swift; sourceTree = "<group>"; };
 		A406D3EC27EDEA52001DE178 /* AKAnimalTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKAnimalTableCell.xib; sourceTree = "<group>"; };
 		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
+		A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
+		B90B6F1E27E36AF5008294B1 /* ZKMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZKMain.storyboard; sourceTree = "<group>"; };
+		B90B6F2027E36B27008294B1 /* ZKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZKViewController.swift; sourceTree = "<group>"; };
 		C8A6942727E374B000BF09C7 /* NBMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NBMain.storyboard; sourceTree = "<group>"; };
 		C8A6942927E374E600BF09C7 /* NBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBViewController.swift; sourceTree = "<group>"; };
 		CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -315,6 +321,7 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
+				B90B6F1D27E3693E008294B1 /* ZK */,
 				2504065227EAF51200186517 /* RN */,
 				4FD234DB27DAB531007514BA /* Info.plist */,
 				4F78A44827E2123300C9E2F7 /* Animal.swift */,
@@ -466,6 +473,15 @@
 			path = AK;
 			sourceTree = "<group>";
 		};
+		B90B6F1D27E3693E008294B1 /* ZK */ = {
+			isa = PBXGroup;
+			children = (
+				B90B6F1E27E36AF5008294B1 /* ZKMain.storyboard */,
+				B90B6F2027E36B27008294B1 /* ZKViewController.swift */,
+			);
+			path = ZK;
+			sourceTree = "<group>";
+		};
 		CEDF88CD27E0CF9200388847 /* PW */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,6 +584,7 @@
 				A406D3E927EDEA3C001DE178 /* AKMain.storyboard in Resources */,
 				59D4282827EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib in Resources */,
 				72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */,
+				B90B6F1F27E36AF5008294B1 /* ZKMain.storyboard in Resources */,
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
 				383935B227ECE2A40051A89C /* BIAnimalTableCell.xib in Resources */,
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
@@ -600,6 +617,7 @@
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
+				B90B6F2127E36B27008294B1 /* ZKViewController.swift in Sources */,
 				A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */,
 				4F83BB6F27EDFA2A00690F01 /* UIView+Extension.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,

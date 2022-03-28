@@ -53,6 +53,8 @@ final class DashboardViewController: UITableViewController {
             goToDPViewController()
         case .TatangSulaeman:
             goToTSViewController()
+        case .ZakiKaren:
+            goToZKViewController()
         case .NuzululAthaya:
             goToATViewController()
         case .Daffashiddiq:
@@ -230,6 +232,19 @@ extension DashboardViewController {
     }
 }
 
+// MARK: goToZKViewController
+extension DashboardViewController {
+    func goToZKViewController() {
+        guard let selectedStudent = selectedStudent else { return }
+        let storyboard = UIStoryboard(name: "ZKMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "ZKViewController") as? ZKViewController else {
+            return
+        }
+       viewController.name = selectedStudent.name
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
 // MARK: goToDSViewController
 extension DashboardViewController {
     func goToDSViewController() {
@@ -331,4 +346,3 @@ extension DashboardViewController{
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
-
