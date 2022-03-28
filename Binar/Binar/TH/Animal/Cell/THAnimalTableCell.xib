@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="100" id="KGk-i7-Jjw" customClass="THAnimalTableCell" customModule="Binar" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2LD-VR-4Ef">
+                        <rect key="frame" x="10" y="10" width="380" height="80"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gzR-Od-XEO">
+                                <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="Tcg-Kz-kmj"/>
+                                    <constraint firstAttribute="height" constant="60" id="mz9-bZ-917"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGt-uU-l3A">
+                                <rect key="frame" x="80" y="10" width="116.5" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="vOF-89-Ai9"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Animal Name">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="20"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AGt-uU-l3A" firstAttribute="top" secondItem="2LD-VR-4Ef" secondAttribute="top" constant="10" id="26q-63-9Hg"/>
+                            <constraint firstItem="gzR-Od-XEO" firstAttribute="top" secondItem="2LD-VR-4Ef" secondAttribute="top" constant="10" id="I6i-kZ-Hsy"/>
+                            <constraint firstAttribute="bottom" secondItem="AGt-uU-l3A" secondAttribute="bottom" constant="10" id="V62-yC-fcJ"/>
+                            <constraint firstAttribute="bottom" secondItem="gzR-Od-XEO" secondAttribute="bottom" constant="10" id="Wsr-Nm-AgC"/>
+                            <constraint firstItem="AGt-uU-l3A" firstAttribute="leading" secondItem="gzR-Od-XEO" secondAttribute="trailing" constant="10" id="cAw-F4-gLj"/>
+                            <constraint firstAttribute="height" constant="80" id="fn2-5T-PdA"/>
+                            <constraint firstItem="gzR-Od-XEO" firstAttribute="leading" secondItem="2LD-VR-4Ef" secondAttribute="leading" constant="10" id="gbM-Gg-bzS"/>
+                            <constraint firstAttribute="width" constant="380" id="lqL-L8-g4O"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                <real key="value" value="0.20000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                <size key="value" width="0.0" height="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <integer key="value" value="0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="2LD-VR-4Ef" secondAttribute="bottom" constant="10" id="3QV-Vw-SMw"/>
+                    <constraint firstAttribute="trailing" secondItem="2LD-VR-4Ef" secondAttribute="trailing" constant="10" id="KsD-8l-0pq"/>
+                    <constraint firstItem="2LD-VR-4Ef" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="L81-A9-yrC"/>
+                    <constraint firstItem="2LD-VR-4Ef" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Pf3-6f-aYQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="animalNameLabel" destination="AGt-uU-l3A" id="Lfl-zc-XIc"/>
+                <outlet property="animalPicImageView" destination="gzR-Od-XEO" id="rti-cx-AWI"/>
+            </connections>
+            <point key="canvasLocation" x="65.217391304347828" y="-42.1875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
