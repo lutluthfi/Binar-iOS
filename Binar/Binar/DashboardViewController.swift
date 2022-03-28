@@ -57,8 +57,6 @@ final class DashboardViewController: UITableViewController {
             goToATViewController()
         case .Daffashiddiq:
             goToDSViewController()
-        case .Daffashiddiq:
-            goToDSViewController()
         case .AdjiFirmansyah:
             goToAFViewController()
         case .BagasIlham:
@@ -105,9 +103,9 @@ extension DashboardViewController: UISearchBarDelegate {
 // MARK: goToARViewController
 extension DashboardViewController {
     func goToARViewController() {
-        guard let viewController = ARAnimalTableViewController.initViewController(from: "ARMain") else {
-            return
-        }
+        guard let student = selectedStudent else { return }
+        let studentName: String = student.name
+        let viewController = ARViewController(name: studentName)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
