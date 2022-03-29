@@ -9,6 +9,7 @@ import UIKit
 
 class AFTableViewCell: UITableViewCell {
   static let reuseIdentifier = "AFCell"
+  let bgColor: UIColor = UIColor.random
   let nameOfAnimalLabel = UILabel()
   let typeOfFood = UILabel()
   let descOfAnimalLabel = UILabel()
@@ -91,7 +92,7 @@ extension UIColor {
       red: .random(in: 0...1),
       green: .random(in: 0...1),
       blue: .random(in: 0...1),
-      alpha: 0.3
+      alpha: 0.5
     )
   }
 }

@@ -10,21 +10,28 @@ import UIKit
 class AFViewController: UIViewController {
   var name: String?
   var animal: [Animal] = Animal.listV2()
-  let searchController = UISearchController()
-  let tableView = UITableView()
+  lazy var searchController = UISearchController()
+  lazy var tableView = UITableView()
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      configureNavigation()
-      configureTableview()
-      
-        // Do any additional setup after loading the view.
-    }
+  override func loadView() {
+    super.loadView()
+    configureNavigation()
+    configureTableview()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    tabBarController?.navigationItem.hidesSearchBarWhenScrolling = false
+    self.tabBarController?.navigationItem.searchController = searchController
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    self.tabBarController?.navigationItem.searchController = nil
+  }
   
   private func configureNavigation() {
-    self.navigationItem.title = "Animal"
-    self.navigationItem.searchController = searchController
+    self.tabBarController?.navigationItem.title = name
     self.navigationController?.navigationBar.prefersLargeTitles = true
+    
   }
   
   private func configureTableview() {
@@ -51,8 +58,7 @@ class AFViewController: UIViewController {
     searchController.delegate = self
     searchController.searchBar.delegate = self
   }
-  
-  
+
 }
 
 // MARK: UISearchController
@@ -102,6 +108,14 @@ extension AFViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 110
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let bgColor = AFTableViewCell().bgColor
+    let item = animal[indexPath.row]
+    let _viewController = AFDetailViewController(animal: item, bg: bgColor)
+    
+    navigationController?.pushViewController(_viewController, animated: true)
   }
   
 }

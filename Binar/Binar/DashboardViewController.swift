@@ -222,12 +222,30 @@ extension DashboardViewController {
 extension DashboardViewController {
     func goToAFViewController() {
         guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
+        let afTabBar = UITabBarController()
+      
+        let challengeFasil = AFViewController()
+        challengeFasil.name = selectedStudent.name
         
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
-        viewController.name = selectedStudent.name
-        
-        navigationController?.pushViewController(viewController, animated: true)
+        let challengeBinar = AFChallengeViewController()
+      
+        challengeFasil.title = "Fasil"
+        challengeBinar.title = "Binar"
+      
+        let vc = ["Animal", "Challenge"]
+        let image = ["house", "flame"]
+      
+        afTabBar.viewControllers = [challengeFasil, challengeBinar]
+      guard let getCount = afTabBar.viewControllers else { return }
+      
+      guard let items = afTabBar.tabBar.items else { return }
+      
+      for index in 0...getCount.count - 1 {
+        items[index].image = UIImage(systemName: image[index])
+        afTabBar.viewControllers?[index].navigationItem.title = vc[index]
+      }
+      
+      navigationController?.pushViewController(afTabBar, animated: true)
     }
 }
         
