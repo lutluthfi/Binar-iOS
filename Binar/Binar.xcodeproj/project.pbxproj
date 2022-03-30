@@ -316,6 +316,67 @@
 			path = AR;
 			sourceTree = "<group>";
 		};
+		4F83BB7027F4239800690F01 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4FD234CD27DAB530007514BA /* AppDelegate.swift */,
+				4FD234CF27DAB530007514BA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4F83BB7127F4239D00690F01 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4FD234DB27DAB531007514BA /* Info.plist */,
+				4FD234D627DAB531007514BA /* Assets.xcassets */,
+				4FD234D827DAB531007514BA /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4F83BB7227F423A800690F01 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				592D89A027E0CA5C00FCE74D /* AD */,
+				0A40550C27E20330003E754D /* AF */,
+				4FF0B32C27EB561900CAF144 /* AI */,
+				A4D3AA5327E0C8A900565DEE /* AK */,
+				4F78A41227DF8C5F00C9E2F7 /* AR */,
+				FF98B2DD27E363EE00830B07 /* AT */,
+				38E0C76B27E3248B009D7A82 /* BI */,
+				4F83BB7427F423DC00690F01 /* Dashboard */,
+				22DD5C8027E0D580003024DC /* DP */,
+				4FF0B30927E8DFD400CAF144 /* DS */,
+				318D72D627E0C54100ACAACF /* MF */,
+				4FF0B32227EB540400CAF144 /* NB */,
+				CEDF88CD27E0CF9200388847 /* PW */,
+				E940649D27E0D43700D8204C /* RD */,
+				2504065227EAF51200186517 /* RN */,
+				01DBD35F27E0C45200C69237 /* TH */,
+				72565B0C27E0DAA600EAF51C /* TS */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		4F83BB7327F423CF00690F01 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4F78A44827E2123300C9E2F7 /* Animal.swift */,
+				4F78A40E27DF8AF700C9E2F7 /* Student.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		4F83BB7427F423DC00690F01 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				4FD234D127DAB530007514BA /* DashboardViewController.swift */,
+				4FD234D327DAB530007514BA /* Main.storyboard */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		4FD234C127DAB530007514BA = {
 			isa = PBXGroup;
 			children = (
@@ -337,31 +398,10 @@
 		4FD234CC27DAB530007514BA /* Binar */ = {
 			isa = PBXGroup;
 			children = (
-				2504065227EAF51200186517 /* RN */,
-				4FD234DB27DAB531007514BA /* Info.plist */,
-				4F78A44827E2123300C9E2F7 /* Animal.swift */,
-				4FD234CD27DAB530007514BA /* AppDelegate.swift */,
-				4FD234D127DAB530007514BA /* DashboardViewController.swift */,
-				4FD234CF27DAB530007514BA /* SceneDelegate.swift */,
-				4F78A40E27DF8AF700C9E2F7 /* Student.swift */,
-				4FD234D627DAB531007514BA /* Assets.xcassets */,
-				592D89A027E0CA5C00FCE74D /* AD */,
-				0A40550C27E20330003E754D /* AF */,
-				4FF0B32C27EB561900CAF144 /* AI */,
-				A4D3AA5327E0C8A900565DEE /* AK */,
-				4F78A41227DF8C5F00C9E2F7 /* AR */,
-				FF98B2DD27E363EE00830B07 /* AT */,
-				38E0C76B27E3248B009D7A82 /* BI */,
-				22DD5C8027E0D580003024DC /* DP */,
-				4FF0B30927E8DFD400CAF144 /* DS */,
-				4FD234D827DAB531007514BA /* LaunchScreen.storyboard */,
-				4FD234D327DAB530007514BA /* Main.storyboard */,
-				318D72D627E0C54100ACAACF /* MF */,
-				4FF0B32227EB540400CAF144 /* NB */,
-				CEDF88CD27E0CF9200388847 /* PW */,
-				E940649D27E0D43700D8204C /* RD */,
-				01DBD35F27E0C45200C69237 /* TH */,
-				72565B0C27E0DAA600EAF51C /* TS */,
+				4F83BB7027F4239800690F01 /* App */,
+				4F83BB7327F423CF00690F01 /* DataLayer */,
+				4F83BB7227F423A800690F01 /* PresentationLayer */,
+				4F83BB7127F4239D00690F01 /* Resource */,
 				4FF0B31027E8E09700CAF144 /* Utility */,
 			);
 			path = Binar;
@@ -810,7 +850,7 @@
 				DEVELOPMENT_TEAM = 5U7M39KWXM;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Binar/Info.plist;
+				INFOPLIST_FILE = Binar/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -842,7 +882,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5U7M39KWXM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Binar/Info.plist;
+				INFOPLIST_FILE = Binar/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
