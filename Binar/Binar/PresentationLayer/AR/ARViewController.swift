@@ -12,6 +12,7 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
         case ScrollView
         case StandardCollectionView
         case CompositionalCollectionView
+        case ChipsCollectionView
     }
     
     private let name: String
@@ -58,6 +59,8 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
             open(viewController)
         case .CompositionalCollectionView:
             break
+        case .ChipsCollectionView:
+            open(ARChipsViewController())
         }
     }
     
