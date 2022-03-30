@@ -9,7 +9,7 @@ import UIKit
 
 final class ARStandardViewController: UICollectionController {
     private let spacing: CGFloat = 8
-    private let numberOfItemInRow: CGFloat = 3
+    private var numberOfItemInRow: CGFloat = 3
     
     private let screenRect: CGRect = UIScreen.main.bounds
     
@@ -19,13 +19,24 @@ final class ARStandardViewController: UICollectionController {
             frame: screenRect,
             collectionViewLayout: collectionViewLayout
         )
-        collectionView.registerCell(UICollectionViewCell.self)
+        collectionView.registerCell(ARStandardCollectionViewCell.self)
         collectionView.backgroundColor = .white
         view = collectionView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let redoButton = UIBarButtonItem(
+            barButtonSystemItem: .redo,
+            target: self,
+            action: #selector(onRedoButtonTap)
+        )
+        let undoButton = UIBarButtonItem(
+            barButtonSystemItem: .undo,
+            target: self,
+            action: #selector(onUndoButtonTap)
+        )
+        navigationItem.rightBarButtonItems = [redoButton, undoButton]
     }
 
     // MARK: UICollectionViewDataSource
@@ -40,18 +51,17 @@ final class ARStandardViewController: UICollectionController {
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "UICollectionViewCell",
+        let reusableCell: UICollectionViewCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "ARStandardCollectionViewCell",
             for: indexPath
         )
         
-        let row: Int = indexPath.row
-        let isEven = row % 2 == 0
-        if isEven {
-            cell.backgroundColor = .green
-        } else {
-            cell.backgroundColor = .blue
+        guard let cell = reusableCell as? ARStandardCollectionViewCell else {
+            return reusableCell
         }
+        
+        let number: Int = indexPath.row + 1
+        cell.fill(with: number)
         
         return cell
     }
@@ -92,5 +102,46 @@ final class ARStandardViewController: UICollectionController {
         insetForSectionAt section: Int
     ) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: spacing, bottom: 0, right: spacing)
+    }
+    
+    @objc private func onRedoButtonTap(_ sender: UIBarButtonItem) {
+        guard numberOfItemInRow < 10 else { return }
+        numberOfItemInRow += 1
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+    
+    @objc private func onUndoButtonTap(_ sender: UIBarButtonItem) {
+        guard numberOfItemInRow > 1 else { return }
+        numberOfItemInRow -= 1
+        collectionView.collectionViewLayout.invalidateLayout()
+    }
+}
+
+final class ARStandardCollectionViewCell: UICollectionViewCell {
+    lazy var textLabel: UILabel = {
+        let view = UILabel()
+        view.textColor = .white
+        view.textAlignment = .center
+        return view
+    }()
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.addSubview(textLabel)
+        textLabel.makeConstraint(
+            textLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            textLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            textLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
+            textLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        )
+        contentView.backgroundColor = .black
+    }
+    
+    func fill(with number: Int) {
+        textLabel.text = String(number)
     }
 }
