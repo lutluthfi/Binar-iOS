@@ -8,9 +8,14 @@
 import UIKit
 
 extension UITableView {
-    func registerCell<Cell>(_ cellType: Cell.Type) where Cell: UITableViewCell {
+    func registerNibCell<Cell>(_ cellType: Cell.Type) where Cell: UITableViewCell {
         let reusableId: String = "\(cellType)"
         let nib = UINib(nibName: reusableId, bundle: nil)
         register(nib, forCellReuseIdentifier: reusableId)
+    }
+    
+    func registerCell<Cell>(_ cellType: Cell.Type) where Cell: UITableViewCell {
+        let reusableId: String = "\(cellType)"
+        register(cellType, forCellReuseIdentifier: reusableId)
     }
 }

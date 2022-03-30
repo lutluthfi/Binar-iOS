@@ -12,7 +12,7 @@ final class THAnimalTableViewController: UITableViewController, StoryboardInstan
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerCell(THAnimalTableCell.self)
+        tableView.registerNibCell(THAnimalTableCell.self)
     }
 
     // MARK: - Table view data source

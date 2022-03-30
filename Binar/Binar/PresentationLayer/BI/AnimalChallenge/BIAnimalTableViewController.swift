@@ -35,7 +35,7 @@ class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Animal List"
-        tableView.registerCell(BIAnimalTableCell.self)
+        tableView.registerNibCell(BIAnimalTableCell.self)
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.keyboardDismissMode = .onDrag
