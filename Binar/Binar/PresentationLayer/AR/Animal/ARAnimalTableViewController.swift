@@ -12,7 +12,7 @@ final class ARAnimalTableViewController: UITableViewController, StoryboardInstan
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerCell(ARAnimalTableCell.self)
+        tableView.registerNibCell(ARAnimalTableCell.self)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -14,7 +14,7 @@ final class AKViewController: UITableViewController, StoryboardInstantiable {
     var displayedAnimals: [Animal] = Animal.listV2()
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerCell(AKAnimalTableCell.self)
+        tableView.registerNibCell(AKAnimalTableCell.self)
         
     }
 
