@@ -7,12 +7,6 @@
 
 import UIKit
 
-// 1. buat label di main page ✅
-// 2. navigate main page ke second page ✅
-// 3. tampilin data table di second page ✅
-// 4. bikin feature selection dan save/done di second page ✅
-// 5. tampilin data yang dipilih dari second page di main page
-
 final class ARFirstViewController: UIViewController {
     lazy var studentNameLabel: UILabel = {
         let view = UILabel()
@@ -54,16 +48,10 @@ final class ARFirstViewController: UIViewController {
     
     @objc private func onAddButtonTap(_ sender: UIBarButtonItem) {
         let viewController = ARSecondViewController()
-        viewController.delegate = self
+        viewController.didSelectStudent = { [weak self] student in
+            self?.studentNameLabel.text = student.name
+        }
+        
         navigationController?.pushViewController(viewController, animated: true)
-    }
-}
-
-extension ARFirstViewController: ARSecondViewControllerDelegate {
-    func secondViewController(
-        _ viewController: ARSecondViewController,
-        didSelectStudent student: Student
-    ) {
-        studentNameLabel.text = student.name
     }
 }

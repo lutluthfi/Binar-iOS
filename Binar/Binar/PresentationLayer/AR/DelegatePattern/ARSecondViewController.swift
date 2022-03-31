@@ -7,17 +7,16 @@
 
 import UIKit
 
-protocol ARSecondViewControllerDelegate {
-    func secondViewController(
-        _ viewController: ARSecondViewController,
-        didSelectStudent student: Student
-    )
-}
-
 final class ARSecondViewController: UITableViewController {
-    var delegate: ARSecondViewControllerDelegate?
+    typealias DidSelectStudent = (Student) -> Void
+    
+    var didSelectStudent: DidSelectStudent?
     
     private var selectedStudent: Student?
+    
+    deinit {
+        print("ARSecondViewController --- deinit")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +69,7 @@ final class ARSecondViewController: UITableViewController {
         guard let _selectedStudent = selectedStudent else {
             return
         }
-        delegate?.secondViewController(self, didSelectStudent: _selectedStudent)
+        didSelectStudent?(_selectedStudent)
         navigationController?.popViewController(animated: true)
     }
 }
