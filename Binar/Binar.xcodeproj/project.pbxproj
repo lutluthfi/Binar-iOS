@@ -32,6 +32,8 @@
 		38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0C76C27E32498009D7A82 /* BIViewController.swift */; };
 		38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E0C76E27E324A2009D7A82 /* BIMain.storyboard */; };
 		4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D72D427E0C53700ACAACF /* MFViewController.swift */; };
+		4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5D727F5EB4900C4048D /* ARFirstViewController.swift */; };
+		4F33D5DA27F5EB5A00C4048D /* ARSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5D927F5EB5A00C4048D /* ARSecondViewController.swift */; };
 		4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A40E27DF8AF700C9E2F7 /* Student.swift */; };
 		4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */; };
 		4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A44827E2123300C9E2F7 /* Animal.swift */; };
@@ -109,6 +111,8 @@
 		3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAddAnimalViewController.swift; sourceTree = "<group>"; };
 		38E0C76C27E32498009D7A82 /* BIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIViewController.swift; sourceTree = "<group>"; };
 		38E0C76E27E324A2009D7A82 /* BIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BIMain.storyboard; sourceTree = "<group>"; };
+		4F33D5D727F5EB4900C4048D /* ARFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFirstViewController.swift; sourceTree = "<group>"; };
+		4F33D5D927F5EB5A00C4048D /* ARSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSecondViewController.swift; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		4F78A44827E2123300C9E2F7 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
@@ -295,12 +299,22 @@
 			path = BI;
 			sourceTree = "<group>";
 		};
+		4F33D5D627F5EB0300C4048D /* DelegatePattern */ = {
+			isa = PBXGroup;
+			children = (
+				4F33D5D727F5EB4900C4048D /* ARFirstViewController.swift */,
+				4F33D5D927F5EB5A00C4048D /* ARSecondViewController.swift */,
+			);
+			path = DelegatePattern;
+			sourceTree = "<group>";
+		};
 		4F78A41227DF8C5F00C9E2F7 /* AR */ = {
 			isa = PBXGroup;
 			children = (
 				4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */,
 				4FF0B33327EB6BEA00CAF144 /* Animal */,
 				4F83BB7E27F49C1000690F01 /* ChipsCollectionView */,
+				4F33D5D627F5EB0300C4048D /* DelegatePattern */,
 				4F83BB7727F47AA000690F01 /* StandardCollectionView */,
 			);
 			path = AR;
@@ -684,6 +698,7 @@
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
 				3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */,
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
+				4F33D5DA27F5EB5A00C4048D /* ARSecondViewController.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
 				4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */,
@@ -703,6 +718,7 @@
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
+				4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
 				013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,

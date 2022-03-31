@@ -9,6 +9,7 @@ import UIKit
 
 final class ARViewController: UITableViewController, StoryboardInstantiable {
     enum Course: String, CaseIterable, TitleEnum {
+        case DelegatePattern
         case ScrollView
         case StandardCollectionView
         case CompositionalCollectionView
@@ -52,11 +53,12 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
         let row: Int = indexPath.row
         let course: Course = Course.allCases[row]
         switch course {
+        case .DelegatePattern:
+            open(ARFirstViewController())
         case .ScrollView:
             break
         case .StandardCollectionView:
-            let viewController = ARStandardViewController()
-            open(viewController)
+            open(ARStandardViewController())
         case .CompositionalCollectionView:
             break
         case .ChipsCollectionView:
