@@ -27,10 +27,10 @@ final class ARFirstViewController: UIViewController {
     }
     
     private func setupConstraint() {
-        studentNameLabel.makeConstraint(
-            studentNameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            studentNameLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        )
+        studentNameLabel.makeConstraint { view in
+            [view.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+             view.centerYAnchor.constraint(equalTo: view.centerYAnchor)]
+        }
     }
     
     private func setupNavigationBar() {
