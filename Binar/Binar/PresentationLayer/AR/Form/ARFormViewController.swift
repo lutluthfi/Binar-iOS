@@ -79,6 +79,12 @@ final class ARFormViewController: UITableViewController {
             name: UIResponder.keyboardWillShowNotification,
             object: nil
         )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -198,7 +204,15 @@ final class ARFormViewController: UITableViewController {
         let keyboardRectangle: CGRect = keyboardFrame.cgRectValue
         let keyboardHeight: CGFloat = keyboardRectangle.height
         
-        bottomRectangleViewConstraint?.constant = -keyboardHeight
+        let bottomInset: CGFloat = view.safeAreaInsets.bottom
+        bottomRectangleViewConstraint?.constant = -(keyboardHeight - bottomInset)
+        UIView.animate(withDuration: 0.05) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc private func keyboardWillHide(_ notification: Notification) {
+        bottomRectangleViewConstraint?.constant = 0
         UIView.animate(withDuration: 0.05) {
             self.view.layoutIfNeeded()
         }
