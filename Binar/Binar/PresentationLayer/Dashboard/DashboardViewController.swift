@@ -58,7 +58,7 @@ final class DashboardViewController: UITableViewController {
         case .Daffashiddiq:
             goToDSViewController()
         case .AdjiFirmansyah:
-            goToAFViewController()
+            goToAF()
         case .BagasIlham:
             let choiceAlert = UIAlertController(title: "Gate to other universe🌌", message: "Where do you wanna go?", preferredStyle: .alert)
             
@@ -242,32 +242,9 @@ extension DashboardViewController {
 }
 
 extension DashboardViewController {
-    func goToAFViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        let afTabBar = UITabBarController()
-      
-        let challengeFasil = AFViewController()
-        challengeFasil.name = selectedStudent.name
-        
-        let challengeBinar = AFChallengeViewController()
-      
-        challengeFasil.title = "Fasil"
-        challengeBinar.title = "Binar"
-      
-        let vc = ["Animal", "Challenge"]
-        let image = ["house", "flame"]
-      
-        afTabBar.viewControllers = [challengeFasil, challengeBinar]
-      guard let getCount = afTabBar.viewControllers else { return }
-      
-      guard let items = afTabBar.tabBar.items else { return }
-      
-      for index in 0...getCount.count - 1 {
-        items[index].image = UIImage(systemName: image[index])
-        afTabBar.viewControllers?[index].navigationItem.title = vc[index]
-      }
-      
-      navigationController?.pushViewController(afTabBar, animated: true)
+    func goToAF() {
+        let afVC = AFViewController()
+        navigationController?.pushViewController(afVC, animated: true)
     }
 }
         

@@ -1,13 +1,13 @@
 //
-//  AFTableViewCell.swift
+//  ChallengeListV2TableViewCell.swift
 //  Binar
 //
-//  Created by Adji Firmansyah on 3/24/22.
+//  Created by Adji Firmansyah on 4/2/22.
 //
 
 import UIKit
 
-class AFTableViewCell: UITableViewCell {
+class ChallengeListV2TableViewCell: UITableViewCell {
   static let reuseIdentifier = "AFCell"
   let bgColor: UIColor = UIColor.random
   let nameOfAnimalLabel = UILabel()
@@ -96,3 +96,4 @@ extension UIColor {
     )
   }
 }
+

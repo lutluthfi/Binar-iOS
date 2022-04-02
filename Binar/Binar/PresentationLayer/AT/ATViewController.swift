@@ -24,7 +24,7 @@ final class ATViewController: UITableViewController {
         
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let displayAnimals : Int = displayAnimals.count
+      let displayAnimals : Int = self.displayAnimals.count
           return displayAnimals
       }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

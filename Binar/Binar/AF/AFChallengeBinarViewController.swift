@@ -1,5 +1,5 @@
 //
-//  AFChallengeViewController.swift
+//  AFChallengeBinarViewController.swift
 //  Binar
 //
 //  Created by Adji Firmansyah on 3/26/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AFChallengeViewController: UIViewController {
+class AFChallengeBinarViewController: UIViewController {
   let firstTextField = UITextField()
   let secondTextField = UITextField()
   let resButton = UIButton()
@@ -126,8 +126,8 @@ class AFChallengeViewController: UIViewController {
   }
   
   override func viewWillAppear(_ animated: Bool) {
-    tabBarController?.navigationItem.searchController = nil
-    print("viewWillAppear")
+    navigationItem.searchController = nil
+    navigationItem.title = "Binar Challenge Chapter 3 "
   }
   
   override func viewWillDisappear(_ animated: Bool) {
@@ -170,7 +170,7 @@ class AFChallengeViewController: UIViewController {
   
 }
 
-extension AFChallengeViewController: UITextFieldDelegate {
+extension AFChallengeBinarViewController: UITextFieldDelegate {
   func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
     view.endEditing(true)
   }
