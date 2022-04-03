@@ -8,13 +8,15 @@
 import UIKit
 
 extension UIView {
-    func makeConstraint(_ constraints: NSLayoutConstraint...) {
-        makeConstraint(constraints)
+    func makeConstraint(completion: @escaping (UIView) -> [NSLayoutConstraint]) {
+        translatesAutoresizingMaskIntoConstraints = false
+        let _constraints: [NSLayoutConstraint] = completion(self)
+        NSLayoutConstraint.activate(_constraints)
     }
     
-    func makeConstraint(_ constraints: [NSLayoutConstraint]) {
-        translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate(constraints)
+    func remakeConstraint(completion: @escaping (UIView) -> [NSLayoutConstraint]) {
+        constraints.forEach { $0.isActive = false }
+        makeConstraint(completion: completion)
     }
     
     func rounded(cornerRadius: CGFloat) {
