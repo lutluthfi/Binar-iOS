@@ -28,8 +28,8 @@ final class ARFirstViewController: UIViewController {
     
     private func setupConstraint() {
         studentNameLabel.makeConstraint { view in
-            [view.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-             view.centerYAnchor.constraint(equalTo: view.centerYAnchor)]
+            [view.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+             view.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)]
         }
     }
     
@@ -53,5 +53,11 @@ final class ARFirstViewController: UIViewController {
         }
         
         navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+extension ARFirstViewController: ARSecondViewControllerDelegate {
+    func secondViewController(_ viewController: ARSecondViewController, didSelectStudent student: Student) {
+        
     }
 }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ARSecondViewControllerDelegate: AnyObject {
+    func secondViewController(_ viewController: ARSecondViewController, didSelectStudent student: Student)
+}
+
 final class ARSecondViewController: UITableViewController {
     typealias DidSelectStudent = (Student) -> Void
     

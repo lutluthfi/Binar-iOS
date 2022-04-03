@@ -39,6 +39,7 @@
 		4F33D5E527F6E86300C4048D /* ARFormTextFieldTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5E427F6E86300C4048D /* ARFormTextFieldTableCell.swift */; };
 		4F33D5E727F6E87600C4048D /* ARFormTextViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5E627F6E87600C4048D /* ARFormTextViewTableCell.swift */; };
 		4F33D5E927F701C600C4048D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5E827F701C600C4048D /* UIViewController+Extension.swift */; };
+		4F33D5F627F9A2C800C4048D /* ARTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5F527F9A2C800C4048D /* ARTabBarViewController.swift */; };
 		4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A40E27DF8AF700C9E2F7 /* Student.swift */; };
 		4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */; };
 		4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A44827E2123300C9E2F7 /* Animal.swift */; };
@@ -123,6 +124,7 @@
 		4F33D5E427F6E86300C4048D /* ARFormTextFieldTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFormTextFieldTableCell.swift; sourceTree = "<group>"; };
 		4F33D5E627F6E87600C4048D /* ARFormTextViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFormTextViewTableCell.swift; sourceTree = "<group>"; };
 		4F33D5E827F701C600C4048D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		4F33D5F527F9A2C800C4048D /* ARTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTabBarViewController.swift; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		4F78A44827E2123300C9E2F7 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
@@ -344,6 +346,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		4F33D5F227F9A1E900C4048D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				4F33D5F527F9A2C800C4048D /* ARTabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		4F78A41227DF8C5F00C9E2F7 /* AR */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +364,7 @@
 				4F33D5D627F5EB0300C4048D /* DelegatePattern */,
 				4F33D5E027F6E1CB00C4048D /* Form */,
 				4F83BB7727F47AA000690F01 /* StandardCollectionView */,
+				4F33D5F227F9A1E900C4048D /* TabBar */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -762,6 +773,7 @@
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
 				4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */,
+				4F33D5F627F9A2C800C4048D /* ARTabBarViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
 				013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,

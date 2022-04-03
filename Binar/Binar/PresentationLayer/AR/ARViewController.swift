@@ -16,6 +16,7 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
         case StandardCollectionView
         case CompositionalCollectionView
         case ChipsCollectionView
+        case TabBar
         
         static var sorted: [Course] {
             Course.allCases.sorted {
@@ -81,6 +82,8 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
             break
         case .ChipsCollectionView:
             open(ARChipsViewController())
+        case .TabBar:
+            open(ARTabBarViewController())
         }
     }
     
