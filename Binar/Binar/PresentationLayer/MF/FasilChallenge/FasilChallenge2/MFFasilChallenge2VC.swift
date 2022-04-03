@@ -9,14 +9,13 @@ import UIKit
 
 final class MFFasilChallenge2VC: UIViewController, UITableViewDataSource, UITableViewDelegate, StoryboardInstantiable {
     
-    var name: String?
     var animalList: [Animal]  = Animal.listV2()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButtonOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
+        title = "Table View CRUD"
     
         addButtonOutlet.layer.cornerRadius = 10
         addButtonOutlet.backgroundColor = .systemGray6

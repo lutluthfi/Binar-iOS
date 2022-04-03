@@ -12,6 +12,7 @@ final class MFFasilChallengeMain : UITableViewController {
     enum FasilChallenge: String, CaseIterable, TitleEnum {
         case FasilChallenge1
         case FasilChallenge2
+        case FasilChallenge3
         
         static var sorted: [FasilChallenge] {
             FasilChallenge.allCases.sorted { $0.rawValue < $1.rawValue }
@@ -64,6 +65,8 @@ final class MFFasilChallengeMain : UITableViewController {
             goToChallenge1()
         case .FasilChallenge2:
             goToChallenge2()
+        case .FasilChallenge3:
+            goToChallenge3()
         default:
             break
         }
@@ -75,22 +78,27 @@ final class MFFasilChallengeMain : UITableViewController {
 
 extension MFFasilChallengeMain {
     func goToChallenge1(){
-        guard let selectedChallenge = selectedChallenge else {return}
         let storyboard = UIStoryboard(name: "MFMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "MFFasilChallenge1VC") as? MFFasilChallenge1VC else {
             return
         }
-        viewController.name = selectedChallenge.name
         navigationController?.pushViewController(viewController, animated: true)
     }
     
     func goToChallenge2(){
-        guard let selectedChallenge = selectedChallenge else {return}
         let storyboard = UIStoryboard(name: "MFMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "MFFasilChallenge2VC") as? MFFasilChallenge2VC else {
             return
         }
-        viewController.name = selectedChallenge.name
         navigationController?.pushViewController(viewController, animated: true)
     }
+    
+    func goToChallenge3(){
+        let storyboard = UIStoryboard(name: "MFMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "MFFasilChallenge3VC") as? MFFasilChallenge3VC else {
+            return
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }

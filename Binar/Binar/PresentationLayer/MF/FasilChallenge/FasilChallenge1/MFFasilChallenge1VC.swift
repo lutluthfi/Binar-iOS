@@ -9,8 +9,6 @@ import UIKit
 
 final class MFFasilChallenge1VC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    var name: String?
-    
     var animalList = Animal.listV1()
     @IBOutlet weak var sortButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -19,7 +17,7 @@ final class MFFasilChallenge1VC: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = name
+        title = "Table View Animal"
         
         tableView.dataSource = self
         tableView.delegate = self

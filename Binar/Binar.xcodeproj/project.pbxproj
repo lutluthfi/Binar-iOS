@@ -25,9 +25,11 @@
 		313B584F27F6459600F7C7F8 /* MFBinarChallengeMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B584E27F6459600F7C7F8 /* MFBinarChallengeMain.swift */; };
 		313B585127F6460D00F7C7F8 /* MFFasilChallengeMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 313B585027F6460D00F7C7F8 /* MFFasilChallengeMain.swift */; };
 		318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 318D72D727E0C55E00ACAACF /* MFMain.storyboard */; };
+		319988BF27F997BF00891D32 /* MFQRVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319988BE27F997BE00891D32 /* MFQRVC.swift */; };
 		319CD7D127E28B1A007F8239 /* MFBinarChallenge3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319CD7D027E28B1A007F8239 /* MFBinarChallenge3VC.swift */; };
 		319CD7D327E28B25007F8239 /* MFFasilChallenge1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319CD7D227E28B25007F8239 /* MFFasilChallenge1VC.swift */; };
 		31F95E1227F616AA008989D7 /* MFFasilChallenge2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F95E1127F616AA008989D7 /* MFFasilChallenge2VC.swift */; };
+		31FD196F27F65D6C00CF1137 /* MFFasilChallenge3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FD196E27F65D6C00CF1137 /* MFFasilChallenge3VC.swift */; };
 		383935AE27ECE27A0051A89C /* BIAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935AD27ECE27A0051A89C /* BIAnimalTableViewController.swift */; };
 		383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935AF27ECE2950051A89C /* BIAnimalTableCell.swift */; };
 		383935B227ECE2A40051A89C /* BIAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */; };
@@ -110,9 +112,11 @@
 		313B585027F6460D00F7C7F8 /* MFFasilChallengeMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFFasilChallengeMain.swift; sourceTree = "<group>"; };
 		318D72D427E0C53700ACAACF /* MFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFViewController.swift; sourceTree = "<group>"; };
 		318D72D727E0C55E00ACAACF /* MFMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MFMain.storyboard; sourceTree = "<group>"; };
+		319988BE27F997BE00891D32 /* MFQRVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFQRVC.swift; sourceTree = "<group>"; };
 		319CD7D027E28B1A007F8239 /* MFBinarChallenge3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFBinarChallenge3VC.swift; sourceTree = "<group>"; };
 		319CD7D227E28B25007F8239 /* MFFasilChallenge1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFFasilChallenge1VC.swift; sourceTree = "<group>"; };
 		31F95E1127F616AA008989D7 /* MFFasilChallenge2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFFasilChallenge2VC.swift; sourceTree = "<group>"; };
+		31FD196E27F65D6C00CF1137 /* MFFasilChallenge3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFFasilChallenge3VC.swift; sourceTree = "<group>"; };
 		383935AD27ECE27A0051A89C /* BIAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAnimalTableViewController.swift; sourceTree = "<group>"; };
 		383935AF27ECE2950051A89C /* BIAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAnimalTableCell.swift; sourceTree = "<group>"; };
 		383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BIAnimalTableCell.xib; sourceTree = "<group>"; };
@@ -290,6 +294,8 @@
 		313B585327F65CA100F7C7F8 /* FasilChallenge3 */ = {
 			isa = PBXGroup;
 			children = (
+				31FD196E27F65D6C00CF1137 /* MFFasilChallenge3VC.swift */,
+				319988BE27F997BE00891D32 /* MFQRVC.swift */,
 			);
 			path = FasilChallenge3;
 			sourceTree = "<group>";
@@ -762,6 +768,7 @@
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
 				3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */,
 				313B585127F6460D00F7C7F8 /* MFFasilChallengeMain.swift in Sources */,
+				31FD196F27F65D6C00CF1137 /* MFFasilChallenge3VC.swift in Sources */,
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				313B584F27F6459600F7C7F8 /* MFBinarChallengeMain.swift in Sources */,
 				4F33D5DA27F5EB5A00C4048D /* ARSecondViewController.swift in Sources */,
@@ -775,6 +782,7 @@
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,
 				4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
+				319988BF27F997BF00891D32 /* MFQRVC.swift in Sources */,
 				A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */,
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
