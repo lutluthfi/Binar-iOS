@@ -46,7 +46,24 @@ final class DashboardViewController: UITableViewController {
         case .AiedylDava:
             goToADViewController()
         case .PranaApsara:
-            goToPWViewController()
+            let challengeAlert = UIAlertController(title: "Which one?", message: "", preferredStyle: .actionSheet)
+            
+            let challenge1 = UIAlertAction(title: "Animal Challenge", style: .default) { _ in
+                self.goToPWViewController()
+            }
+            
+            let challenge2 = UIAlertAction(title: "Robot Challenge", style: .default) { _ in
+                self.goToPWRobotsViewController()
+            }
+            
+            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            
+            challengeAlert.addAction(challenge1)
+            challengeAlert.addAction(challenge2)
+            challengeAlert.addAction(cancel)
+            
+            present(challengeAlert, animated: true)
+            
         case .RadenDimas:
             goToRDViewController()
         case .DimasPurnomo:
@@ -57,8 +74,7 @@ final class DashboardViewController: UITableViewController {
             goToATViewController()
         case .Daffashiddiq:
             goToDSViewController()
-        case .Daffashiddiq:
-            goToDSViewController()
+
         case .AdjiFirmansyah:
             goToAFViewController()
         case .BagasIlham:
@@ -150,6 +166,13 @@ extension DashboardViewController {
 extension DashboardViewController{
     func goToPWViewController() {
         guard let viewController = PWViewController.initViewController(from: "PWMain") else{
+            return
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    func goToPWRobotsViewController(){
+        guard let viewController = PWRobotsTableViewController.initViewController(from: "PWMain") else {
             return
         }
         navigationController?.pushViewController(viewController, animated: true)

@@ -66,3 +66,25 @@ class PWViewController: UIViewController, UITableViewDataSource, StoryboardInsta
 }
 
 
+final class RobotsDetailViewController: UIViewController{
+    var name: String?
+    var detail: String?
+    var urlString: String?
+    @IBOutlet weak var AnimalNameLabel: UILabel!
+    @IBOutlet weak var AnimalDetailLabel: UILabel!
+    @IBOutlet weak var animalImageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.animalImageView.image = UIImage(named: name!)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = name
+        AnimalNameLabel.text = name
+        AnimalDetailLabel.text = detail
+    }
+    
+    private func setupAnimalImageView() {
+        
+        self.animalImageView.image = UIImage(named: name!)
+    }
+}

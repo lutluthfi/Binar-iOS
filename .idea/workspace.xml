@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="eb13acf2-dae8-44b2-8348-32786418959b" name="Changes" comment="mergeback from master">
-      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/UIImage+Extension.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binar/Binar.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binar/Binar/AR/ARMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/AR/ARMain.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binar/Binar/PW/PWViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PW/PWViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/DashboardViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/DashboardViewController.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +42,8 @@
       <updated>1648178883488</updated>
       <workItem from="1648178886101" duration="136000" />
       <workItem from="1648184006988" duration="5000" />
+      <workItem from="1648201988425" duration="361000" />
+      <workItem from="1648202358468" duration="218000" />
     </task>
     <task id="LOCAL-00001" summary="mergeback from master">
       <created>1648178977056</created>

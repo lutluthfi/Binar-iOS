@@ -93,6 +93,46 @@
             </objects>
             <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
         </scene>
+        <!--Robots Table View Controller-->
+        <scene sceneID="1cf-rl-cGF">
+            <objects>
+                <viewController storyboardIdentifier="PWRobotsTableViewController" id="BxF-PM-xHW" customClass="PWRobotsTableViewController" customModule="Binar" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XvS-EN-o4z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="s4u-z4-6CL">
+                                <rect key="frame" x="10" y="44" width="394" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RobotsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="jPV-PR-7Wj" customClass="RobotsTableViewCell" customModule="Binar">
+                                        <rect key="frame" x="0.0" y="44.5" width="394" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jPV-PR-7Wj" id="Hni-qu-DIR">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dqV-0B-2E0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s4u-z4-6CL" firstAttribute="leading" secondItem="dqV-0B-2E0" secondAttribute="leading" constant="10" id="NTk-Lo-Hdf"/>
+                            <constraint firstItem="s4u-z4-6CL" firstAttribute="top" secondItem="dqV-0B-2E0" secondAttribute="top" id="TLF-WF-hp0"/>
+                            <constraint firstItem="dqV-0B-2E0" firstAttribute="trailing" secondItem="s4u-z4-6CL" secondAttribute="trailing" constant="10" id="gKH-66-SNt"/>
+                            <constraint firstItem="dqV-0B-2E0" firstAttribute="bottom" secondItem="s4u-z4-6CL" secondAttribute="bottom" id="jhs-fa-Wh7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="s4u-z4-6CL" id="9aC-k6-6Ig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h05-7f-t4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.85507246376812" y="103.79464285714285"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="labelColor">

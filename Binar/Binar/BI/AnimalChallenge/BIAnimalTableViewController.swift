@@ -11,7 +11,6 @@ final class BIAnimalTableViewController: UITableViewController, StoryboardInstan
     var displayedAnimals: [Animal] = Animal.listV2()
     var selectedAnimal: Animal?
     @IBOutlet weak var animalSearchBar: UISearchBar!
-    @IBOutlet weak var actionsButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -59,6 +59,9 @@
 		A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4D3AA5627E0C8F700565DEE /* AKMain.storyboard */; };
 		CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */; };
 		CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */; };
+		CE399A7327EE08C100AAE07E /* RobotsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE399A7127EE08C100AAE07E /* RobotsTableViewCell.swift */; };
+		CE399A7427EE08C100AAE07E /* RobotsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE399A7227EE08C100AAE07E /* RobotsTableViewCell.xib */; };
+		CE399A7827EE101D00AAE07E /* PWRobotsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE399A7727EE101D00AAE07E /* PWRobotsTableViewController.swift */; };
 		CE53B6A427ED7568003832A5 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE53B6A327ED7568003832A5 /* UIImage+Extension.swift */; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
@@ -129,6 +132,9 @@
 		C8A6942927E374E600BF09C7 /* NBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBViewController.swift; sourceTree = "<group>"; };
 		CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		CE399A7127EE08C100AAE07E /* RobotsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotsTableViewCell.swift; sourceTree = "<group>"; };
+		CE399A7227EE08C100AAE07E /* RobotsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RobotsTableViewCell.xib; sourceTree = "<group>"; };
+		CE399A7727EE101D00AAE07E /* PWRobotsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWRobotsTableViewController.swift; sourceTree = "<group>"; };
 		CE53B6A327ED7568003832A5 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		CEDF88CE27E0CFB300388847 /* PWMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PWMain.storyboard; sourceTree = "<group>"; };
 		CEDF88D027E0CFC800388847 /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
@@ -409,9 +415,20 @@
 			path = AK;
 			sourceTree = "<group>";
 		};
+		CE399A7027EE088A00AAE07E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE399A7127EE08C100AAE07E /* RobotsTableViewCell.swift */,
+				CE399A7227EE08C100AAE07E /* RobotsTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CE53B6A527EDA664003832A5 /* Robots */ = {
 			isa = PBXGroup;
 			children = (
+				CE399A7027EE088A00AAE07E /* Cell */,
+				CE399A7727EE101D00AAE07E /* PWRobotsTableViewController.swift */,
 			);
 			path = Robots;
 			sourceTree = "<group>";
@@ -508,6 +525,7 @@
 			files = (
 				CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */,
 				4FF0B32527EB540400CAF144 /* NBMain.storyboard in Resources */,
+				CE399A7427EE08C100AAE07E /* RobotsTableViewCell.xib in Resources */,
 				2504065427EAF52800186517 /* RNMain.storyboard in Resources */,
 				4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */,
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
@@ -553,9 +571,11 @@
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
+				CE399A7327EE08C100AAE07E /* RobotsTableViewCell.swift in Sources */,
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
+				CE399A7827EE101D00AAE07E /* PWRobotsTableViewController.swift in Sources */,
 				4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */,
 				01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */,
 				4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */,
