@@ -65,7 +65,7 @@ final class MFQRVC: UIViewController{
                 backCamera = device
             } else {
                 //handle this appropriately for production purposes
-                fatalError("no back camera")
+                fatalError("no back camera") //this error will come if using simulator. real device needed.
             }
             
             //now we need to create an input objects from our devices
