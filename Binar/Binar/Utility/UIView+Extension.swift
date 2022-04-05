@@ -19,8 +19,14 @@ extension UIView {
         makeConstraint(completion: completion)
     }
     
-    func rounded(cornerRadius: CGFloat) {
+    func rounded(
+        cornerRadius: CGFloat,
+        borderWidth: CGFloat = 0,
+        borderColor: UIColor = .clear
+    ) {
         layer.cornerRadius = 8
+        layer.borderWidth = borderWidth
+        layer.borderColor = borderColor.cgColor
         layer.masksToBounds = true
     }
 }

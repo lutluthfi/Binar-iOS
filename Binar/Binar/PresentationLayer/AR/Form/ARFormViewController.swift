@@ -73,23 +73,12 @@ final class ARFormViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillShow),
-            name: UIResponder.keyboardWillShowNotification,
-            object: nil
-        )
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(keyboardWillHide),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil
-        )
+        enableKeyboardNotification()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
+        removeKeyboardNotification()
     }
     
     private func setupAddSubview() {
@@ -195,14 +184,8 @@ final class ARFormViewController: UITableViewController {
         return cell
     }
     
-    @objc private func keyboardWillShow(_ notification: Notification) {
-        let keyboardInfoKey = UIResponder.keyboardFrameEndUserInfoKey
-        guard let keyboardFrame = notification.userInfo?[keyboardInfoKey] as? NSValue else {
-            return
-        }
-        
-        let keyboardRectangle: CGRect = keyboardFrame.cgRectValue
-        let keyboardHeight: CGFloat = keyboardRectangle.height
+    override func keyboardWillShow(_ notification: Notification, keyboardFrame: CGRect) {
+        let keyboardHeight: CGFloat = keyboardFrame.height
         
         let bottomInset: CGFloat = view.safeAreaInsets.bottom
         bottomRectangleViewConstraint?.constant = -(keyboardHeight - bottomInset)
@@ -211,7 +194,7 @@ final class ARFormViewController: UITableViewController {
         }
     }
     
-    @objc private func keyboardWillHide(_ notification: Notification) {
+    override func keyboardWillHide(_ notification: Notification) {
         bottomRectangleViewConstraint?.constant = 0
         UIView.animate(withDuration: 0.05) {
             self.view.layoutIfNeeded()

@@ -17,6 +17,7 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
         case CompositionalCollectionView
         case ChipsCollectionView
         case TabBar
+        case Chat
         
         static var sorted: [Course] {
             Course.allCases.sorted {
@@ -70,6 +71,8 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
         switch course {
         case .Challenge4:
             open(ARChallenge4ViewController())
+        case .Chat:
+            open(ARChatViewController())
         case .DelegatePattern:
             open(ARFirstViewController())
         case .Form:
