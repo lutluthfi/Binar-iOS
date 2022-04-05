@@ -94,6 +94,11 @@
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
 		E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940649E27E0D44E00D8204C /* RDViewController.swift */; };
+		E9FDD0A727F996D20051B161 /* RDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0A627F996D20051B161 /* RDView.swift */; };
+		E9FDD0AA27F996FB0051B161 /* RDViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0A927F996FB0051B161 /* RDViewModels.swift */; };
+		E9FDD0AD27F997360051B161 /* RDDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0AC27F997360051B161 /* RDDetailViewController.swift */; };
+		E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0AF27F9976C0051B161 /* RDConstants.swift */; };
+		E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0B327F99B660051B161 /* RDAnimalListCell.swift */; };
 		FF98B2DF27E3643300830B07 /* ATMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF98B2DE27E3643300830B07 /* ATMain.storyboard */; };
 		FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF98B2E027E3646000830B07 /* ATViewController.swift */; };
 /* End PBXBuildFile section */
@@ -195,6 +200,11 @@
 		CEDF88CE27E0CFB300388847 /* PWMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PWMain.storyboard; sourceTree = "<group>"; };
 		CEDF88D027E0CFC800388847 /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
 		E940649E27E0D44E00D8204C /* RDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewController.swift; sourceTree = "<group>"; };
+		E9FDD0A627F996D20051B161 /* RDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDView.swift; sourceTree = "<group>"; };
+		E9FDD0A927F996FB0051B161 /* RDViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewModels.swift; sourceTree = "<group>"; };
+		E9FDD0AC27F997360051B161 /* RDDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDDetailViewController.swift; sourceTree = "<group>"; };
+		E9FDD0AF27F9976C0051B161 /* RDConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDConstants.swift; sourceTree = "<group>"; };
+		E9FDD0B327F99B660051B161 /* RDAnimalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDAnimalListCell.swift; sourceTree = "<group>"; };
 		FF98B2DE27E3643300830B07 /* ATMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ATMain.storyboard; sourceTree = "<group>"; };
 		FF98B2E027E3646000830B07 /* ATViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -684,9 +694,62 @@
 		E940649D27E0D43700D8204C /* RD */ = {
 			isa = PBXGroup;
 			children = (
+				E9FDD0AE27F9975A0051B161 /* RDUtils */,
+				E9FDD0AB27F997100051B161 /* RDViewControllers */,
+				E9FDD0A827F996E50051B161 /* RDViewModels */,
+				E9FDD0A527F996B90051B161 /* RDViews */,
 				E940649E27E0D44E00D8204C /* RDViewController.swift */,
 			);
 			path = RD;
+			sourceTree = "<group>";
+		};
+		E9FDD0A527F996B90051B161 /* RDViews */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0B227F997960051B161 /* Cells */,
+				E9FDD0B127F9978C0051B161 /* Views */,
+			);
+			path = RDViews;
+			sourceTree = "<group>";
+		};
+		E9FDD0A827F996E50051B161 /* RDViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0A927F996FB0051B161 /* RDViewModels.swift */,
+			);
+			path = RDViewModels;
+			sourceTree = "<group>";
+		};
+		E9FDD0AB27F997100051B161 /* RDViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0AC27F997360051B161 /* RDDetailViewController.swift */,
+			);
+			path = RDViewControllers;
+			sourceTree = "<group>";
+		};
+		E9FDD0AE27F9975A0051B161 /* RDUtils */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0AF27F9976C0051B161 /* RDConstants.swift */,
+			);
+			path = RDUtils;
+			sourceTree = "<group>";
+		};
+		E9FDD0B127F9978C0051B161 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0A627F996D20051B161 /* RDView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E9FDD0B227F997960051B161 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0B327F99B660051B161 /* RDAnimalListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FF98B2DD27E363EE00830B07 /* AT */ = {
@@ -838,17 +901,21 @@
 				4F33D5FD27FACEB400C4048D /* UIVisualEffectView+Extension.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				4F33D5DF27F6DFA600C4048D /* ARChallenge4ViewController.swift in Sources */,
+				E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
 				4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */,
 				4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
+				E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
+				E9FDD0A727F996D20051B161 /* RDView.swift in Sources */,
 				4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */,
 				4F33D60727FAE2E000C4048D /* ARBrowseViewController.swift in Sources */,
 				4F33D5F627F9A2C800C4048D /* ARTabBarViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
+				E9FDD0AD27F997360051B161 /* RDDetailViewController.swift in Sources */,
 				013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,
 				4F33D5FB27FA618900C4048D /* ARChatViewController.swift in Sources */,
@@ -856,6 +923,7 @@
 				59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */,
 				4F33D60C27FC392500C4048D /* ARBrowseBannerCollectionCell.swift in Sources */,
 				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,
+				E9FDD0AA27F996FB0051B161 /* RDViewModels.swift in Sources */,
 				4F83BB7D27F4824700690F01 /* Typealias.swift in Sources */,
 				4F33D5E727F6E87600C4048D /* ARFormTextViewTableCell.swift in Sources */,
 			);
