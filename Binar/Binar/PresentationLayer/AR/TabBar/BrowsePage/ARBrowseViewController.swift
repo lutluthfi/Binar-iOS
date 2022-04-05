@@ -9,6 +9,7 @@ import UIKit
 
 final class ARBrowseViewController: UIViewController {
     lazy var collectionView: UICollectionView = makeCollectionView()
+    private weak var topBannerSectionPagedView: ARTopBannerSectionPagedView?
     
     private let screenFrame: CGRect = UIScreen.main.bounds
     
@@ -116,8 +117,19 @@ final class ARBrowseViewController: UIViewController {
             subitems: [item]
         )
         
+        let footerSectionSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(44)
+        )
+        let footerSectionItem = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: footerSectionSize,
+            elementKind: UICollectionView.elementKindSectionFooter,
+            alignment: .bottom
+        )
+        
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+        section.boundarySupplementaryItems = [footerSectionItem]
+        section.orthogonalScrollingBehavior = .groupPaging
         section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8)
         return section
     }
@@ -127,8 +139,12 @@ final class ARBrowseViewController: UIViewController {
         let view = UICollectionView(frame: screenFrame, collectionViewLayout: collectionLayout)
         view.registerCell(UICollectionViewCell.self)
         view.registerCell(ARBrowseBannerCollectionCell.self)
-        view.register(<#T##viewClass: AnyClass?##AnyClass?#>, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: <#T##String#>)
+        view.registerView(
+            ARTopBannerSectionPagedView.self,
+            ofKind: UICollectionView.elementKindSectionFooter
+        )
         view.backgroundColor = .white
+        view.delegate = self
         view.dataSource = self
         return view
     }
@@ -170,5 +186,73 @@ extension ARBrowseViewController: UICollectionViewDataSource {
                 }
             }
         }
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        viewForSupplementaryElementOfKind kind: String,
+        at indexPath: IndexPath
+    ) -> UICollectionReusableView {
+        let section: Int = indexPath.section
+        switch section {
+        case 1:
+            let reusableView = collectionView.dequeueReusableSupplementaryView(
+                ofKind: UICollectionView.elementKindSectionFooter,
+                withReuseIdentifier: "ARTopBannerSectionPagedView",
+                for: indexPath
+            )
+            
+            if topBannerSectionPagedView == nil, let view = reusableView as? ARTopBannerSectionPagedView {
+                topBannerSectionPagedView = view
+                view.numberOfItem = 100
+            }
+            
+            return reusableView
+        default:
+            fatalError("Cannot dequeueReusableSupplementaryView")
+        }
+    }
+}
+
+extension ARBrowseViewController: UICollectionViewDelegate {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didEndDisplaying cell: UICollectionViewCell,
+        forItemAt indexPath: IndexPath
+    ) {
+        if topBannerSectionPagedView?.currentPage == indexPath.row {
+            guard let visible = collectionView.visibleCells.first,
+                  let index = collectionView.indexPath(for: visible)?.row else { return }
+            topBannerSectionPagedView?.currentPage = index
+        }
+    }
+}
+
+final class ARTopBannerSectionPagedView: UICollectionReusableView {
+    lazy var textLabel = UILabel()
+    
+    var currentPage: Int = 0 {
+        didSet {
+            textLabel.text = "\(currentPage)/\(numberOfItem)"
+        }
+    }
+    var numberOfItem: Int = 0
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .systemBlue
+        addSubview(textLabel)
+        textLabel.makeConstraint {
+            [$0.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+             $0.topAnchor.constraint(equalTo: self.topAnchor),
+             $0.rightAnchor.constraint(equalTo: self.rightAnchor),
+             $0.bottomAnchor.constraint(equalTo: self.bottomAnchor)]
+        }
+        
+        currentPage = 0
     }
 }

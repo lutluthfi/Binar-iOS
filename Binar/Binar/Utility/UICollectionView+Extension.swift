@@ -18,4 +18,9 @@ extension UICollectionView {
         let reusableId: String = "\(cellType)"
         register(cellType, forCellWithReuseIdentifier: reusableId)
     }
+    
+    func registerView<View>(_ viewType: View.Type, ofKind kind: String) where View: UICollectionReusableView {
+        let reusableId: String = "\(viewType)"
+        register(viewType, forSupplementaryViewOfKind: kind, withReuseIdentifier: reusableId)
+    }
 }
