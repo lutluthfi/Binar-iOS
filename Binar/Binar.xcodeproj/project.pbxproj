@@ -76,6 +76,7 @@
 		4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33527EB6C4900CAF144 /* ARAnimalTableCell.swift */; };
 		4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */; };
 		4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */; };
+		4FF5E15E27FD4517005D1A0E /* CarouselTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */; };
 		592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592D89A127E0CAC200FCE74D /* ADMain.storyboard */; };
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		59D4282227EDBAFB00AE8C50 /* ADAnimalV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */; };
@@ -177,6 +178,7 @@
 		4FF0B33527EB6C4900CAF144 /* ARAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAnimalTableCell.swift; sourceTree = "<group>"; };
 		4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARAnimalTableCell.xib; sourceTree = "<group>"; };
 		4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableCell.swift; sourceTree = "<group>"; };
 		5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAITableViewController.swift; sourceTree = "<group>"; };
 		5401EB8E27E8791E009026E4 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		54751E3827E36AF100536139 /* AIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
@@ -570,12 +572,8 @@
 				4FF0B31127E8E0A500CAF144 /* StoryboardInstantiable.swift */,
 				4F83BB7527F47A3E00690F01 /* TitleEnum.swift */,
 				4F83BB7C27F4824700690F01 /* Typealias.swift */,
-				4F83BB7A27F47AE700690F01 /* UICollectionView+Extension.swift */,
-				4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */,
-				4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */,
-				4F83BB6E27EDFA2A00690F01 /* UIView+Extension.swift */,
-				4F33D5E827F701C600C4048D /* UIViewController+Extension.swift */,
-				4F33D5FC27FACEB400C4048D /* UIVisualEffectView+Extension.swift */,
+				4FF5E15B27FD44F0005D1A0E /* Cell */,
+				4FF5E15C27FD44F7005D1A0E /* Extension */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -629,6 +627,27 @@
 				4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		4FF5E15B27FD44F0005D1A0E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4FF5E15C27FD44F7005D1A0E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4F83BB7A27F47AE700690F01 /* UICollectionView+Extension.swift */,
+				4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */,
+				4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */,
+				4F83BB6E27EDFA2A00690F01 /* UIView+Extension.swift */,
+				4F33D5E827F701C600C4048D /* UIViewController+Extension.swift */,
+				4F33D5FC27FACEB400C4048D /* UIVisualEffectView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		592D89A027E0CA5C00FCE74D /* AD */ = {
@@ -904,6 +923,7 @@
 				E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
 				4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */,
+				4FF5E15E27FD4517005D1A0E /* CarouselTableCell.swift in Sources */,
 				4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
 				E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */,
@@ -1085,7 +1105,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1117,7 +1137,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

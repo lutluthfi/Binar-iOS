@@ -8,6 +8,12 @@
 import UIKit
 
 extension UICollectionView {
+    convenience init(layout: UICollectionViewLayout) {
+        self.init(frame: .zero, collectionViewLayout: layout)
+    }
+}
+
+extension UICollectionView {
     func registerNibCell<Cell>(_ cellType: Cell.Type) where Cell: UICollectionViewCell {
         let reusableId: String = "\(cellType)"
         let nib = UINib(nibName: reusableId, bundle: nil)

@@ -70,12 +70,14 @@ extension UIViewController {
 extension UIViewController {
     final func dequeueCell<CellType>(
         _ cellType: CellType.Type,
+        reuseId: String? = nil,
         in collectionView: UICollectionView,
         at indexPath: IndexPath,
         completion: @escaping (CellType) -> Void
     ) -> UICollectionViewCell where CellType: UICollectionViewCell {
+        let reuseIdentifier: String = reuseId ?? "\(cellType)"
         let reusableCell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: "\(cellType)",
+            withReuseIdentifier: reuseIdentifier,
             for: indexPath
         )
         
@@ -88,12 +90,14 @@ extension UIViewController {
     
     final func dequeueCell<CellType>(
         _ cellType: CellType.Type,
+        reuseId: String? = nil,
         in tableView: UITableView,
         at indexPath: IndexPath,
         completion: @escaping (CellType) -> Void
     ) -> UITableViewCell where CellType: UITableViewCell {
+        let reuseIdentifier: String = reuseId ?? "\(cellType)"
         let reusableCell = tableView.dequeueReusableCell(
-            withIdentifier: "\(cellType)",
+            withIdentifier: reuseIdentifier,
             for: indexPath
         )
         

@@ -30,3 +30,25 @@ extension UIView {
         layer.masksToBounds = true
     }
 }
+
+extension UIView {
+    final func dequeueCell<CellType>(
+        _ cellType: CellType.Type,
+        reuseId: String? = nil,
+        in collectionView: UICollectionView,
+        at indexPath: IndexPath,
+        completion: @escaping (CellType) -> Void
+    ) -> UICollectionViewCell where CellType: UICollectionViewCell {
+        let reuseIdentifier: String = reuseId ?? "\(cellType)"
+        let reusableCell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: reuseIdentifier,
+            for: indexPath
+        )
+        
+        if let cell = reusableCell as? CellType {
+            completion(cell)
+        }
+        
+        return reusableCell
+    }
+}
