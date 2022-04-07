@@ -32,6 +32,11 @@
 		3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */; };
 		38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0C76C27E32498009D7A82 /* BIViewController.swift */; };
 		38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E0C76E27E324A2009D7A82 /* BIMain.storyboard */; };
+		38F5565727FEE7EF00193C7C /* BITodayNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F5565627FEE7EF00193C7C /* BITodayNewsViewController.swift */; };
+		38F5565927FEE91100193C7C /* BIAnotherNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F5565827FEE91100193C7C /* BIAnotherNewsViewController.swift */; };
+		38F5565B27FEE92A00193C7C /* BINewsAudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F5565A27FEE92A00193C7C /* BINewsAudioViewController.swift */; };
+		38F5565D27FEE95600193C7C /* BINewsFollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F5565C27FEE95600193C7C /* BINewsFollowingViewController.swift */; };
+		38F5565F27FEE96E00193C7C /* BINewsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F5565E27FEE96E00193C7C /* BINewsSearchViewController.swift */; };
 		4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318D72D427E0C53700ACAACF /* MFViewController.swift */; };
 		4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5D727F5EB4900C4048D /* ARFirstViewController.swift */; };
 		4F33D5DA27F5EB5A00C4048D /* ARSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5D927F5EB5A00C4048D /* ARSecondViewController.swift */; };
@@ -132,6 +137,11 @@
 		3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAddAnimalViewController.swift; sourceTree = "<group>"; };
 		38E0C76C27E32498009D7A82 /* BIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIViewController.swift; sourceTree = "<group>"; };
 		38E0C76E27E324A2009D7A82 /* BIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BIMain.storyboard; sourceTree = "<group>"; };
+		38F5565627FEE7EF00193C7C /* BITodayNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BITodayNewsViewController.swift; sourceTree = "<group>"; };
+		38F5565827FEE91100193C7C /* BIAnotherNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAnotherNewsViewController.swift; sourceTree = "<group>"; };
+		38F5565A27FEE92A00193C7C /* BINewsAudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BINewsAudioViewController.swift; sourceTree = "<group>"; };
+		38F5565C27FEE95600193C7C /* BINewsFollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BINewsFollowingViewController.swift; sourceTree = "<group>"; };
+		38F5565E27FEE96E00193C7C /* BINewsSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BINewsSearchViewController.swift; sourceTree = "<group>"; };
 		4F33D5D727F5EB4900C4048D /* ARFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFirstViewController.swift; sourceTree = "<group>"; };
 		4F33D5D927F5EB5A00C4048D /* ARSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSecondViewController.swift; sourceTree = "<group>"; };
 		4F33D5DE27F6DFA600C4048D /* ARChallenge4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARChallenge4ViewController.swift; sourceTree = "<group>"; };
@@ -332,6 +342,11 @@
 			isa = PBXGroup;
 			children = (
 				385A343527FEDF4E0056995C /* BITabBarViewController.swift */,
+				38F5565627FEE7EF00193C7C /* BITodayNewsViewController.swift */,
+				38F5565827FEE91100193C7C /* BIAnotherNewsViewController.swift */,
+				38F5565A27FEE92A00193C7C /* BINewsAudioViewController.swift */,
+				38F5565C27FEE95600193C7C /* BINewsFollowingViewController.swift */,
+				38F5565E27FEE96E00193C7C /* BINewsSearchViewController.swift */,
 			);
 			path = NewsChallenge;
 			sourceTree = "<group>";
@@ -897,6 +912,7 @@
 				013165F727EDE6D500CB0BD7 /* THDetailAnimalViewController.swift in Sources */,
 				4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */,
 				383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */,
+				38F5565F27FEE96E00193C7C /* BINewsSearchViewController.swift in Sources */,
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
@@ -932,19 +948,23 @@
 				4F33D5FD27FACEB400C4048D /* UIVisualEffectView+Extension.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				4F33D5DF27F6DFA600C4048D /* ARChallenge4ViewController.swift in Sources */,
+				38F5565D27FEE95600193C7C /* BINewsFollowingViewController.swift in Sources */,
 				E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
 				4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */,
 				4FF5E15E27FD4517005D1A0E /* CarouselTableCell.swift in Sources */,
 				4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
+				38F5565927FEE91100193C7C /* BIAnotherNewsViewController.swift in Sources */,
 				E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */,
+				38F5565B27FEE92A00193C7C /* BINewsAudioViewController.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
 				E9FDD0A727F996D20051B161 /* RDView.swift in Sources */,
 				4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */,
 				4F33D60727FAE2E000C4048D /* ARBrowseViewController.swift in Sources */,
+				38F5565727FEE7EF00193C7C /* BITodayNewsViewController.swift in Sources */,
 				4F33D5F627F9A2C800C4048D /* ARTabBarViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
 				E9FDD0AD27F997360051B161 /* RDDetailViewController.swift in Sources */,
