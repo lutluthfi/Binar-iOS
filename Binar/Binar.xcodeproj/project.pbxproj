@@ -28,6 +28,7 @@
 		383935B227ECE2A40051A89C /* BIAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */; };
 		383935B527ECEC550051A89C /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935B427ECEC550051A89C /* AnimalDetailViewController.swift */; };
 		38550CC927ECFF77004269C8 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550CC827ECFF77004269C8 /* ChallengeViewController.swift */; };
+		385A343627FEDF4E0056995C /* BITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A343527FEDF4E0056995C /* BITabBarViewController.swift */; };
 		3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */; };
 		38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E0C76C27E32498009D7A82 /* BIViewController.swift */; };
 		38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E0C76E27E324A2009D7A82 /* BIMain.storyboard */; };
@@ -127,6 +128,7 @@
 		383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BIAnimalTableCell.xib; sourceTree = "<group>"; };
 		383935B427ECEC550051A89C /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
 		38550CC827ECFF77004269C8 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		385A343527FEDF4E0056995C /* BITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BITabBarViewController.swift; sourceTree = "<group>"; };
 		3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAddAnimalViewController.swift; sourceTree = "<group>"; };
 		38E0C76C27E32498009D7A82 /* BIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIViewController.swift; sourceTree = "<group>"; };
 		38E0C76E27E324A2009D7A82 /* BIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BIMain.storyboard; sourceTree = "<group>"; };
@@ -326,9 +328,18 @@
 			path = ChapterChallenge;
 			sourceTree = "<group>";
 		};
+		385A343427FEDF380056995C /* NewsChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				385A343527FEDF4E0056995C /* BITabBarViewController.swift */,
+			);
+			path = NewsChallenge;
+			sourceTree = "<group>";
+		};
 		38E0C76B27E3248B009D7A82 /* BI */ = {
 			isa = PBXGroup;
 			children = (
+				385A343427FEDF380056995C /* NewsChallenge */,
 				383935B627ECFF000051A89C /* ChapterChallenge */,
 				383935AB27ECE25B0051A89C /* AnimalChallenge */,
 				38E0C76E27E324A2009D7A82 /* BIMain.storyboard */,
@@ -880,6 +891,7 @@
 				4FF0B30F27E8DFD400CAF144 /* DSViewController.swift in Sources */,
 				59D4282227EDBAFB00AE8C50 /* ADAnimalV1.swift in Sources */,
 				4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */,
+				385A343627FEDF4E0056995C /* BITabBarViewController.swift in Sources */,
 				4F83BB7927F47AD600690F01 /* ARStandardViewController.swift in Sources */,
 				4F83BB7B27F47AE700690F01 /* UICollectionView+Extension.swift in Sources */,
 				013165F727EDE6D500CB0BD7 /* THDetailAnimalViewController.swift in Sources */,
