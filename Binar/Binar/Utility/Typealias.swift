@@ -8,3 +8,4 @@
 import UIKit
 
 typealias UICollectionController = UICollectionViewController & UICollectionViewDelegateFlowLayout
+typealias UICollectionViewContract = UICollectionViewDataSource & UICollectionViewDelegateFlowLayout & UICollectionViewDelegate

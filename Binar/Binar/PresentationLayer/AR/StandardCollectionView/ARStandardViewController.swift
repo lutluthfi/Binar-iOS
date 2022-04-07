@@ -132,12 +132,12 @@ final class ARStandardCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(textLabel)
-        textLabel.makeConstraint(
-            textLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            textLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            textLabel.topAnchor.constraint(equalTo: contentView.topAnchor),
-            textLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        )
+        textLabel.makeConstraint { view in
+            [view.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
+             view.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
+             view.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+             view.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)]
+        }
         contentView.backgroundColor = .black
     }
     

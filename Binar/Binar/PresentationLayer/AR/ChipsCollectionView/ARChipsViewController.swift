@@ -145,12 +145,12 @@ final class ARChipsCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(textLabel)
-        textLabel.makeConstraint(
-            textLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            textLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            textLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            textLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4)
-        )
+        textLabel.makeConstraint { view in
+            [view.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 16),
+             view.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -16),
+             view.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 4),
+             view.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -4)]
+        }
     }
     
     override func layoutSubviews() {
