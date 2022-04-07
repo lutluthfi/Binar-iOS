@@ -91,7 +91,8 @@
 		4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33527EB6C4900CAF144 /* ARAnimalTableCell.swift */; };
 		4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */; };
 		4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */; };
-		4FF5E15E27FD4517005D1A0E /* CarouselTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */; };
+		4FF5E15E27FD4517005D1A0E /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5E15D27FD4517005D1A0E /* CarouselView.swift */; };
+		4FF5E16727FDA288005D1A0E /* ARTopBannerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5E16627FDA288005D1A0E /* ARTopBannerTableCell.swift */; };
 		592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592D89A127E0CAC200FCE74D /* ADMain.storyboard */; };
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		59D4282227EDBAFB00AE8C50 /* ADAnimalV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */; };
@@ -208,7 +209,8 @@
 		4FF0B33527EB6C4900CAF144 /* ARAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAnimalTableCell.swift; sourceTree = "<group>"; };
 		4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARAnimalTableCell.xib; sourceTree = "<group>"; };
 		4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableCell.swift; sourceTree = "<group>"; };
+		4FF5E15D27FD4517005D1A0E /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		4FF5E16627FDA288005D1A0E /* ARTopBannerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTopBannerTableCell.swift; sourceTree = "<group>"; };
 		5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAITableViewController.swift; sourceTree = "<group>"; };
 		5401EB8E27E8791E009026E4 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		54751E3827E36AF100536139 /* AIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				4F33D60427FAE2D600C4048D /* ARHomeViewController.swift */,
+				4FF5E15F27FD9070005D1A0E /* TopBanner */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -469,8 +472,8 @@
 		4F33D60227FAE2C300C4048D /* BrowsePage */ = {
 			isa = PBXGroup;
 			children = (
-				4F33D60A27FC391C00C4048D /* Cell */,
 				4F33D60627FAE2E000C4048D /* ARBrowseViewController.swift */,
+				4F33D60A27FC391C00C4048D /* Cell */,
 			);
 			path = BrowsePage;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				4FF0B31127E8E0A500CAF144 /* StoryboardInstantiable.swift */,
 				4F83BB7527F47A3E00690F01 /* TitleEnum.swift */,
 				4F83BB7C27F4824700690F01 /* Typealias.swift */,
+				4FF5E16327FDA140005D1A0E /* View */,
 				4F83BB7A27F47AE700690F01 /* UICollectionView+Extension.swift */,
 				4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */,
 				4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */,
@@ -695,14 +699,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		4FF5E15B27FD44F0005D1A0E /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */,
-			);
-			path = Cell;
-			sourceTree = "<group>";
-		};
 		4FF5E15C27FD44F7005D1A0E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,6 +710,22 @@
 				4F33D5FC27FACEB400C4048D /* UIVisualEffectView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		4FF5E15F27FD9070005D1A0E /* TopBanner */ = {
+			isa = PBXGroup;
+			children = (
+				4FF5E16627FDA288005D1A0E /* ARTopBannerTableCell.swift */,
+			);
+			path = TopBanner;
+			sourceTree = "<group>";
+		};
+		4FF5E16327FDA140005D1A0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4FF5E15D27FD4517005D1A0E /* CarouselView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		592D89A027E0CA5C00FCE74D /* AD */ = {
@@ -996,7 +1008,7 @@
 				E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
 				4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */,
-				4FF5E15E27FD4517005D1A0E /* CarouselTableCell.swift in Sources */,
+				4FF5E15E27FD4517005D1A0E /* CarouselView.swift in Sources */,
 				4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */,
 				0A7C810D27F906380030B0C6 /* StretchyViewController.swift in Sources */,
 				0AE994AD27F8AE7100D13D58 /* AFTableViewCell.swift in Sources */,
@@ -1012,6 +1024,7 @@
 				4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */,
 				4F33D60727FAE2E000C4048D /* ARBrowseViewController.swift in Sources */,
 				4F33D5F627F9A2C800C4048D /* ARTabBarViewController.swift in Sources */,
+				4FF5E16727FDA288005D1A0E /* ARTopBannerTableCell.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
 				E9FDD0AD27F997360051B161 /* RDDetailViewController.swift in Sources */,
 				013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */,
