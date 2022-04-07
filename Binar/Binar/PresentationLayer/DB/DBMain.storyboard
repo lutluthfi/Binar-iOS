@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -26,16 +25,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="animaltableview" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tK-zF-TNz" customClass="animaltableview" customModule="Binar" customModuleProvider="target">
-                                <rect key="frame" x="20" y="196" width="238" height="31"/>
+                                <rect key="frame" x="20" y="201" width="238" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Challange2TableView"/>
                                 <connections>
-                                    <segue destination="s4f-oo-Pfy" kind="modal" identifier="moveanimal" modalPresentationStyle="fullScreen" id="wph-Uj-d36"/>
+                                    <segue destination="s4f-oo-Pfy" kind="show" id="FNe-LF-VcF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jx-Xh-niA">
+                                <rect key="frame" x="20" y="245" width="238" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Challange 3">
+                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="gXo-oQ-DlN" kind="show" id="luw-Sm-c7G"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OH-xn-rug">
-                                <rect key="frame" x="20" y="248" width="238" height="35"/>
+                                <rect key="frame" x="20" y="290" width="238" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <state key="normal" title="Button"/>
@@ -43,13 +54,14 @@
                                     <color key="baseForegroundColor" systemColor="systemGray6Color"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="Zwg-RF-tXs" kind="modal" identifier="calc" modalPresentationStyle="fullScreen" id="JIv-cF-8BI"/>
+                                    <segue destination="Zwg-RF-tXs" kind="show" id="tID-n8-JtQ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GfO-qe-JfA"/>
                     <connections>
                         <outlet property="Challange4" destination="5OH-xn-rug" id="kwP-sL-kO3"/>
                         <outlet property="challange4" destination="5OH-xn-rug" id="byS-3d-uUf"/>
@@ -57,7 +69,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1255.072463768116" y="-78.348214285714278"/>
+            <point key="canvasLocation" x="-344.92753623188406" y="-78.348214285714278"/>
+        </scene>
+        <!--Challange3 Table View Controller-->
+        <scene sceneID="8Ba-qG-QdF">
+            <objects>
+                <tableViewController storyboardIdentifier="DBChallange3TableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gXo-oQ-DlN" customClass="DBChallange3TableViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="LmQ-iV-iQv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DBTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="816" id="rBJ-Hx-ALO" customClass="DBTableViewCell" customModule="Binar" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="816"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rBJ-Hx-ALO" id="uBo-E1-9Mz">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="816"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gXo-oQ-DlN" id="7yB-2k-pqv"/>
+                            <outlet property="delegate" destination="gXo-oQ-DlN" id="PXl-Be-jYv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="CBz-Fm-ZRZ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5XI-He-oru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="-1100"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Xp5-wh-GHR">
@@ -82,11 +123,11 @@
                             <outlet property="delegate" destination="s4f-oo-Pfy" id="BZb-69-zWi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="MGD-4k-STs"/>
+                    <navigationItem key="navigationItem" id="5jP-Jc-Tmh"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kg2-fR-Wa5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89.855072463768124" y="-626.11607142857144"/>
+            <point key="canvasLocation" x="1838" y="-425"/>
         </scene>
         <!--Challange4ViewController-->
         <scene sceneID="EWi-6b-8n2">
@@ -444,13 +485,32 @@
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pij-zD-JF7"/>
                     <connections>
                         <outlet property="OutputLbl" destination="Vy2-qH-Qp8" id="aBW-Kq-7fW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pKc-tx-Xth" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-478.26086956521743" y="114.50892857142857"/>
+            <point key="canvasLocation" x="1838" y="264"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="a3Z-Jb-XgF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rZq-yR-98v" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tQC-eD-6dd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Bn7-bb-qsW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rgz-II-FbF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1255.072463768116" y="-78.348214285714278"/>
         </scene>
     </scenes>
     <designables>

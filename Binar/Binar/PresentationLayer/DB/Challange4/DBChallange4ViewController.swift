@@ -82,7 +82,11 @@ var runningNumber = ""
                 }else if currentOperation == .Divide {
                     result = "\(Double(leftValue)! / Double(rightValue)!)"
                 }
+                
                leftValue = result
+                if (Double(result)!.truncatingRemainder(dividingBy: 1) == 0) {
+                    result = "\(Int(Double(result)!))"
+                }
                 OutputLbl.text = result
             }
             currentOperation = operation
