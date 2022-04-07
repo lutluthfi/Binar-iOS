@@ -47,6 +47,13 @@
 		4F33D5E727F6E87600C4048D /* ARFormTextViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5E627F6E87600C4048D /* ARFormTextViewTableCell.swift */; };
 		4F33D5E927F701C600C4048D /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5E827F701C600C4048D /* UIViewController+Extension.swift */; };
 		4F33D5F627F9A2C800C4048D /* ARTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5F527F9A2C800C4048D /* ARTabBarViewController.swift */; };
+		4F33D5FB27FA618900C4048D /* ARChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5FA27FA618900C4048D /* ARChatViewController.swift */; };
+		4F33D5FD27FACEB400C4048D /* UIVisualEffectView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5FC27FACEB400C4048D /* UIVisualEffectView+Extension.swift */; };
+		4F33D60027FADA9100C4048D /* ARChatInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D5FF27FADA9100C4048D /* ARChatInputTextView.swift */; };
+		4F33D60527FAE2D600C4048D /* ARHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D60427FAE2D600C4048D /* ARHomeViewController.swift */; };
+		4F33D60727FAE2E000C4048D /* ARBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D60627FAE2E000C4048D /* ARBrowseViewController.swift */; };
+		4F33D60927FAE2E800C4048D /* ARSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D60827FAE2E800C4048D /* ARSearchViewController.swift */; };
+		4F33D60C27FC392500C4048D /* ARBrowseBannerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D60B27FC392500C4048D /* ARBrowseBannerCollectionCell.swift */; };
 		4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A40E27DF8AF700C9E2F7 /* Student.swift */; };
 		4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */; };
 		4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A44827E2123300C9E2F7 /* Animal.swift */; };
@@ -76,6 +83,7 @@
 		4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33527EB6C4900CAF144 /* ARAnimalTableCell.swift */; };
 		4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */; };
 		4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */; };
+		4FF5E15E27FD4517005D1A0E /* CarouselTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */; };
 		592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592D89A127E0CAC200FCE74D /* ADMain.storyboard */; };
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		59D4282227EDBAFB00AE8C50 /* ADAnimalV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */; };
@@ -94,6 +102,11 @@
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
 		E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940649E27E0D44E00D8204C /* RDViewController.swift */; };
+		E9FDD0A727F996D20051B161 /* RDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0A627F996D20051B161 /* RDView.swift */; };
+		E9FDD0AA27F996FB0051B161 /* RDViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0A927F996FB0051B161 /* RDViewModels.swift */; };
+		E9FDD0AD27F997360051B161 /* RDDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0AC27F997360051B161 /* RDDetailViewController.swift */; };
+		E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0AF27F9976C0051B161 /* RDConstants.swift */; };
+		E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0B327F99B660051B161 /* RDAnimalListCell.swift */; };
 		FF98B2DF27E3643300830B07 /* ATMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF98B2DE27E3643300830B07 /* ATMain.storyboard */; };
 		FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF98B2E027E3646000830B07 /* ATViewController.swift */; };
 /* End PBXBuildFile section */
@@ -139,6 +152,13 @@
 		4F33D5E627F6E87600C4048D /* ARFormTextViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARFormTextViewTableCell.swift; sourceTree = "<group>"; };
 		4F33D5E827F701C600C4048D /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		4F33D5F527F9A2C800C4048D /* ARTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARTabBarViewController.swift; sourceTree = "<group>"; };
+		4F33D5FA27FA618900C4048D /* ARChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARChatViewController.swift; sourceTree = "<group>"; };
+		4F33D5FC27FACEB400C4048D /* UIVisualEffectView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVisualEffectView+Extension.swift"; sourceTree = "<group>"; };
+		4F33D5FF27FADA9100C4048D /* ARChatInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARChatInputTextView.swift; sourceTree = "<group>"; };
+		4F33D60427FAE2D600C4048D /* ARHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARHomeViewController.swift; sourceTree = "<group>"; };
+		4F33D60627FAE2E000C4048D /* ARBrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBrowseViewController.swift; sourceTree = "<group>"; };
+		4F33D60827FAE2E800C4048D /* ARSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSearchViewController.swift; sourceTree = "<group>"; };
+		4F33D60B27FC392500C4048D /* ARBrowseBannerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBrowseBannerCollectionCell.swift; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		4F78A44827E2123300C9E2F7 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
@@ -172,6 +192,7 @@
 		4FF0B33527EB6C4900CAF144 /* ARAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARAnimalTableCell.swift; sourceTree = "<group>"; };
 		4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ARAnimalTableCell.xib; sourceTree = "<group>"; };
 		4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableCell.swift; sourceTree = "<group>"; };
 		5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAITableViewController.swift; sourceTree = "<group>"; };
 		5401EB8E27E8791E009026E4 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		54751E3827E36AF100536139 /* AIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
@@ -195,6 +216,11 @@
 		CEDF88CE27E0CFB300388847 /* PWMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PWMain.storyboard; sourceTree = "<group>"; };
 		CEDF88D027E0CFC800388847 /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
 		E940649E27E0D44E00D8204C /* RDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewController.swift; sourceTree = "<group>"; };
+		E9FDD0A627F996D20051B161 /* RDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDView.swift; sourceTree = "<group>"; };
+		E9FDD0A927F996FB0051B161 /* RDViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewModels.swift; sourceTree = "<group>"; };
+		E9FDD0AC27F997360051B161 /* RDDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDDetailViewController.swift; sourceTree = "<group>"; };
+		E9FDD0AF27F9976C0051B161 /* RDConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDConstants.swift; sourceTree = "<group>"; };
+		E9FDD0B327F99B660051B161 /* RDAnimalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDAnimalListCell.swift; sourceTree = "<group>"; };
 		FF98B2DE27E3643300830B07 /* ATMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ATMain.storyboard; sourceTree = "<group>"; };
 		FF98B2E027E3646000830B07 /* ATViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -419,8 +445,61 @@
 			isa = PBXGroup;
 			children = (
 				4F33D5F527F9A2C800C4048D /* ARTabBarViewController.swift */,
+				4F33D60227FAE2C300C4048D /* BrowsePage */,
+				4F33D60127FAE2B800C4048D /* HomePage */,
+				4F33D60327FAE2C800C4048D /* SearchPage */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		4F33D5F927FA617700C4048D /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				4F33D5FA27FA618900C4048D /* ARChatViewController.swift */,
+				4F33D5FE27FADA7C00C4048D /* Subview */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		4F33D5FE27FADA7C00C4048D /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				4F33D5FF27FADA9100C4048D /* ARChatInputTextView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		4F33D60127FAE2B800C4048D /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				4F33D60427FAE2D600C4048D /* ARHomeViewController.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		4F33D60227FAE2C300C4048D /* BrowsePage */ = {
+			isa = PBXGroup;
+			children = (
+				4F33D60A27FC391C00C4048D /* Cell */,
+				4F33D60627FAE2E000C4048D /* ARBrowseViewController.swift */,
+			);
+			path = BrowsePage;
+			sourceTree = "<group>";
+		};
+		4F33D60327FAE2C800C4048D /* SearchPage */ = {
+			isa = PBXGroup;
+			children = (
+				4F33D60827FAE2E800C4048D /* ARSearchViewController.swift */,
+			);
+			path = SearchPage;
+			sourceTree = "<group>";
+		};
+		4F33D60A27FC391C00C4048D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4F33D60B27FC392500C4048D /* ARBrowseBannerCollectionCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		4F78A41227DF8C5F00C9E2F7 /* AR */ = {
@@ -429,6 +508,7 @@
 				4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */,
 				4FF0B33327EB6BEA00CAF144 /* Animal */,
 				4F33D5DD27F6DF9100C4048D /* Challenge4 */,
+				4F33D5F927FA617700C4048D /* Chat */,
 				4F83BB7E27F49C1000690F01 /* ChipsCollectionView */,
 				4F33D5D627F5EB0300C4048D /* DelegatePattern */,
 				4F33D5E027F6E1CB00C4048D /* Form */,
@@ -561,11 +641,8 @@
 				4FF0B31127E8E0A500CAF144 /* StoryboardInstantiable.swift */,
 				4F83BB7527F47A3E00690F01 /* TitleEnum.swift */,
 				4F83BB7C27F4824700690F01 /* Typealias.swift */,
-				4F83BB7A27F47AE700690F01 /* UICollectionView+Extension.swift */,
-				4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */,
-				4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */,
-				4F83BB6E27EDFA2A00690F01 /* UIView+Extension.swift */,
-				4F33D5E827F701C600C4048D /* UIViewController+Extension.swift */,
+				4FF5E15B27FD44F0005D1A0E /* Cell */,
+				4FF5E15C27FD44F7005D1A0E /* Extension */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -619,6 +696,27 @@
 				4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		4FF5E15B27FD44F0005D1A0E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		4FF5E15C27FD44F7005D1A0E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4F83BB7A27F47AE700690F01 /* UICollectionView+Extension.swift */,
+				4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */,
+				4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */,
+				4F83BB6E27EDFA2A00690F01 /* UIView+Extension.swift */,
+				4F33D5E827F701C600C4048D /* UIViewController+Extension.swift */,
+				4F33D5FC27FACEB400C4048D /* UIVisualEffectView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		592D89A027E0CA5C00FCE74D /* AD */ = {
@@ -684,9 +782,62 @@
 		E940649D27E0D43700D8204C /* RD */ = {
 			isa = PBXGroup;
 			children = (
+				E9FDD0AE27F9975A0051B161 /* RDUtils */,
+				E9FDD0AB27F997100051B161 /* RDViewControllers */,
+				E9FDD0A827F996E50051B161 /* RDViewModels */,
+				E9FDD0A527F996B90051B161 /* RDViews */,
 				E940649E27E0D44E00D8204C /* RDViewController.swift */,
 			);
 			path = RD;
+			sourceTree = "<group>";
+		};
+		E9FDD0A527F996B90051B161 /* RDViews */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0B227F997960051B161 /* Cells */,
+				E9FDD0B127F9978C0051B161 /* Views */,
+			);
+			path = RDViews;
+			sourceTree = "<group>";
+		};
+		E9FDD0A827F996E50051B161 /* RDViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0A927F996FB0051B161 /* RDViewModels.swift */,
+			);
+			path = RDViewModels;
+			sourceTree = "<group>";
+		};
+		E9FDD0AB27F997100051B161 /* RDViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0AC27F997360051B161 /* RDDetailViewController.swift */,
+			);
+			path = RDViewControllers;
+			sourceTree = "<group>";
+		};
+		E9FDD0AE27F9975A0051B161 /* RDUtils */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0AF27F9976C0051B161 /* RDConstants.swift */,
+			);
+			path = RDUtils;
+			sourceTree = "<group>";
+		};
+		E9FDD0B127F9978C0051B161 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0A627F996D20051B161 /* RDView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E9FDD0B227F997960051B161 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E9FDD0B327F99B660051B161 /* RDAnimalListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FF98B2DD27E363EE00830B07 /* AT */ = {
@@ -825,12 +976,15 @@
 				4F33D5DA27F5EB5A00C4048D /* ARSecondViewController.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				4F33D5E927F701C600C4048D /* UIViewController+Extension.swift in Sources */,
+				4F33D60527FAE2D600C4048D /* ARHomeViewController.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
 				4F33D5E527F6E86300C4048D /* ARFormTextFieldTableCell.swift in Sources */,
+				4F33D60927FAE2E800C4048D /* ARSearchViewController.swift in Sources */,
 				4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */,
 				01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */,
 				4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */,
 				592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */,
+				4F33D60027FADA9100C4048D /* ARChatInputTextView.swift in Sources */,
 				31F95E1227F616AA008989D7 /* MFFasilChallenge2VC.swift in Sources */,
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,
 				4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */,
@@ -838,24 +992,34 @@
 				319988BF27F997BF00891D32 /* MFQRVC.swift in Sources */,
 				A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */,
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
+				4F33D5FD27FACEB400C4048D /* UIVisualEffectView+Extension.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				4F33D5DF27F6DFA600C4048D /* ARChallenge4ViewController.swift in Sources */,
+				E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
 				4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */,
+				4FF5E15E27FD4517005D1A0E /* CarouselTableCell.swift in Sources */,
 				4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
+				E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallenge3VC.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
+				E9FDD0A727F996D20051B161 /* RDView.swift in Sources */,
 				4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */,
+				4F33D60727FAE2E000C4048D /* ARBrowseViewController.swift in Sources */,
 				4F33D5F627F9A2C800C4048D /* ARTabBarViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
+				E9FDD0AD27F997360051B161 /* RDDetailViewController.swift in Sources */,
 				313B584A27F626AE00F7C7F8 /* MFTableCell.swift in Sources */,
 				013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,
+				4F33D5FB27FA618900C4048D /* ARChatViewController.swift in Sources */,
 				013165EC27ED71BF00CB0BD7 /* THAnimalTableViewController.swift in Sources */,
 				59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */,
+				4F33D60C27FC392500C4048D /* ARBrowseBannerCollectionCell.swift in Sources */,
 				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,
+				E9FDD0AA27F996FB0051B161 /* RDViewModels.swift in Sources */,
 				4F83BB7D27F4824700690F01 /* Typealias.swift in Sources */,
 				4F33D5E727F6E87600C4048D /* ARFormTextViewTableCell.swift in Sources */,
 			);
@@ -1017,7 +1181,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1049,7 +1213,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
