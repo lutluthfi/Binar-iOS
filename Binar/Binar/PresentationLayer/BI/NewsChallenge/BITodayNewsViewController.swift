@@ -392,7 +392,7 @@ final class BITodayNewsViewController: UIViewController, SFSafariViewControllerD
         
         backToHomeButton.translatesAutoresizingMaskIntoConstraints = false
         backToHomeButton.setTitle("Back to Home", for: .normal)
-        backToHomeButton.backgroundColor = .systemBlue
+        backToHomeButton.backgroundColor = .systemPink
         backToHomeButton.layer.cornerRadius = 12
         backToHomeButton.addTarget((Any).self, action: #selector(backToHome), for: .touchUpInside)
         
@@ -517,7 +517,7 @@ final class BITodayNewsViewController: UIViewController, SFSafariViewControllerD
             news5MoreButton.topAnchor.constraint(equalTo: news5Divider.bottomAnchor, constant: 3),
             news5MoreButton.trailingAnchor.constraint(equalTo: news5View.trailingAnchor, constant: -15),
             
-            backToHomeButton.topAnchor.constraint(equalTo: news5View.bottomAnchor, constant: 20),
+            backToHomeButton.topAnchor.constraint(equalTo: news5View.bottomAnchor, constant: 15),
             backToHomeButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             backToHomeButton.widthAnchor.constraint(equalToConstant: 200),
             backToHomeButton.heightAnchor.constraint(equalToConstant: 40)
