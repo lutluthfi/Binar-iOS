@@ -90,12 +90,16 @@ class MenuTableViewCell: UITableViewCell {
   }
   
   func setConstraint() {
-    stackView.makeConstraint([
-      stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-      stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-      stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-      stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-    ])
+    stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+    stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+    stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+    stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+//    stackView.makeConstraint([
+//      stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+//      stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+//      stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+//      stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+//    ])
   }
 
 }
