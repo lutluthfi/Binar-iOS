@@ -761,6 +761,7 @@ struct NewsSharer {
         let activityViewController = UIActivityViewController(activityItems: [link ?? "", text, image], applicationActivities: nil)
     
     viewController.present(activityViewController, animated: true, completion: nil)
+        
   }
   
 }
