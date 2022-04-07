@@ -7,12 +7,36 @@
 
 import Foundation
 
-struct HotCoffee: Decodable {
+protocol ProtocolHotCoffee {
+  var name: String { get set }
+  var photoUrlString: String { get set }
+  var descCoffee: String { get set }
+  var price: String { get set }
+  var stock: Int { get set }
+}
+
+protocol ProtocolCold: ProtocolHotCoffee {
+  var name: String { get set }
+  var photoUrlString: String { get set }
+  var descCoffee: String { get set }
+  var price: String { get set }
+  var stock: Int { get set }
+}
+
+protocol ProtocolOthers: ProtocolCold {
+  var name: String { get set }
+  var photoUrlString: String { get set }
+  var descCoffee: String { get set }
+  var price: String { get set }
+  var stock: Int { get set }
+}
+
+struct HotCoffee: ProtocolHotCoffee, Decodable {
   var name: String
-  let photoUrlString: String
-  let descCoffee: String
-  let price: String
-  let stock: Int
+  var photoUrlString: String
+  var descCoffee: String
+  var price: String
+  var stock: Int
   
   enum CodingKeys: String, CodingKey {
     case name
@@ -30,12 +54,12 @@ struct HotCoffee: Decodable {
   }
 }
 
-struct ColdCoffee: Decodable {
+struct ColdCoffee: ProtocolCold, Decodable {
   var name: String
-  let photoUrlString: String
-  let descCoffee: String
-  let price: String
-  let stock: Int
+  var photoUrlString: String
+  var descCoffee: String
+  var price: String
+  var stock: Int
   
   enum CodingKeys: String, CodingKey {
     case name
@@ -53,12 +77,12 @@ struct ColdCoffee: Decodable {
   }
 }
 
-struct Others: Decodable {
+struct Others: ProtocolOthers, Decodable {
   var name: String
-  let photoUrlString: String
-  let descCoffee: String
-  let price: String
-  let stock: Int
+  var photoUrlString: String
+  var descCoffee: String
+  var price: String
+  var stock: Int
   
   enum CodingKeys: String, CodingKey {
     case name

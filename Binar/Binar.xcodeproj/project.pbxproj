@@ -16,20 +16,21 @@
 		01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DBD36227E0C4C400C69237 /* THViewController.swift */; };
 		0A1598ED27F9EEE60049512B /* CoffeeShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1598EC27F9EEE60049512B /* CoffeeShop.swift */; };
 		0A1598F127F9F5A00049512B /* Challenge4TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1598F027F9F5A00049512B /* Challenge4TableViewCell.swift */; };
-		0A1598F427FA0E870049512B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1598F327FA0E870049512B /* UIColor+Extension.swift */; };
 		0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A40550D27E2033F003E754D /* AFMain.storyboard */; };
 		0A40551027E20353003E754D /* AFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A40550F27E20353003E754D /* AFViewController.swift */; };
 		0A7C810D27F906380030B0C6 /* StretchyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7C810C27F906380030B0C6 /* StretchyViewController.swift */; };
 		0A86281127FA6AEB00DA43F4 /* Challenge4TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86281027FA6AEB00DA43F4 /* Challenge4TableViewController.swift */; };
 		0A86281927FA832200DA43F4 /* SearchBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A86281827FA832200DA43F4 /* SearchBarTableViewCell.swift */; };
-		0A871C1627FADF2F0004E142 /* DetailOfCoffeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A871C1527FADF2E0004E142 /* DetailOfCoffeeTableViewController.swift */; };
-		0AA043DB27FE91F100D157B1 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA043DA27FE91F100D157B1 /* CheckoutView.swift */; };
 		0AA3981B27FC70BB00491230 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA3981A27FC70BB00491230 /* MenuTableViewCell.swift */; };
 		0AE994AD27F8AE7100D13D58 /* AFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE994AC27F8AE7100D13D58 /* AFTableViewCell.swift */; };
 		0AE994B827F8AEB500D13D58 /* AFChallengeBinarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE994B727F8AEB500D13D58 /* AFChallengeBinarViewController.swift */; };
 		0AE994BD27F8AEF800D13D58 /* AFDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE994BC27F8AEF800D13D58 /* AFDetailViewController.swift */; };
 		0AE994C227F8AFBA00D13D58 /* AFChallengeListV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE994C127F8AFBA00D13D58 /* AFChallengeListV2.swift */; };
 		0AE994C527F8B04000D13D58 /* ChallengeListV2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE994C427F8B04000D13D58 /* ChallengeListV2TableViewCell.swift */; };
+		0AF9F7D127FEE45A00CD5E55 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9F7D027FEE45A00CD5E55 /* UIColor+Extension.swift */; };
+		0AF9F7D527FEE47E00CD5E55 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9F7D427FEE47E00CD5E55 /* UIColor+Extension.swift */; };
+		0AF9F7D927FEED8200CD5E55 /* DetailCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9F7D827FEED8200CD5E55 /* DetailCoffeeViewController.swift */; };
+		0AF9F7DD27FF086400CD5E55 /* StretchyTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF9F7DC27FF086400CD5E55 /* StretchyTableHeaderView.swift */; };
 		22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22DD5C8127E0D59C003024DC /* DPMain.storyboard */; };
 		22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DD5C8327E0D5BA003024DC /* DPViewController.swift */; };
 		2504065427EAF52800186517 /* RNMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2504065327EAF52800186517 /* RNMain.storyboard */; };
@@ -107,20 +108,21 @@
 		01DBD36227E0C4C400C69237 /* THViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewController.swift; sourceTree = "<group>"; };
 		0A1598EC27F9EEE60049512B /* CoffeeShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShop.swift; sourceTree = "<group>"; };
 		0A1598F027F9F5A00049512B /* Challenge4TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge4TableViewCell.swift; sourceTree = "<group>"; };
-		0A1598F327FA0E870049512B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		0A40550D27E2033F003E754D /* AFMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AFMain.storyboard; sourceTree = "<group>"; };
 		0A40550F27E20353003E754D /* AFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFViewController.swift; sourceTree = "<group>"; };
 		0A7C810C27F906380030B0C6 /* StretchyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyViewController.swift; sourceTree = "<group>"; };
 		0A86281027FA6AEB00DA43F4 /* Challenge4TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge4TableViewController.swift; sourceTree = "<group>"; };
 		0A86281827FA832200DA43F4 /* SearchBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTableViewCell.swift; sourceTree = "<group>"; };
-		0A871C1527FADF2E0004E142 /* DetailOfCoffeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailOfCoffeeTableViewController.swift; sourceTree = "<group>"; };
-		0AA043DA27FE91F100D157B1 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		0AA3981A27FC70BB00491230 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		0AE994AC27F8AE7100D13D58 /* AFTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFTableViewCell.swift; sourceTree = "<group>"; };
 		0AE994B727F8AEB500D13D58 /* AFChallengeBinarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AFChallengeBinarViewController.swift; path = Binar/AF/AFChallengeBinarViewController.swift; sourceTree = SOURCE_ROOT; };
 		0AE994BC27F8AEF800D13D58 /* AFDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFDetailViewController.swift; sourceTree = "<group>"; };
 		0AE994C127F8AFBA00D13D58 /* AFChallengeListV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFChallengeListV2.swift; sourceTree = "<group>"; };
 		0AE994C427F8B04000D13D58 /* ChallengeListV2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeListV2TableViewCell.swift; sourceTree = "<group>"; };
+		0AF9F7D027FEE45A00CD5E55 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		0AF9F7D427FEE47E00CD5E55 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		0AF9F7D827FEED8200CD5E55 /* DetailCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoffeeViewController.swift; sourceTree = "<group>"; };
+		0AF9F7DC27FF086400CD5E55 /* StretchyTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StretchyTableHeaderView.swift; sourceTree = "<group>"; };
 		22DD5C8127E0D59C003024DC /* DPMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DPMain.storyboard; sourceTree = "<group>"; };
 		22DD5C8327E0D5BA003024DC /* DPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPViewController.swift; sourceTree = "<group>"; };
 		2504065327EAF52800186517 /* RNMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RNMain.storyboard; sourceTree = "<group>"; };
@@ -254,7 +256,7 @@
 				0AE994C127F8AFBA00D13D58 /* AFChallengeListV2.swift */,
 				0AE994B727F8AEB500D13D58 /* AFChallengeBinarViewController.swift */,
 				0A86281027FA6AEB00DA43F4 /* Challenge4TableViewController.swift */,
-				0AA043DA27FE91F100D157B1 /* CheckoutView.swift */,
+				0AF9F7DC27FF086400CD5E55 /* StretchyTableHeaderView.swift */,
 				0AD91C2527EF7B9200714EB4 /* Detail */,
 				0ABD0DC227EC8845007B16D0 /* Cell */,
 				0A40550D27E2033F003E754D /* AFMain.storyboard */,
@@ -278,7 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				0AE994BC27F8AEF800D13D58 /* AFDetailViewController.swift */,
-				0A871C1527FADF2E0004E142 /* DetailOfCoffeeTableViewController.swift */,
+				0AF9F7D827FEED8200CD5E55 /* DetailCoffeeViewController.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -490,7 +492,8 @@
 				4FF0B31F27EAC59C00CAF144 /* UIImageView+Extension.swift */,
 				4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */,
 				4F83BB6E27EDFA2A00690F01 /* UIView+Extension.swift */,
-				0A1598F327FA0E870049512B /* UIColor+Extension.swift */,
+				0AF9F7D427FEE47E00CD5E55 /* UIColor+Extension.swift */,
+				0AF9F7D027FEE45A00CD5E55 /* UIColor+Extension.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -718,6 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF9F7DD27FF086400CD5E55 /* StretchyTableHeaderView.swift in Sources */,
 				0A86281127FA6AEB00DA43F4 /* Challenge4TableViewController.swift in Sources */,
 				383935AE27ECE27A0051A89C /* BIAnimalTableViewController.swift in Sources */,
 				2504065627EAF53E00186517 /* RNViewController.swift in Sources */,
@@ -732,7 +736,6 @@
 				383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */,
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */,
-				0A871C1627FADF2F0004E142 /* DetailOfCoffeeTableViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */,
 				4F83BB6F27EDFA2A00690F01 /* UIView+Extension.swift in Sources */,
@@ -747,6 +750,7 @@
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
 				3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */,
+				0AF9F7D927FEED8200CD5E55 /* DetailCoffeeViewController.swift in Sources */,
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
@@ -759,7 +763,6 @@
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */,
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
-				0A1598F427FA0E870049512B /* UIColor+Extension.swift in Sources */,
 				0AE994B827F8AEB500D13D58 /* AFChallengeBinarViewController.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
@@ -767,6 +770,8 @@
 				4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */,
 				0A7C810D27F906380030B0C6 /* StretchyViewController.swift in Sources */,
 				0AE994AD27F8AE7100D13D58 /* AFTableViewCell.swift in Sources */,
+				0AF9F7D127FEE45A00CD5E55 /* UIColor+Extension.swift in Sources */,
+				0AF9F7D527FEE47E00CD5E55 /* UIColor+Extension.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
@@ -780,7 +785,6 @@
 				59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */,
 				0A1598ED27F9EEE60049512B /* CoffeeShop.swift in Sources */,
 				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,
-				0AA043DB27FE91F100D157B1 /* CheckoutView.swift in Sources */,
 				4F83BB7D27F4824700690F01 /* Typealias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

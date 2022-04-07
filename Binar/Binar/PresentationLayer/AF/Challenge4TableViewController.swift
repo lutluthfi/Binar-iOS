@@ -9,19 +9,6 @@ import UIKit
 
 class Challenge4TableViewController: UITableViewController {
   
-  lazy var headerView: UIView = {
-    let heaader = UIView()
-    heaader.contentMode = .scaleAspectFill
-    heaader.clipsToBounds = true
-    return heaader
-  }()
-  
-  lazy var imageView: UIImageView = {
-    let image = UIImageView()
-    
-    return image
-  }()
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
@@ -38,14 +25,15 @@ class Challenge4TableViewController: UITableViewController {
   
   func configTableView() {
     tableView.separatorStyle = .none
+    let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 250))
     guard let imageUrl = URL(string: CoffeeShop.listCoffe().urlMainImage) else { return }
     guard let imageData = try? Data(contentsOf: imageUrl) else { return }
-    imageView =  UIImageView(image: UIImage(data: imageData))
-    imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 300)
+    let image =  UIImageView(image: UIImage(data: imageData))
+    print(imageData)
+    headerView.imageView.image = image.image
+    tableView.tableHeaderView = headerView
+   
     
-    
-    headerView.addSubview(imageView)
-    tableView.backgroundView = headerView
     
   }
   
@@ -63,8 +51,9 @@ class Challenge4TableViewController: UITableViewController {
   }
   
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    let y = -scrollView.contentOffset.y
-    self.headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: y)
+    
+    let headerView = self.tableView.tableHeaderView as! StretchyTableHeaderView
+    headerView.scrollViewDidScroll(scrollView: scrollView)
   }
 }
 

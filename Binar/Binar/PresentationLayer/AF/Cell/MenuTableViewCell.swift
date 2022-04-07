@@ -10,15 +10,15 @@ import UIKit
 class MenuTableViewCell: UITableViewCell {
   static let reuseIdentifier = "menuTableViewCell"
   let listMenu: [String] = ["Hot Coffee", "Cold Coffe", "Others"]
-  var hotCoffee: [HotCoffee] = CoffeeShop.listCoffe().hotCoffee.sorted { $0.name < $1.name }
-  let coldCoffee = CoffeeShop.listCoffe().coldCoffee
-  let others = CoffeeShop.listCoffe().others.map { $0 }
-//  var dict: [String: Any] =
+  let hotCoffee: [HotCoffee] = CoffeeShop.listCoffe().hotCoffee
+  let coldCoffee: [ColdCoffee] = CoffeeShop.listCoffe().coldCoffee
+  let others: [Others] = CoffeeShop.listCoffe().others
+  lazy var rowsToDisplay: [ProtocolHotCoffee] = hotCoffee
   lazy var segmentedControl: UISegmentedControl = {
     let segmented = UISegmentedControl(items: listMenu)
     segmented.backgroundColor = .white
     segmented.selectedSegmentIndex = 0
-//    segmented.addTarget(self, action: #selector(handleSegmentChange), for: .valueChanged)
+    segmented.addTarget(self, action: #selector(handleSegmentChange), for: .valueChanged)
     return segmented
   }()
   
@@ -55,16 +55,22 @@ class MenuTableViewCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
-//  @objc func handleSegmentChange() {
-//    switch segmentedControl.selectedSegmentIndex {
-//    case 0:
-//      rowsToDisplay = hotCoffee
-//    case 1:
-//      rowsToDisplay = coldCoffee
-//    default:
-//      rowsToDisplay = others
-//    }
-//  }
+  @objc func handleSegmentChange() {
+    switch segmentedControl.selectedSegmentIndex {
+    case 0:
+      rowsToDisplay = hotCoffee
+      print(segmentedControl.selectedSegmentIndex)
+      tableView.reloadData()
+    case 1:
+      rowsToDisplay = coldCoffee
+      print(segmentedControl.selectedSegmentIndex)
+      tableView.reloadData()
+    default:
+      rowsToDisplay = others
+      print(segmentedControl.selectedSegmentIndex)
+      tableView.reloadData()
+    }
+  }
   
   func configView() {
     tableView.delegate = self
@@ -97,13 +103,13 @@ class MenuTableViewCell: UITableViewCell {
 extension MenuTableViewCell: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
  
-    return hotCoffee.count
+    return rowsToDisplay.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "segmentedListCell", for: indexPath) as? Challenge4TableViewCell else { return UITableViewCell() }
     cell.selectionStyle = .none
-    cell.fill(coffee: hotCoffee[indexPath.row])
+    cell.fill(coffee: rowsToDisplay[indexPath.row])
     return cell
   }
 
@@ -116,19 +122,19 @@ extension MenuTableViewCell: UISearchBarDelegate {
   }
   
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    print("textDidChange")
+    
     let searchText = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
     let isMenuNotEmpty = !searchText.isEmpty
-    let defaultMenu = hotCoffee.sorted { $0.name < $1.name }
+    let defaultMenu = rowsToDisplay.sorted { $0.name < $1.name }
     if isMenuNotEmpty {
-      let searchedMenu: [HotCoffee] = hotCoffee.filter {
+      let searchedMenu: [ProtocolHotCoffee] = rowsToDisplay.filter {
         let searchTextlower = searchText.lowercased()
         let menu = $0.name.lowercased()
         return menu.contains(searchTextlower)
       }
-      hotCoffee = searchedMenu
+      rowsToDisplay = searchedMenu
     } else {
-      hotCoffee = defaultMenu
+      rowsToDisplay = defaultMenu
     }
     tableView.reloadData()
   }
@@ -136,11 +142,20 @@ extension MenuTableViewCell: UISearchBarDelegate {
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     searchBar.showsCancelButton = false
     searchBar.text = ""
-    let menu: [HotCoffee] = hotCoffee.sorted { $0.name < $1.name }
-    hotCoffee = menu
-    print(menu)
+    let menu: [ProtocolHotCoffee] = rowsToDisplay.sorted { $0.name < $1.name }
+    rowsToDisplay = menu
+    tableView.endEditing(true)
     
     tableView.reloadData()
+  }
+  
+  func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+    tableView.reloadData()
+    return true
+  }
+  
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    print("searchBarSearchButtonClicked")
   }
   
 }

@@ -130,7 +130,7 @@ class Challenge4TableViewCell: UITableViewCell {
     
   }
   
-  func fill(coffee: HotCoffee) {
+  func fill(coffee: ProtocolHotCoffee) {
     nameLabel.text = coffee.name
     descOfCoffeLabel.text = coffee.descCoffee
     priceLabel.text = "Rp. \(coffee.price)"
