@@ -20,6 +20,8 @@ class AFChallengeBinarViewController: UIViewController {
   let imageView = UIImageView()
   let additionImageView = UIImageView()
   
+  let listMenu: [String] = ["Hot Coffee", "Cold Coffe", "Others"]
+  
   var result: Int = 0
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -164,7 +166,7 @@ class AFChallengeBinarViewController: UIViewController {
     imageView.topAnchor.constraint(equalTo: resButton.bottomAnchor, constant: 16).isActive                = true
     imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive                              = true
     imageView.heightAnchor.constraint(equalToConstant: 100).isActive                                      = true
-    imageView.widthAnchor.constraint(equalToConstant: 100).isActive                                      = true
+    imageView.widthAnchor.constraint(equalToConstant: 100).isActive                                       = true
     
   }
   

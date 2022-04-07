@@ -9,13 +9,13 @@ import UIKit
 
 class ChallengeListV2TableViewCell: UITableViewCell {
   static let reuseIdentifier = "AFCell"
-  let bgColor: UIColor = UIColor.random
-  let nameOfAnimalLabel = UILabel()
-  let typeOfFood = UILabel()
-  let descOfAnimalLabel = UILabel()
-  let imageOfAnimal = UIImageView()
-  let bgView = UIView()
-  let stackView = UIStackView()
+  lazy var bgColor: UIColor = UIColor.random
+  lazy var nameOfAnimalLabel = UILabel()
+  lazy var typeOfFood = UILabel()
+  lazy var descOfAnimalLabel = UILabel()
+  lazy var imageOfAnimal = UIImageView()
+  lazy var bgView = UIView()
+  lazy var stackView = UIStackView()
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)

@@ -9,9 +9,9 @@ import UIKit
 
 class AFViewController: UIViewController {
   enum Course: String, CaseIterable, CodingKey {
-    case ChallengeChapter3 = "Challege Chapter 3"
+    case ChallengeChapter3 = "Challenge 3"
     case ChallengeBinarChapter3 = "Challenge Binar Chapter 3"
-    case ChallengeChapter4 = "Challenge Chapter 4"
+    case ChallengeChapter4 = "Challenge 4"
   }
   
   let tableView: UITableView = {
@@ -69,7 +69,7 @@ extension AFViewController: UITableViewDelegate, UITableViewDataSource {
       let vc = AFChallengeBinarViewController()
       open(viewController: vc)
     case .ChallengeChapter4:
-      let vc = ChallengeChapter4ViewController()
+      let vc = Challenge4TableViewController()
       open(viewController: vc)
     }
     
