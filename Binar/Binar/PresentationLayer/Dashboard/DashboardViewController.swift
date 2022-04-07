@@ -74,16 +74,11 @@ final class DashboardViewController: UITableViewController {
                 self.goToBI3()
             }
             
-            let challenge4 = UIAlertAction(title: "Challenge 4", style: .default) { _ in
-                self.goToBI4()
-            }
-            
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             
             choiceAlert.addAction(challenge1)
             choiceAlert.addAction(challenge2)
             choiceAlert.addAction(challenge3)
-            choiceAlert.addAction(challenge4)
             choiceAlert.addAction(cancel)
             
             present(choiceAlert, animated: true)
@@ -283,11 +278,6 @@ extension DashboardViewController {
             return
         }
         navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    func goToBI4() {
-        navigationController?.pushViewController(BITabBarViewController(), animated: true)
-        navigationController?.isNavigationBarHidden = true
     }
 }
 
