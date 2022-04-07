@@ -233,12 +233,10 @@ extension DashboardViewController {
 // MARK: goToDSViewController
 extension DashboardViewController {
     func goToDSViewController() {
-        let storyboard = UIStoryboard(name: "DSMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DSViewController") as? DSViewController else {
-            return
-        }
-        navigationController?.pushViewController(viewController, animated: true)
-    }
+        guard let student = selectedStudent else { return }
+        let studentName: String = student.name
+        let viewController = DSMainTableViewController(name: studentName)
+        navigationController?.pushViewController(viewController, animated: true)    }
 }
 
 extension DashboardViewController {

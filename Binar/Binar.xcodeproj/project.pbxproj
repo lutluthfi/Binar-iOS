@@ -77,6 +77,8 @@
 		59D4282827EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
+		7BF043B527FAE96A00876C21 /* DSMainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF043B427FAE96A00876C21 /* DSMainTableViewController.swift */; };
+		7BF043B727FC359400876C21 /* DSBumbleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF043B627FC359400876C21 /* DSBumbleViewController.swift */; };
 		A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */; };
 		A406D3E927EDEA3C001DE178 /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A406D3E827EDEA3C001DE178 /* AKMain.storyboard */; };
 		A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */; };
@@ -174,6 +176,8 @@
 		59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADAnimalViewCellViewTableViewCell.xib; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
+		7BF043B427FAE96A00876C21 /* DSMainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSMainTableViewController.swift; sourceTree = "<group>"; };
+		7BF043B627FC359400876C21 /* DSBumbleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSBumbleViewController.swift; sourceTree = "<group>"; };
 		A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKDetailViewController.swift; sourceTree = "<group>"; };
 		A406D3E827EDEA3C001DE178 /* AKMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
 		A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKAnimalTableCell.swift; sourceTree = "<group>"; };
@@ -492,6 +496,8 @@
 				4FF0B30B27E8DFD400CAF144 /* DSMain.storyboard */,
 				4FF0B30A27E8DFD400CAF144 /* AnimalTableViewCell.swift */,
 				4FF0B30C27E8DFD400CAF144 /* DSViewController.swift */,
+				7BF043B427FAE96A00876C21 /* DSMainTableViewController.swift */,
+				7BF043B627FC359400876C21 /* DSBumbleViewController.swift */,
 			);
 			path = DS;
 			sourceTree = "<group>";
@@ -814,6 +820,7 @@
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				4F33D5DA27F5EB5A00C4048D /* ARSecondViewController.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
+				7BF043B727FC359400876C21 /* DSBumbleViewController.swift in Sources */,
 				4F33D5E927F701C600C4048D /* UIViewController+Extension.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
 				4F33D5E527F6E86300C4048D /* ARFormTextFieldTableCell.swift in Sources */,
@@ -848,6 +855,7 @@
 				59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */,
 				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,
 				E9FDD0AA27F996FB0051B161 /* RDViewModels.swift in Sources */,
+				7BF043B527FAE96A00876C21 /* DSMainTableViewController.swift in Sources */,
 				4F83BB7D27F4824700690F01 /* Typealias.swift in Sources */,
 				4F33D5E727F6E87600C4048D /* ARFormTextViewTableCell.swift in Sources */,
 			);
