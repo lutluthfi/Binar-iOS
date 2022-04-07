@@ -195,6 +195,8 @@ class BITodayViewController: UIViewController, SFSafariViewControllerDelegate {
         print("touched")
 //        navigationController?.popViewController(animated: true)
         tabBarController?.navigationController?.popViewController(animated: true)
+        tabBarController?.navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
     }
     
     func createView() {
