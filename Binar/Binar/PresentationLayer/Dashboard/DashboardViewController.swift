@@ -58,7 +58,7 @@ final class DashboardViewController: UITableViewController {
         case .Daffashiddiq:
             goToDSViewController()
         case .AdjiFirmansyah:
-            goToAFViewController()
+            goToAF()
         case .BagasIlham:
             let choiceAlert = UIAlertController(title: "Gate to other universe🌌", message: "Where do you wanna go?", preferredStyle: .alert)
             
@@ -242,14 +242,9 @@ extension DashboardViewController {
 }
 
 extension DashboardViewController {
-    func goToAFViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "AFMain", bundle: nil)
-        
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
-        viewController.name = selectedStudent.name
-        
-        navigationController?.pushViewController(viewController, animated: true)
+    func goToAF() {
+        let afVC = AFViewController()
+        navigationController?.pushViewController(afVC, animated: true)
     }
 }
         

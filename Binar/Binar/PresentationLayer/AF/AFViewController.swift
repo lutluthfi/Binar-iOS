@@ -8,85 +8,75 @@
 import UIKit
 
 class AFViewController: UIViewController {
-  var name: String?
-  var animal: [String] = Animal.listV1()
-  var searchController: UISearchController = {
-    let _searchController = UISearchController()
-    _searchController.searchBar.placeholder = "Search animal name"
-    return _searchController
+  enum Course: String, CaseIterable, CodingKey {
+    case ChallengeChapter3 = "Challenge 3"
+    case ChallengeBinarChapter3 = "Challenge Binar Chapter 3"
+    case ChallengeChapter4 = "Challenge 4"
+  }
+  
+  let tableView: UITableView = {
+    let tableView = UITableView()
+    
+    return tableView
   }()
   
-  var tableView: UITableView = {
-    var _tableView = UITableView()
-    return _tableView
-  }()
-  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      setupAllComponent()
-      searchController.searchResultsUpdater = self
-      searchController.delegate = self
-      searchController.searchBar.delegate = self
-        // Do any additional setup after loading the view.
-    }
-  
-  func setupAllComponent() {
-    navigationItem.title = "Animal"
-    navigationItem.searchController = searchController
-    navigationController?.navigationBar.prefersLargeTitles = true
+  override func loadView() {
+    super.loadView()
     
-    self.tableView.delegate = self
-    self.tableView.dataSource = self
-    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "animalCell")
-    self.tableView.frame = view.bounds
+    setupView()
     
+  }
+  
+  func setupView() {
+    setupTableView()
+    setupDelegate()
     view.addSubview(tableView)
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: "afCell")
   }
   
-}
-
-extension AFViewController: UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
-  
-  func updateSearchResults(for searchController: UISearchController) {
-    guard let searchText = searchController.searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
-    
-    print(searchText)
-    let isAnimalNotEmpty = !searchText.isEmpty
-    let defaultAnimal = animal.sorted {$0 < $1}
-    if isAnimalNotEmpty {
-      let animal: [String] = Animal.listV1().filter {
-        let searchTextLower = searchText.lowercased()
-        let animal = $0.lowercased()
-        return animal.contains(searchTextLower)
-      }
-      self.animal = animal
-    } else {
-      self.animal = defaultAnimal
-    }
-    tableView.reloadData()
+  func setupDelegate() {
+    tableView.delegate = self
+    tableView.dataSource = self
   }
   
-  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-    let animal: [String] = Animal.listV1().sorted()
-    self.animal = animal
-    tableView.reloadData()
-    
+  func setupTableView() {
+    tableView.frame = view.bounds
   }
-
 }
 
 extension AFViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return animal.count
+    return Course.allCases.count
   }
-
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "animalCell", for: indexPath)
-    let row = indexPath.row
-    let data = animal[row]
-    cell.textLabel?.text = data
-    
+    let cell = tableView.dequeueReusableCell(withIdentifier: "afCell", for: indexPath)
+    let row: Int = indexPath.row
+    let course: String = Course.allCases[row].rawValue
+    cell.textLabel?.text = course
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let row: Int = indexPath.row
+    let course: Course = Course.allCases[row]
+    
+    switch course {
+    case .ChallengeChapter3:
+      let vc  = AFChallengeListV2()
+      open(viewController: vc)
+    case .ChallengeBinarChapter3:
+      let vc = AFChallengeBinarViewController()
+      open(viewController: vc)
+    case .ChallengeChapter4:
+      let vc = Challenge4TableViewController()
+      open(viewController: vc)
+    }
+    
+  }
+  
+  private func open(viewController: UIViewController) {
+    navigationController?.pushViewController(viewController, animated: true)
   }
   
 }
