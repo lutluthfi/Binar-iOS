@@ -12,6 +12,9 @@
 		013165F127ED903500CB0BD7 /* THAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013165EF27ED903500CB0BD7 /* THAnimalTableCell.xib */; };
 		013165F727EDE6D500CB0BD7 /* THDetailAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013165F527EDE6D500CB0BD7 /* THDetailAnimalViewController.swift */; };
 		013165F827EDE6D500CB0BD7 /* THDetailAnimalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013165F627EDE6D500CB0BD7 /* THDetailAnimalViewController.xib */; };
+		018D785E28009CBF007091B1 /* THYoutubeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D785D28009CBF007091B1 /* THYoutubeHomeViewController.swift */; };
+		018D786028009CC8007091B1 /* THYoutubeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D785F28009CC7007091B1 /* THYoutubeTabBarViewController.swift */; };
+		018D786228009DA7007091B1 /* THYoutubeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018D786128009DA7007091B1 /* THYoutubeData.swift */; };
 		01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01DBD36027E0C48800C69237 /* THMain.storyboard */; };
 		01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DBD36227E0C4C400C69237 /* THViewController.swift */; };
 		0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A40550D27E2033F003E754D /* AFMain.storyboard */; };
@@ -118,6 +121,9 @@
 		013165EF27ED903500CB0BD7 /* THAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THAnimalTableCell.xib; sourceTree = "<group>"; };
 		013165F527EDE6D500CB0BD7 /* THDetailAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THDetailAnimalViewController.swift; sourceTree = "<group>"; };
 		013165F627EDE6D500CB0BD7 /* THDetailAnimalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = THDetailAnimalViewController.xib; sourceTree = "<group>"; };
+		018D785D28009CBF007091B1 /* THYoutubeHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THYoutubeHomeViewController.swift; sourceTree = "<group>"; };
+		018D785F28009CC7007091B1 /* THYoutubeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THYoutubeTabBarViewController.swift; sourceTree = "<group>"; };
+		018D786128009DA7007091B1 /* THYoutubeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THYoutubeData.swift; sourceTree = "<group>"; };
 		01DBD36027E0C48800C69237 /* THMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = THMain.storyboard; sourceTree = "<group>"; };
 		01DBD36227E0C4C400C69237 /* THViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THViewController.swift; sourceTree = "<group>"; };
 		0A40550D27E2033F003E754D /* AFMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AFMain.storyboard; sourceTree = "<group>"; };
@@ -266,9 +272,20 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
+		018D785C28009CAA007091B1 /* Youtube */ = {
+			isa = PBXGroup;
+			children = (
+				018D785F28009CC7007091B1 /* THYoutubeTabBarViewController.swift */,
+				018D785D28009CBF007091B1 /* THYoutubeHomeViewController.swift */,
+				018D786128009DA7007091B1 /* THYoutubeData.swift */,
+			);
+			path = Youtube;
+			sourceTree = "<group>";
+		};
 		01DBD35F27E0C45200C69237 /* TH */ = {
 			isa = PBXGroup;
 			children = (
+				018D785C28009CAA007091B1 /* Youtube */,
 				013165E827ED714B00CB0BD7 /* Animal */,
 				01DBD36027E0C48800C69237 /* THMain.storyboard */,
 				01DBD36227E0C4C400C69237 /* THViewController.swift */,
@@ -988,7 +1005,9 @@
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				4F33D5E927F701C600C4048D /* UIViewController+Extension.swift in Sources */,
 				4F33D60527FAE2D600C4048D /* ARHomeViewController.swift in Sources */,
+				018D785E28009CBF007091B1 /* THYoutubeHomeViewController.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
+				018D786028009CC8007091B1 /* THYoutubeTabBarViewController.swift in Sources */,
 				4F33D5E527F6E86300C4048D /* ARFormTextFieldTableCell.swift in Sources */,
 				4F33D60927FAE2E800C4048D /* ARSearchViewController.swift in Sources */,
 				4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */,
@@ -1018,6 +1037,7 @@
 				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
 				E9FDD0A727F996D20051B161 /* RDView.swift in Sources */,
 				4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */,
+				018D786228009DA7007091B1 /* THYoutubeData.swift in Sources */,
 				4F33D60727FAE2E000C4048D /* ARBrowseViewController.swift in Sources */,
 				4F33D5F627F9A2C800C4048D /* ARTabBarViewController.swift in Sources */,
 				4FF5E16727FDA288005D1A0E /* ARTopBannerTableCell.swift in Sources */,

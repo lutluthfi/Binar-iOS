@@ -140,10 +140,10 @@ extension DashboardViewController {
 //            return
 //        }
 //        viewController.name = selectedStudent.name
-        guard let viewController = THAnimalTableViewController.initViewController(from: "THMain") else {
-            return
-        }
-        navigationController?.pushViewController(viewController, animated: true)
+//        guard let viewController = THAnimalTableViewController.initViewController(from: "THMain") else {
+//            return
+//        }
+        navigationController?.pushViewController(THYoutubeTabBarViewController(), animated: true)
     }
 }
 
