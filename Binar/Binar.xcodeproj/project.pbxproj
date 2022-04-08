@@ -77,8 +77,11 @@
 		4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0B33627EB6C4900CAF144 /* ARAnimalTableCell.xib */; };
 		4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF0B33927EB700700CAF144 /* UITableView+Extension.swift */; };
 		4FF5E15E27FD4517005D1A0E /* CarouselTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5E15D27FD4517005D1A0E /* CarouselTableCell.swift */; };
-		592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 592D89A127E0CAC200FCE74D /* ADMain.storyboard */; };
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
+		5966D18F27FE0646005F49FC /* ADAnimalV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D18E27FE0646005F49FC /* ADAnimalV2.swift */; };
+		5966D19527FE17C9005F49FC /* ADKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D19427FE17C9005F49FC /* ADKeyboardViewController.swift */; };
+		5966D19727FE17DF005F49FC /* ADBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D19627FE17DF005F49FC /* ADBoard.swift */; };
+		5966D19927FE17F1005F49FC /* ADKeyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5966D19827FE17F1005F49FC /* ADKeyCell.swift */; };
 		59D4282227EDBAFB00AE8C50 /* ADAnimalV1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */; };
 		59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */; };
 		59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */; };
@@ -182,8 +185,11 @@
 		5401EB8C27E878A1009026E4 /* AnimalAITableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAITableViewController.swift; sourceTree = "<group>"; };
 		5401EB8E27E8791E009026E4 /* AIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIViewController.swift; sourceTree = "<group>"; };
 		54751E3827E36AF100536139 /* AIMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AIMain.storyboard; sourceTree = "<group>"; };
-		592D89A127E0CAC200FCE74D /* ADMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ADMain.storyboard; sourceTree = "<group>"; };
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		5966D18E27FE0646005F49FC /* ADAnimalV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalV2.swift; sourceTree = "<group>"; };
+		5966D19427FE17C9005F49FC /* ADKeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADKeyboardViewController.swift; sourceTree = "<group>"; };
+		5966D19627FE17DF005F49FC /* ADBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADBoard.swift; sourceTree = "<group>"; };
+		5966D19827FE17F1005F49FC /* ADKeyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADKeyCell.swift; sourceTree = "<group>"; };
 		59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalV1.swift; sourceTree = "<group>"; };
 		59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewController.swift; sourceTree = "<group>"; };
 		59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewCellViewTableViewCell.swift; sourceTree = "<group>"; };
@@ -653,14 +659,25 @@
 		592D89A027E0CA5C00FCE74D /* AD */ = {
 			isa = PBXGroup;
 			children = (
-				592D89A127E0CAC200FCE74D /* ADMain.storyboard */,
 				592D89A327E0CB0200FCE74D /* ADViewController.swift */,
-				59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */,
-				59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */,
-				59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */,
-				59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */,
+				5966D19427FE17C9005F49FC /* ADKeyboardViewController.swift */,
+				5966D19627FE17DF005F49FC /* ADBoard.swift */,
+				5966D19827FE17F1005F49FC /* ADKeyCell.swift */,
+				5966D18D27FE0618005F49FC /* Animal */,
 			);
 			path = AD;
+			sourceTree = "<group>";
+		};
+		5966D18D27FE0618005F49FC /* Animal */ = {
+			isa = PBXGroup;
+			children = (
+				59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */,
+				59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */,
+				59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */,
+				59D4282127EDBAFB00AE8C50 /* ADAnimalV1.swift */,
+				5966D18E27FE0646005F49FC /* ADAnimalV2.swift */,
+			);
+			path = Animal;
 			sourceTree = "<group>";
 		};
 		72565B0C27E0DAA600EAF51C /* TS */ = {
@@ -847,7 +864,6 @@
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
 				013165F127ED903500CB0BD7 /* THAnimalTableCell.xib in Resources */,
 				A406D3EE27EDEA52001DE178 /* AKAnimalTableCell.xib in Resources */,
-				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				4FF0B30E27E8DFD400CAF144 /* DSMain.storyboard in Resources */,
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
 				4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */,
@@ -885,6 +901,8 @@
 				013165F727EDE6D500CB0BD7 /* THDetailAnimalViewController.swift in Sources */,
 				4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */,
 				383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */,
+				5966D18F27FE0646005F49FC /* ADAnimalV2.swift in Sources */,
+				5966D19927FE17F1005F49FC /* ADKeyCell.swift in Sources */,
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
@@ -895,6 +913,7 @@
 				38550CC927ECFF77004269C8 /* ChallengeViewController.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4F83BB7627F47A3E00690F01 /* TitleEnum.swift in Sources */,
+				5966D19527FE17C9005F49FC /* ADKeyboardViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
 				3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */,
@@ -910,6 +929,7 @@
 				4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */,
 				01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */,
 				4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */,
+				5966D19727FE17DF005F49FC /* ADBoard.swift in Sources */,
 				592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */,
 				4F33D60027FADA9100C4048D /* ARChatInputTextView.swift in Sources */,
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,

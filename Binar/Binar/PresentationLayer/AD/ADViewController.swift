@@ -7,61 +7,111 @@
 
 import UIKit
 
-class ADViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+class ADViewController: UIViewController {
+
     var name: String?
-    var displayAnimal: [Animal] = Animal.listV2()
     
+    let answers = [
+        "later", "bloke", "there", "ultra"
+    ]
 
-    @IBOutlet var tableView: UITableView!
+    var answer = ""
+    private var guesses: [[Character?]] = Array(
+        repeating: Array(repeating: nil, count: 5),
+        count: 6
+    )
 
-    
+    let keyboardVC = ADKeyboardViewController()
+    let boardVC = ADBoard()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
-
-        let nib = UINib(nibName: "ADAnimalViewCellViewTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "ADAnimalViewCellViewTableViewCell")
-        tableView.delegate = self
-        tableView.dataSource = self
-
-
+        answer = answers.randomElement() ?? "after"
+        view.backgroundColor = .systemGray6
+        addChildren()
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return displayAnimal.count
+    private func addChildren() {
+        addChild(keyboardVC)
+        keyboardVC.didMove(toParent: self)
+        keyboardVC.delegate = self
+        keyboardVC.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(keyboardVC.view)
+
+        addChild(boardVC)
+        boardVC.didMove(toParent: self)
+        boardVC.view.translatesAutoresizingMaskIntoConstraints = false
+        boardVC.datasource = self
+        view.addSubview(boardVC.view)
+
+        addConstraints()
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func addConstraints() {
+        NSLayoutConstraint.activate([
+            boardVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            boardVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            boardVC.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            boardVC.view.bottomAnchor.constraint(equalTo: keyboardVC.view.topAnchor),
+            boardVC.view.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6),
 
-        let row: Int = indexPath.row
-        let animal: Animal = displayAnimal[row]
-
-        let reusableCell: UITableViewCell = tableView.dequeueReusableCell(
-            withIdentifier: "ADAnimalViewCellViewTableViewCell",
-            for: indexPath
-        )
-
-        guard let cell = reusableCell as? ADAnimalViewCellViewTableViewCell else {
-            return reusableCell
-        }
-
-        cell.animalName.text = animal.name
-        cell.animalImg.loadImage(resource: animal.photoUrlString)
-
-        return cell
+            keyboardVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            keyboardVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            keyboardVC.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+        ])
     }
-
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetail", sender: self)
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? ADAnimalViewController {
-            destination.animal = Animal.listV2()[(tableView.indexPathForSelectedRow?.row)!]
-        }
-    }
-
 }
 
+extension ADViewController: ADKeyboardViewControllerDelegate {
+    func ADkeyboardViewController(_ vc: ADKeyboardViewController, didTapKey letter: Character) {
+
+        // Update guesses
+        var stop = false
+
+        for i in 0..<guesses.count {
+            for j in 0..<guesses[i].count {
+                if guesses[i][j] == nil {
+                    guesses[i][j] = letter
+                    stop = true
+                    break
+                }
+            }
+
+            if stop {
+                break
+            }
+        }
+
+        boardVC.reloadData()
+    }
+}
+
+extension ADViewController: ADBoardDatasource {
+    var currentGuesses: [[Character?]] {
+        return guesses
+    }
+
+    func boxColor(at indexPath: IndexPath) -> UIColor? {
+        let rowIndex = indexPath.section
+
+        let count = guesses[rowIndex].compactMap({ $0 }).count
+        guard count == 5 else {
+            return nil
+        }
+
+        let indexedAnswer = Array(answer)
+
+        guard let letter = guesses[indexPath.section][indexPath.row],
+              indexedAnswer.contains(letter) else {
+            return nil
+        }
+
+        if indexedAnswer[indexPath.row] == letter {
+            return .systemGreen
+        }
+
+
+        return .systemOrange
+    }
+}
 
