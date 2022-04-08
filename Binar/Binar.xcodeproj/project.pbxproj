@@ -95,6 +95,9 @@
 		59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */; };
 		59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */; };
 		59D4282827EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */; };
+		6E51CCF5280090ED001D99D9 /* DBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E51CCF3280090ED001D99D9 /* DBTableViewCell.swift */; };
+		6E51CCF6280090ED001D99D9 /* DBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E51CCF4280090ED001D99D9 /* DBTableViewCell.xib */; };
+		6E51CCF828009171001D99D9 /* DBChallange3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E51CCF728009171001D99D9 /* DBChallange3TableViewController.swift */; };
 		6E6F5ED727FAA489009FBF98 /* DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F5ED627FAA489009FBF98 /* DBViewController.swift */; };
 		6E6F5ED927FAA7D1009FBF98 /* DBMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F5ED827FAA7D1009FBF98 /* DBMain.storyboard */; };
 		6E79916127FB041600E3ADB3 /* DBChallange4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E79916027FB041600E3ADB3 /* DBChallange4ViewController.swift */; };
@@ -219,6 +222,9 @@
 		59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewController.swift; sourceTree = "<group>"; };
 		59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewCellViewTableViewCell.swift; sourceTree = "<group>"; };
 		59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADAnimalViewCellViewTableViewCell.xib; sourceTree = "<group>"; };
+		6E51CCF3280090ED001D99D9 /* DBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTableViewCell.swift; sourceTree = "<group>"; };
+		6E51CCF4280090ED001D99D9 /* DBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DBTableViewCell.xib; sourceTree = "<group>"; };
+		6E51CCF728009171001D99D9 /* DBChallange3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DBChallange3TableViewController.swift; path = Binar/PresentationLayer/DB/animalTableView/cell/DBChallange3TableViewController.swift; sourceTree = SOURCE_ROOT; };
 		6E6F5ED627FAA489009FBF98 /* DBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewController.swift; sourceTree = "<group>"; };
 		6E6F5ED827FAA7D1009FBF98 /* DBMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DBMain.storyboard; sourceTree = "<group>"; };
 		6E79916027FB041600E3ADB3 /* DBChallange4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBChallange4ViewController.swift; sourceTree = "<group>"; };
@@ -802,6 +808,16 @@
 			path = AD;
 			sourceTree = "<group>";
 		};
+		6E51CCF2280090C3001D99D9 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				6E51CCF728009171001D99D9 /* DBChallange3TableViewController.swift */,
+				6E51CCF3280090ED001D99D9 /* DBTableViewCell.swift */,
+				6E51CCF4280090ED001D99D9 /* DBTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		6E6F5ED027FAA2CE009FBF98 /* DB */ = {
 			isa = PBXGroup;
 			children = (
@@ -826,11 +842,12 @@
 			isa = PBXGroup;
 			children = (
 				6EB236F827FC2D570098CBB3 /* DBTableViewController.swift */,
-				6EB236FA27FC490D0098CBB3 /* cellAnimal */,
+				6E51CCF2280090C3001D99D9 /* cell */,
 			);
 			path = animalTableView;
 			sourceTree = "<group>";
 		};
+<<<<<<< master
 		6EB236FA27FC490D0098CBB3 /* cellAnimal */ = {
 			isa = PBXGroup;
 			children = (
@@ -840,6 +857,8 @@
 			path = cellAnimal;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> TableViewCell
 		72565B0C27E0DAA600EAF51C /* TS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1038,7 +1057,11 @@
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
 				013165F827EDE6D500CB0BD7 /* THDetailAnimalViewController.xib in Resources */,
 				0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */,
+<<<<<<< master
 				6EB685BF27FF2CBC003F02E7 /* DBTableViewCell.xib in Resources */,
+=======
+				6E51CCF6280090ED001D99D9 /* DBTableViewCell.xib in Resources */,
+>>>>>>> TableViewCell
 				4FF0B33027EB561900CAF144 /* AIMain.storyboard in Resources */,
 				38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
@@ -1109,7 +1132,11 @@
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				319988BF27F997BF00891D32 /* MFQRVC.swift in Sources */,
 				A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */,
+<<<<<<< master
 				6EB685BE27FF2CBC003F02E7 /* DBTableViewCell.swift in Sources */,
+=======
+				6E51CCF5280090ED001D99D9 /* DBTableViewCell.swift in Sources */,
+>>>>>>> TableViewCell
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
 				4F33D5FD27FACEB400C4048D /* UIVisualEffectView+Extension.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
@@ -1146,6 +1173,7 @@
 				E9FDD0AA27F996FB0051B161 /* RDViewModels.swift in Sources */,
 				4F83BB7D27F4824700690F01 /* Typealias.swift in Sources */,
 				4F33D5E727F6E87600C4048D /* ARFormTextViewTableCell.swift in Sources */,
+				6E51CCF828009171001D99D9 /* DBChallange3TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
