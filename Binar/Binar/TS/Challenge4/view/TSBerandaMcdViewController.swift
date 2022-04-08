@@ -1,5 +1,5 @@
 //
-//  TSChallenge4ViewController.swift
+//  TSBerandaMcdViewController.swift
 //  Binar
 //
 //  Created by Tatang Sulaeman on 08/04/22.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class TSChallenge4ViewController: UIViewController {
+class TSBerandaMcdViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -28,5 +28,3 @@ class TSChallenge4ViewController: UIViewController {
     */
 
 }
-
-

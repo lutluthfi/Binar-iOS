@@ -51,6 +51,8 @@
 		7256B1B927FFEDA8005918CD /* TSAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B1B827FFEDA8005918CD /* TSAnimalViewController.swift */; };
 		7256B1BB27FFF005005918CD /* TSChallenge4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B1BA27FFF005005918CD /* TSChallenge4ViewController.swift */; };
 		7256B1BD27FFF029005918CD /* TSChallenge4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7256B1BC27FFF029005918CD /* TSChallenge4.storyboard */; };
+		7256B1C028000E24005918CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7256B1BF28000E23005918CD /* Assets.xcassets */; };
+		7256B1C4280029F8005918CD /* TSBerandaMcdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B1C3280029F8005918CD /* TSBerandaMcdViewController.swift */; };
 		72ECE2C827EDD4C000E38A6F /* TSAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ECE2C727EDD4C000E38A6F /* TSAnimalTableViewController.swift */; };
 		72ECE2CD27EDD5A700E38A6F /* TSAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ECE2CB27EDD5A700E38A6F /* TSAnimalTableCell.swift */; };
 		72ECE2CE27EDD5A700E38A6F /* TSAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ECE2CC27EDD5A700E38A6F /* TSAnimalTableCell.xib */; };
@@ -117,6 +119,8 @@
 		7256B1B827FFEDA8005918CD /* TSAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAnimalViewController.swift; sourceTree = "<group>"; };
 		7256B1BA27FFF005005918CD /* TSChallenge4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSChallenge4ViewController.swift; sourceTree = "<group>"; };
 		7256B1BC27FFF029005918CD /* TSChallenge4.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSChallenge4.storyboard; sourceTree = "<group>"; };
+		7256B1BF28000E23005918CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7256B1C3280029F8005918CD /* TSBerandaMcdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSBerandaMcdViewController.swift; sourceTree = "<group>"; };
 		72ECE2C727EDD4C000E38A6F /* TSAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAnimalTableViewController.swift; sourceTree = "<group>"; };
 		72ECE2CB27EDD5A700E38A6F /* TSAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAnimalTableCell.swift; sourceTree = "<group>"; };
 		72ECE2CC27EDD5A700E38A6F /* TSAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSAnimalTableCell.xib; sourceTree = "<group>"; };
@@ -345,10 +349,20 @@
 		7256B1B727FFED28005918CD /* Challenge4 */ = {
 			isa = PBXGroup;
 			children = (
+				7256B1BE280009F0005918CD /* view */,
 				7256B1BA27FFF005005918CD /* TSChallenge4ViewController.swift */,
 				7256B1BC27FFF029005918CD /* TSChallenge4.storyboard */,
+				7256B1BF28000E23005918CD /* Assets.xcassets */,
 			);
 			path = Challenge4;
+			sourceTree = "<group>";
+		};
+		7256B1BE280009F0005918CD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				7256B1C3280029F8005918CD /* TSBerandaMcdViewController.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		72ECE2C927EDD4C500E38A6F /* Animal */ = {
@@ -480,6 +494,7 @@
 				4FF0B32527EB540400CAF144 /* NBMain.storyboard in Resources */,
 				4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */,
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
+				7256B1C028000E24005918CD /* Assets.xcassets in Resources */,
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				4FF0B30E27E8DFD400CAF144 /* DSMain.storyboard in Resources */,
 				7256B1BD27FFF029005918CD /* TSChallenge4.storyboard in Resources */,
@@ -532,6 +547,7 @@
 				72ECE2CD27EDD5A700E38A6F /* TSAnimalTableCell.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
+				7256B1C4280029F8005918CD /* TSBerandaMcdViewController.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
 				4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */,
