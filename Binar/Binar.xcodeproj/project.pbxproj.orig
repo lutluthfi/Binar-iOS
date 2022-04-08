@@ -1043,9 +1043,12 @@
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
 				38F5565927FEE91100193C7C /* BIAnotherNewsViewController.swift in Sources */,
 				E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */,
-				319CD7D127E28B1A007F8239 /* MFBinarChallenge3VC.swift in Sources */,
+<<<<<<< HEAD
 				38F5565B27FEE92A00193C7C /* BINewsAudioViewController.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
+=======
+				319CD7D127E28B1A007F8239 /* MFBinarChallenge3VC.swift in Sources */,
+>>>>>>> master
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
 				E9FDD0A727F996D20051B161 /* RDView.swift in Sources */,

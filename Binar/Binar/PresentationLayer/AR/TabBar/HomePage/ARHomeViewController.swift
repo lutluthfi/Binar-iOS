@@ -13,12 +13,12 @@ final class ARHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
-        tableView.makeConstraint {
-            [$0.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-             $0.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-             $0.topAnchor.constraint(equalTo: self.view.topAnchor),
-             $0.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)]
-        }
+        tableView.makeConstraint {[
+            $0.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
+            $0.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
+            $0.topAnchor.constraint(equalTo: self.view.topAnchor),
+            $0.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+        ]}
     }
     
     private func makeTableView() -> UITableView {
@@ -27,15 +27,15 @@ final class ARHomeViewController: UIViewController {
         view.separatorStyle = .none
         view.estimatedRowHeight = 44
         view.rowHeight = UITableView.automaticDimension
-        view.registerCell(CarouselTableCell<UILabel, Int>.self)
         view.registerCell(UITableViewCell.self)
+        view.registerCell(ARTopBannerTableCell.self)
         return view
     }
 }
 
-extension ARHomeViewController: UITableViewDataSource {
+extension ARHomeViewController: UITableViewContract {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,22 +43,23 @@ extension ARHomeViewController: UITableViewDataSource {
         switch row {
         case 0:
             return dequeueCell(
-                CarouselTableCell<UILabel, Int>.self,
+                ARTopBannerTableCell.self,
                 in: tableView,
                 at: indexPath,
-                completion: configureCarouselTableCell
+                completion: onTopBannerTableCell
             )
+//        case 1:
+//            return dequeueCell(UITableViewCell.self, in: tableView, at: indexPath) { cell in
+//                cell.textLabel?.text = "Default Cell"
+//            }
         default:
             return dequeueCell(UITableViewCell.self, in: tableView, at: indexPath) { cell in
-                cell.backgroundColor = .systemGray4
+                cell.textLabel?.text = "Default Cell"
             }
         }
     }
     
-    private func configureCarouselTableCell(_ cell: CarouselTableCell<UILabel, Int>) {
-        cell.configure(items: Array(1...10)) { (component, item, indexPath) in
-            component.textAlignment = .center
-            component.text = "Item: \(item)"
-        }
+    private func onTopBannerTableCell(_ cell: ARTopBannerTableCell) {
+        cell.configure()
     }
 }
