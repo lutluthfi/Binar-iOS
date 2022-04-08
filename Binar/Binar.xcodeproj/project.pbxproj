@@ -47,6 +47,10 @@
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
+		7256B1B627FFE192005918CD /* TSAnimal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7256B1B527FFE192005918CD /* TSAnimal.storyboard */; };
+		7256B1B927FFEDA8005918CD /* TSAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B1B827FFEDA8005918CD /* TSAnimalViewController.swift */; };
+		7256B1BB27FFF005005918CD /* TSChallenge4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7256B1BA27FFF005005918CD /* TSChallenge4ViewController.swift */; };
+		7256B1BD27FFF029005918CD /* TSChallenge4.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7256B1BC27FFF029005918CD /* TSChallenge4.storyboard */; };
 		72ECE2C827EDD4C000E38A6F /* TSAnimalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ECE2C727EDD4C000E38A6F /* TSAnimalTableViewController.swift */; };
 		72ECE2CD27EDD5A700E38A6F /* TSAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ECE2CB27EDD5A700E38A6F /* TSAnimalTableCell.swift */; };
 		72ECE2CE27EDD5A700E38A6F /* TSAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72ECE2CC27EDD5A700E38A6F /* TSAnimalTableCell.xib */; };
@@ -109,6 +113,10 @@
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
+		7256B1B527FFE192005918CD /* TSAnimal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSAnimal.storyboard; sourceTree = "<group>"; };
+		7256B1B827FFEDA8005918CD /* TSAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAnimalViewController.swift; sourceTree = "<group>"; };
+		7256B1BA27FFF005005918CD /* TSChallenge4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSChallenge4ViewController.swift; sourceTree = "<group>"; };
+		7256B1BC27FFF029005918CD /* TSChallenge4.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSChallenge4.storyboard; sourceTree = "<group>"; };
 		72ECE2C727EDD4C000E38A6F /* TSAnimalTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAnimalTableViewController.swift; sourceTree = "<group>"; };
 		72ECE2CB27EDD5A700E38A6F /* TSAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSAnimalTableCell.swift; sourceTree = "<group>"; };
 		72ECE2CC27EDD5A700E38A6F /* TSAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TSAnimalTableCell.xib; sourceTree = "<group>"; };
@@ -326,6 +334,7 @@
 		72565B0C27E0DAA600EAF51C /* TS */ = {
 			isa = PBXGroup;
 			children = (
+				7256B1B727FFED28005918CD /* Challenge4 */,
 				72ECE2C927EDD4C500E38A6F /* Animal */,
 				72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */,
 				72565B0F27E0DB4300EAF51C /* TSViewController.swift */,
@@ -333,9 +342,20 @@
 			path = TS;
 			sourceTree = "<group>";
 		};
+		7256B1B727FFED28005918CD /* Challenge4 */ = {
+			isa = PBXGroup;
+			children = (
+				7256B1BA27FFF005005918CD /* TSChallenge4ViewController.swift */,
+				7256B1BC27FFF029005918CD /* TSChallenge4.storyboard */,
+			);
+			path = Challenge4;
+			sourceTree = "<group>";
+		};
 		72ECE2C927EDD4C500E38A6F /* Animal */ = {
 			isa = PBXGroup;
 			children = (
+				7256B1B527FFE192005918CD /* TSAnimal.storyboard */,
+				7256B1B827FFEDA8005918CD /* TSAnimalViewController.swift */,
 				72ECE2C727EDD4C000E38A6F /* TSAnimalTableViewController.swift */,
 				72ECE2CA27EDD56300E38A6F /* Cell */,
 			);
@@ -462,8 +482,10 @@
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				4FF0B30E27E8DFD400CAF144 /* DSMain.storyboard in Resources */,
+				7256B1BD27FFF029005918CD /* TSChallenge4.storyboard in Resources */,
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
 				A4D3AA5727E0C8F700565DEE /* AKMain.storyboard in Resources */,
+				7256B1B627FFE192005918CD /* TSAnimal.storyboard in Resources */,
 				4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */,
 				72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */,
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
@@ -487,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF0B30F27E8DFD400CAF144 /* DSViewController.swift in Sources */,
+				7256B1B927FFEDA8005918CD /* TSAnimalViewController.swift in Sources */,
 				4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */,
 				4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */,
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
@@ -495,6 +518,7 @@
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
+				7256B1BB27FFF005005918CD /* TSChallenge4ViewController.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,

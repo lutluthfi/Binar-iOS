@@ -17,20 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jdU-8B-vyI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SOD-r7-itX">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="1pH-6g-DpZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="1" reuseIdentifier="TSAnimalTableCell" rowHeight="155" id="5fZ-1D-cYn" customClass="TSAnimalTableCell" customModule="Binar" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="88.5" width="414" height="155"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TSTableViewCell" id="k5v-56-QjP">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5fZ-1D-cYn" id="WSC-I4-FXU">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="k5v-56-QjP" id="sUJ-nw-2vY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -40,15 +35,14 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jdU-8B-vyI" secondAttribute="bottom" id="leg-6G-Eb8"/>
-                            <constraint firstItem="jdU-8B-vyI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ley-wG-8Id"/>
-                            <constraint firstItem="jdU-8B-vyI" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="qXC-Pp-uV9"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jdU-8B-vyI" secondAttribute="trailing" id="tbS-WS-Cn4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="SOD-r7-itX" secondAttribute="trailing" id="Lwt-L8-I4Y"/>
+                            <constraint firstItem="SOD-r7-itX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="c5J-M4-hHQ"/>
+                            <constraint firstItem="SOD-r7-itX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="jcJ-5T-9ZI"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SOD-r7-itX" secondAttribute="bottom" id="wPa-kS-y0g"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="animalSearchBar" destination="1pH-6g-DpZ" id="LRz-km-mxV"/>
-                        <outlet property="animalTable" destination="jdU-8B-vyI" id="4Rx-Cj-lak"/>
+                        <outlet property="tableView" destination="SOD-r7-itX" id="o2G-Yd-lRm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
