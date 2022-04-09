@@ -49,11 +49,21 @@
 		592D89A427E0CB0200FCE74D /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 592D89A327E0CB0200FCE74D /* ADViewController.swift */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
-		A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */; };
-		A406D3E927EDEA3C001DE178 /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A406D3E827EDEA3C001DE178 /* AKMain.storyboard */; };
-		A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */; };
-		A406D3EE27EDEA52001DE178 /* AKAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A406D3EC27EDEA52001DE178 /* AKAnimalTableCell.xib */; };
-		A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3AA5427E0C8C600565DEE /* AKViewController.swift */; };
+		A41EA5312801BD34005A5C4E /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41EA5302801BD34005A5C4E /* AKMain.storyboard */; };
+		A41EA5332801BD3E005A5C4E /* AKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EA5322801BD3E005A5C4E /* AKViewController.swift */; };
+		A41EA53E2801BD46005A5C4E /* AKMirrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EA5352801BD46005A5C4E /* AKMirrorViewController.swift */; };
+		A41EA53F2801BD46005A5C4E /* AKMainChallengeMirror.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41EA5362801BD46005A5C4E /* AKMainChallengeMirror.storyboard */; };
+		A41EA5402801BD46005A5C4E /* Group 182.png in Resources */ = {isa = PBXBuildFile; fileRef = A41EA5382801BD46005A5C4E /* Group 182.png */; };
+		A41EA5412801BD46005A5C4E /* Rectangle 1.png in Resources */ = {isa = PBXBuildFile; fileRef = A41EA5392801BD46005A5C4E /* Rectangle 1.png */; };
+		A41EA5422801BD46005A5C4E /* Top.png in Resources */ = {isa = PBXBuildFile; fileRef = A41EA53A2801BD46005A5C4E /* Top.png */; };
+		A41EA5432801BD46005A5C4E /* Frame 471.png in Resources */ = {isa = PBXBuildFile; fileRef = A41EA53B2801BD46005A5C4E /* Frame 471.png */; };
+		A41EA5442801BD46005A5C4E /* Flare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A41EA53C2801BD46005A5C4E /* Flare.jpg */; };
+		A41EA5452801BD46005A5C4E /* AKTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EA53D2801BD46005A5C4E /* AKTabBarController.swift */; };
+		A41EA54D2801BD4F005A5C4E /* AKMainChallenge2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A41EA5472801BD4F005A5C4E /* AKMainChallenge2.storyboard */; };
+		A41EA54E2801BD4F005A5C4E /* AKChallenge2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EA5482801BD4F005A5C4E /* AKChallenge2ViewController.swift */; };
+		A41EA54F2801BD4F005A5C4E /* AKAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EA54A2801BD4F005A5C4E /* AKAnimalTableCell.swift */; };
+		A41EA5502801BD4F005A5C4E /* AKAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A41EA54B2801BD4F005A5C4E /* AKAnimalTableCell.xib */; };
+		A41EA5512801BD4F005A5C4E /* AKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41EA54C2801BD4F005A5C4E /* AKDetailViewController.swift */; };
 		CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */; };
 		CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
@@ -113,11 +123,21 @@
 		592D89A327E0CB0200FCE74D /* ADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
-		A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKDetailViewController.swift; sourceTree = "<group>"; };
-		A406D3E827EDEA3C001DE178 /* AKMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
-		A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKAnimalTableCell.swift; sourceTree = "<group>"; };
-		A406D3EC27EDEA52001DE178 /* AKAnimalTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKAnimalTableCell.xib; sourceTree = "<group>"; };
-		A4D3AA5427E0C8C600565DEE /* AKViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
+		A41EA5302801BD34005A5C4E /* AKMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
+		A41EA5322801BD3E005A5C4E /* AKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKViewController.swift; sourceTree = "<group>"; };
+		A41EA5352801BD46005A5C4E /* AKMirrorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKMirrorViewController.swift; sourceTree = "<group>"; };
+		A41EA5362801BD46005A5C4E /* AKMainChallengeMirror.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AKMainChallengeMirror.storyboard; sourceTree = "<group>"; };
+		A41EA5382801BD46005A5C4E /* Group 182.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 182.png"; sourceTree = "<group>"; };
+		A41EA5392801BD46005A5C4E /* Rectangle 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 1.png"; sourceTree = "<group>"; };
+		A41EA53A2801BD46005A5C4E /* Top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Top.png; sourceTree = "<group>"; };
+		A41EA53B2801BD46005A5C4E /* Frame 471.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Frame 471.png"; sourceTree = "<group>"; };
+		A41EA53C2801BD46005A5C4E /* Flare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Flare.jpg; sourceTree = "<group>"; };
+		A41EA53D2801BD46005A5C4E /* AKTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKTabBarController.swift; sourceTree = "<group>"; };
+		A41EA5472801BD4F005A5C4E /* AKMainChallenge2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AKMainChallenge2.storyboard; sourceTree = "<group>"; };
+		A41EA5482801BD4F005A5C4E /* AKChallenge2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKChallenge2ViewController.swift; sourceTree = "<group>"; };
+		A41EA54A2801BD4F005A5C4E /* AKAnimalTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKAnimalTableCell.swift; sourceTree = "<group>"; };
+		A41EA54B2801BD4F005A5C4E /* AKAnimalTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AKAnimalTableCell.xib; sourceTree = "<group>"; };
+		A41EA54C2801BD4F005A5C4E /* AKDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKDetailViewController.swift; sourceTree = "<group>"; };
 		C8A6942727E374B000BF09C7 /* NBMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NBMain.storyboard; sourceTree = "<group>"; };
 		C8A6942927E374E600BF09C7 /* NBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBViewController.swift; sourceTree = "<group>"; };
 		CE373CCC27E386B700FFF26C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -353,11 +373,45 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A406D3EA27EDEA52001DE178 /* Cell */ = {
+		A41EA5342801BD46005A5C4E /* ChallengeMirroringApp */ = {
 			isa = PBXGroup;
 			children = (
-				A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */,
-				A406D3EC27EDEA52001DE178 /* AKAnimalTableCell.xib */,
+				A41EA5352801BD46005A5C4E /* AKMirrorViewController.swift */,
+				A41EA5362801BD46005A5C4E /* AKMainChallengeMirror.storyboard */,
+				A41EA5372801BD46005A5C4E /* Assets */,
+				A41EA53D2801BD46005A5C4E /* AKTabBarController.swift */,
+			);
+			path = ChallengeMirroringApp;
+			sourceTree = "<group>";
+		};
+		A41EA5372801BD46005A5C4E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A41EA5382801BD46005A5C4E /* Group 182.png */,
+				A41EA5392801BD46005A5C4E /* Rectangle 1.png */,
+				A41EA53A2801BD46005A5C4E /* Top.png */,
+				A41EA53B2801BD46005A5C4E /* Frame 471.png */,
+				A41EA53C2801BD46005A5C4E /* Flare.jpg */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A41EA5462801BD4F005A5C4E /* ChallengeAnimal2 */ = {
+			isa = PBXGroup;
+			children = (
+				A41EA5472801BD4F005A5C4E /* AKMainChallenge2.storyboard */,
+				A41EA5482801BD4F005A5C4E /* AKChallenge2ViewController.swift */,
+				A41EA5492801BD4F005A5C4E /* Cell */,
+				A41EA54C2801BD4F005A5C4E /* AKDetailViewController.swift */,
+			);
+			path = ChallengeAnimal2;
+			sourceTree = "<group>";
+		};
+		A41EA5492801BD4F005A5C4E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A41EA54A2801BD4F005A5C4E /* AKAnimalTableCell.swift */,
+				A41EA54B2801BD4F005A5C4E /* AKAnimalTableCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -365,10 +419,10 @@
 		A4D3AA5327E0C8A900565DEE /* AK */ = {
 			isa = PBXGroup;
 			children = (
-				A406D3EA27EDEA52001DE178 /* Cell */,
-				A406D3E827EDEA3C001DE178 /* AKMain.storyboard */,
-				A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */,
-				A4D3AA5427E0C8C600565DEE /* AKViewController.swift */,
+				A41EA5462801BD4F005A5C4E /* ChallengeAnimal2 */,
+				A41EA5342801BD46005A5C4E /* ChallengeMirroringApp */,
+				A41EA5322801BD3E005A5C4E /* AKViewController.swift */,
+				A41EA5302801BD34005A5C4E /* AKMain.storyboard */,
 			);
 			path = AK;
 			sourceTree = "<group>";
@@ -466,23 +520,30 @@
 				4FF0B32527EB540400CAF144 /* NBMain.storyboard in Resources */,
 				2504065427EAF52800186517 /* RNMain.storyboard in Resources */,
 				4F78A41627E0455300C9E2F7 /* ARMain.storyboard in Resources */,
+				A41EA5442801BD46005A5C4E /* Flare.jpg in Resources */,
 				4FD234DA27DAB531007514BA /* LaunchScreen.storyboard in Resources */,
-				A406D3EE27EDEA52001DE178 /* AKAnimalTableCell.xib in Resources */,
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				4FF0B30E27E8DFD400CAF144 /* DSMain.storyboard in Resources */,
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
 				4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */,
-				A406D3E927EDEA3C001DE178 /* AKMain.storyboard in Resources */,
+				A41EA5312801BD34005A5C4E /* AKMain.storyboard in Resources */,
 				72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */,
+				A41EA5502801BD4F005A5C4E /* AKAnimalTableCell.xib in Resources */,
 				CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */,
+				A41EA54D2801BD4F005A5C4E /* AKMainChallenge2.storyboard in Resources */,
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
 				0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */,
+				A41EA5402801BD46005A5C4E /* Group 182.png in Resources */,
+				A41EA53F2801BD46005A5C4E /* AKMainChallengeMirror.storyboard in Resources */,
 				4FF0B33027EB561900CAF144 /* AIMain.storyboard in Resources */,
 				38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
+				A41EA5412801BD46005A5C4E /* Rectangle 1.png in Resources */,
 				318D72D827E0C55E00ACAACF /* MFMain.storyboard in Resources */,
+				A41EA5422801BD46005A5C4E /* Top.png in Resources */,
 				FF98B2DF27E3643300830B07 /* ATMain.storyboard in Resources */,
 				4FD234D527DAB530007514BA /* Main.storyboard in Resources */,
+				A41EA5432801BD46005A5C4E /* Frame 471.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +554,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A41EA54F2801BD4F005A5C4E /* AKAnimalTableCell.swift in Sources */,
+				A41EA5512801BD4F005A5C4E /* AKDetailViewController.swift in Sources */,
 				2504065627EAF53E00186517 /* RNViewController.swift in Sources */,
 				4FF0B30F27E8DFD400CAF144 /* DSViewController.swift in Sources */,
 				4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */,
@@ -500,14 +563,12 @@
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallengeViewController.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
-				A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
-				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
 				4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */,
 				01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */,
 				4FF0B33A27EB700700CAF144 /* UITableView+Extension.swift in Sources */,
@@ -515,17 +576,20 @@
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,
 				4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
-				A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */,
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
+				A41EA54E2801BD4F005A5C4E /* AKChallenge2ViewController.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
+				A41EA5452801BD46005A5C4E /* AKTabBarController.swift in Sources */,
 				4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */,
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				0A40551027E20353003E754D /* AFViewController.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,
+				A41EA53E2801BD46005A5C4E /* AKMirrorViewController.swift in Sources */,
 				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,
+				A41EA5332801BD3E005A5C4E /* AKViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
