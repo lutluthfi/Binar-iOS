@@ -34,6 +34,10 @@
 		383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935AF27ECE2950051A89C /* BIAnimalTableCell.swift */; };
 		383935B227ECE2A40051A89C /* BIAnimalTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */; };
 		383935B527ECEC550051A89C /* AnimalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383935B427ECEC550051A89C /* AnimalDetailViewController.swift */; };
+		384FD60228020C06009A9879 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FD5FE28020C06009A9879 /* Character.swift */; };
+		384FD60328020C06009A9879 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FD5FF28020C06009A9879 /* CharacterDetailViewController.swift */; };
+		384FD60428020C06009A9879 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FD60028020C06009A9879 /* CharacterTableViewController.swift */; };
+		384FD60528020C06009A9879 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FD60128020C06009A9879 /* PaymentViewController.swift */; };
 		38550CC927ECFF77004269C8 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550CC827ECFF77004269C8 /* ChallengeViewController.swift */; };
 		385A343627FEDF4E0056995C /* BITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A343527FEDF4E0056995C /* BITabBarViewController.swift */; };
 		3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */; };
@@ -147,6 +151,10 @@
 		383935AF27ECE2950051A89C /* BIAnimalTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAnimalTableCell.swift; sourceTree = "<group>"; };
 		383935B127ECE2A40051A89C /* BIAnimalTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BIAnimalTableCell.xib; sourceTree = "<group>"; };
 		383935B427ECEC550051A89C /* AnimalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailViewController.swift; sourceTree = "<group>"; };
+		384FD5FE28020C06009A9879 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		384FD5FF28020C06009A9879 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		384FD60028020C06009A9879 /* CharacterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
+		384FD60128020C06009A9879 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		38550CC827ECFF77004269C8 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		385A343527FEDF4E0056995C /* BITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BITabBarViewController.swift; sourceTree = "<group>"; };
 		3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAddAnimalViewController.swift; sourceTree = "<group>"; };
@@ -409,6 +417,17 @@
 			path = ChapterChallenge;
 			sourceTree = "<group>";
 		};
+		384FD5FD28020BEC009A9879 /* ChallengeChapter4 */ = {
+			isa = PBXGroup;
+			children = (
+				384FD5FE28020C06009A9879 /* Character.swift */,
+				384FD5FF28020C06009A9879 /* CharacterDetailViewController.swift */,
+				384FD60028020C06009A9879 /* CharacterTableViewController.swift */,
+				384FD60128020C06009A9879 /* PaymentViewController.swift */,
+			);
+			path = ChallengeChapter4;
+			sourceTree = "<group>";
+		};
 		385A343427FEDF380056995C /* NewsChallenge */ = {
 			isa = PBXGroup;
 			children = (
@@ -425,6 +444,7 @@
 		38E0C76B27E3248B009D7A82 /* BI */ = {
 			isa = PBXGroup;
 			children = (
+				384FD5FD28020BEC009A9879 /* ChallengeChapter4 */,
 				385A343427FEDF380056995C /* NewsChallenge */,
 				383935B627ECFF000051A89C /* ChapterChallenge */,
 				383935AB27ECE25B0051A89C /* AnimalChallenge */,
@@ -1013,11 +1033,13 @@
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				313B584F27F6459600F7C7F8 /* MFBinarChallengeMain.swift in Sources */,
 				4F33D5DA27F5EB5A00C4048D /* ARSecondViewController.swift in Sources */,
+				384FD60328020C06009A9879 /* CharacterDetailViewController.swift in Sources */,
 				4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */,
 				4F33D5E927F701C600C4048D /* UIViewController+Extension.swift in Sources */,
 				4F33D60527FAE2D600C4048D /* ARHomeViewController.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
 				4F33D5E527F6E86300C4048D /* ARFormTextFieldTableCell.swift in Sources */,
+				384FD60428020C06009A9879 /* CharacterTableViewController.swift in Sources */,
 				4F33D60927FAE2E800C4048D /* ARSearchViewController.swift in Sources */,
 				4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */,
 				01DBD36327E0C4C400C69237 /* THViewController.swift in Sources */,
@@ -1037,6 +1059,7 @@
 				38F5565D27FEE95600193C7C /* BINewsFollowingViewController.swift in Sources */,
 				E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
+				384FD60228020C06009A9879 /* Character.swift in Sources */,
 				4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */,
 				4FF5E15E27FD4517005D1A0E /* CarouselView.swift in Sources */,
 				4FF0B32027EAC59C00CAF144 /* UIImageView+Extension.swift in Sources */,
@@ -1045,7 +1068,8 @@
 				E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallenge3VC.swift in Sources */,
 				38F5565B27FEE92A00193C7C /* BINewsAudioViewController.swift in Sources */,
-				319CD7D127E28B1A007F8239 /* MFBinarChallengeViewController.swift in Sources */,
+				384FD60528020C06009A9879 /* PaymentViewController.swift in Sources */,
+				319CD7D127E28B1A007F8239 /* MFBinarChallenge3VC.swift in Sources */,
 				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
 				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
 				E9FDD0A727F996D20051B161 /* RDView.swift in Sources */,
