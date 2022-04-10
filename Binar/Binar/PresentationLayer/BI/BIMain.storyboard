@@ -204,21 +204,8 @@
                             <outlet property="delegate" destination="Lfe-bX-E7M" id="QLO-G7-lC5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Jqa-qv-u9e">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="ktP-NB-iuY">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="DQV-Uc-JJv">
-                                <rect key="frame" x="339.5" y="5" width="54.5" height="34.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="ellipsis.circle" catalog="system" title=" "/>
-                                <connections>
-                                    <action selector="onActionsButtonTouchUpInside:" destination="Lfe-bX-E7M" eventType="touchUpInside" id="nms-pJ-f0U"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Jqa-qv-u9e"/>
                     <connections>
-                        <outlet property="actionsButton" destination="ktP-NB-iuY" id="rIU-l6-qz4"/>
                         <outlet property="animalSearchBar" destination="Vje-KL-dse" id="P0y-lU-6rS"/>
                     </connections>
                 </tableViewController>

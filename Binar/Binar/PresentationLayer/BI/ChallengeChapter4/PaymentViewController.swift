@@ -26,6 +26,8 @@ class BIPaymentViewController: UIViewController {
         paymentChoiceTableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell2")
         paymentChoiceTableView.delegate = self
         paymentChoiceTableView.dataSource = self
+        paymentChoiceTableView.isScrollEnabled = false
+        paymentChoiceTableView.alwaysBounceVertical = false
         
         addViews()
         setupViews()

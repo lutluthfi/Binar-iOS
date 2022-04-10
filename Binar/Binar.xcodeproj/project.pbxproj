@@ -38,6 +38,7 @@
 		384FD60328020C06009A9879 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FD5FF28020C06009A9879 /* CharacterDetailViewController.swift */; };
 		384FD60428020C06009A9879 /* CharacterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FD60028020C06009A9879 /* CharacterTableViewController.swift */; };
 		384FD60528020C06009A9879 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FD60128020C06009A9879 /* PaymentViewController.swift */; };
+		384FD6072802AA44009A9879 /* BIDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384FD6062802AA44009A9879 /* BIDashboardViewController.swift */; };
 		38550CC927ECFF77004269C8 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38550CC827ECFF77004269C8 /* ChallengeViewController.swift */; };
 		385A343627FEDF4E0056995C /* BITabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A343527FEDF4E0056995C /* BITabBarViewController.swift */; };
 		3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */; };
@@ -155,6 +156,7 @@
 		384FD5FF28020C06009A9879 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		384FD60028020C06009A9879 /* CharacterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterTableViewController.swift; sourceTree = "<group>"; };
 		384FD60128020C06009A9879 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		384FD6062802AA44009A9879 /* BIDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIDashboardViewController.swift; sourceTree = "<group>"; };
 		38550CC827ECFF77004269C8 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		385A343527FEDF4E0056995C /* BITabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BITabBarViewController.swift; sourceTree = "<group>"; };
 		3861A4C927F098B7005606FB /* BIAddAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BIAddAnimalViewController.swift; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 				383935AB27ECE25B0051A89C /* AnimalChallenge */,
 				38E0C76E27E324A2009D7A82 /* BIMain.storyboard */,
 				38E0C76C27E32498009D7A82 /* BIViewController.swift */,
+				384FD6062802AA44009A9879 /* BIDashboardViewController.swift */,
 			);
 			path = BI;
 			sourceTree = "<group>";
@@ -1024,6 +1027,7 @@
 				38550CC927ECFF77004269C8 /* ChallengeViewController.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4F83BB7627F47A3E00690F01 /* TitleEnum.swift in Sources */,
+				384FD6072802AA44009A9879 /* BIDashboardViewController.swift in Sources */,
 				4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */,
 				22DD5C8427E0D5BA003024DC /* DPViewController.swift in Sources */,
 				3861A4CA27F098B7005606FB /* BIAddAnimalViewController.swift in Sources */,
