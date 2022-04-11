@@ -10,13 +10,12 @@ import UIKit
 class DetailCoffeeViewController: UIViewController {
   lazy var containerView: UIView = {
     let view = UIView()
-    view.backgroundColor = .systemBlue
+    view.backgroundColor = .white
     return view
   }()
   
   lazy var containerLabel: UIView = {
     let view = UIView()
-    view.backgroundColor = .red
     return view
   }()
   
@@ -108,10 +107,10 @@ class DetailCoffeeViewController: UIViewController {
   }
   
   func configView() {
-    backgroudColor()
     addSubView()
     setupView()
     setupConstraint()
+    view.backgroundColor = .white
   }
   
   func addSubView() {
@@ -131,10 +130,6 @@ class DetailCoffeeViewController: UIViewController {
     stackView.addArrangedSubview(titleStackView)
     stackView.addArrangedSubview(descStackView)
     
-  }
-  
-  func backgroudColor() {
-    view.backgroundColor = .gray
   }
   
   func setupView() {
@@ -169,15 +164,14 @@ class DetailCoffeeViewController: UIViewController {
     containerLabel.topAnchor.constraint(equalTo: detailImage.bottomAnchor, constant: -20).isActive = true
     containerLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
     containerLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
-    containerLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -32).isActive = true
+    containerLabel.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
     
     stackView.translatesAutoresizingMaskIntoConstraints = false
     stackView.topAnchor.constraint(equalTo: containerLabel.topAnchor, constant: 32).isActive = true
     stackView.leadingAnchor.constraint(equalTo: containerLabel.leadingAnchor, constant: 16).isActive = true
     stackView.trailingAnchor.constraint(equalTo: containerLabel.trailingAnchor, constant: -16).isActive = true
     stackView.bottomAnchor.constraint(equalTo: containerLabel.bottomAnchor, constant: -32).isActive = true
-    
-    stackView.backgroundColor = .green
+
   }
 
 }
