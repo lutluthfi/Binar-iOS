@@ -8,7 +8,7 @@
 import UIKit
 
 class Challenge4TableViewController: UITableViewController {
-  
+  var delegate: PushViewController?
   override func viewDidLoad() {
     super.viewDidLoad()
     setupView()
@@ -22,27 +22,36 @@ class Challenge4TableViewController: UITableViewController {
     
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    navigationController?.navigationBar.isHidden = true
+  }
+  
   
   func configTableView() {
     tableView.separatorStyle = .none
+    setupHeader()
+    
+  }
+  
+  func setupHeader() {
     let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 250))
+    
     guard let imageUrl = URL(string: CoffeeShop.listCoffe().urlMainImage) else { return }
     guard let imageData = try? Data(contentsOf: imageUrl) else { return }
+    
     let image =  UIImageView(image: UIImage(data: imageData))
-    print(imageData)
     headerView.imageView.image = image.image
+    
     tableView.tableHeaderView = headerView
-   
-    
-    
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return 1
   }
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.reuseIdentifier, for: indexPath)
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.reuseIdentifier, for: indexPath) as? MenuTableViewCell else { return UITableViewCell() }
     cell.backgroundColor = .white
+    cell.delegate = self
     return cell
   }
   
@@ -52,11 +61,14 @@ class Challenge4TableViewController: UITableViewController {
   
   override func scrollViewDidScroll(_ scrollView: UIScrollView) {
     
-    let headerView = self.tableView.tableHeaderView as! StretchyTableHeaderView
-    headerView.scrollViewDidScroll(scrollView: scrollView)
+    let headerView = self.tableView.tableHeaderView as? StretchyTableHeaderView
+    headerView?.scrollViewDidScroll(scrollView: scrollView)
   }
 }
 
-extension Challenge4TableViewController {
-  
+extension Challenge4TableViewController: PushViewController {
+  func goToDetailCell(sender: IndexPath, data: ProtocolHotCoffee) {
+    let detailView = DetailCoffeeViewController(data: data )
+    navigationController?.pushViewController(detailView, animated: true)
+  }
 }

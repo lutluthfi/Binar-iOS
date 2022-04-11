@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol PushViewController {
+  func goToDetailCell(sender: IndexPath, data: ProtocolHotCoffee)
+}
+
 class MenuTableViewCell: UITableViewCell {
   static let reuseIdentifier = "menuTableViewCell"
+  var delegate: PushViewController?
   let listMenu: [String] = ["Hot Coffee", "Cold Coffe", "Others"]
   let hotCoffee: [HotCoffee] = CoffeeShop.listCoffe().hotCoffee
   let coldCoffee: [ColdCoffee] = CoffeeShop.listCoffe().coldCoffee
@@ -25,7 +30,7 @@ class MenuTableViewCell: UITableViewCell {
   lazy var searchBar: UISearchBar = {
     let searchBar = UISearchBar()
     searchBar.backgroundColor = .clear
-    searchBar.placeholder = "Jangan cari yang aneh aneh dah"
+    searchBar.placeholder = "Type here to find your menu"
     searchBar.sizeToFit()
     return searchBar
   }()
@@ -79,6 +84,7 @@ class MenuTableViewCell: UITableViewCell {
     searchBar.delegate = self
     
     tableView.frame = bounds
+    tableView.isScrollEnabled = false
     tableView.register(Challenge4TableViewCell.self, forCellReuseIdentifier: "segmentedListCell")
     
     stackView.addArrangedSubview(segmentedControl)
@@ -90,16 +96,11 @@ class MenuTableViewCell: UITableViewCell {
   }
   
   func setConstraint() {
+    stackView.translatesAutoresizingMaskIntoConstraints = false 
     stackView.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
     stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
     stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
     stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
-//    stackView.makeConstraint([
-//      stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-//      stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-//      stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-//      stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-//    ])
   }
 
 }
@@ -115,6 +116,10 @@ extension MenuTableViewCell: UITableViewDelegate, UITableViewDataSource {
     cell.selectionStyle = .none
     cell.fill(coffee: rowsToDisplay[indexPath.row])
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    delegate?.goToDetailCell(sender: indexPath, data: rowsToDisplay[indexPath.row])
   }
 
 }
@@ -146,10 +151,9 @@ extension MenuTableViewCell: UISearchBarDelegate {
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     searchBar.showsCancelButton = false
     searchBar.text = ""
+    searchBar.endEditing(true)
     let menu: [ProtocolHotCoffee] = rowsToDisplay.sorted { $0.name < $1.name }
     rowsToDisplay = menu
-    tableView.endEditing(true)
-    
     tableView.reloadData()
   }
   

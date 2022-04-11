@@ -127,21 +127,21 @@ extension CoffeeShop {
         {
             "name": "Latte",
             "description": "Jenis minuman kopi yang kedua adalah latte. Sebagai minuman kopi paling populer di dunia, latte terdiri dari espresso dan steamed milk dengan sedikit busa di atasnya. Latte bisa dipesan dalam bentuk dan rasa originalnya, atau dengan tambahan perasa mulai dari vanilla hingga kayu manis. Latte juga terkenal dengan latte art-nya, yakni seni menggambar bentuk atau pola di atas busa minuman ini.",
-            "photoUrlString": "https://media-cdn.tripadvisor.com/media/photo-s/18/98/a9/e0/vanilla-latte-our-vanilla.jpg",
+            "photoUrlString": "https://media-cdn.tripadvisor.com/media/photo-m/1280/18/c0/ab/c5/hot-caramel-macchiato.jpg?h=300",
             "price": "25.000",
             "stock": 10
         },
         {
             "name": "Cappuccino",
             "description": "Jenis minuman kopi yang ketiga adalah cappuccino. Cappuccino adalah latte yang dibuat dengan lebih banyak busa (foam) daripada steamed milk, seringkali ditambah dengan taburan bubuk kakao atau kayu manis di atasnya. Terdapat juga variasi cappuccino yang menggunakan krim sebagai pengganti susu atau yang memberikan penambah rasa.",
-            "photoUrlString": "https://s-ecom.ottenstatic.com/original/602738bcea11c752211252.jpg",
+            "photoUrlString": "https://s-ecom.ottenstatic.com/original/602738bcea11c752211252.jpg?h=300",
             "price": "25.000",
             "stock": 25
         },
         {
             "name": "Espresso",
             "description": "Jenis minuman kopi yang kelima adalah espresso. Espresso adalah jenis minuman kopi yang sangat pekat. Meski sederhana dalam penampilan, espresso cenderung sulit untuk diminum bagi pemula karena rasanya yang pahit dan kental. Minuman espresso dapat disajikan sendiri atau digunakan sebagai dasar dari sebagian besar jenis minuman kopi, seperti latte dan macchiatos.",
-            "photoUrlString": "https://www.baristamagazine.com/wp-content/uploads/2021/08/paje-victoria-aBX4eb7zNBo-unsplash-550x687.jpg",
+            "photoUrlString": "https://www.baristamagazine.com/wp-content/uploads/2021/08/paje-victoria-aBX4eb7zNBo-unsplash-550x687.jpg?h=300",
             "price": "20.000",
             "stock": 15
         },
@@ -155,7 +155,7 @@ extension CoffeeShop {
         {
             "name": "Mochaccino",
             "description": "Jenis minuman kopi yang kesepuluh adalah mocha. Mocha adalah jenis minuman kopi yang pas bagi Anda pecinta cokelat. Mocha adalah jenis minuman kopi yang terdiri dari espresso, coklat, steamed milk dan foam. Mocha adalah perpaduan unik kopi dan cokelat panas. Bubuk atau sirup coklat memberikan rasa yang kaya dan lembut serta mengurangi keasaman espresso pada jenis minuman kopi satu ini.",
-            "photoUrlString": "https://coffeeaffection.com/wp-content/uploads/2021/02/what-is-mocha.jpg",
+            "photoUrlString": "https://coffeeaffection.com/wp-content/uploads/2021/02/what-is-mocha.jpg?h=300",
             "price": "23.000",
             "stock": 15
         }
