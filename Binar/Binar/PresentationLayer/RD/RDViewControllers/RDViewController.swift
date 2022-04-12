@@ -12,44 +12,44 @@ final class RDViewController: UIViewController {
     private var displayedAnimals: [Animal] = Animal.listV2()
     private var filteredAnimals = [Animal]()
 
-    private lazy var tableView: UITableView = {
-        let tv = UITableView(frame: .zero, style: .insetGrouped)
-        tv.backgroundColor = .white
-        tv.translatesAutoresizingMaskIntoConstraints = false
-        return tv
+    private lazy var animalTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        tableView.backgroundColor = .white
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
     }()
 
-    private lazy var searchController: UISearchController = {
-        let sc = UISearchController(searchResultsController: nil)
-        sc.searchResultsUpdater = self
-        sc.obscuresBackgroundDuringPresentation = false
-        sc.searchBar.placeholder = "Search Countries ..."
-        sc.searchBar.sizeToFit()
-        sc.searchBar.searchBarStyle = .prominent
-        sc.searchBar.scopeButtonTitles = ["All","carnivora","herbivora","omnivora"]
-        sc.searchBar.delegate = self
-        return sc
+    private lazy var searchAnimalController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Animals ..."
+        searchController.searchBar.sizeToFit()
+        searchController.searchBar.searchBarStyle = .prominent
+        searchController.searchBar.scopeButtonTitles = ["All","carnivora","herbivora","omnivora"]
+        searchController.searchBar.delegate = self
+        return searchController
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = name
-        navigationItem.searchController = searchController
+        navigationItem.searchController = searchAnimalController
         setupTableView()
     }
 
     private func setupTableView() {
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(RDAnimalListCell.self, forCellReuseIdentifier: "rdCellId")
+        animalTableView.delegate = self
+        animalTableView.dataSource = self
+        animalTableView.register(RDAnimalListCell.self, forCellReuseIdentifier: "rdCellId")
 
-        view.addSubview(tableView)
+        view.addSubview(animalTableView)
 
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableView.rightAnchor.constraint(equalTo: view.rightAnchor),
-            tableView.leftAnchor.constraint(equalTo: view.leftAnchor)
+            animalTableView.topAnchor.constraint(equalTo: view.topAnchor),
+            animalTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            animalTableView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            animalTableView.leftAnchor.constraint(equalTo: view.leftAnchor)
         ])
 
     }
@@ -57,7 +57,7 @@ final class RDViewController: UIViewController {
     private func reloadDataTableView() {
         let animals: [Animal] = Animal.listV2()
         displayedAnimals = animals
-        tableView.reloadData()
+        animalTableView.reloadData()
     }
 
     private func filteredAnimalByType(search searchText: String, filter scope: String = "All") {
@@ -70,16 +70,16 @@ final class RDViewController: UIViewController {
                 return typeCategory && animal.name.lowercased().contains(searchText.lowercased())
             }
         })
-        tableView.reloadData()
+        animalTableView.reloadData()
     }
 
     private func isSearchBarEmpty() -> Bool {
-        return searchController.searchBar.text?.isEmpty ?? true
+        return searchAnimalController.searchBar.text?.isEmpty ?? true
     }
 
     private func isFiltering() -> Bool {
-        let searchBarIsFiltering = searchController.searchBar.selectedScopeButtonIndex != 0
-        return searchController.isActive && (!isSearchBarEmpty() || searchBarIsFiltering)
+        let searchBarIsFiltering = searchAnimalController.searchBar.selectedScopeButtonIndex != 0
+        return searchAnimalController.isActive && (!isSearchBarEmpty() || searchBarIsFiltering)
     }
 }
 
@@ -189,7 +189,7 @@ extension RDViewController: UITableViewDelegate,UITableViewDataSource {
         let action = UIContextualAction(style: .destructive, title: "Delete") { [weak self] (_ , _, _) in
             guard let self = self else { return }
             self.displayedAnimals.remove(at: indexPath.row)
-            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.animalTableView.deleteRows(at: [indexPath], with: .automatic)
         }
         return action
     }
