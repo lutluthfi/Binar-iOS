@@ -12,7 +12,7 @@ final class RDProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Profile"
         view.backgroundColor = .systemBackground
     }
 }

@@ -20,7 +20,7 @@ final class RDHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Home"
+        title = "Home"
         setupHomeTableView()
     }
         
@@ -72,7 +72,8 @@ extension RDHomeViewController: UITableViewDataSource,UITableViewDelegate {
         case .challengeWeek3:
             open(to: RDChallenge3ViewController())
         case .challengeWeek4:
-            open(to: RDChallenge4ViewController())
+            let layout = UICollectionViewFlowLayout()
+            open(to: RDChallenge4ViewController(collectionViewLayout: layout))
         case .challengeWeek5:
             open(to: RDChallenge5ViewController())
         case .challengeWeek6:

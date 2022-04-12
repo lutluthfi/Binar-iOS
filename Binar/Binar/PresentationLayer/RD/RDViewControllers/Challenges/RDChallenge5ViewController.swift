@@ -9,7 +9,26 @@ import UIKit
 
 final class RDChallenge5ViewController: UIViewController {
     
+    private lazy var contentLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Coming Soon..."
+        label.font = .systemFont(ofSize: 18,weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+    
+    private func setupView() {
+        view.addSubview(contentLabel)
+        NSLayoutConstraint.activate([
+            contentLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            contentLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
 }
+
+

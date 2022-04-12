@@ -11,6 +11,7 @@ final class RDSettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Settings"
         view.backgroundColor = .systemBackground
     }
 }
