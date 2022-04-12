@@ -54,6 +54,11 @@
 		4F33D60727FAE2E000C4048D /* ARBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D60627FAE2E000C4048D /* ARBrowseViewController.swift */; };
 		4F33D60927FAE2E800C4048D /* ARSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D60827FAE2E800C4048D /* ARSearchViewController.swift */; };
 		4F33D60C27FC392500C4048D /* ARBrowseBannerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F33D60B27FC392500C4048D /* ARBrowseBannerCollectionCell.swift */; };
+		4F4F5DD728057D5D003AB017 /* IGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F5DD628057D5D003AB017 /* IGTabBarController.swift */; };
+		4F4F5DDB28057D83003AB017 /* IGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F5DDA28057D83003AB017 /* IGHomeViewController.swift */; };
+		4F4F5DDD28057D8F003AB017 /* IGProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F5DDC28057D8F003AB017 /* IGProfileViewController.swift */; };
+		4F4F5DDF28058146003AB017 /* IGLikesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F5DDE28058146003AB017 /* IGLikesLabel.swift */; };
+		4F4F5DE1280582F9003AB017 /* IGUsernameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4F5DE0280582F9003AB017 /* IGUsernameLabel.swift */; };
 		4F78A40F27DF8AF700C9E2F7 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A40E27DF8AF700C9E2F7 /* Student.swift */; };
 		4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */; };
 		4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F78A44827E2123300C9E2F7 /* Animal.swift */; };
@@ -164,6 +169,11 @@
 		4F33D60627FAE2E000C4048D /* ARBrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBrowseViewController.swift; sourceTree = "<group>"; };
 		4F33D60827FAE2E800C4048D /* ARSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSearchViewController.swift; sourceTree = "<group>"; };
 		4F33D60B27FC392500C4048D /* ARBrowseBannerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBrowseBannerCollectionCell.swift; sourceTree = "<group>"; };
+		4F4F5DD628057D5D003AB017 /* IGTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTabBarController.swift; sourceTree = "<group>"; };
+		4F4F5DDA28057D83003AB017 /* IGHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGHomeViewController.swift; sourceTree = "<group>"; };
+		4F4F5DDC28057D8F003AB017 /* IGProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGProfileViewController.swift; sourceTree = "<group>"; };
+		4F4F5DDE28058146003AB017 /* IGLikesLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikesLabel.swift; sourceTree = "<group>"; };
+		4F4F5DE0280582F9003AB017 /* IGUsernameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGUsernameLabel.swift; sourceTree = "<group>"; };
 		4F78A40E27DF8AF700C9E2F7 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		4F78A41327DF8DB400C9E2F7 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		4F78A44827E2123300C9E2F7 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
@@ -513,6 +523,42 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		4F4F5DD0280572B3003AB017 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				4F4F5DD628057D5D003AB017 /* IGTabBarController.swift */,
+				4F4F5DD828057D61003AB017 /* Home */,
+				4F4F5DD928057D66003AB017 /* Profile */,
+				4F4F5DD228057CCE003AB017 /* ComponentView */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		4F4F5DD228057CCE003AB017 /* ComponentView */ = {
+			isa = PBXGroup;
+			children = (
+				4F4F5DDE28058146003AB017 /* IGLikesLabel.swift */,
+				4F4F5DE0280582F9003AB017 /* IGUsernameLabel.swift */,
+			);
+			path = ComponentView;
+			sourceTree = "<group>";
+		};
+		4F4F5DD828057D61003AB017 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4F4F5DDA28057D83003AB017 /* IGHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4F4F5DD928057D66003AB017 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4F4F5DDC28057D8F003AB017 /* IGProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		4F78A41227DF8C5F00C9E2F7 /* AR */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,6 +607,7 @@
 				4F83BB7427F423DC00690F01 /* Dashboard */,
 				22DD5C8027E0D580003024DC /* DP */,
 				4FF0B30927E8DFD400CAF144 /* DS */,
+				4F4F5DD0280572B3003AB017 /* Instagram */,
 				318D72D627E0C54100ACAACF /* MF */,
 				4FF0B32227EB540400CAF144 /* NB */,
 				CEDF88CD27E0CF9200388847 /* PW */,
@@ -1001,8 +1048,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				383935AE27ECE27A0051A89C /* BIAnimalTableViewController.swift in Sources */,
+				4F4F5DE1280582F9003AB017 /* IGUsernameLabel.swift in Sources */,
 				2504065627EAF53E00186517 /* RNViewController.swift in Sources */,
 				4FF0B30F27E8DFD400CAF144 /* DSViewController.swift in Sources */,
+				4F4F5DDF28058146003AB017 /* IGLikesLabel.swift in Sources */,
 				59D4282227EDBAFB00AE8C50 /* ADAnimalV1.swift in Sources */,
 				4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */,
 				4F83BB7927F47AD600690F01 /* ARStandardViewController.swift in Sources */,
@@ -1046,6 +1095,7 @@
 				4FF5E17228043106005D1A0E /* InstagramAPI.swift in Sources */,
 				4FF0B30D27E8DFD400CAF144 /* AnimalTableViewCell.swift in Sources */,
 				4FF5E178280436D8005D1A0E /* IGLocationResponse.swift in Sources */,
+				4F4F5DDD28057D8F003AB017 /* IGProfileViewController.swift in Sources */,
 				4FF0B32627EB540400CAF144 /* NBViewController.swift in Sources */,
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				319988BF27F997BF00891D32 /* MFQRVC.swift in Sources */,
@@ -1077,7 +1127,9 @@
 				4F33D5FB27FA618900C4048D /* ARChatViewController.swift in Sources */,
 				013165EC27ED71BF00CB0BD7 /* THAnimalTableViewController.swift in Sources */,
 				59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */,
+				4F4F5DDB28057D83003AB017 /* IGHomeViewController.swift in Sources */,
 				4F33D60C27FC392500C4048D /* ARBrowseBannerCollectionCell.swift in Sources */,
+				4F4F5DD728057D5D003AB017 /* IGTabBarController.swift in Sources */,
 				38E0C76D27E32498009D7A82 /* BIViewController.swift in Sources */,
 				E9FDD0AA27F996FB0051B161 /* RDViewModels.swift in Sources */,
 				4F83BB7D27F4824700690F01 /* Typealias.swift in Sources */,
