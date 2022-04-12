@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MFFasilChallengeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+final class MFFasilChallenge1VC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     var animalList = Animal.listV1()
     @IBOutlet weak var sortButton: UIButton!
@@ -16,6 +16,8 @@ final class MFFasilChallengeViewController: UIViewController, UITableViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Table View Animal"
         
         tableView.dataSource = self
         tableView.delegate = self
