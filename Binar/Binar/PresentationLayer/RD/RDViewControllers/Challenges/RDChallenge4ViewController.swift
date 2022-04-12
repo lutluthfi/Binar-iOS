@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class RDViewController: UIViewController {
+final class RDChallenge4ViewController: UIViewController {
     var name: String?
     private var displayedAnimals: [Animal] = Animal.listV2()
     private var filteredAnimals = [Animal]()
@@ -85,7 +85,7 @@ final class RDViewController: UIViewController {
 
 
 
-extension RDViewController: UISearchBarDelegate,UISearchResultsUpdating {
+extension RDChallenge4ViewController: UISearchBarDelegate,UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
@@ -125,12 +125,9 @@ extension RDViewController: UISearchBarDelegate,UISearchResultsUpdating {
 
 }
 
-extension RDViewController: UITableViewDelegate,UITableViewDataSource {
+extension RDChallenge4ViewController: UITableViewDelegate,UITableViewDataSource {
 
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
+  
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering() { return filteredAnimals.count }
         return displayedAnimals.count

@@ -102,13 +102,16 @@
 		CE373CCF27E386B700FFF26C /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */; };
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
-		E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940649E27E0D44E00D8204C /* RDViewController.swift */; };
+		E940649F27E0D44E00D8204C /* RDChallenge4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940649E27E0D44E00D8204C /* RDChallenge4ViewController.swift */; };
 		E9BD2D9028004B7E0068003B /* RDTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D8F28004B7E0068003B /* RDTabbarViewController.swift */; };
 		E9BD2D92280057960068003B /* RDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D91280057960068003B /* RDHomeViewController.swift */; };
 		E9BD2D942800620C0068003B /* RDProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D932800620C0068003B /* RDProfileViewController.swift */; };
 		E9BD2D96280062870068003B /* RDSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D95280062870068003B /* RDSettingsViewController.swift */; };
 		E9BD2D99280072E00068003B /* RDHomeTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D98280072E00068003B /* RDHomeTitleModel.swift */; };
 		E9BD2D9B280079ED0068003B /* RDHomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D9A280079ED0068003B /* RDHomeListCell.swift */; };
+		E9E2C11928056BE3000EF9C9 /* RDChallenge3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2C11828056BE3000EF9C9 /* RDChallenge3ViewController.swift */; };
+		E9E2C11B28056D38000EF9C9 /* RDChallenge5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2C11A28056D38000EF9C9 /* RDChallenge5ViewController.swift */; };
+		E9E2C11D28056D49000EF9C9 /* RDChallenge6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E2C11C28056D49000EF9C9 /* RDChallenge6ViewController.swift */; };
 		E9FDD0AA27F996FB0051B161 /* RDViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0A927F996FB0051B161 /* RDViewModels.swift */; };
 		E9FDD0AD27F997360051B161 /* RDDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0AC27F997360051B161 /* RDDetailViewController.swift */; };
 		E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FDD0AF27F9976C0051B161 /* RDConstants.swift */; };
@@ -222,13 +225,16 @@
 		CE373CCD27E386B700FFF26C /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		CEDF88CE27E0CFB300388847 /* PWMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PWMain.storyboard; sourceTree = "<group>"; };
 		CEDF88D027E0CFC800388847 /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
-		E940649E27E0D44E00D8204C /* RDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewController.swift; sourceTree = "<group>"; };
+		E940649E27E0D44E00D8204C /* RDChallenge4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDChallenge4ViewController.swift; sourceTree = "<group>"; };
 		E9BD2D8F28004B7E0068003B /* RDTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTabbarViewController.swift; sourceTree = "<group>"; };
 		E9BD2D91280057960068003B /* RDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHomeViewController.swift; sourceTree = "<group>"; };
 		E9BD2D932800620C0068003B /* RDProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDProfileViewController.swift; sourceTree = "<group>"; };
 		E9BD2D95280062870068003B /* RDSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDSettingsViewController.swift; sourceTree = "<group>"; };
 		E9BD2D98280072E00068003B /* RDHomeTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHomeTitleModel.swift; sourceTree = "<group>"; };
 		E9BD2D9A280079ED0068003B /* RDHomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHomeListCell.swift; sourceTree = "<group>"; };
+		E9E2C11828056BE3000EF9C9 /* RDChallenge3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDChallenge3ViewController.swift; sourceTree = "<group>"; };
+		E9E2C11A28056D38000EF9C9 /* RDChallenge5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDChallenge5ViewController.swift; sourceTree = "<group>"; };
+		E9E2C11C28056D49000EF9C9 /* RDChallenge6ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDChallenge6ViewController.swift; sourceTree = "<group>"; };
 		E9FDD0A927F996FB0051B161 /* RDViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDViewModels.swift; sourceTree = "<group>"; };
 		E9FDD0AC27F997360051B161 /* RDDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDDetailViewController.swift; sourceTree = "<group>"; };
 		E9FDD0AF27F9976C0051B161 /* RDConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDConstants.swift; sourceTree = "<group>"; };
@@ -803,7 +809,7 @@
 		E940649D27E0D43700D8204C /* RD */ = {
 			isa = PBXGroup;
 			children = (
-				E9BD2D97280072B40068003B /* RDModels */,
+				E9BD2D97280072B40068003B /* RDData */,
 				E9BD2D8E2800465E0068003B /* RDRootViewController */,
 				E9FDD0AE27F9975A0051B161 /* RDUtils */,
 				E9FDD0AB27F997100051B161 /* RDViewControllers */,
@@ -821,12 +827,47 @@
 			path = RDRootViewController;
 			sourceTree = "<group>";
 		};
-		E9BD2D97280072B40068003B /* RDModels */ = {
+		E9BD2D97280072B40068003B /* RDData */ = {
+			isa = PBXGroup;
+			children = (
+				E9E2C116280569C9000EF9C9 /* Model */,
+				E9E2C115280569BA000EF9C9 /* Local */,
+				E9E2C114280569A1000EF9C9 /* Remote */,
+			);
+			path = RDData;
+			sourceTree = "<group>";
+		};
+		E9E2C114280569A1000EF9C9 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		E9E2C115280569BA000EF9C9 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		E9E2C116280569C9000EF9C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E9BD2D98280072E00068003B /* RDHomeTitleModel.swift */,
 			);
-			path = RDModels;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E9E2C11728056B2F000EF9C9 /* Challenges */ = {
+			isa = PBXGroup;
+			children = (
+				E9E2C11828056BE3000EF9C9 /* RDChallenge3ViewController.swift */,
+				E940649E27E0D44E00D8204C /* RDChallenge4ViewController.swift */,
+				E9E2C11A28056D38000EF9C9 /* RDChallenge5ViewController.swift */,
+				E9E2C11C28056D49000EF9C9 /* RDChallenge6ViewController.swift */,
+			);
+			path = Challenges;
 			sourceTree = "<group>";
 		};
 		E9FDD0A527F996B90051B161 /* RDViews */ = {
@@ -849,8 +890,8 @@
 		E9FDD0AB27F997100051B161 /* RDViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				E9E2C11728056B2F000EF9C9 /* Challenges */,
 				E9BD2D932800620C0068003B /* RDProfileViewController.swift */,
-				E940649E27E0D44E00D8204C /* RDViewController.swift */,
 				E9BD2D91280057960068003B /* RDHomeViewController.swift */,
 				E9FDD0AC27F997360051B161 /* RDDetailViewController.swift */,
 				E9BD2D95280062870068003B /* RDSettingsViewController.swift */,
@@ -991,6 +1032,7 @@
 				2504065627EAF53E00186517 /* RNViewController.swift in Sources */,
 				4FF0B30F27E8DFD400CAF144 /* DSViewController.swift in Sources */,
 				59D4282227EDBAFB00AE8C50 /* ADAnimalV1.swift in Sources */,
+				E9E2C11928056BE3000EF9C9 /* RDChallenge3ViewController.swift in Sources */,
 				4F0DF7CB27E8CB7700DFF664 /* MFViewController.swift in Sources */,
 				4F83BB7927F47AD600690F01 /* ARStandardViewController.swift in Sources */,
 				4F83BB7B27F47AE700690F01 /* UICollectionView+Extension.swift in Sources */,
@@ -1047,10 +1089,11 @@
 				4F78A44927E2123300C9E2F7 /* Animal.swift in Sources */,
 				E9FDD0B027F9976C0051B161 /* RDConstants.swift in Sources */,
 				319CD7D127E28B1A007F8239 /* MFBinarChallenge3VC.swift in Sources */,
-				E940649F27E0D44E00D8204C /* RDViewController.swift in Sources */,
+				E940649F27E0D44E00D8204C /* RDChallenge4ViewController.swift in Sources */,
 				E9BD2D99280072E00068003B /* RDHomeTitleModel.swift in Sources */,
 				59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */,
 				4F33D5D827F5EB4900C4048D /* ARFirstViewController.swift in Sources */,
+				E9E2C11B28056D38000EF9C9 /* RDChallenge5ViewController.swift in Sources */,
 				E9BD2D9028004B7E0068003B /* RDTabbarViewController.swift in Sources */,
 				4F33D60727FAE2E000C4048D /* ARBrowseViewController.swift in Sources */,
 				4F33D5F627F9A2C800C4048D /* ARTabBarViewController.swift in Sources */,
@@ -1061,6 +1104,7 @@
 				013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */,
 				E9BD2D9B280079ED0068003B /* RDHomeListCell.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,
+				E9E2C11D28056D49000EF9C9 /* RDChallenge6ViewController.swift in Sources */,
 				4F33D5FB27FA618900C4048D /* ARChatViewController.swift in Sources */,
 				013165EC27ED71BF00CB0BD7 /* THAnimalTableViewController.swift in Sources */,
 				59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */,

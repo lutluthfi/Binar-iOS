@@ -9,11 +9,12 @@ import UIKit
 
 final class RDTabbarViewController: UITabBarController {
     
+    var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTabbarView()
-        
+        navigationItem.title = name
         setupNavigationVC()
     }
     
@@ -25,6 +26,7 @@ final class RDTabbarViewController: UITabBarController {
     
     private func setupNavigationVC() {
         let homeViewController = RDHomeViewController()
+        homeViewController.navigationItem.leftBarButtonItem =  UIBarButtonItem(barButtonSystemItem: .close, target: self, action: #selector(back))
         homeViewController.tabBarItem = UITabBarItem(
             title: "Home",
             image: UIImage(systemName: "house"),
@@ -33,16 +35,16 @@ final class RDTabbarViewController: UITabBarController {
 
         let profileViewController = RDProfileViewController()
         profileViewController.tabBarItem = UITabBarItem(
-            title: "Browse",
-            image: UIImage(systemName: "square.grid.2x2.fill"),
-            selectedImage: UIImage(systemName: "square.grid.2x2.fill")
+            title: "Profile",
+            image: UIImage(systemName: "person"),
+            selectedImage: UIImage(systemName: "person.fill")
         )
 
         let settingsViewController = RDSettingsViewController()
         settingsViewController.tabBarItem = UITabBarItem(
-            title: "Search",
-            image: UIImage(systemName: "magnifyingglass"),
-            selectedImage: UIImage(systemName: "magnifyingglass")
+            title: "Settings",
+            image: UIImage(systemName: "gear"),
+            selectedImage: UIImage(systemName: "gear")
         )
         
         let _viewControllers: [UINavigationController] = [
@@ -50,10 +52,14 @@ final class RDTabbarViewController: UITabBarController {
             settingsViewController
         ].map {
             let navigationController = UINavigationController(rootViewController: $0)
-            navigationController.setNavigationBarHidden(true, animated: false)
+            navigationController.setNavigationBarHidden(false, animated: false)
             return navigationController
         }
         viewControllers = _viewControllers
+    }
+    
+    @objc func back() {
+        navigationController?.popViewController(animated: true)
     }
 
     

@@ -12,7 +12,7 @@ final class RDHomeViewController: UIViewController {
     let homeTableTitle: [RDHomeTitleModel] = RDHomeTitleModel.allCases
     
     private lazy var homeTableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .insetGrouped)
+        let tableView = UITableView(frame: .zero, style: .plain)
         tableView.backgroundColor = .systemBackground
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
@@ -20,13 +20,15 @@ final class RDHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Home"
         setupHomeTableView()
     }
-    
+        
     private func setupHomeTableView() {
+        view.addSubview(homeTableView)
         homeTableView.dataSource = self
         homeTableView.delegate = self
-        homeTableView.register(RDHomeListCell.self, forCellReuseIdentifier: "rdHomeCell")
+        homeTableView.register(UITableViewCell.self, forCellReuseIdentifier: "rdHomeCell")
         
         NSLayoutConstraint.activate([
             homeTableView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -35,13 +37,11 @@ final class RDHomeViewController: UIViewController {
             homeTableView.leftAnchor.constraint(equalTo: view.leftAnchor)
         ])
     }
+    
+    
 }
 
 extension RDHomeViewController: UITableViewDataSource,UITableViewDelegate {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let challengeCount: Int = homeTableTitle.count
@@ -51,20 +51,38 @@ extension RDHomeViewController: UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let rdCell = tableView.dequeueReusableCell(withIdentifier: "rdHomeCell", for: indexPath)
-        guard let cell = rdCell as? RDHomeListCell else {
-            return rdCell
-        }
+        let cell: UITableViewCell = tableView.dequeueReusableCell(
+            withIdentifier: "rdHomeCell",
+            for: indexPath
+        )
+      
         let row: Int = indexPath.row
-        let challenge: RDHomeTitleModel = homeTableTitle[row]
+        let challenge: String = homeTableTitle[row].rawValue
         
-        cell.fill(with: challenge)
+        cell.textLabel?.text = challenge
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row: Int = indexPath.row
+        let challenge: RDHomeTitleModel = RDHomeTitleModel.sorted[row]
+        
+        switch challenge {
+        case .challengeWeek3:
+            open(to: RDChallenge3ViewController())
+        case .challengeWeek4:
+            open(to: RDChallenge4ViewController())
+        case .challengeWeek5:
+            open(to: RDChallenge5ViewController())
+        case .challengeWeek6:
+            open(to: RDChallenge6ViewController())
+        }
+    }
+    
+    private func open(to viewController: UIViewController) {
+        viewController.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
 }
