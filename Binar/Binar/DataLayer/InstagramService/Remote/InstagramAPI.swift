@@ -7,13 +7,47 @@
 
 import Foundation
 
+enum HttpMethod: String {
+    case GET
+    case POST
+    case PUT
+    case DELETE
+    case PATCH
+}
+
 final class InstagramAPI {
     static let baseUrl = "https://dummyapi.io/data/v1"
     
     private let appId: String
+    private let urlComponentBuilder = URLComponentsBuilder(baseUrl: InstagramAPI.baseUrl)
     
     init(appId: String) {
         self.appId = appId
+    }
+    
+    func getFeeds(
+        limit: Int? = nil,
+        page: Int? = nil
+    ) {
+        let url: URL? = urlComponentBuilder.path("/post")
+            .addQuery(key: "limit", value: limit)
+            .addQuery(key: "page", value: page)
+            .buildUrl()
+        
+        guard let url = url else {
+            fatalError("\(Self.self) has a request but invalid URL")
+        }
+        
+        let request: URLRequest = URLRequestBuilder(url: url)
+            .appId(appId)
+            .httpMethod(.GET)
+            .build()
+        
+//        URLSession.shared.dataTask(
+//            for: IGDataResponse<IGUserResponse>.self,
+//            with: request,
+//            completion: completion
+//        ).resume()
     }
     
     func getUsers(
@@ -21,43 +55,25 @@ final class InstagramAPI {
         page: Int? = nil,
         _ completion: @escaping (Result<IGDataResponse<IGUserResponse>, Error>) -> Void
     ) {
-        var urlComponent = URLComponents(string: Self.baseUrl)
-        urlComponent?.path = "/user"
+        let url: URL? = urlComponentBuilder
+            .path("/user")
+            .addQuery(key: "limit", value: limit)
+            .addQuery(key: "page", value: page)
+            .buildUrl()
         
-        var queries: [URLQueryItem] = []
-        if let limit = limit {
-            let queryItem = URLQueryItem(name: "limit", value: String(limit))
-            queries.append(queryItem)
-        }
-        if let page = page {
-            let queryItem = URLQueryItem(name: "page", value: String(page))
-            queries.append(queryItem)
-        }
-        urlComponent?.queryItems = queries
-        
-        guard let url: URL = urlComponent?.url else {
+        guard let url = url else {
             fatalError("\(Self.self) has a request but invalid URL")
         }
         
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.addValue("app-id", forHTTPHeaderField: appId)
-        request.addValue("content-type", forHTTPHeaderField: "application/json")
+        let request: URLRequest = URLRequestBuilder(url: url)
+            .appId(appId)
+            .httpMethod(.GET)
+            .build()
         
-        let task = URLSession.shared.dataTask(with: request) { data, _, error in
-            if let error = error {
-                completion(.failure(error))
-            } else if let data = data {
-                do {
-                    let res = try JSONDecoder().decode(IGDataResponse<IGUserResponse>.self, from: data)
-                    completion(.success(res))
-                } catch {
-                    completion(.failure(error))
-                }
-            } else {
-                print("unknown error")
-            }
-        }
-        task.resume()
+        URLSession.shared.dataTask(
+            for: IGDataResponse<IGUserResponse>.self,
+            with: request,
+            completion: completion
+        ).resume()
     }
 }

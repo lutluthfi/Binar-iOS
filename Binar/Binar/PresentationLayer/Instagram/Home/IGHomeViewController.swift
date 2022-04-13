@@ -25,6 +25,9 @@ final class IGHomeViewController: UIViewController {
         usernameLabel.configure(username: "binaracademy")
         
         // avatarImageView.configure(size: .x32, url: "https://")
+        
+        // imageButton.onTap = { }
+        // imageButton.configure(image: commentImage)
     }
     
 }
