@@ -106,6 +106,9 @@
 		E988FB83280672F40021EBFD /* RDSubSpotifyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FB82280672F40021EBFD /* RDSubSpotifyCell.swift */; };
 		E988FB85280678410021EBFD /* RDSpotifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FB84280678410021EBFD /* RDSpotifyModel.swift */; };
 		E988FB8D28067B080021EBFD /* RDTabbarSpotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FB8C28067B080021EBFD /* RDTabbarSpotify.swift */; };
+		E988FB8F280687790021EBFD /* RDLocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FB8E280687790021EBFD /* RDLocalData.swift */; };
+		E988FB912806879C0021EBFD /* RDRemoteData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FB902806879C0021EBFD /* RDRemoteData.swift */; };
+		E988FB93280687C20021EBFD /* RDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FB92280687C20021EBFD /* RDView.swift */; };
 		E9BD2D9028004B7E0068003B /* RDTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D8F28004B7E0068003B /* RDTabbarViewController.swift */; };
 		E9BD2D92280057960068003B /* RDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D91280057960068003B /* RDHomeViewController.swift */; };
 		E9BD2D942800620C0068003B /* RDProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D932800620C0068003B /* RDProfileViewController.swift */; };
@@ -233,6 +236,9 @@
 		E988FB82280672F40021EBFD /* RDSubSpotifyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDSubSpotifyCell.swift; sourceTree = "<group>"; };
 		E988FB84280678410021EBFD /* RDSpotifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDSpotifyModel.swift; sourceTree = "<group>"; };
 		E988FB8C28067B080021EBFD /* RDTabbarSpotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTabbarSpotify.swift; sourceTree = "<group>"; };
+		E988FB8E280687790021EBFD /* RDLocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDLocalData.swift; sourceTree = "<group>"; };
+		E988FB902806879C0021EBFD /* RDRemoteData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDRemoteData.swift; sourceTree = "<group>"; };
+		E988FB92280687C20021EBFD /* RDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDView.swift; sourceTree = "<group>"; };
 		E9BD2D8F28004B7E0068003B /* RDTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTabbarViewController.swift; sourceTree = "<group>"; };
 		E9BD2D91280057960068003B /* RDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHomeViewController.swift; sourceTree = "<group>"; };
 		E9BD2D932800620C0068003B /* RDProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDProfileViewController.swift; sourceTree = "<group>"; };
@@ -905,6 +911,7 @@
 		E9E2C114280569A1000EF9C9 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				E988FB902806879C0021EBFD /* RDRemoteData.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -912,6 +919,7 @@
 		E9E2C115280569BA000EF9C9 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				E988FB8E280687790021EBFD /* RDLocalData.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -976,6 +984,7 @@
 		E9FDD0B127F9978C0051B161 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E988FB92280687C20021EBFD /* RDView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1110,6 +1119,7 @@
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				E988FB8D28067B080021EBFD /* RDTabbarSpotify.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallenge1VC.swift in Sources */,
+				E988FB93280687C20021EBFD /* RDView.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */,
 				E9BD2D942800620C0068003B /* RDProfileViewController.swift in Sources */,
@@ -1133,6 +1143,7 @@
 				4F33D5E927F701C600C4048D /* UIViewController+Extension.swift in Sources */,
 				4F33D60527FAE2D600C4048D /* ARHomeViewController.swift in Sources */,
 				A4D3AA5527E0C8C600565DEE /* AKViewController.swift in Sources */,
+				E988FB912806879C0021EBFD /* RDRemoteData.swift in Sources */,
 				4F33D5E527F6E86300C4048D /* ARFormTextFieldTableCell.swift in Sources */,
 				4F33D60927FAE2E800C4048D /* ARSearchViewController.swift in Sources */,
 				4FF0B31227E8E0A500CAF144 /* StoryboardInstantiable.swift in Sources */,
@@ -1151,6 +1162,7 @@
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
 				4F33D5FD27FACEB400C4048D /* UIVisualEffectView+Extension.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
+				E988FB8F280687790021EBFD /* RDLocalData.swift in Sources */,
 				4F33D5DF27F6DFA600C4048D /* ARChallenge4ViewController.swift in Sources */,
 				E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
