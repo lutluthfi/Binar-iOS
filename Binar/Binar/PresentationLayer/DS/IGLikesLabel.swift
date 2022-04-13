@@ -20,15 +20,23 @@ class IGLikesLabel: UIView {
     private var number: Int = 0
     
     func setLikesLabel(numberOfLikes num: Int) -> UILabel{
+//        if num >= 1000 {
+//            text = "\(num / 1000).\(num % 1000) likes"
+//        }
+//        if num >= 1000000 {
+//            text = "\(num / 1000000).\((num % 1000000) / 1000).\((num % 1000000) % 1000) likes"
+//        }
+
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        guard let formattedNumber = numberFormatter.string(from: NSNumber(value:num)) else { return UILabel()}
+        
         if num > 1 {
-            text = "\(num) likes"
+            text = "\(formattedNumber) likes"
+        } else {
+            text = "\(formattedNumber) like"
         }
-        if num >= 1000 {
-            text = "\(num / 1000).\(num % 1000) likes"
-        }
-        if num >= 1000000 {
-            text = "\(num / 1000000).\((num % 1000000) / 1000).\((num % 1000000) % 1000) likes"
-        }
+        
         
         let label = UILabel()
         

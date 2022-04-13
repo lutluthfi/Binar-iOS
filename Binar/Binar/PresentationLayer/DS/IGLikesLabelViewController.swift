@@ -19,7 +19,7 @@ class IGLikesLabelViewController: UIViewController {
     }
     
     func setLabel () {
-        let label = likesLabel.setLikesLabel(numberOfLikes: 7986)
+        let label = likesLabel.setLikesLabel(numberOfLikes: 798699234904393459)
         
         view.addSubview(label)
         
