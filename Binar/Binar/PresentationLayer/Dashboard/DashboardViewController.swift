@@ -198,7 +198,8 @@ extension DashboardViewController {
 // MARK: goToRDViewController
 extension DashboardViewController {
     func goToRDViewController() {
-        let viewController = RDTabbarViewController()
+//        let viewController = RDTabbarViewController()
+        let viewController = InstagramLikesLabelController()
         navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(viewController, animated: true)
     }
