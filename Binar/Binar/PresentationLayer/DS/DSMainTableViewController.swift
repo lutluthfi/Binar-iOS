@@ -65,7 +65,7 @@ final class DSMainTableViewController: UITableViewController, StoryboardInstanti
         case .BumbleChallenge:
             open(DSBumbleViewController())
         case .Challenge1:
-            break
+            open(DSViewController())
         }
     }
     
