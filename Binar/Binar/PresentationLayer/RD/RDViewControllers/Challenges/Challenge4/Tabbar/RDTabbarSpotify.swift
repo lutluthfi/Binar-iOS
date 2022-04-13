@@ -77,29 +77,71 @@ final class RDTabbarSpotify: UITabBarController {
 
 final class RDBrowseSpotifyViewController: UIViewController {
     
+    let apperance = UINavigationBarAppearance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "Browse"
+        apperance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        apperance.backgroundColor = .black
+        navigationItem.standardAppearance = apperance
+        navigationItem.scrollEdgeAppearance = apperance
     }
 }
 final class RDSearchSpotifyViewController: UIViewController {
     
+    let apperance = UINavigationBarAppearance()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "Search"
+        apperance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        apperance.backgroundColor = .black
+        navigationItem.standardAppearance = apperance
+        navigationItem.scrollEdgeAppearance = apperance
     }
 }
 final class RDRadioSpotifyViewController: UIViewController {
+    let apperance = UINavigationBarAppearance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "Radio"
+        apperance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        apperance.backgroundColor = .black
+        navigationItem.standardAppearance = apperance
+        navigationItem.scrollEdgeAppearance = apperance
     }
 }
 final class RDLibrarySpotifyViewController: UIViewController {
+    let apperance = UINavigationBarAppearance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
+        setupNavigationBar()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "Library"
+        apperance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        apperance.backgroundColor = .black
+        navigationItem.standardAppearance = apperance
+        navigationItem.scrollEdgeAppearance = apperance
     }
 }
