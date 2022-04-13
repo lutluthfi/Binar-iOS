@@ -13,13 +13,13 @@ class IGLikesLabelViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = .white
         setLabel()
         // Do any additional setup after loading the view.
     }
     
     func setLabel () {
-        let label = likesLabel.setLikesLabel(numberOfLikes: 3)
+        let label = likesLabel.setLikesLabel(numberOfLikes: 7986)
         
         view.addSubview(label)
         
