@@ -9,12 +9,25 @@ import UIKit
 
 final class RDChallenge4ViewController: UICollectionViewController {
     let cellId : String = "cellId"
+    let apperance = UINavigationBarAppearance()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .systemBackground
+        setupNavigationBar()
+        setupCollectionView()
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "Spotify Clone"
+        apperance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        apperance.backgroundColor = .black
+        navigationItem.standardAppearance = apperance
+        navigationItem.scrollEdgeAppearance = apperance
+    }
+    
+    private func setupCollectionView() {
+        collectionView.backgroundColor = .black
         collectionView.register(RDSpotifyCell.self, forCellWithReuseIdentifier: cellId)
-        
     }
 }
 
@@ -22,19 +35,19 @@ final class RDChallenge4ViewController: UICollectionViewController {
 extension RDChallenge4ViewController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-           return 5
+        return 4
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RDSpotifyCell
-           return cell
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           let width = view.frame.width
-           let height = CGFloat(200)
-           
-           return CGSize(width: width, height: height)
-       }
+        let width = view.frame.width
+        let height = CGFloat(200)
+        
+        return CGSize(width: width, height: height)
+    }
     
 }
