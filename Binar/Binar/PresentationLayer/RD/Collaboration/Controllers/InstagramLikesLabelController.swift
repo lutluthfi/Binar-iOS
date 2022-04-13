@@ -15,7 +15,7 @@ final class InstagramLikesLabelController: UIViewController {
     
     private lazy var instagramLikesView: UIView = {
         let likesView = UIView()
-        likesView.backgroundColor = .blue
+        likesView.backgroundColor = .white
         likesView.translatesAutoresizingMaskIntoConstraints = false
         return likesView
     }()
