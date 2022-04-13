@@ -147,39 +147,5 @@ extension Int {
         
         return numberFormatter.string(from: NSNumber(value:self))!
     }
-    
 }
 
-//func setLikesLabel(numberOfLikes num: Int) -> UILabel{
-//
-//        if num > 1 {
-//
-//            text = "\(num) likes"
-//
-//        }
-//
-//        if num >= 1000 {
-//
-//            text = "\(num / 1000).\(num % 1000) likes"
-//
-//        }
-//
-//        if num >= 1000000 {
-//
-//            text = "\(num / 1000000).\((num % 1000000) / 1000).\((num % 1000000) % 1000) likes"
-//
-//        }
-//
-//
-//
-//        let label = UILabel()
-//
-//
-//
-//        label.text = text
-//
-//
-//
-//        return label
-//
-//}
