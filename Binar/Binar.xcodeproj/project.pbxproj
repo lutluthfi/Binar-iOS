@@ -103,6 +103,9 @@
 		CEDF88CF27E0CFB300388847 /* PWMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEDF88CE27E0CFB300388847 /* PWMain.storyboard */; };
 		CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF88D027E0CFC800388847 /* PWViewController.swift */; };
 		E940649F27E0D44E00D8204C /* RDChallenge3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940649E27E0D44E00D8204C /* RDChallenge3ViewController.swift */; };
+		E988FB83280672F40021EBFD /* RDSubSpotifyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FB82280672F40021EBFD /* RDSubSpotifyCell.swift */; };
+		E988FB85280678410021EBFD /* RDSpotifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FB84280678410021EBFD /* RDSpotifyModel.swift */; };
+		E988FB8D28067B080021EBFD /* RDTabbarSpotify.swift in Sources */ = {isa = PBXBuildFile; fileRef = E988FB8C28067B080021EBFD /* RDTabbarSpotify.swift */; };
 		E9BD2D9028004B7E0068003B /* RDTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D8F28004B7E0068003B /* RDTabbarViewController.swift */; };
 		E9BD2D92280057960068003B /* RDHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D91280057960068003B /* RDHomeViewController.swift */; };
 		E9BD2D942800620C0068003B /* RDProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BD2D932800620C0068003B /* RDProfileViewController.swift */; };
@@ -227,6 +230,9 @@
 		CEDF88CE27E0CFB300388847 /* PWMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PWMain.storyboard; sourceTree = "<group>"; };
 		CEDF88D027E0CFC800388847 /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
 		E940649E27E0D44E00D8204C /* RDChallenge3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDChallenge3ViewController.swift; sourceTree = "<group>"; };
+		E988FB82280672F40021EBFD /* RDSubSpotifyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDSubSpotifyCell.swift; sourceTree = "<group>"; };
+		E988FB84280678410021EBFD /* RDSpotifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDSpotifyModel.swift; sourceTree = "<group>"; };
+		E988FB8C28067B080021EBFD /* RDTabbarSpotify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTabbarSpotify.swift; sourceTree = "<group>"; };
 		E9BD2D8F28004B7E0068003B /* RDTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDTabbarViewController.swift; sourceTree = "<group>"; };
 		E9BD2D91280057960068003B /* RDHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDHomeViewController.swift; sourceTree = "<group>"; };
 		E9BD2D932800620C0068003B /* RDProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RDProfileViewController.swift; sourceTree = "<group>"; };
@@ -821,6 +827,63 @@
 			path = RD;
 			sourceTree = "<group>";
 		};
+		E988FB81280672D70021EBFD /* SubCells */ = {
+			isa = PBXGroup;
+			children = (
+				E988FB82280672F40021EBFD /* RDSubSpotifyCell.swift */,
+			);
+			path = SubCells;
+			sourceTree = "<group>";
+		};
+		E988FB86280679D10021EBFD /* Challenge3 */ = {
+			isa = PBXGroup;
+			children = (
+				E940649E27E0D44E00D8204C /* RDChallenge3ViewController.swift */,
+			);
+			path = Challenge3;
+			sourceTree = "<group>";
+		};
+		E988FB87280679DB0021EBFD /* Challenge4 */ = {
+			isa = PBXGroup;
+			children = (
+				E988FB8B28067A390021EBFD /* Controllers */,
+				E988FB8A28067A2F0021EBFD /* Tabbar */,
+			);
+			path = Challenge4;
+			sourceTree = "<group>";
+		};
+		E988FB88280679E20021EBFD /* Challenge5 */ = {
+			isa = PBXGroup;
+			children = (
+				E9E2C11A28056D38000EF9C9 /* RDChallenge5ViewController.swift */,
+			);
+			path = Challenge5;
+			sourceTree = "<group>";
+		};
+		E988FB89280679EC0021EBFD /* Challenge6 */ = {
+			isa = PBXGroup;
+			children = (
+				E9E2C11C28056D49000EF9C9 /* RDChallenge6ViewController.swift */,
+			);
+			path = Challenge6;
+			sourceTree = "<group>";
+		};
+		E988FB8A28067A2F0021EBFD /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				E988FB8C28067B080021EBFD /* RDTabbarSpotify.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		E988FB8B28067A390021EBFD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E9E2C11828056BE3000EF9C9 /* RDChallenge4ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		E9BD2D8E2800465E0068003B /* RDRootViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -857,6 +920,7 @@
 			isa = PBXGroup;
 			children = (
 				E9BD2D98280072E00068003B /* RDHomeTitleModel.swift */,
+				E988FB84280678410021EBFD /* RDSpotifyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -864,10 +928,10 @@
 		E9E2C11728056B2F000EF9C9 /* Challenges */ = {
 			isa = PBXGroup;
 			children = (
-				E940649E27E0D44E00D8204C /* RDChallenge3ViewController.swift */,
-				E9E2C11828056BE3000EF9C9 /* RDChallenge4ViewController.swift */,
-				E9E2C11A28056D38000EF9C9 /* RDChallenge5ViewController.swift */,
-				E9E2C11C28056D49000EF9C9 /* RDChallenge6ViewController.swift */,
+				E988FB86280679D10021EBFD /* Challenge3 */,
+				E988FB87280679DB0021EBFD /* Challenge4 */,
+				E988FB88280679E20021EBFD /* Challenge5 */,
+				E988FB89280679EC0021EBFD /* Challenge6 */,
 			);
 			path = Challenges;
 			sourceTree = "<group>";
@@ -919,6 +983,7 @@
 		E9FDD0B227F997960051B161 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E988FB81280672D70021EBFD /* SubCells */,
 				E9FDD0B327F99B660051B161 /* RDAnimalListCell.swift */,
 				E9BD2D9A280079ED0068003B /* RDHomeListCell.swift */,
 				E9E2C11E28058529000EF9C9 /* RDSpotifyCell.swift */,
@@ -1043,6 +1108,7 @@
 				4FF0B33727EB6C4900CAF144 /* ARAnimalTableCell.swift in Sources */,
 				383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */,
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
+				E988FB8D28067B080021EBFD /* RDTabbarSpotify.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallenge1VC.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */,
@@ -1050,6 +1116,7 @@
 				4F83BB6F27EDFA2A00690F01 /* UIView+Extension.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				383935B527ECEC550051A89C /* AnimalDetailViewController.swift in Sources */,
+				E988FB85280678410021EBFD /* RDSpotifyModel.swift in Sources */,
 				38550CC927ECFF77004269C8 /* ChallengeViewController.swift in Sources */,
 				CEDF88D127E0CFC800388847 /* PWViewController.swift in Sources */,
 				4F83BB7627F47A3E00690F01 /* TitleEnum.swift in Sources */,
@@ -1118,6 +1185,7 @@
 				4F83BB7D27F4824700690F01 /* Typealias.swift in Sources */,
 				4F33D5E727F6E87600C4048D /* ARFormTextViewTableCell.swift in Sources */,
 				E9BD2D92280057960068003B /* RDHomeViewController.swift in Sources */,
+				E988FB83280672F40021EBFD /* RDSubSpotifyCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

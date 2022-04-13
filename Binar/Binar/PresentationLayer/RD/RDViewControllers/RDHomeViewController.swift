@@ -23,7 +23,11 @@ final class RDHomeViewController: UIViewController {
         title = "Home"
         setupHomeTableView()
     }
-        
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     private func setupHomeTableView() {
         view.addSubview(homeTableView)
         homeTableView.dataSource = self
@@ -55,7 +59,7 @@ extension RDHomeViewController: UITableViewDataSource,UITableViewDelegate {
             withIdentifier: "rdHomeCell",
             for: indexPath
         )
-      
+        
         let row: Int = indexPath.row
         let challenge: String = homeTableTitle[row].rawValue
         
@@ -72,8 +76,8 @@ extension RDHomeViewController: UITableViewDataSource,UITableViewDelegate {
         case .challengeWeek3:
             open(to: RDChallenge3ViewController())
         case .challengeWeek4:
-            let layout = UICollectionViewFlowLayout()
-            open(to: RDChallenge4ViewController(collectionViewLayout: layout))
+            setNavigationBarHidden()
+            open(to: RDTabbarSpotify())
         case .challengeWeek5:
             open(to: RDChallenge5ViewController())
         case .challengeWeek6:
@@ -84,6 +88,10 @@ extension RDHomeViewController: UITableViewDataSource,UITableViewDelegate {
     private func open(to viewController: UIViewController) {
         viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func setNavigationBarHidden() {
+        navigationController?.isNavigationBarHidden = true
     }
     
 }

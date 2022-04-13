@@ -198,9 +198,7 @@ extension DashboardViewController {
 // MARK: goToRDViewController
 extension DashboardViewController {
     func goToRDViewController() {
-        guard let selectedStudent = selectedStudent else { return }
         let viewController = RDTabbarViewController()
-        viewController.name = selectedStudent.name
         navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(viewController, animated: true)
     }

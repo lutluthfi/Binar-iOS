@@ -12,38 +12,33 @@ final class RDSpotifyCell: UICollectionViewCell {
     
     let cellId : String = "subCellID"
     
-    let titleLabel: UILabel = {
-        let lb  = UILabel()
-        lb.text = "Section Title"
-        lb.textColor = .white
-        lb.font = UIFont.boldSystemFont(ofSize: 14)
-        lb.translatesAutoresizingMaskIntoConstraints = false
-        
-        return lb
+    let spotifyTitleLabel: UILabel = {
+        let titleLabel  = UILabel()
+        titleLabel.text = "Section Title"
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        return titleLabel
     }()
     
-    let collectionView : UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        
-        
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
-        cv.translatesAutoresizingMaskIntoConstraints = false
-        
-        return cv
-        
+    let spotifyCollectionView : UICollectionView = {
+        let collectionViewFlow = UICollectionViewFlowLayout()
+        collectionViewFlow.scrollDirection = .horizontal
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlow)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.addSubview(titleLabel)
+        contentView.addSubview(spotifyTitleLabel)
         contentView.backgroundColor = .black
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
-        
+        spotifyCollectionView.register(RDSubSpotifyCell.self, forCellWithReuseIdentifier: cellId)
+        spotifyCollectionView.backgroundColor = .black
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            titleLabel.leftAnchor.constraint(equalTo: leftAnchor,constant: 8),
+            spotifyTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            spotifyTitleLabel.leftAnchor.constraint(equalTo: leftAnchor,constant: 8),
         ])
         setupSubCells()
     }
@@ -53,15 +48,15 @@ final class RDSpotifyCell: UICollectionViewCell {
     }
     
     fileprivate  func setupSubCells(){
-        addSubview(collectionView)
+        addSubview(spotifyCollectionView)
         
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        spotifyCollectionView.dataSource = self
+        spotifyCollectionView.delegate = self
         
-        collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
-        collectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        collectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        collectionView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        spotifyCollectionView.topAnchor.constraint(equalTo: spotifyTitleLabel.bottomAnchor).isActive = true
+        spotifyCollectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        spotifyCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        spotifyCollectionView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
     }
 }
 
@@ -73,22 +68,15 @@ extension RDSpotifyCell: UICollectionViewDelegate,UICollectionViewDataSource,UIC
         return  4
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
-        cell.backgroundColor = .yellow
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RDSubSpotifyCell
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let width = frame.height
         let height = frame.height
-        
         return CGSize(width: width, height: height)
-        
     }
-    
     
 }

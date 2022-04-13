@@ -8,19 +8,16 @@
 import UIKit
 
 final class RDTabbarViewController: UITabBarController {
-    
-    var name: String?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTabbarView()
-        navigationItem.title = name
         setupNavigationVC()
     }
     
     private func setupTabbarView() {
         view.backgroundColor = .systemBackground
-        UITabBar.appearance().barTintColor = .systemBackground
+        tabBar.barTintColor = .systemBackground
         tabBar.tintColor = .label
     }
     
