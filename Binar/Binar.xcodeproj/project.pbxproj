@@ -97,6 +97,8 @@
 		59D4282827EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
+		7BAC39B72806A89C0016A938 /* IGLikesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC39B62806A89C0016A938 /* IGLikesLabel.swift */; };
+		7BAC39B92806AD290016A938 /* IGLikesLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC39B82806AD290016A938 /* IGLikesLabelViewController.swift */; };
 		A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */; };
 		A406D3E927EDEA3C001DE178 /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A406D3E827EDEA3C001DE178 /* AKMain.storyboard */; };
 		A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */; };
@@ -214,6 +216,8 @@
 		59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADAnimalViewCellViewTableViewCell.xib; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
+		7BAC39B62806A89C0016A938 /* IGLikesLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IGLikesLabel.swift; path = Binar/DataLayer/InstagramService/Remote/IGLikesLabel.swift; sourceTree = SOURCE_ROOT; };
+		7BAC39B82806AD290016A938 /* IGLikesLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGLikesLabelViewController.swift; sourceTree = "<group>"; };
 		A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKDetailViewController.swift; sourceTree = "<group>"; };
 		A406D3E827EDEA3C001DE178 /* AKMain.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AKMain.storyboard; sourceTree = "<group>"; };
 		A406D3EB27EDEA52001DE178 /* AKAnimalTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKAnimalTableCell.swift; sourceTree = "<group>"; };
@@ -641,9 +645,11 @@
 		4FF0B30927E8DFD400CAF144 /* DS */ = {
 			isa = PBXGroup;
 			children = (
+				7BAC39B62806A89C0016A938 /* IGLikesLabel.swift */,
 				4FF0B30B27E8DFD400CAF144 /* DSMain.storyboard */,
 				4FF0B30A27E8DFD400CAF144 /* AnimalTableViewCell.swift */,
 				4FF0B30C27E8DFD400CAF144 /* DSViewController.swift */,
+				7BAC39B82806AD290016A938 /* IGLikesLabelViewController.swift */,
 			);
 			path = DS;
 			sourceTree = "<group>";
@@ -1000,6 +1006,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAC39B72806A89C0016A938 /* IGLikesLabel.swift in Sources */,
 				383935AE27ECE27A0051A89C /* BIAnimalTableViewController.swift in Sources */,
 				2504065627EAF53E00186517 /* RNViewController.swift in Sources */,
 				4FF0B30F27E8DFD400CAF144 /* DSViewController.swift in Sources */,
@@ -1051,6 +1058,7 @@
 				319988BF27F997BF00891D32 /* MFQRVC.swift in Sources */,
 				A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */,
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
+				7BAC39B92806AD290016A938 /* IGLikesLabelViewController.swift in Sources */,
 				4F33D5FD27FACEB400C4048D /* UIVisualEffectView+Extension.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				4F33D5DF27F6DFA600C4048D /* ARChallenge4ViewController.swift in Sources */,
