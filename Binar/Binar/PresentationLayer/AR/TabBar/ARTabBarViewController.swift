@@ -35,33 +35,13 @@ final class ARTabBarViewController: UITabBarController {
         let _viewControllers: [UINavigationController] = [
             homeViewController, browseViewController,
             searchViewController
-        ].map { UINavigationController(rootViewController: $0) }
+        ].map {
+            let navigationController = UINavigationController(rootViewController: $0)
+            navigationController.setNavigationBarHidden(true, animated: false)
+            return navigationController
+        }
         
         tabBar.backgroundColor = .systemBackground
         viewControllers = _viewControllers
-    }
-}
-
-final class ARHomeViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .systemRed
-    }
-}
-
-final class ARBrowseViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .systemGreen
-    }
-}
-
-final class ARSearchViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .systemBlue
     }
 }

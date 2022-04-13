@@ -17,6 +17,7 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
         case CompositionalCollectionView
         case ChipsCollectionView
         case TabBar
+        case Chat
         
         static var sorted: [Course] {
             Course.allCases.sorted {
@@ -39,6 +40,16 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerCell(UITableViewCell.self)
+        
+        let api = InstagramAPI(appId: "6249791f9296122eca0475be")
+        api.getUsers { result in
+            switch result {
+            case let .success(data):
+                print(data.data.first?.firstName)
+            case let .failure(error):
+                print(String(describing: error))
+            }
+        }
     }
     
     // MARK: TableViewDataSource
@@ -70,6 +81,8 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
         switch course {
         case .Challenge4:
             open(ARChallenge4ViewController())
+        case .Chat:
+            open(ARChatViewController())
         case .DelegatePattern:
             open(ARFirstViewController())
         case .Form:

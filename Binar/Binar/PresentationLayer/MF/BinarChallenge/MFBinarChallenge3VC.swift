@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class MFBinarChallengeViewController: UIViewController {
+final class MFBinarChallenge3VC: UIViewController {
     
     @IBOutlet weak var valueALabel: UITextField!
     @IBOutlet weak var valueBLabel: UITextField!
@@ -17,6 +17,8 @@ final class MFBinarChallengeViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
+        
+        title = "Binar Challenge Chapter 3"
         valueALabel.keyboardType = .numberPad
         valueBLabel.keyboardType = .numberPad
         
@@ -34,13 +36,7 @@ final class MFBinarChallengeViewController: UIViewController {
         let valueB = Int(valueBLabel.text!) ?? 0
         let summary = valueA + valueB
         resultLabel.text = String(summary)
-        
-        let img1 = UIImage(systemName: "sun.min")
-        let img2 = UIImage(systemName: "moon")
-        let img3 = UIImage(systemName: "cloud")
-        let randomImage = [img1, img2, img3]
-        
-        imageView.image = randomImage.randomElement()!!
+        imageView.loadImage(resource: "https://picsum.photos/200")
         
     }
 }
