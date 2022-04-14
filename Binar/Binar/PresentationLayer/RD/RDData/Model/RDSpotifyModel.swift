@@ -9,41 +9,81 @@ import UIKit
 
 struct RDSpotifyModel: Codable {
     let title: String
-    let titleDescription: String
-    let imageCover: String
-    let playlist: String
+    let playlist: [RDSpotifyPlaylist]
+}
+
+struct RDSpotifyPlaylist: Codable {
+    let title: String
+    let image: String
     let follower: Int
-    
-    
-    init(title: String,titleDescription: String,imageCover: String,playlist: String,follower: Int) {
-        self.title = title
-        self.titleDescription = titleDescription
-        self.imageCover = imageCover
-        self.playlist = playlist
-        self.follower = follower
-    }
-    
 }
 
 extension RDSpotifyModel {
-    
     static func dummySpotifyData() -> [RDSpotifyModel] {
         let dummyData = """
                 [
                     {
-                        "name": "Chital",
-                        "titleDescription": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-                        "imageCover": "https://robohash.org/consectetursapientedeserunt.png?size=700x700&set=set1",
-                        "playlist": "herbivora",
-                        "follower": 214
+                        "title": "Section1",
+                        "playlist": [
+                            {
+                                "title": "Justin Bieber",
+                                "image": "SpotifyCover1"
+                                "follower": 180
+                            },
+                            {
+                                "title": "Justin Bieber",
+                                "image": "SpotifyCover1",
+                                "follower": 180
+                            },
+                            {
+                                "title": "Justin Bieber",
+                                "image": "SpotifyCover1"
+                                "follower": 180
+                            },
+                        ]
                     },
                     {
-                        "name": "Chital",
-                        "titleDescription": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-                        "imageCover": "https://robohash.org/consectetursapientedeserunt.png?size=700x700&set=set1",
-                        "playlist": "herbivora",
-                        "follower": 214
+                        "title": "Section2",
+                        "playlist": [
+                            {
+                                "title": "Justin Bieber",
+                                "image": "SpotifyCover1"
+                                "follower": 180
+                            },
+                            {
+                                "title": "Justin Bieber",
+                                "image": "SpotifyCover1",
+                                "follower": 180
+                            },
+                            {
+                                "title": "Justin Bieber",
+                                "image": "SpotifyCover1"
+                                "follower": 180
+                            },
+                        ]
                     },
+                    {
+                        "title": "Section3",
+                        "playlist": [
+                        {
+                            "title": "Justin Bieber",
+                            "image": "SpotifyCover1"
+                            "follower": 180
+                        },
+                        {
+                            "title": "Justin Bieber",
+                            "image": "SpotifyCover1",
+                            "follower": 180
+                        },
+                        {
+                            "title": "Justin Bieber",
+                            "image": "SpotifyCover1"
+                            "follower": 180
+                            },
+                        ]
+                    },
+                ]
+                    
         """
         do {
             let jsonData = Data(dummyData.utf8)

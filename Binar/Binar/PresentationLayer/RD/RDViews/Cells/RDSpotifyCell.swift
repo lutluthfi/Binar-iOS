@@ -11,13 +11,29 @@ import UIKit
 final class RDSpotifyCell: UICollectionViewCell {
     
     let cellId : String = "subCellID"
+    private var spotifyData: [RDSpotifyModel] = RDSpotifyModel.dummySpotifyData()
+    
+//    var section : Section? {
+//         didSet{
+//            
+//             guard let section = self.section else {return}
+//             self.titleLabel.text = section.title
+//             self.section?.playlists.forEach({ (item) in
+//                 let playlist = PlayList(dictionary: item as! [String : Any])
+//                 self.playlists.append(playlist)
+//
+//             })
+//             self.collectionView.reloadData()
+//             
+//         }
+//     }
     
     let spotifyTitleLabel: UILabel = {
         let titleLabel  = UILabel()
         titleLabel.text = "Section Title"
         titleLabel.textColor = .white
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        titleLabel.font = UIFont.systemFont(ofSize: 14)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         return titleLabel
     }()
@@ -63,9 +79,9 @@ final class RDSpotifyCell: UICollectionViewCell {
 
 extension RDSpotifyCell: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    
+  
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  4
+        return spotifyData[section].playlist.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

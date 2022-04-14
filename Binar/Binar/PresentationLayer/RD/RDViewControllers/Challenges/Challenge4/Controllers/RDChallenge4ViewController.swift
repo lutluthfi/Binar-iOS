@@ -10,6 +10,7 @@ import UIKit
 final class RDChallenge4ViewController: UICollectionViewController {
     let cellId : String = "cellId"
     let apperance = UINavigationBarAppearance()
+    private var spotifyData: [RDSpotifyModel] = RDSpotifyModel.dummySpotifyData()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +36,7 @@ final class RDChallenge4ViewController: UICollectionViewController {
 extension RDChallenge4ViewController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return spotifyData.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -45,7 +46,7 @@ extension RDChallenge4ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.width
-        let height = CGFloat(200)
+        let height = CGFloat(300)
         return CGSize(width: width, height: height)
     }
     

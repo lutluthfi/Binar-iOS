@@ -10,6 +10,16 @@ import UIKit
 
 final class RDSubSpotifyCell: UICollectionViewCell {
     
+//    var playlist : PlayList? {
+//               didSet{
+//                   print("Playlist 🎯",self.playlist)
+//                guard let playlist = self.playlist else {return}
+//                self.ImageView.image = UIImage(named: playlist.image)
+//                self.TitleLabel.text = self.playlist?.title
+//
+//               }
+//        }
+    
     private lazy var cellImageView : UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .yellow
