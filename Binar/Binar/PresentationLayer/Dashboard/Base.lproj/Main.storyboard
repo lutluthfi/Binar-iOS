@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jTj-eQ-jJP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="HrT-tE-r2t">
+            <objects>
+                <navigationController id="jTj-eQ-jJP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZGf-yy-DvI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k56-rI-i0c">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="PBB-NW-Gs1" kind="relationship" relationship="rootViewController" id="e4z-U9-IYr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMO-VQ-2Ph" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="122"/>
+        </scene>
+        <!--Binar Academy-->
+        <scene sceneID="bxv-Me-8Rf">
+            <objects>
+                <tableViewController id="PBB-NW-Gs1" customClass="DashboardViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="2jy-29-HHh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Type student name" showsCancelButton="YES" id="jEr-zk-CNf">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            <connections>
+                                <outlet property="delegate" destination="PBB-NW-Gs1" id="ku8-Mr-W42"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentTableCell" id="3lC-rM-PRE">
+                                <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3lC-rM-PRE" id="HJf-pR-9Gm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="PBB-NW-Gs1" id="0OR-8R-5F4"/>
+                            <outlet property="delegate" destination="PBB-NW-Gs1" id="93f-EK-0JT"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Binar Academy" id="hOg-MP-VKj"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13f-Cg-1Uo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168" y="122"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9IL-is-iYh">
+            <objects>
+                <viewController id="bNR-Zs-oux" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P9V-wm-7ab">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzF-m8-6O2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ZL-QC-PWJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6ZL-QC-PWJ" secondAttribute="bottom" id="4gq-e5-QZV"/>
+                                    <constraint firstItem="6ZL-QC-PWJ" firstAttribute="top" secondItem="hzF-m8-6O2" secondAttribute="top" id="6ai-21-xyf"/>
+                                    <constraint firstItem="6ZL-QC-PWJ" firstAttribute="height" secondItem="hzF-m8-6O2" secondAttribute="height" priority="250" id="O2j-yD-UO7"/>
+                                    <constraint firstItem="6ZL-QC-PWJ" firstAttribute="width" secondItem="hzF-m8-6O2" secondAttribute="width" id="Srp-VN-idE"/>
+                                    <constraint firstAttribute="trailing" secondItem="6ZL-QC-PWJ" secondAttribute="trailing" id="rrk-we-T1W"/>
+                                    <constraint firstItem="6ZL-QC-PWJ" firstAttribute="leading" secondItem="hzF-m8-6O2" secondAttribute="leading" id="urm-yo-IQy"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="OYv-6P-IbV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Z7k-VL-ihH"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MaH-vw-GQh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MaH-vw-GQh" firstAttribute="bottom" secondItem="hzF-m8-6O2" secondAttribute="bottom" id="1BH-6D-iYm"/>
+                            <constraint firstItem="MaH-vw-GQh" firstAttribute="trailing" secondItem="hzF-m8-6O2" secondAttribute="trailing" id="CTg-mS-xOu"/>
+                            <constraint firstItem="hzF-m8-6O2" firstAttribute="top" secondItem="MaH-vw-GQh" secondAttribute="top" id="gsq-bq-GkP"/>
+                            <constraint firstItem="hzF-m8-6O2" firstAttribute="leading" secondItem="MaH-vw-GQh" secondAttribute="leading" id="z3m-IH-Azt"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0G-NC-g8u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="105"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

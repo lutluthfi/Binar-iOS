@@ -4,10 +4,445 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb13acf2-dae8-44b2-8348-32786418959b" name="Changes" comment="mergeback from master">
+    <list default="true" id="eb13acf2-dae8-44b2-8348-32786418959b" name="Changes" comment="resolve conflict">
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/DataLayer/InstagramService/Remote/Entity/IGDataResponse.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/DataLayer/InstagramService/Remote/Entity/IGLocationResponse.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/DataLayer/InstagramService/Remote/Entity/IGUserResponse.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/DataLayer/InstagramService/Remote/InstagramAPI.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/DataLayer/Network/URLComponentsBuilder.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/DataLayer/Network/URLRequestBuilder.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AD/ADAnimalViewCellViewTableViewCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AD/ADAnimalViewCellViewTableViewCell.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AD/ADAnimalViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AD/ADMain.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AD/ADViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AK/AKDetailViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AK/AKMain.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AK/AKViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AK/Cell/AKAnimalTableCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AK/Cell/AKAnimalTableCell.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/ARViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Challenge4/ARChallenge4ViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Chat/ARChatViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Chat/Subview/ARChatInputTextView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/ChipsCollectionView/ARChipsViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/DelegatePattern/ARFirstViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/DelegatePattern/ARSecondViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Form/ARFormViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Form/Cell/ARFormTextFieldTableCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Form/Cell/ARFormTextViewTableCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Instagram/ARInstagramViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/StandardCollectionView/ARStandardViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/TabBar/ARTabBarViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/TabBar/BrowsePage/ARBrowseViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/TabBar/BrowsePage/Cell/ARBrowseBannerCollectionCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/TabBar/HomePage/ARHomeViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/TabBar/HomePage/TopBanner/ARTopBannerTableCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/TabBar/SearchPage/ARSearchViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/BI/AnimalChallenge/AnimalDetailViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/BI/AnimalChallenge/BIAddAnimalViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/BI/AnimalChallenge/BIAnimalTableViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/BI/AnimalChallenge/Cell/BIAnimalTableCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/BI/AnimalChallenge/Cell/BIAnimalTableCell.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/BI/BIViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/BI/ChapterChallenge/ChallengeViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/Dashboard/DashboardViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/Instagram/ComponentView/IGLikesLabel.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/Instagram/ComponentView/IGUsernameLabel.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/Instagram/Home/IGHomeViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/Instagram/IGTabBarController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/Instagram/Profile/IGProfileViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/BinarChallenge/MFBinarChallengeMain.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/FasilChallenge/FasilChallenge2/Cell/MFTableCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/FasilChallenge/FasilChallenge2/Cell/MFTableCell.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/FasilChallenge/FasilChallenge2/MFFasilChallenge2VC.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/FasilChallenge/FasilChallenge3/MFFasilChallenge3VC.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/FasilChallenge/FasilChallenge3/MFQRVC.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/FasilChallenge/MFFasilChallengeMain.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/MFMain.storyboard" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/MFViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/RD/RDUtils/RDConstants.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/RD/RDViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/RD/RDViewControllers/RDDetailViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/RD/RDViewModels/RDViewModels.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/RD/RDViews/Cells/RDAnimalListCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/RD/RDViews/Views/RDView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/TH/Animal/Cell/THAnimalTableCell.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/TH/Animal/Cell/THAnimalTableCell.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/TH/Animal/Detail/THDetailAnimalViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/TH/Animal/Detail/THDetailAnimalViewController.xib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/TH/Animal/THAnimalTableViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/MFButton1.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/MFButton1.imageset/leadership (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/MFButton1.imageset/leadership (2)@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/MFButton1.imageset/leadership (2)@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/MFButton2.imageset/Contents.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/MFButton2.imageset/leadership (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/MFButton2.imageset/leadership (3)@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/MFButton2.imageset/leadership (3)@3x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Extension/Data+Extension.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Extension/Encodable+Extension.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Extension/UICollectionView+Extension.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Extension/UITableView+Extension.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Extension/UIView+Extension.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Extension/UIViewController+Extension.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Extension/UIVisualEffectView+Extension.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Extension/URLSession+Extension.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/TitleEnum.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Typealias.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Binar/Binar/Utility/View/CarouselView.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Binar/Binar.xcworkspace/xcshareddata/swiftpm/Package.resolved" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AD/ADMain.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AD/ADViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AD/ADAnimalV1.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AF/AFMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AF/AFMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AF/AFViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AF/AFViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AI/AIAnimalTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AI/AIAnimalTableViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AI/AIMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AI/AIMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AI/AIViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AI/AIViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AK/AKMain.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AK/AKViewController.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AR/ARMain.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AR/ARViewController.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AR/Animal/ARAnimalTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Animal/ARAnimalTableViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AR/Animal/Cell/ARAnimalTableCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Animal/Cell/ARAnimalTableCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AR/Animal/Cell/ARAnimalTableCell.xib" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AR/Animal/Cell/ARAnimalTableCell.xib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AT/ATMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AT/ATMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AT/ATViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/AT/ATViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Animal.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/DataLayer/Animal.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/App/AppDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/150x150.imageset/150x150.png" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/150x150.imageset/150x150.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/150x150.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/150x150.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Aardvark.imageset/Aardvark.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Aardvark.imageset/Aardvark.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Aardvark.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Aardvark.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/AccentColor.colorset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/AccentColor.colorset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Albatross.imageset/Albatross.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Albatross.imageset/Albatross.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Albatross.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Albatross.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Alligator.imageset/Alligator.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Alligator.imageset/Alligator.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Alligator.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Alligator.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Alpaca.imageset/Alpaca.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Alpaca.imageset/Alpaca.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Alpaca.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Alpaca.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ant.imageset/Ant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ant.imageset/Ant.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ant.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ant.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Anteater.imageset/Anteater.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Anteater.imageset/Anteater.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Anteater.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Anteater.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Antelope.imageset/Antelope.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Antelope.imageset/Antelope.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Antelope.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Antelope.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ape.imageset/Ape.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ape.imageset/Ape.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ape.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ape.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Armadillo.imageset/Armadillo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Armadillo.imageset/Armadillo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Armadillo.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Armadillo.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Baboon.imageset/Baboon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Baboon.imageset/Baboon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Baboon.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Baboon.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Badger.imageset/Badger.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Badger.imageset/Badger.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Badger.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Badger.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Barracuda.imageset/Barracuda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Barracuda.imageset/Barracuda.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Barracuda.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Barracuda.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Bat.imageset/Bat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Bat.imageset/Bat.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Bat.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Bat.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Bear.imageset/Bear.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Bear.imageset/Bear.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Bear.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Bear.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Beaver.imageset/Beaver.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Beaver.imageset/Beaver.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Beaver.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Beaver.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Bee.imageset/Bee.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Bee.imageset/Bee.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Bee.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Bee.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Bison.imageset/Bison.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Bison.imageset/Bison.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Bison.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Bison.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Boar.imageset/Boar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Boar.imageset/Boar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Boar.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Boar.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Buffalo.imageset/Buffalo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Buffalo.imageset/Buffalo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Buffalo.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Buffalo.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Butterfly.imageset/Butterfly.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Butterfly.imageset/Butterfly.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Butterfly.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Butterfly.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Camel.imageset/Camel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Camel.imageset/Camel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Camel.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Camel.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Capybara.imageset/Capybara.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Capybara.imageset/Capybara.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Capybara.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Capybara.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Caribou.imageset/Caribou.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Caribou.imageset/Caribou.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Caribou.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Caribou.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cassowary.imageset/Cassowary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cassowary.imageset/Cassowary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cassowary.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cassowary.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cat.imageset/Cat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cat.imageset/Cat.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cat.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cat.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Caterpillar.imageset/Caterpillar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Caterpillar.imageset/Caterpillar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Caterpillar.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Caterpillar.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cattle.imageset/Cattle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cattle.imageset/Cattle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cattle.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cattle.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chamois.imageset/Chamois.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chamois.imageset/Chamois.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chamois.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chamois.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cheetah.imageset/Cheetah.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cheetah.imageset/Cheetah.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cheetah.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cheetah.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chicken.imageset/Chicken.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chicken.imageset/Chicken.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chicken.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chicken.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chimpanzee.imageset/Chimpanzee.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chimpanzee.imageset/Chimpanzee.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chimpanzee.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chimpanzee.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chinchilla.imageset/Chinchilla.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chinchilla.imageset/Chinchilla.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chinchilla.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chinchilla.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chough.imageset/Chough.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chough.imageset/Chough.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Chough.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Chough.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Clam.imageset/Clam.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Clam.imageset/Clam.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Clam.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Clam.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cobra.imageset/Cobra.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cobra.imageset/Cobra.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cobra.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cobra.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cockroach.imageset/Cockroach.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cockroach.imageset/Cockroach.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cockroach.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cockroach.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cod.imageset/Cod.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cod.imageset/Cod.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cod.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cod.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cormorant.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cormorant.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Cormorant.imageset/Cormorant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Cormorant.imageset/Cormorant.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Coyote.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Coyote.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Coyote.imageset/Coyote.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Coyote.imageset/Coyote.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Crab.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Crab.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Crab.imageset/Crab.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Crab.imageset/Crab.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Crane.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Crane.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Crane.imageset/Crane.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Crane.imageset/Crane.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Crocodile.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Crocodile.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Crocodile.imageset/Crocodile.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Crocodile.imageset/Crocodile.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Crow.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Crow.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Crow.imageset/Crow.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Crow.imageset/Crow.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Curlew.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Curlew.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Curlew.imageset/Curlew.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Curlew.imageset/Curlew.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Deer.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Deer.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Deer.imageset/Deer.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Deer.imageset/Deer.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dinosaur.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dinosaur.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dinosaur.imageset/Dinosaur.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dinosaur.imageset/Dinosaur.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dog.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dog.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dog.imageset/Dog.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dog.imageset/Dog.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dogfish.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dogfish.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dogfish.imageset/Dogfish.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dogfish.imageset/Dogfish.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dolphin.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dolphin.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dolphin.imageset/Dolphin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dolphin.imageset/Dolphin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Donkey.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Donkey.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Donkey.imageset/Donkey.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Donkey.imageset/Donkey.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dotterel.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dotterel.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dotterel.imageset/Dotterel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dotterel.imageset/Dotterel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dove.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dove.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dove.imageset/Dove.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dove.imageset/Dove.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dragonfly.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dragonfly.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dragonfly.imageset/Dragonfly.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dragonfly.imageset/Dragonfly.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Duck.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Duck.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Duck.imageset/Duck.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Duck.imageset/Duck.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dugong.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dugong.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dugong.imageset/Dugong.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dugong.imageset/Dugong.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dunlin.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dunlin.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Dunlin.imageset/Dunlin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Dunlin.imageset/Dunlin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Eagle.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Eagle.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Eagle.imageset/Eagle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Eagle.imageset/Eagle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Echidna.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Echidna.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Echidna.imageset/Echidna.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Echidna.imageset/Echidna.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Eel.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Eel.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Eel.imageset/Eel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Eel.imageset/Eel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Eland.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Eland.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Eland.imageset/Eland.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Eland.imageset/Eland.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Elephant.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Elephant.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Elephant.imageset/Elephant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Elephant.imageset/Elephant.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Elk.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Elk.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Elk.imageset/Elk.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Elk.imageset/Elk.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Emu.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Emu.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Emu.imageset/Emu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Emu.imageset/Emu.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Falcon.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Falcon.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Falcon.imageset/Falcon.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Falcon.imageset/Falcon.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ferret.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ferret.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ferret.imageset/Ferret.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ferret.imageset/Ferret.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Finch.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Finch.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Finch.imageset/Finch.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Finch.imageset/Finch.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Fish.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Fish.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Fish.imageset/Fish.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Fish.imageset/Fish.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Flamingo.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Flamingo.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Flamingo.imageset/Flamingo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Flamingo.imageset/Flamingo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Fly.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Fly.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Fly.imageset/Fly.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Fly.imageset/Fly.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Fox.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Fox.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Fox.imageset/Fox.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Fox.imageset/Fox.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Frog.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Frog.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Frog.imageset/Frog.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Frog.imageset/Frog.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gaur.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gaur.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gaur.imageset/Gaur.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gaur.imageset/Gaur.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gazelle.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gazelle.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gazelle.imageset/Gazelle.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gazelle.imageset/Gazelle.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gerbil.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gerbil.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gerbil.imageset/Gerbil.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gerbil.imageset/Gerbil.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Giraffe.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Giraffe.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Giraffe.imageset/Giraffe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Giraffe.imageset/Giraffe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gnat.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gnat.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gnat.imageset/Gnat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gnat.imageset/Gnat.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gnu.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gnu.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gnu.imageset/Gnu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gnu.imageset/Gnu.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goat.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goat.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goat.imageset/Goat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goat.imageset/Goat.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goldfinch.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goldfinch.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goldfinch.imageset/Goldfinch.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goldfinch.imageset/Goldfinch.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goldfish.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goldfish.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goldfish.imageset/Goldfish.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goldfish.imageset/Goldfish.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goose.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goose.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goose.imageset/Goose.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goose.imageset/Goose.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gorilla.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gorilla.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gorilla.imageset/Gorilla.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gorilla.imageset/Gorilla.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goshawk.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goshawk.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Goshawk.imageset/Goshawk.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Goshawk.imageset/Goshawk.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Grasshopper.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Grasshopper.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Grasshopper.imageset/Grasshopper.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Grasshopper.imageset/Grasshopper.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Grouse.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Grouse.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Grouse.imageset/Grouse.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Grouse.imageset/Grouse.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Guanaco.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Guanaco.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Guanaco.imageset/Guanaco.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Guanaco.imageset/Guanaco.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gull.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gull.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Gull.imageset/Gull.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Gull.imageset/Gull.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hamster.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hamster.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hamster.imageset/Hamster.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hamster.imageset/Hamster.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hare.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hare.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hare.imageset/Hare.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hare.imageset/Hare.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hawk.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hawk.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hawk.imageset/Hawk.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hawk.imageset/Hawk.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hedgehog.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hedgehog.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hedgehog.imageset/Hedgehog.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hedgehog.imageset/Hedgehog.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Heron.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Heron.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Heron.imageset/Heron.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Heron.imageset/Heron.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Herring.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Herring.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Herring.imageset/Herring.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Herring.imageset/Herring.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hippopotamus.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hippopotamus.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hippopotamus.imageset/Hippopotamus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hippopotamus.imageset/Hippopotamus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hornet.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hornet.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hornet.imageset/Hornet.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hornet.imageset/Hornet.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Horse.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Horse.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Horse.imageset/Horse.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Horse.imageset/Horse.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Human.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Human.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Human.imageset/Human.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Human.imageset/Human.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hummingbird.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hummingbird.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hummingbird.imageset/Hummingbird.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hummingbird.imageset/Hummingbird.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hyena.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hyena.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Hyena.imageset/Hyena.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Hyena.imageset/Hyena.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/IKEA-Logo.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/IKEA-Logo.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/IKEA-Logo.imageset/IKEA-Logo copy 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/IKEA-Logo.imageset/IKEA-Logo copy 2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/IKEA-Logo.imageset/IKEA-Logo copy 3-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/IKEA-Logo.imageset/IKEA-Logo copy 3-1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/IKEA-Logo.imageset/IKEA-Logo copy.png" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/IKEA-Logo.imageset/IKEA-Logo copy.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ibex.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ibex.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ibex.imageset/Ibex.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ibex.imageset/Ibex.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ibis.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ibis.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ibis.imageset/Ibis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ibis.imageset/Ibis.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Jackal.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Jackal.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Jackal.imageset/Jackal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Jackal.imageset/Jackal.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Jaguar.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Jaguar.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Jaguar.imageset/Jaguar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Jaguar.imageset/Jaguar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Jay.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Jay.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Jay.imageset/Jay.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Jay.imageset/Jay.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Jellyfish.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Jellyfish.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Jellyfish.imageset/Jellyfish.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Jellyfish.imageset/Jellyfish.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Kangaroo.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Kangaroo.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Kangaroo.imageset/Kangaroo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Kangaroo.imageset/Kangaroo.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Kingfisher.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Kingfisher.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Kingfisher.imageset/Kingfisher.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Kingfisher.imageset/Kingfisher.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Koala.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Koala.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Koala.imageset/Koala.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Koala.imageset/Koala.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Kookabura.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Kookabura.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Kookabura.imageset/Kookabura.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Kookabura.imageset/Kookabura.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Kudu.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Kudu.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Kudu.imageset/Kudu.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Kudu.imageset/Kudu.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Lapwing.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Lapwing.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Lapwing.imageset/Lapwing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Lapwing.imageset/Lapwing.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Lark.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Lark.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Lark.imageset/Lark.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Lark.imageset/Lark.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Leopard.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Leopard.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Leopard.imageset/Leopard.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Leopard.imageset/Leopard.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Lion.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Lion.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Lion.imageset/Lion.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Lion.imageset/Lion.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Llama.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Llama.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Llama.imageset/Llama.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Llama.imageset/Llama.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Lobster.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Lobster.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Lobster.imageset/Lobster.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Lobster.imageset/Lobster.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Locust.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Locust.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Locust.imageset/Locust.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Locust.imageset/Locust.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Loris.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Loris.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Loris.imageset/Loris.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Loris.imageset/Loris.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Louse.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Louse.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Louse.imageset/Louse.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Louse.imageset/Louse.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Magpie.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Magpie.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Magpie.imageset/Magpie.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Magpie.imageset/Magpie.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mallard.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mallard.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mallard.imageset/Mallard.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mallard.imageset/Mallard.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Manatee.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Manatee.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Manatee.imageset/Manatee.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Manatee.imageset/Manatee.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mandrill.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mandrill.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mandrill.imageset/Mandrill.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mandrill.imageset/Mandrill.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mantis.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mantis.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mantis.imageset/Mantis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mantis.imageset/Mantis.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Marten.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Marten.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Marten.imageset/Marten.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Marten.imageset/Marten.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Meerkat.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Meerkat.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Meerkat.imageset/Meerkat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Meerkat.imageset/Meerkat.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mink.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mink.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mink.imageset/Mink.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mink.imageset/Mink.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mole.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mole.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mole.imageset/Mole.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mole.imageset/Mole.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mongoose.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mongoose.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mongoose.imageset/Mongoose.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mongoose.imageset/Mongoose.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Monkey.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Monkey.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Monkey.imageset/Monkey.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Monkey.imageset/Monkey.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Moose.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Moose.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Moose.imageset/Moose.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Moose.imageset/Moose.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mosquito.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mosquito.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mosquito.imageset/Mosquito.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mosquito.imageset/Mosquito.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mule.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mule.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Mule.imageset/Mule.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Mule.imageset/Mule.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Newt.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Newt.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Newt.imageset/Newt.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Newt.imageset/Newt.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Nightingale.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Nightingale.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Nightingale.imageset/Nightingale.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Nightingale.imageset/Nightingale.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Octopus.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Octopus.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Octopus.imageset/Octopus.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Octopus.imageset/Octopus.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Okapi.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Okapi.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Okapi.imageset/Okapi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Okapi.imageset/Okapi.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Opossum.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Opossum.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Opossum.imageset/Opossum.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Opossum.imageset/Opossum.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Oryx.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Oryx.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Oryx.imageset/Oryx.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Oryx.imageset/Oryx.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ostrich.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ostrich.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Ostrich.imageset/Ostrich.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Ostrich.imageset/Ostrich.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Owl.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Owl.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Owl.imageset/Owl.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Owl.imageset/Owl.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Panther.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Panther.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Panther.imageset/Panther.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Panther.imageset/Panther.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Pelican.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Pelican.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Pelican.imageset/Pelican.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Pelican.imageset/Pelican.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Penguin.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Penguin.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Penguin.imageset/Penguin.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Penguin.imageset/Penguin.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Rabbit.imageset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Rabbit.imageset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Assets.xcassets/Rabbit.imageset/Rabbit.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Assets.xcassets/Rabbit.imageset/Rabbit.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/BI/BIMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/BI/BIMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/BI/BIViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/BI/BIViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Base.lproj/LaunchScreen.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Resource/Base.lproj/LaunchScreen.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/Dashboard/Base.lproj/Main.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/DP/DPMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/DP/DPMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/DP/DPViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/DP/DPViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/DS/AnimalTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/DS/AnimalTableViewCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/DS/DSMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/DS/DSMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/DS/DSViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/DS/DSViewController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Binar/Binar/DashboardViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/DashboardViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/MF/MFBinarChallengeViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/BinarChallenge/MFBinarChallenge3VC.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/MF/MFFasilChallengeViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/MF/FasilChallenge/FasilChallenge1/MFFasilChallenge1VC.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/MF/MFMain.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/MF/MFViewController.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/NB/NBMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/NB/NBMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/NB/NBViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/NB/NBViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/PW/CustomTableViewCell.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/PW/CustomTableViewCell.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/PW/CustomTableViewCell.xib" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/PW/CustomTableViewCell.xib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/PW/PWMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/PW/PWMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/PW/PWViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/PW/PWViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/RD/RDViewController.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/RN/RNMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/RN/RNMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/RN/RNViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/RN/RNViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/SceneDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/App/SceneDelegate.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Student.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/DataLayer/Student.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/TH/THMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/TH/THMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/TH/THViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/TH/THViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/TS/TSMain.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/TS/TSMain.storyboard" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/TS/TSViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/PresentationLayer/TS/TSViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Utility/UIImageView+Extension.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Binar/Binar/Utility/Extension/UIImageView+Extension.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Binar/Binar/Utility/UITableView+Extension.swift" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +466,7 @@
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cidr.known.project.marker" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -44,6 +480,7 @@
       <workItem from="1648184006988" duration="5000" />
       <workItem from="1648201988425" duration="361000" />
       <workItem from="1648202358468" duration="218000" />
+      <workItem from="1649925681942" duration="452000" />
     </task>
     <task id="LOCAL-00001" summary="mergeback from master">
       <created>1648178977056</created>
@@ -55,6 +492,9 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -65,9 +505,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="mergeback from master" />
-    <option name="LAST_COMMIT_MESSAGE" value="mergeback from master" />
+    <MESSAGE value="resolve conflict" />
+    <option name="LAST_COMMIT_MESSAGE" value="resolve conflict" />
   </component>
 </project>
