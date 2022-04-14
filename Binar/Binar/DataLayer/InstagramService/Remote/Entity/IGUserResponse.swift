@@ -7,6 +7,14 @@
 
 import Foundation
 
+struct IGUserShortResponse: Codable {
+    let id: String
+    let title: String
+    let firstName: String
+    let lastName: String
+    let picture: String
+}
+
 struct IGUserResponse: Codable {
     let id: String
     let title: String
