@@ -11,6 +11,8 @@ final class ARInstagramUserDetailViewController: UIViewController {
     lazy var dateOfBirthTextField = UITextField()
     lazy var phoneNumberTextField = UITextField()
     
+    var detailUser: IGUserResponse?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let stackView = UIStackView(arrangedSubviews: [phoneNumberTextField, dateOfBirthTextField])
