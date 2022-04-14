@@ -311,7 +311,7 @@ extension DashboardViewController {
 extension DashboardViewController {
     func goToNBViewController() {
         let storyboard = UIStoryboard(name: "NBMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "NBViewController") as? NBViewController else {
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "NBMainViewController") as? NBMainViewController else {
             return
         }
         
