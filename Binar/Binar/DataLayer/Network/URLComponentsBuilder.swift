@@ -9,19 +9,22 @@ import Foundation
 
 final class URLComponentsBuilder {
     private var component: URLComponents
+    private let baseUrl: String
     
     init(baseUrl: String) {
+        self.baseUrl = baseUrl
         component = URLComponents(string: baseUrl)!
-        component.queryItems = []
     }
     
     func path(_ string: String) -> URLComponentsBuilder {
-        component.path = string
+        let endpoint = baseUrl + string
+        component = URLComponents(string: endpoint)!
         return self
     }
     
     func addQuery(key: String, value: String?) -> URLComponentsBuilder {
         guard let value = value else { return self }
+        initQueryItemsIfNeed()
         let queryItem = URLQueryItem(name: key, value: value)
         component.queryItems?.append(queryItem)
         return self
@@ -39,4 +42,10 @@ final class URLComponentsBuilder {
     
     func build() -> URLComponents { component }
     func buildUrl() -> URL? { component.url }
+    
+    private func initQueryItemsIfNeed() {
+        if component.queryItems == nil {
+            component.queryItems = []
+        }
+    }
 }

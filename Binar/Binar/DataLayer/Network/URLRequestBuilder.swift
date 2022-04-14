@@ -12,11 +12,11 @@ final class URLRequestBuilder {
     
     init(url: URL) {
         request = URLRequest(url: url)
-        request.addValue("content-type", forHTTPHeaderField: "application/json")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
     }
     
     func appId(_ id: String) -> URLRequestBuilder {
-        request.addValue("app-id", forHTTPHeaderField: id)
+        request.addValue(id, forHTTPHeaderField: "app-id")
         return self
     }
     

@@ -53,7 +53,7 @@ final class InstagramAPI {
     func getUsers(
         limit: Int? = nil,
         page: Int? = nil,
-        _ completion: @escaping (Result<IGDataResponse<IGUserResponse>, Error>) -> Void
+        _ completion: @escaping (Result<IGDataResponse<IGUserShortResponse>, Error>) -> Void
     ) {
         let url: URL? = urlComponentBuilder
             .path("/user")
@@ -71,7 +71,7 @@ final class InstagramAPI {
             .build()
         
         URLSession.shared.dataTask(
-            for: IGDataResponse<IGUserResponse>.self,
+            for: IGDataResponse<IGUserShortResponse>.self,
             with: request,
             completion: completion
         ).resume()
