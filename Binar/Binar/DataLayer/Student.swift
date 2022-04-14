@@ -30,6 +30,7 @@ enum Student: String, CaseIterable {
     case RadenDimas
     case WidyaAyu
     case ArifLuthfi
+    case Instagram
     
     static var sorted: [Student] {
         Student.allCases.sorted { $0.rawValue < $1.rawValue }
