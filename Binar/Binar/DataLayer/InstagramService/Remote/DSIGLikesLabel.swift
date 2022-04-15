@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IGLikesLabel: UIView {
+class DSIGLikesLabel: UIView {
 
 //    override func viewDidLoad() {
 //        super.viewDidLoad()

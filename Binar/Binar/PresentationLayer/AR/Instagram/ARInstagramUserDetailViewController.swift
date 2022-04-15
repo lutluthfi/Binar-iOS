@@ -11,6 +11,7 @@ final class ARInstagramUserDetailViewController: UIViewController {
     lazy var dateOfBirthTextField = UITextField()
     lazy var phoneNumberTextField = UITextField()
     lazy var likesLabel = IGLikesLabel()
+    lazy var usernameLabel = IGUsernameLabel()
     
     private let instagramAPI = InstagramAPI(appId: "6257aed4bbcd232e233bfdcb")
     
@@ -19,7 +20,9 @@ final class ARInstagramUserDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let stackView = UIStackView(arrangedSubviews: [phoneNumberTextField, dateOfBirthTextField, likesLabel])
+        let stackView = UIStackView(arrangedSubviews: [
+            phoneNumberTextField, dateOfBirthTextField, likesLabel, usernameLabel
+        ])
         stackView.axis = .vertical
         stackView.spacing = 16
         view.addSubview(stackView)
@@ -33,6 +36,9 @@ final class ARInstagramUserDetailViewController: UIViewController {
         phoneNumberTextField.placeholder = "Phone Number"
         
         likesLabel.configure(9_999)
+        usernameLabel.onTap = {
+            print("Username Label On Tap")
+        }
         
         loadUsers()
     }
@@ -40,6 +46,9 @@ final class ARInstagramUserDetailViewController: UIViewController {
     private func setUser(_ user: IGUserResponse) {
         dateOfBirthTextField.text = user.dateOfBirth
         phoneNumberTextField.text = user.phone
+        let email = user.email
+        let username = String(email.split(separator: "@").first ?? "null")
+        usernameLabel.configure(username: username)
     }
     
     private func loadUsers() {
