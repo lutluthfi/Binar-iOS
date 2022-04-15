@@ -13,6 +13,7 @@ final class ARInstagramUserDetailViewController: UIViewController {
     lazy var likesLabel = IGLikesLabel()
     lazy var usernameLabel = IGUsernameLabel()
     lazy var captionLabel = IGCaptionLabel()
+    lazy var avatarImageView = IGAvatarImageView()
     lazy var stackView: UIStackView = {
         let view = UIStackView(arrangedSubviews: [
             phoneNumberTextField, dateOfBirthTextField, likesLabel, usernameLabel
@@ -37,6 +38,7 @@ final class ARInstagramUserDetailViewController: UIViewController {
     private func setupAddSubview() {
         view.addSubview(stackView)
         view.addSubview(captionLabel)
+        view.addSubview(avatarImageView)
     }
     
     private func setupConstraint() {
@@ -49,6 +51,11 @@ final class ARInstagramUserDetailViewController: UIViewController {
             $0.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             $0.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             $0.topAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: 20)
+        ]}
+        avatarImageView.makeConstraint {[
+            $0.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            $0.trailingAnchor.constraint(lessThanOrEqualTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            $0.topAnchor.constraint(equalTo: self.captionLabel.bottomAnchor, constant: 20)
         ]}
     }
     
@@ -64,7 +71,10 @@ final class ARInstagramUserDetailViewController: UIViewController {
             print("Username Label On Tap")
         }
         captionLabel.onTap = {
-            
+            print("Caption Label On Tap")
+        }
+        avatarImageView.onTap = {
+            print("Avatar Image View On Tap")
         }
     }
     
@@ -77,6 +87,8 @@ final class ARInstagramUserDetailViewController: UIViewController {
         usernameLabel.configure(username: username)
         
         captionLabel.configure(username: username, caption: "Another major benefit of using NumberFormatter is that it’ll automatically take the user’s current Locale into account when formatting our numbers. For instance, in some countries the number 50932.52 is expected to be formatted as 50 932,52, while other locales prefer 50,932.52 instead. All of those complexities are now handled for us completely automatically, which is most likely what we want when formatting user-facing numbers.\n\nHowever, when that’s not the case, and we’re instead looking for consistency across all locales, then we could either assign a specific Locale to our NumberFormatter, or we could configure it to use specific characters as its decimalSeparator and groupingSeparator")
+        
+        avatarImageView.configure(sizeType: .large, urlString: user.picture)
     }
     
     private func loadUsers() {
