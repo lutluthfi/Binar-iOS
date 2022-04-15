@@ -41,8 +41,6 @@ final class IGUsernameLabel: UIView {
     }
     
     func configure(username: String) {
-        var _username = username
-        _username.removeAll { $0 == "@" }
-        textLabel.text = "@\(_username)"
+        textLabel.attributedText = username.toUsernameAttrString()
     }
 }

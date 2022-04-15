@@ -75,6 +75,7 @@
 		4F83BB7D27F4824700690F01 /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83BB7C27F4824700690F01 /* Typealias.swift */; };
 		4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83BB7F27F49C2400690F01 /* ARChipsViewController.swift */; };
 		4F85415E280814D700D385F3 /* ARInstagramUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85415D280814D700D385F3 /* ARInstagramUserDetailViewController.swift */; };
+		4F854160280970F000D385F3 /* IGCaptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85415F280970F000D385F3 /* IGCaptionLabel.swift */; };
 		4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234CD27DAB530007514BA /* AppDelegate.swift */; };
 		4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234CF27DAB530007514BA /* SceneDelegate.swift */; };
 		4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234D127DAB530007514BA /* DashboardViewController.swift */; };
@@ -216,6 +217,7 @@
 		4F83BB7C27F4824700690F01 /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		4F83BB7F27F49C2400690F01 /* ARChipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARChipsViewController.swift; sourceTree = "<group>"; };
 		4F85415D280814D700D385F3 /* ARInstagramUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARInstagramUserDetailViewController.swift; sourceTree = "<group>"; };
+		4F85415F280970F000D385F3 /* IGCaptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGCaptionLabel.swift; sourceTree = "<group>"; };
 		4FD234CA27DAB530007514BA /* Binar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Binar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD234CD27DAB530007514BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD234CF27DAB530007514BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -589,6 +591,7 @@
 		4F4F5DD228057CCE003AB017 /* ComponentView */ = {
 			isa = PBXGroup;
 			children = (
+				4F85415F280970F000D385F3 /* IGCaptionLabel.swift */,
 				4F4F5DDE28058146003AB017 /* IGLikesLabel.swift */,
 				4F4F5DE0280582F9003AB017 /* IGUsernameLabel.swift */,
 			);
@@ -1318,6 +1321,7 @@
 				4F33D5E227F6E1E000C4048D /* ARFormViewController.swift in Sources */,
 				313B585127F6460D00F7C7F8 /* MFFasilChallengeMain.swift in Sources */,
 				31FD196F27F65D6C00CF1137 /* MFFasilChallenge3VC.swift in Sources */,
+				4F854160280970F000D385F3 /* IGCaptionLabel.swift in Sources */,
 				CE373CCE27E386B700FFF26C /* CustomTableViewCell.swift in Sources */,
 				313B584F27F6459600F7C7F8 /* MFBinarChallengeMain.swift in Sources */,
 				4F33D5DA27F5EB5A00C4048D /* ARSecondViewController.swift in Sources */,

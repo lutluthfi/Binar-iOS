@@ -12,6 +12,15 @@ final class ARInstagramUserDetailViewController: UIViewController {
     lazy var phoneNumberTextField = UITextField()
     lazy var likesLabel = IGLikesLabel()
     lazy var usernameLabel = IGUsernameLabel()
+    lazy var captionLabel = IGCaptionLabel()
+    lazy var stackView: UIStackView = {
+        let view = UIStackView(arrangedSubviews: [
+            phoneNumberTextField, dateOfBirthTextField, likesLabel, usernameLabel
+        ])
+        view.axis = .vertical
+        view.spacing = 16
+        return view
+    }()
     
     private let instagramAPI = InstagramAPI(appId: "6257aed4bbcd232e233bfdcb")
     
@@ -19,36 +28,55 @@ final class ARInstagramUserDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        let stackView = UIStackView(arrangedSubviews: [
-            phoneNumberTextField, dateOfBirthTextField, likesLabel, usernameLabel
-        ])
-        stackView.axis = .vertical
-        stackView.spacing = 16
+        setupAddSubview()
+        setupConstraint()
+        setupView()
+        loadUsers()
+    }
+    
+    private func setupAddSubview() {
         view.addSubview(stackView)
-        view.backgroundColor = .white
+        view.addSubview(captionLabel)
+    }
+    
+    private func setupConstraint() {
         stackView.makeConstraint {[
             $0.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             $0.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
             $0.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
         ]}
+        captionLabel.makeConstraint {[
+            $0.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            $0.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -20),
+            $0.topAnchor.constraint(equalTo: self.stackView.bottomAnchor, constant: 20)
+        ]}
+    }
+    
+    private func setupView() {
+        view.backgroundColor = .white
+        
         dateOfBirthTextField.placeholder = "Date of Birth"
         phoneNumberTextField.placeholder = "Phone Number"
         
         likesLabel.configure(9_999)
+        
         usernameLabel.onTap = {
             print("Username Label On Tap")
         }
-        
-        loadUsers()
+        captionLabel.onTap = {
+            
+        }
     }
     
     private func setUser(_ user: IGUserResponse) {
         dateOfBirthTextField.text = user.dateOfBirth
         phoneNumberTextField.text = user.phone
+        
         let email = user.email
         let username = String(email.split(separator: "@").first ?? "null")
         usernameLabel.configure(username: username)
+        
+        captionLabel.configure(username: username, caption: "Another major benefit of using NumberFormatter is that it’ll automatically take the user’s current Locale into account when formatting our numbers. For instance, in some countries the number 50932.52 is expected to be formatted as 50 932,52, while other locales prefer 50,932.52 instead. All of those complexities are now handled for us completely automatically, which is most likely what we want when formatting user-facing numbers.\n\nHowever, when that’s not the case, and we’re instead looking for consistency across all locales, then we could either assign a specific Locale to our NumberFormatter, or we could configure it to use specific characters as its decimalSeparator and groupingSeparator")
     }
     
     private func loadUsers() {
