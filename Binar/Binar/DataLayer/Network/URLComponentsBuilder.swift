@@ -10,6 +10,7 @@ import Foundation
 final class URLComponentsBuilder {
     private var component: URLComponents
     private let baseUrl: String
+    private lazy var endpoint: String = baseUrl
     
     init(baseUrl: String) {
         self.baseUrl = baseUrl
@@ -17,7 +18,7 @@ final class URLComponentsBuilder {
     }
     
     func path(_ string: String) -> URLComponentsBuilder {
-        let endpoint = baseUrl + string
+        endpoint = endpoint + string
         component = URLComponents(string: endpoint)!
         return self
     }
