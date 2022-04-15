@@ -1298,9 +1298,12 @@
 				E988FB93280687C20021EBFD /* RDView.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
 				A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */,
-				E9BD2D942800620C0068003B /* RDProfileViewController.swift in Sources */,
+<<<<<<< HEAD
 				4F4F5E772806CFBC003AB017 /* Encodable+Extension.swift in Sources */,
 				4F4F5E752806CF95003AB017 /* Data+Extension.swift in Sources */,
+=======
+				E9BD2D942800620C0068003B /* RDProfileViewController.swift in Sources */,
+>>>>>>> feature/iglikeslabel
 				4F83BB6F27EDFA2A00690F01 /* UIView+Extension.swift in Sources */,
 				4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */,
 				383935B527ECEC550051A89C /* AnimalDetailViewController.swift in Sources */,
@@ -1376,8 +1379,11 @@
 				013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */,
 				E9BD2D9B280079ED0068003B /* RDHomeListCell.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,
-				E9E2C11D28056D49000EF9C9 /* RDChallenge6ViewController.swift in Sources */,
+<<<<<<< HEAD
 				4F4F5E702806C88A003AB017 /* URLRequestBuilder.swift in Sources */,
+=======
+				E9E2C11D28056D49000EF9C9 /* RDChallenge6ViewController.swift in Sources */,
+>>>>>>> feature/iglikeslabel
 				4F33D5FB27FA618900C4048D /* ARChatViewController.swift in Sources */,
 				013165EC27ED71BF00CB0BD7 /* THAnimalTableViewController.swift in Sources */,
 				59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */,

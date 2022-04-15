@@ -198,9 +198,9 @@ extension DashboardViewController {
 // MARK: goToRDViewController
 extension DashboardViewController {
     func goToRDViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        let viewController = RDViewController()
-        viewController.name = selectedStudent.name
+        let viewController = RDTabbarViewController()
+//        let viewController = InstagramLikesLabelController()
+        navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
