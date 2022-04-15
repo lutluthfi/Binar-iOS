@@ -76,4 +76,25 @@ final class InstagramAPI {
             completion: completion
         ).resume()
     }
+    
+    func getDetailUser(
+        id: String,
+        _ completion: @escaping (Result<IGUserResponse,Error>) -> Void
+    ) {
+        let url: URL? = urlComponentBuilder
+            .path("/user/\(id)")
+            .buildUrl()
+        
+        guard let url = url else {
+            fatalError("\(Self.self) has a request error URL")
+        }
+        
+        let request: URLRequest = URLRequestBuilder(url: url)
+            .appId(appId)
+            .httpMethod(.GET)
+            .build()
+        
+        URLSession.shared.dataTask(for: IGUserResponse.self, with: request, completion: completion)
+            .resume()
+    }
 }

@@ -40,6 +40,14 @@ final class ARInstagramViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = ARInstagramUserDetailViewController()
+        let row: Int = indexPath.row
+        let user: IGUserShortResponse = self.displayedUsers[row]
+        detailVC.idUser = user.id
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
     private func loadUsers() {
         loadingIndicator.startAnimating()
         instagramAPI.getUsers { [weak self] (result) in
@@ -54,4 +62,6 @@ final class ARInstagramViewController: UITableViewController {
             }
         }
     }
+    
+   
 }
