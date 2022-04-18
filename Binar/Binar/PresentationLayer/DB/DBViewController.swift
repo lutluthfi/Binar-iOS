@@ -7,6 +7,7 @@
 
 import UIKit
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 class DBViewController: UIViewController {
 
@@ -29,6 +30,8 @@ class DBViewController: UIViewController {
 
 }
 =======
+=======
+>>>>>>> featuredani
 final class DBViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -45,4 +48,7 @@ final class DBViewController: UIViewController {
 }
 
 
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> featuredani

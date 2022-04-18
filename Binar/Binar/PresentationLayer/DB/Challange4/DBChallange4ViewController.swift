@@ -82,7 +82,15 @@ var runningNumber = ""
                 }else if currentOperation == .Divide {
                     result = "\(Double(leftValue)! / Double(rightValue)!)"
                 }
+<<<<<<< HEAD
                leftValue = result
+=======
+                
+               leftValue = result
+                if (Double(result)!.truncatingRemainder(dividingBy: 1) == 0) {
+                    result = "\(Int(Double(result)!))"
+                }
+>>>>>>> featuredani
                 OutputLbl.text = result
             }
             currentOperation = operation
