@@ -88,6 +88,8 @@ final class DashboardViewController: UITableViewController {
             goToAIViewController()
         case .RandySetiawan:
             goToRNViewController()
+        case .DhaniBukhory:
+            goToDBViewController()
         default:
             break
         }
@@ -332,3 +334,15 @@ extension DashboardViewController{
     }
 }
 
+extension DashboardViewController {
+    func goToDBViewController() {
+        let storyboard = UIStoryboard(name: "DBMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DBViewController") as? DBViewController else {
+            return
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+  

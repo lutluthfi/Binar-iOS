@@ -109,6 +109,11 @@
 		59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */; };
 		59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */; };
 		59D4282827EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */; };
+		6E6F5ED727FAA489009FBF98 /* DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F5ED627FAA489009FBF98 /* DBViewController.swift */; };
+		6E6F5ED927FAA7D1009FBF98 /* DBMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F5ED827FAA7D1009FBF98 /* DBMain.storyboard */; };
+		6E79916127FB041600E3ADB3 /* DBChallange4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E79916027FB041600E3ADB3 /* DBChallange4ViewController.swift */; };
+		6E7B1EC827FCBE5600AC0558 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B1EC727FCBE5600AC0558 /* RoundButton.swift */; };
+		6EB236F927FC2D570098CBB3 /* DBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB236F827FC2D570098CBB3 /* DBTableViewController.swift */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
 		7BAC39B72806A89C0016A938 /* DSIGLikesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC39B62806A89C0016A938 /* DSIGLikesLabel.swift */; };
@@ -259,6 +264,11 @@
 		59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewController.swift; sourceTree = "<group>"; };
 		59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewCellViewTableViewCell.swift; sourceTree = "<group>"; };
 		59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADAnimalViewCellViewTableViewCell.xib; sourceTree = "<group>"; };
+		6E6F5ED627FAA489009FBF98 /* DBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewController.swift; sourceTree = "<group>"; };
+		6E6F5ED827FAA7D1009FBF98 /* DBMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DBMain.storyboard; sourceTree = "<group>"; };
+		6E79916027FB041600E3ADB3 /* DBChallange4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBChallange4ViewController.swift; sourceTree = "<group>"; };
+		6E7B1EC727FCBE5600AC0558 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		6EB236F827FC2D570098CBB3 /* DBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTableViewController.swift; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
 		7BAC39B62806A89C0016A938 /* DSIGLikesLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DSIGLikesLabel.swift; path = Binar/DataLayer/InstagramService/Remote/DSIGLikesLabel.swift; sourceTree = SOURCE_ROOT; };
@@ -674,6 +684,7 @@
 		4F83BB7227F423A800690F01 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				6E6F5ED027FAA2CE009FBF98 /* DB */,
 				592D89A027E0CA5C00FCE74D /* AD */,
 				0A40550C27E20330003E754D /* AF */,
 				4FF0B32C27EB561900CAF144 /* AI */,
@@ -915,6 +926,42 @@
 				59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */,
 			);
 			path = AD;
+			sourceTree = "<group>";
+		};
+		6E6F5ED027FAA2CE009FBF98 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				6E6F5ED627FAA489009FBF98 /* DBViewController.swift */,
+				6E6F5ED827FAA7D1009FBF98 /* DBMain.storyboard */,
+				6E8FC1FA27FB60AB009FD9BB /* animalTableView */,
+				6E79915D27FAE7C100E3ADB3 /* Challange4 */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		6E79915D27FAE7C100E3ADB3 /* Challange4 */ = {
+			isa = PBXGroup;
+			children = (
+				6E79916027FB041600E3ADB3 /* DBChallange4ViewController.swift */,
+				6E7B1EC727FCBE5600AC0558 /* RoundButton.swift */,
+			);
+			path = Challange4;
+			sourceTree = "<group>";
+		};
+		6E8FC1FA27FB60AB009FD9BB /* animalTableView */ = {
+			isa = PBXGroup;
+			children = (
+				6EB236F827FC2D570098CBB3 /* DBTableViewController.swift */,
+				6EB236FA27FC490D0098CBB3 /* cellAnimal */,
+			);
+			path = animalTableView;
+			sourceTree = "<group>";
+		};
+		6EB236FA27FC490D0098CBB3 /* cellAnimal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = cellAnimal;
 			sourceTree = "<group>";
 		};
 		72565B0C27E0DAA600EAF51C /* TS */ = {
@@ -1220,6 +1267,7 @@
 				TargetAttributes = {
 					4FD234C927DAB530007514BA = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 				};
 			};
@@ -1257,6 +1305,7 @@
 				592D89A227E0CAC200FCE74D /* ADMain.storyboard in Resources */,
 				4FF0B30E27E8DFD400CAF144 /* DSMain.storyboard in Resources */,
 				01DBD36127E0C48800C69237 /* THMain.storyboard in Resources */,
+				6E6F5ED927FAA7D1009FBF98 /* DBMain.storyboard in Resources */,
 				4FF0B33827EB6C4900CAF144 /* ARAnimalTableCell.xib in Resources */,
 				A406D3E927EDEA3C001DE178 /* AKMain.storyboard in Resources */,
 				59D4282827EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib in Resources */,
@@ -1283,7 +1332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BAC39B72806A89C0016A938 /* DSIGLikesLabel.swift in Sources */,
+				6E7B1EC827FCBE5600AC0558 /* RoundButton.swift in Sources */,
 				383935AE27ECE27A0051A89C /* BIAnimalTableViewController.swift in Sources */,
 				4F4F5DE1280582F9003AB017 /* IGUsernameLabel.swift in Sources */,
 				2504065627EAF53E00186517 /* RNViewController.swift in Sources */,
@@ -1304,6 +1353,8 @@
 				319CD7D327E28B25007F8239 /* MFFasilChallenge1VC.swift in Sources */,
 				E988FB93280687C20021EBFD /* RDView.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,
+				6E6F5ED727FAA489009FBF98 /* DBViewController.swift in Sources */,
+				6E79916127FB041600E3ADB3 /* DBChallange4ViewController.swift in Sources */,
 				A406D3ED27EDEA52001DE178 /* AKAnimalTableCell.swift in Sources */,
 				E9BD2D942800620C0068003B /* RDProfileViewController.swift in Sources */,
 				4F4F5E772806CFBC003AB017 /* Encodable+Extension.swift in Sources */,
@@ -1358,7 +1409,7 @@
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				E988FB8F280687790021EBFD /* RDLocalData.swift in Sources */,
 				4F33D5DF27F6DFA600C4048D /* ARChallenge4ViewController.swift in Sources */,
-				E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */,
+				6EB236F927FC2D570098CBB3 /* DBTableViewController.swift in Sources */,
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
 				4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */,
 				E988FB9828068D3C0021EBFD /* InstagramLikesLabelView.swift in Sources */,
@@ -1544,6 +1595,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1567,6 +1619,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1577,6 +1630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
