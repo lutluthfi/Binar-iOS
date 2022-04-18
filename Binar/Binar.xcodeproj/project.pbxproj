@@ -109,22 +109,16 @@
 		59D4282427EDBEB200AE8C50 /* ADAnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */; };
 		59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */; };
 		59D4282827EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */; };
-<<<<<<< HEAD
-=======
 		6E51CCF5280090ED001D99D9 /* DBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E51CCF3280090ED001D99D9 /* DBTableViewCell.swift */; };
 		6E51CCF6280090ED001D99D9 /* DBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E51CCF4280090ED001D99D9 /* DBTableViewCell.xib */; };
 		6E51CCF828009171001D99D9 /* DBChallange3TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E51CCF728009171001D99D9 /* DBChallange3TableViewController.swift */; };
->>>>>>> featuredani
 		6E6F5ED727FAA489009FBF98 /* DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6F5ED627FAA489009FBF98 /* DBViewController.swift */; };
 		6E6F5ED927FAA7D1009FBF98 /* DBMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6F5ED827FAA7D1009FBF98 /* DBMain.storyboard */; };
 		6E79916127FB041600E3ADB3 /* DBChallange4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E79916027FB041600E3ADB3 /* DBChallange4ViewController.swift */; };
 		6E7B1EC827FCBE5600AC0558 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7B1EC727FCBE5600AC0558 /* RoundButton.swift */; };
 		6EB236F927FC2D570098CBB3 /* DBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB236F827FC2D570098CBB3 /* DBTableViewController.swift */; };
-<<<<<<< HEAD
-=======
 		6EB685BE27FF2CBC003F02E7 /* DBTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB685BC27FF2CBC003F02E7 /* DBTableViewCell.swift */; };
 		6EB685BF27FF2CBC003F02E7 /* DBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EB685BD27FF2CBC003F02E7 /* DBTableViewCell.xib */; };
->>>>>>> featuredani
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
 		7BAC39B72806A89C0016A938 /* DSIGLikesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC39B62806A89C0016A938 /* DSIGLikesLabel.swift */; };
@@ -275,22 +269,16 @@
 		59D4282327EDBEB200AE8C50 /* ADAnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewController.swift; sourceTree = "<group>"; };
 		59D4282527EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADAnimalViewCellViewTableViewCell.swift; sourceTree = "<group>"; };
 		59D4282627EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ADAnimalViewCellViewTableViewCell.xib; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
 		6E51CCF3280090ED001D99D9 /* DBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTableViewCell.swift; sourceTree = "<group>"; };
 		6E51CCF4280090ED001D99D9 /* DBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DBTableViewCell.xib; sourceTree = "<group>"; };
 		6E51CCF728009171001D99D9 /* DBChallange3TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DBChallange3TableViewController.swift; path = Binar/PresentationLayer/DB/animalTableView/cell/DBChallange3TableViewController.swift; sourceTree = SOURCE_ROOT; };
->>>>>>> featuredani
 		6E6F5ED627FAA489009FBF98 /* DBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBViewController.swift; sourceTree = "<group>"; };
 		6E6F5ED827FAA7D1009FBF98 /* DBMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DBMain.storyboard; sourceTree = "<group>"; };
 		6E79916027FB041600E3ADB3 /* DBChallange4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBChallange4ViewController.swift; sourceTree = "<group>"; };
 		6E7B1EC727FCBE5600AC0558 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		6EB236F827FC2D570098CBB3 /* DBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTableViewController.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
-=======
-		6EB685BC27FF2CBC003F02E7 /* DBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DBTableViewCell.swift; path = ../../../../../../../DBTableViewCell.swift; sourceTree = "<group>"; };
-		6EB685BD27FF2CBC003F02E7 /* DBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DBTableViewCell.xib; path = ../../../../../../../DBTableViewCell.xib; sourceTree = "<group>"; };
->>>>>>> featuredani
+		6EB685BC27FF2CBC003F02E7 /* DBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DBTableViewCell.swift; path = DBTableViewCell.swift; sourceTree = "<group>"; };
+		6EB685BD27FF2CBC003F02E7 /* DBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DBTableViewCell.xib; path = DBTableViewCell.xib; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
 		7BAC39B62806A89C0016A938 /* DSIGLikesLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DSIGLikesLabel.swift; path = Binar/DataLayer/InstagramService/Remote/DSIGLikesLabel.swift; sourceTree = SOURCE_ROOT; };
@@ -950,8 +938,6 @@
 			path = AD;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-=======
 		6E51CCF2280090C3001D99D9 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -962,7 +948,6 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
->>>>>>> featuredani
 		6E6F5ED027FAA2CE009FBF98 /* DB */ = {
 			isa = PBXGroup;
 			children = (
@@ -987,36 +972,24 @@
 			isa = PBXGroup;
 			children = (
 				6EB236F827FC2D570098CBB3 /* DBTableViewController.swift */,
-<<<<<<< HEAD
 				6EB236FA27FC490D0098CBB3 /* cellAnimal */,
-=======
 				6E51CCF2280090C3001D99D9 /* cell */,
->>>>>>> featuredani
 			);
 			path = animalTableView;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		6EB236FA27FC490D0098CBB3 /* cellAnimal */ = {
 			isa = PBXGroup;
 			children = (
-=======
-<<<<<<< master
 		6EB236FA27FC490D0098CBB3 /* cellAnimal */ = {
 			isa = PBXGroup;
 			children = (
 				6EB685BC27FF2CBC003F02E7 /* DBTableViewCell.swift */,
 				6EB685BD27FF2CBC003F02E7 /* DBTableViewCell.xib */,
->>>>>>> featuredani
 			);
 			path = cellAnimal;
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
-=======
-=======
->>>>>>> TableViewCell
->>>>>>> featuredani
 		72565B0C27E0DAA600EAF51C /* TS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1461,26 +1434,17 @@
 				4F78A41427DF8DB400C9E2F7 /* ARViewController.swift in Sources */,
 				319988BF27F997BF00891D32 /* MFQRVC.swift in Sources */,
 				A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */,
-<<<<<<< master
 				6EB685BE27FF2CBC003F02E7 /* DBTableViewCell.swift in Sources */,
-=======
 				6E51CCF5280090ED001D99D9 /* DBTableViewCell.swift in Sources */,
->>>>>>> TableViewCell
 				4FF0B33227EB561900CAF144 /* AIAnimalTableViewController.swift in Sources */,
 				7BAC39B92806AD290016A938 /* IGLikesLabelViewController.swift in Sources */,
 				4F33D5FD27FACEB400C4048D /* UIVisualEffectView+Extension.swift in Sources */,
 				FF98B2E127E3646000830B07 /* ATViewController.swift in Sources */,
 				E988FB8F280687790021EBFD /* RDLocalData.swift in Sources */,
 				4F33D5DF27F6DFA600C4048D /* ARChallenge4ViewController.swift in Sources */,
-<<<<<<< HEAD
 				6EB236F927FC2D570098CBB3 /* DBTableViewController.swift in Sources */,
-=======
-<<<<<<< HEAD
 				6EB236F927FC2D570098CBB3 /* DBTableViewController.swift in Sources */,
-=======
 				E9FDD0B427F99B660051B161 /* RDAnimalListCell.swift in Sources */,
->>>>>>> master
->>>>>>> featuredani
 				4FF0B31E27EAB1D900CAF144 /* ARAnimalTableViewController.swift in Sources */,
 				4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */,
 				E988FB9828068D3C0021EBFD /* InstagramLikesLabelView.swift in Sources */,
@@ -1518,12 +1482,9 @@
 				E9FDD0AA27F996FB0051B161 /* RDViewModels.swift in Sources */,
 				4F83BB7D27F4824700690F01 /* Typealias.swift in Sources */,
 				4F33D5E727F6E87600C4048D /* ARFormTextViewTableCell.swift in Sources */,
-<<<<<<< HEAD
 				E9BD2D92280057960068003B /* RDHomeViewController.swift in Sources */,
 				E988FB83280672F40021EBFD /* RDSubSpotifyCell.swift in Sources */,
-=======
 				6E51CCF828009171001D99D9 /* DBChallange3TableViewController.swift in Sources */,
->>>>>>> featuredani
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
