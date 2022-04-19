@@ -121,7 +121,6 @@
 		6EB685BF27FF2CBC003F02E7 /* DBTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6EB685BD27FF2CBC003F02E7 /* DBTableViewCell.xib */; };
 		72565B0E27E0DB1D00EAF51C /* TSMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */; };
 		72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72565B0F27E0DB4300EAF51C /* TSViewController.swift */; };
-		7BAC39B72806A89C0016A938 /* DSIGLikesLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC39B62806A89C0016A938 /* DSIGLikesLabel.swift */; };
 		7BAC39B92806AD290016A938 /* IGLikesLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC39B82806AD290016A938 /* IGLikesLabelViewController.swift */; };
 		A406D3E727EDEA19001DE178 /* AKDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A406D3E627EDEA19001DE178 /* AKDetailViewController.swift */; };
 		A406D3E927EDEA3C001DE178 /* AKMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A406D3E827EDEA3C001DE178 /* AKMain.storyboard */; };
@@ -277,8 +276,8 @@
 		6E79916027FB041600E3ADB3 /* DBChallange4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBChallange4ViewController.swift; sourceTree = "<group>"; };
 		6E7B1EC727FCBE5600AC0558 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		6EB236F827FC2D570098CBB3 /* DBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTableViewController.swift; sourceTree = "<group>"; };
-		6EB685BC27FF2CBC003F02E7 /* DBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DBTableViewCell.swift; path = DBTableViewCell.swift; sourceTree = "<group>"; };
-		6EB685BD27FF2CBC003F02E7 /* DBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = DBTableViewCell.xib; path = DBTableViewCell.xib; sourceTree = "<group>"; };
+		6EB685BC27FF2CBC003F02E7 /* DBTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBTableViewCell.swift; sourceTree = "<group>"; };
+		6EB685BD27FF2CBC003F02E7 /* DBTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DBTableViewCell.xib; sourceTree = "<group>"; };
 		72565B0D27E0DB1D00EAF51C /* TSMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TSMain.storyboard; sourceTree = "<group>"; };
 		72565B0F27E0DB4300EAF51C /* TSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TSViewController.swift; sourceTree = "<group>"; };
 		7BAC39B62806A89C0016A938 /* DSIGLikesLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DSIGLikesLabel.swift; path = Binar/DataLayer/InstagramService/Remote/DSIGLikesLabel.swift; sourceTree = SOURCE_ROOT; };
@@ -972,13 +971,10 @@
 			isa = PBXGroup;
 			children = (
 				6EB236F827FC2D570098CBB3 /* DBTableViewController.swift */,
-				6EB236FA27FC490D0098CBB3 /* cellAnimal */,
 				6E51CCF2280090C3001D99D9 /* cell */,
 			);
 			path = animalTableView;
 			sourceTree = "<group>";
-
-		
 		};
 		72565B0C27E0DAA600EAF51C /* TS */ = {
 			isa = PBXGroup;
@@ -1331,9 +1327,9 @@
 				4FD234D727DAB531007514BA /* Assets.xcassets in Resources */,
 				013165F827EDE6D500CB0BD7 /* THDetailAnimalViewController.xib in Resources */,
 				0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */,
-                6EB685BF27FF2CBC003F02E7 /* DBTableViewCell.xib in Resources */,
-                6E51CCF6280090ED001D99D9 /* DBTableViewCell.xib in Resources */,
-                4FF0B33027EB561900CAF144 /* AIMain.storyboard in Resources */,
+				6EB685BF27FF2CBC003F02E7 /* DBTableViewCell.xib in Resources */,
+				6E51CCF6280090ED001D99D9 /* DBTableViewCell.xib in Resources */,
+				4FF0B33027EB561900CAF144 /* AIMain.storyboard in Resources */,
 				38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */,
 				22DD5C8227E0D59C003024DC /* DPMain.storyboard in Resources */,
 				313B584B27F626AE00F7C7F8 /* MFTableCell.xib in Resources */,
