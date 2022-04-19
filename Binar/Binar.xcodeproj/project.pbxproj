@@ -977,18 +977,8 @@
 			);
 			path = animalTableView;
 			sourceTree = "<group>";
-		};
-		6EB236FA27FC490D0098CBB3 /* cellAnimal */ = {
-			isa = PBXGroup;
-			children = (
-		6EB236FA27FC490D0098CBB3 /* cellAnimal */ = {
-			isa = PBXGroup;
-			children = (
-				6EB685BC27FF2CBC003F02E7 /* DBTableViewCell.swift */,
-				6EB685BD27FF2CBC003F02E7 /* DBTableViewCell.xib */,
-			);
-			path = cellAnimal;
-			sourceTree = "<group>";
+
+		
 		};
 		72565B0C27E0DAA600EAF51C /* TS */ = {
 			isa = PBXGroup;
