@@ -1379,11 +1379,8 @@
 				013165F027ED903500CB0BD7 /* THAnimalTableCell.swift in Sources */,
 				E9BD2D9B280079ED0068003B /* RDHomeListCell.swift in Sources */,
 				4FF0B33127EB561900CAF144 /* AIViewController.swift in Sources */,
-<<<<<<< HEAD
 				4F4F5E702806C88A003AB017 /* URLRequestBuilder.swift in Sources */,
-=======
 				E9E2C11D28056D49000EF9C9 /* RDChallenge6ViewController.swift in Sources */,
->>>>>>> feature/iglikeslabel
 				4F33D5FB27FA618900C4048D /* ARChatViewController.swift in Sources */,
 				013165EC27ED71BF00CB0BD7 /* THAnimalTableViewController.swift in Sources */,
 				59D4282727EDD0A900AE8C50 /* ADAnimalViewCellViewTableViewCell.swift in Sources */,
