@@ -1343,8 +1343,7 @@
 				0A40550E27E2033F003E754D /* AFMain.storyboard in Resources */,
 <<<<<<< master
 				6EB685BF27FF2CBC003F02E7 /* DBTableViewCell.xib in Resources */,
-=======
-				6E51CCF6280090ED001D99D9 /* DBTableViewCell.xib in Resources */,
+                6E51CCF6280090ED001D99D9 /* DBTableViewCell.xib in Resources */,
 >>>>>>> TableViewCell
 				4FF0B33027EB561900CAF144 /* AIMain.storyboard in Resources */,
 				38E0C76F27E324A2009D7A82 /* BIMain.storyboard in Resources */,
