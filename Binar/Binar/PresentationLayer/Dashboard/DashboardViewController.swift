@@ -90,6 +90,9 @@ final class DashboardViewController: UITableViewController {
             goToRNViewController()
         case .DhaniBukhory:
             goToDBViewController()
+        case .Instagram:
+            let viewController = IGTabBarController()
+            navigationController?.pushViewController(viewController, animated: true)
         default:
             break
         }

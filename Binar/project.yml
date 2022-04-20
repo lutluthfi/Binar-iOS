@@ -77,10 +77,10 @@ targets:
                         UIWindowSceneSessionRoleApplication:
                             - UISceneConfigurationName: Default Configuration
                               UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
-                              UISceneStoryboardFile: LaunchScreen
+                              UISceneStoryboardFile: Main
                 UIApplicationSupportsIndirectInputEvents: true
                 UILaunchStoryboardName: LaunchScreen
-                UIMainStoryboardFile: LaunchScreen
+                UIMainStoryboardFile: Main
                 UIRequiredDeviceCapabilities:
                     - armv7
                 UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]

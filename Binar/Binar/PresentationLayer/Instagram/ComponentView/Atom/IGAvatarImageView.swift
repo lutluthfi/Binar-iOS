@@ -19,13 +19,13 @@ final class IGAvatarImageView: UIView {
     private lazy var imageView: UIImageView = {
         let view = UIImageView()
         view.backgroundColor = .secondarySystemBackground
-        view.contentMode = .center
+        view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onImageViewTapped))
         return view
     }()
-    private var widthConstraint: NSLayoutConstraint?
-    private var heightConstraint: NSLayoutConstraint?
+    private var imageWidthConstraint: NSLayoutConstraint?
+    private var imageHeightConstraint: NSLayoutConstraint?
     
     private var sizeType: SizeType = .small
     
@@ -48,13 +48,12 @@ final class IGAvatarImageView: UIView {
         let cornerRad: CGFloat = sizeValue / 2
         imageView.rounded(cornerRadius: cornerRad)
         imageView.loadImage(resource: urlString)
-        widthConstraint?.constant = sizeValue
-        heightConstraint?.constant = sizeValue
+        imageWidthConstraint?.constant = sizeValue
+        imageHeightConstraint?.constant = sizeValue
     }
     
     @objc private func onImageViewTapped(_ gesture: UITapGestureRecognizer) {
         onTap?()
-        print("Tapped")
     }
     
     private func setupConstraint() {
@@ -65,9 +64,9 @@ final class IGAvatarImageView: UIView {
         imageView.leadingAnchor.constraint(greaterThanOrEqualTo: self.leadingAnchor).isActive = true
         imageView.bottomAnchor.constraint(lessThanOrEqualTo: self.bottomAnchor).isActive = true
         imageView.trailingAnchor.constraint(lessThanOrEqualTo: self.trailingAnchor).isActive = true
-        widthConstraint = imageView.widthAnchor.constraint(equalToConstant: sizeType.rawValue)
-        widthConstraint?.isActive = true
-        heightConstraint = imageView.heightAnchor.constraint(equalToConstant: sizeType.rawValue)
-        heightConstraint?.isActive = true
+        imageWidthConstraint = imageView.widthAnchor.constraint(equalToConstant: sizeType.rawValue)
+        imageWidthConstraint?.isActive = true
+        imageHeightConstraint = imageView.heightAnchor.constraint(equalToConstant: sizeType.rawValue)
+        imageHeightConstraint?.isActive = true
     }
 }

@@ -13,6 +13,7 @@ final class IGUsernameLabel: UIView {
     private lazy var textLabel: UILabel = {
         let view = UILabel()
         view.font = .boldSystemFont(ofSize: 17)
+        view.numberOfLines = 1
         view.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTextLabelTapped))
         view.addGestureRecognizer(tapGesture)
@@ -41,6 +42,6 @@ final class IGUsernameLabel: UIView {
     }
     
     func configure(username: String) {
-        textLabel.attributedText = username.toUsernameAttrString()
+        textLabel.attributedText = username.toUsernameAttrString(color: .systemBlue)
     }
 }
