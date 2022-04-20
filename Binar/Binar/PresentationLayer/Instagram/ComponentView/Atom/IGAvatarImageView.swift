@@ -21,7 +21,9 @@ final class IGAvatarImageView: UIView {
         view.backgroundColor = .secondarySystemBackground
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
+        view.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onImageViewTapped))
+        view.addGestureRecognizer(tapGesture)
         return view
     }()
     private var imageWidthConstraint: NSLayoutConstraint?

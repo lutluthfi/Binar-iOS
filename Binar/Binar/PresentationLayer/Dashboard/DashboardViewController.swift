@@ -16,6 +16,11 @@ final class DashboardViewController: UITableViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let studentCount: Int = displayedStudents.count
         return studentCount
@@ -92,6 +97,7 @@ final class DashboardViewController: UITableViewController {
             goToDBViewController()
         case .Instagram:
             let viewController = IGTabBarController()
+            navigationController?.setNavigationBarHidden(true, animated: true)
             navigationController?.pushViewController(viewController, animated: true)
         default:
             break

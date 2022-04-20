@@ -10,19 +10,24 @@ import UIKit
 final class IGTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+    }
+    
+    private func setupView() {
         view.backgroundColor = .white
-        navigationController?.isNavigationBarHidden = true
         
         let homeViewController = IGHomeViewController()
+        homeViewController.title = "Home"
         homeViewController.tabBarItem = UITabBarItem(
-            title: "Home",
+            title: nil,
             image: UIImage(systemName: "house"),
             selectedImage: UIImage(systemName: "house.fill")
         )
         
         let profileViewController = IGProfileViewController()
+        profileViewController.title = "Profile"
         profileViewController.tabBarItem = UITabBarItem(
-            title: "Profile",
+            title: nil,
             image: UIImage(systemName: "person"),
             selectedImage: UIImage(systemName: "person.fill")
         )
@@ -30,6 +35,6 @@ final class IGTabBarController: UITabBarController {
         let viewControllers: [UIViewController] = [homeViewController, profileViewController].map {
             UINavigationController(rootViewController: $0)
         }
-        self.viewControllers = viewControllers
+        setViewControllers(viewControllers, animated: false)
     }
 }
