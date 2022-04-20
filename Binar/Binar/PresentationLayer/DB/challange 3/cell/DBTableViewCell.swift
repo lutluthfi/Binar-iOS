@@ -20,4 +20,8 @@ class DBTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func fill(with animal: Animal) {
+        
+    }
+    
 }
