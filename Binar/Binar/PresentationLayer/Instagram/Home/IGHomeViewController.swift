@@ -7,31 +7,44 @@
 
 import UIKit
 
-final class IGHomeViewController: UIViewController {
+final class IGHomeViewController: UITableViewController {
     lazy var creatorView = IGFeedCreatorView()
+    
+    private let instagramAPI = InstagramAPI(appId: "6249791f9296122eca0475be")
+    
+    private var displayedFeed: [IGFeedResponse] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAddSubview()
-        setupConstraint()
+        tableView.separatorStyle = .none
+        tableView.registerCell(TableCell<IGFeedCreatorView>.self)
+        tableView.registerCell(TableCell<UILabel>.self)
+        tableView.backgroundColor = UIColor.secondarySystemBackground
         
-        creatorView.onAvatarImageViewTap = { [weak self] in
-            let nextController = UIViewController()
-            nextController.view.backgroundColor = .systemRed
-            self?.navigationController?.pushViewController(nextController, animated: true)
+        instagramAPI.getFeeds { [weak self] result in
+            switch result {
+            case let .success(data):
+                self?.displayedFeed = data.data
+                self?.tableView.reloadData()
+            case .failure:
+                break
+            }
         }
-        creatorView.configure(username: "binar.academy", avatarUrlString: "https://educationalliancefinland.com/sites/default/files/styles/product-cover/public/products/a631b33f-5c62-4c9c-b9d9-2d2961b8aded.png")
     }
     
-    private func setupAddSubview() {
-        view.addSubview(creatorView)
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let numberOfFeed: Int = displayedFeed.count
+        return numberOfFeed
     }
     
-    private func setupConstraint() {
-        creatorView.makeConstraint {[
-            $0.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 20),
-            $0.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            $0.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -20)
-        ]}
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row: Int = indexPath.row
+        let feed: IGFeedResponse = displayedFeed[row]
+        return dequeueCell(TableCell<IGFeedCreatorView>.self, in: tableView, at: indexPath) { cell in
+            let username: String = feed.owner.firstName
+            let avatarUrlString: String = feed.owner.picture
+            cell.padding = UIEdgeInsets(top: 12, left: 20, bottom: -12, right: -20)
+            cell.content.configure(username: username, avatarUrlString: avatarUrlString)
+        }
     }
 }

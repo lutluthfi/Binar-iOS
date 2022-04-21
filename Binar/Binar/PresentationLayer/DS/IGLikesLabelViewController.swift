@@ -9,25 +9,25 @@ import UIKit
 
 class IGLikesLabelViewController: UIViewController {
     
-    var likesLabel = DSIGLikesLabel()
+//    var likesLabel = DSIGLikesLabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        setLabel()
+//        setLabel()
         // Do any additional setup after loading the view.
     }
     
     func setLabel () {
-        let label = likesLabel.setLikesLabel(numberOfLikes: 999_999_999)
+//        let label = likesLabel.setLikesLabel(numberOfLikes: 999_999_999)
         
-        view.addSubview(label)
+//        view.addSubview(label)
         
-        label.makeConstraint {
-            [$0.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor),
-             $0.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor)
-            ]
-        }
+//        label.makeConstraint {
+//            [$0.centerYAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerYAnchor),
+//             $0.centerXAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.centerXAnchor)
+//            ]
+//        }
     }
     
 

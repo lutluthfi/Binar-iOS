@@ -27,7 +27,8 @@ final class InstagramAPI {
     
     func getFeeds(
         limit: Int? = nil,
-        page: Int? = nil
+        page: Int? = nil,
+        completion: @escaping (Result<IGDataResponse<IGFeedResponse>, Error>) -> Void
     ) {
         let url: URL? = urlComponentBuilder.path("/post")
             .addQuery(key: "limit", value: limit)
@@ -43,17 +44,17 @@ final class InstagramAPI {
             .httpMethod(.GET)
             .build()
         
-//        URLSession.shared.dataTask(
-//            for: IGDataResponse<IGUserResponse>.self,
-//            with: request,
-//            completion: completion
-//        ).resume()
+        URLSession.shared.dataTask(
+            for: IGDataResponse<IGFeedResponse>.self,
+            with: request,
+            completion: completion
+        ).resume()
     }
     
     func getUsers(
         limit: Int? = nil,
         page: Int? = nil,
-        _ completion: @escaping (Result<IGDataResponse<IGUserShortResponse>, Error>) -> Void
+        completion: @escaping (Result<IGDataResponse<IGUserShortResponse>, Error>) -> Void
     ) {
         let url: URL? = urlComponentBuilder
             .path("/user")
