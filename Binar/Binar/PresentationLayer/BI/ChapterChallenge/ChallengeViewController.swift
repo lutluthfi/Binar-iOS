@@ -31,8 +31,8 @@ final class BIChallengeViewController: UIViewController {
     }
     
     private func setupChallengeImageView() {
-        self.challengeImageView.image = UIImage(named: Animal.listV1().randomElement()!)
-        self.challengeImageView.contentMode = .scaleAspectFill
+        challengeImageView.image = UIImage(named: Animal.listV1().randomElement()!)
+        challengeImageView.contentMode = .scaleAspectFill
     }
     
     @IBAction func onAddTouchUpInside(_ sender: UIButton) {

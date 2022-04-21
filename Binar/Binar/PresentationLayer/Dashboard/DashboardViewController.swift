@@ -65,28 +65,7 @@ final class DashboardViewController: UITableViewController {
         case .AdjiFirmansyah:
             goToAFViewController()
         case .BagasIlham:
-            let choiceAlert = UIAlertController(title: "Gate to other universe🌌", message: "Where do you wanna go?", preferredStyle: .alert)
-            
-            let challenge1 = UIAlertAction(title: "Challenge 1", style: .default) { _ in
-                self.goToBI1()
-            }
-            
-            let challenge2 = UIAlertAction(title: "Challenge 2", style: .default) { _ in
-                self.goToBI2()
-            }
-            
-            let challenge3 = UIAlertAction(title: "Challenge 3", style: .default) { _ in
-                self.goToBI3()
-            }
-            
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-            
-            choiceAlert.addAction(challenge1)
-            choiceAlert.addAction(challenge2)
-            choiceAlert.addAction(challenge3)
-            choiceAlert.addAction(cancel)
-            
-            present(choiceAlert, animated: true)
+            navigationController?.pushViewController(BIDashboardViewController(), animated: true)
         case .NurinBerlianna:
             goToNBViewController()
         case .AkbarIdris:
@@ -260,34 +239,6 @@ extension DashboardViewController {
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "AFViewController") as? AFViewController else { return }
         viewController.name = selectedStudent.name
         
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-}
-        
-// MARK: goToBIViewController
-extension DashboardViewController {
-    func goToBI1() {
-        guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "BIViewController") as? BIViewController else {
-            return
-        }
-        viewController.name = selectedStudent.name
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    func goToBI2() {
-        guard let viewController = BIAnimalTableViewController.initViewController(from: "BIMain") else {
-            return
-        }
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-    
-    func goToBI3() {
-        let storyboard = UIStoryboard(name: "BIMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "BIChallengeViewController") as? BIChallengeViewController else {
-            return
-        }
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

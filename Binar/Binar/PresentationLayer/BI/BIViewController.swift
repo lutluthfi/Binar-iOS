@@ -17,7 +17,8 @@ final class BIViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name! + "'s Animal List"
+        title = "Bagas' Animal List"
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "AnimalTableCell")
     }
     
     

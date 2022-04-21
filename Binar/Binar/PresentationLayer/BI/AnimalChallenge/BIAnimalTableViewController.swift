@@ -39,6 +39,21 @@ class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.keyboardDismissMode = .onDrag
+        
+//        let searchController = UISearchController(searchResultsController: nil)
+//        navigationItem.searchController = searchController
+        
+        let barButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(onActionsButtonTouchUpInside))
+        navigationItem.rightBarButtonItem = barButton
+
+    }
+    
+    override init(style: UITableView.Style) {
+        super.init(style: .insetGrouped)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,6 +71,7 @@ class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable
         super.viewWillDisappear(true)
         navigationItem.title?.removeAll()
         navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.searchController?.isActive = true
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,6 +98,8 @@ class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable
         }
         
         cell.fill(with: animal)
+        cell.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        cell.contentView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
         return cell
     }
@@ -111,7 +129,7 @@ class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable
     
     // MARK: More Actions Button
     
-    @IBAction func onActionsButtonTouchUpInside(_ sender: UIButton) {
+    @objc func onActionsButtonTouchUpInside() {
         var choice: String?
         let actionsAlert = UIAlertController(title: "More Actions", message: "What do you want to do?", preferredStyle: .actionSheet)
         
