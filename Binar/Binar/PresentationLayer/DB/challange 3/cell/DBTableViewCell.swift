@@ -9,8 +9,6 @@ import UIKit
 
 class DBTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var LabelTextAnimal: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,8 +21,7 @@ class DBTableViewCell: UITableViewCell {
     }
     
     func fill(with animal: Animal) {
-        photoImageView.loadImage(resource: animal.photoUrlString)
-        LabelTextAnimal.text = animal.name
+        
     }
     
 }
