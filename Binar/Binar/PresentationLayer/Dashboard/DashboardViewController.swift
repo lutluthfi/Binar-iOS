@@ -16,6 +16,11 @@ final class DashboardViewController: UITableViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let studentCount: Int = displayedStudents.count
         return studentCount
@@ -67,6 +72,12 @@ final class DashboardViewController: UITableViewController {
             goToAIViewController()
         case .RandySetiawan:
             goToRNViewController()
+        case .DhaniBukhory:
+            goToDBViewController()
+        case .Instagram:
+            let viewController = IGTabBarController()
+            navigationController?.setNavigationBarHidden(true, animated: true)
+            navigationController?.pushViewController(viewController, animated: true)
         default:
             break
         }
@@ -177,9 +188,9 @@ extension DashboardViewController {
 // MARK: goToRDViewController
 extension DashboardViewController {
     func goToRDViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        let viewController = RDViewController()
-        viewController.name = selectedStudent.name
+        let viewController = RDTabbarViewController()
+//        let viewController = InstagramLikesLabelController()
+        navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -283,3 +294,15 @@ extension DashboardViewController{
     }
 }
 
+extension DashboardViewController {
+    func goToDBViewController() {
+        let storyboard = UIStoryboard(name: "DBMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DBViewController") as? DBViewController else {
+            return
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+  

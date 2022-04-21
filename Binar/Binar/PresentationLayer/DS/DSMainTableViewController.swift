@@ -1,24 +1,16 @@
 //
-//  ARViewController.swift
+//  DSMainTableViewController.swift
 //  Binar
 //
-//  Created by Arif Luthfiansyah on 14/03/22.
+//  Created by Daffashiddiq on 04/04/22.
 //
 
 import UIKit
 
-final class ARViewController: UITableViewController, StoryboardInstantiable {
+final class DSMainTableViewController: UITableViewController, StoryboardInstantiable {
     enum Course: String, CaseIterable, TitleEnum {
-        case Challenge4
-        case DelegatePattern
-        case Form
-        case ScrollView
-        case StandardCollectionView
-        case CompositionalCollectionView
-        case ChipsCollectionView
-        case TabBar
-        case Chat
-        case Instagram
+        case BumbleChallenge
+        case Challenge1
         
         static var sorted: [Course] {
             Course.allCases.sorted {
@@ -70,26 +62,10 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
         let row: Int = indexPath.row
         let course: Course = Course.sorted[row]
         switch course {
-        case .Challenge4:
-            open(ARChallenge4ViewController())
-        case .Chat:
-            open(ARChatViewController())
-        case .DelegatePattern:
-            open(ARFirstViewController())
-        case .Form:
-            open(ARFormViewController())
-        case .Instagram:
-            open(ARInstagramViewController())
-        case .ScrollView:
-            break
-        case .StandardCollectionView:
-            open(ARStandardViewController())
-        case .CompositionalCollectionView:
-            break
-        case .ChipsCollectionView:
-            open(ARChipsViewController())
-        case .TabBar:
-            open(ARTabBarViewController())
+        case .BumbleChallenge:
+            open(DSBumbleViewController())
+        case .Challenge1:
+            open(DSViewController())
         }
     }
     

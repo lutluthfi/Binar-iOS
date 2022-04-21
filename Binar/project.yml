@@ -1,0 +1,123 @@
+## MARK: - Project Name
+name: Binar
+
+
+## MARK: - Configs Section
+configs:
+    DEV-Debug   : debug
+    DEV-Release : release
+    STA-Debug   : debug
+    STA-Release : release
+    PRO-Debug   : debug
+    PRO-Release : release
+
+## MARK: - Option Section
+options:
+    xcodeVersion             : '11.3'
+    deploymentTarget         : '13.0'
+    groupSortPosition        : down
+    generateEmptyDirectories : true
+    minimumXcodeGenVersion   : '2.18.0'
+    preGenCommand            : ./pregencommand.sh
+    postGenCommand           : # pod install
+
+## MARK: - Target Section
+targets:
+    Binar:
+        type: application
+        platform: iOS
+        sources: Binar
+        settings:
+            base:
+                CODE_SIGN_STYLE: Automatic
+                DEVELOPMENT_TEAM: 1234567890 # Your development team code
+                EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
+                IPHONEOS_DEPLOYMENT_TARGET: 13.0
+                INFOPLIST_FILE: Binar/Resource/Info.plist
+                MOMC_NO_WARNINGS: true
+                TARGETED_DEVICE_FAMILY: 1
+            configs:
+                DEV-Debug:
+                    PRODUCT_BUNDLE_IDENTIFIER: com.binaracademy.Binar.dev
+                    PRODUCT_NAME: Binar
+                    SWIFT_ACTIVE_COMPILATION_CONDITIONS: "DEV DEBUG"
+                DEV-Release:
+                    PRODUCT_BUNDLE_IDENTIFIER: com.binaracademy.Binar.dev
+                    PRODUCT_NAME: Binar
+                    SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEV
+                STA-Debug:
+                    PRODUCT_BUNDLE_IDENTIFIER: com.binaracademy.Binar.sta
+                    PRODUCT_NAME: Binar
+                    SWIFT_ACTIVE_COMPILATION_CONDITIONS: "STA DEBUG"
+                STA-Release:
+                    PRODUCT_BUNDLE_IDENTIFIER: com.binaracademy.Binar.sta
+                    PRODUCT_NAME: Binar
+                    SWIFT_ACTIVE_COMPILATION_CONDITIONS: STA
+                PRO-Debug:
+                    PRODUCT_BUNDLE_IDENTIFIER: com.binaracademy.Binar
+                    PRODUCT_NAME: Binar
+                    SWIFT_ACTIVE_COMPILATION_CONDITIONS: "PRO DEBUG"
+                PRO-Release:
+                    PRODUCT_BUNDLE_IDENTIFIER: com.binaracademy.Binar
+                    PRODUCT_NAME: Binar
+                    SWIFT_ACTIVE_COMPILATION_CONDITIONS: PRO
+        info:
+            path: Binar/Resource/Info.plist
+            properties:
+                CFBundleDevelopmentRegion: $(DEVELOPMENT_LANGUAGE)
+                CFBundleExecutable: $(EXECUTABLE_NAME)
+                CFBundleInfoDictionaryVersion: 6.0
+                CFBundlePackageType: $(PRODUCT_BUNDLE_PACKAGE_TYPE)
+                CFBundleShortVersionString: 1.0.0
+                CFBundleVersion: "1"
+                LSRequiresIPhoneOS: true
+                UIApplicationSceneManifest:
+                    UIApplicationSupportsMultipleScenes: false
+                    UISceneConfigurations:
+                        UIWindowSceneSessionRoleApplication:
+                            - UISceneConfigurationName: Default Configuration
+                              UISceneDelegateClassName: $(PRODUCT_MODULE_NAME).SceneDelegate
+                              UISceneStoryboardFile: Main
+                UIApplicationSupportsIndirectInputEvents: true
+                UILaunchStoryboardName: LaunchScreen
+                UIMainStoryboardFile: Main
+                UIRequiredDeviceCapabilities:
+                    - armv7
+                UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+                UIUserInterfaceStyle: Light
+                NSPhotoLibraryUsageDescription: $(PRODUCT_NAME) will helps you to detail your hero by attaching a photo as an attachment
+
+## MARK: - Scheme Section
+schemes:
+    DEV-Binar:
+        build:
+            targets:
+                Binar: [run, archive]
+        run:
+            config: DEV-Debug
+        test:
+            config: DEV-Debug
+        profile:
+            config: DEV-Release
+        analyze:
+            config: DEV-Debug
+        archive:
+            config: DEV-Release
+            customArchiveName: DEV Binar
+            revealArchiveInOrganizer: true
+    PRO-Binar:
+        build:
+            targets:
+                Binar: [run, archive]
+        run:
+            config: PRO-Debug
+        test:
+            config: PRO-Debug
+        profile:
+            config: PRO-Release
+        analyze:
+            config: PRO-Debug
+        archive:
+            config: PRO-Release
+            customArchiveName: PRO Binar
+            revealArchiveInOrganizer: true
