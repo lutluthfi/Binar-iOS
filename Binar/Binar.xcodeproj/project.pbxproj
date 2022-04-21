@@ -381,7 +381,6 @@
 		4F83BB8027F49C2400690F01 /* ARChipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F83BB7F27F49C2400690F01 /* ARChipsViewController.swift */; };
 		4F85415E280814D700D385F3 /* ARInstagramUserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85415D280814D700D385F3 /* ARInstagramUserDetailViewController.swift */; };
 		4F854160280970F000D385F3 /* IGCaptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F85415F280970F000D385F3 /* IGCaptionLabel.swift */; };
-		4F8541622809782E00D385F3 /* IGAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8541612809782E00D385F3 /* IGAvatarImageView.swift */; };
 		4FD234CE27DAB530007514BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234CD27DAB530007514BA /* AppDelegate.swift */; };
 		4FD234D027DAB530007514BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234CF27DAB530007514BA /* SceneDelegate.swift */; };
 		4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD234D127DAB530007514BA /* DashboardViewController.swift */; };
@@ -533,7 +532,6 @@
 		4F83BB7F27F49C2400690F01 /* ARChipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARChipsViewController.swift; sourceTree = "<group>"; };
 		4F85415D280814D700D385F3 /* ARInstagramUserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARInstagramUserDetailViewController.swift; sourceTree = "<group>"; };
 		4F85415F280970F000D385F3 /* IGCaptionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGCaptionLabel.swift; sourceTree = "<group>"; };
-		4F8541612809782E00D385F3 /* IGAvatarImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGAvatarImageView.swift; sourceTree = "<group>"; };
 		4FD234CA27DAB530007514BA /* Binar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Binar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD234CD27DAB530007514BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FD234CF27DAB530007514BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -2167,7 +2165,6 @@
 		4F4F5DD228057CCE003AB017 /* ComponentView */ = {
 			isa = PBXGroup;
 			children = (
-				4F8541612809782E00D385F3 /* IGAvatarImageView.swift */,
 				4F85415F280970F000D385F3 /* IGCaptionLabel.swift */,
 				4F4F5DDE28058146003AB017 /* IGLikesLabel.swift */,
 				4F4F5DE0280582F9003AB017 /* IGUsernameLabel.swift */,
@@ -2918,7 +2915,6 @@
 				383935B027ECE2950051A89C /* BIAnimalTableCell.swift in Sources */,
 				72565B1027E0DB4300EAF51C /* TSViewController.swift in Sources */,
 				E988FB8D28067B080021EBFD /* RDTabbarSpotify.swift in Sources */,
-				4F8541622809782E00D385F3 /* IGAvatarImageView.swift in Sources */,
 				319CD7D327E28B25007F8239 /* MFFasilChallenge1VC.swift in Sources */,
 				E988FB93280687C20021EBFD /* RDView.swift in Sources */,
 				4FD234D227DAB530007514BA /* DashboardViewController.swift in Sources */,

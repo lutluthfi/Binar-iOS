@@ -24,9 +24,10 @@ extension UIView {
         borderWidth: CGFloat = 0,
         borderColor: UIColor = .clear
     ) {
-        layer.cornerRadius = cornerRadius
+        layer.cornerRadius = 8
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor
+        layer.masksToBounds = true
     }
 }
 
