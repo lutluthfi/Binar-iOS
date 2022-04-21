@@ -18,6 +18,7 @@ final class TableCell<Content>: UITableViewCell where Content: UIView {
     private var topConstraint: NSLayoutConstraint?
     private var trailingConstraint: NSLayoutConstraint?
     private var bottomConstraint: NSLayoutConstraint?
+    private var heightConstraint: NSLayoutConstraint?
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -26,13 +27,18 @@ final class TableCell<Content>: UITableViewCell where Content: UIView {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(content)
-        content.makeConstraint {
-            self.leadingConstraint = $0.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor)
-            self.trailingConstraint = $0.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
-            self.topConstraint = $0.topAnchor.constraint(equalTo: self.contentView.topAnchor)
-            self.bottomConstraint = $0.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
-            return [self.leadingConstraint!, self.trailingConstraint!, self.topConstraint!, self.bottomConstraint!]
-        }
+        leadingConstraint = content.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)
+        trailingConstraint = content.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
+        topConstraint = content.topAnchor.constraint(equalTo: contentView.topAnchor)
+        bottomConstraint = content.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        heightConstraint = content.heightAnchor.constraint(greaterThanOrEqualToConstant: 1)
+        content.makeConstraint(builder: { _ in
+            heightConstraint!
+            leadingConstraint!
+            trailingConstraint!
+            topConstraint!
+            bottomConstraint!
+        })
     }
     
     private func updateConstraint() {
@@ -40,5 +46,14 @@ final class TableCell<Content>: UITableViewCell where Content: UIView {
         self.trailingConstraint?.constant = padding.right
         self.topConstraint?.constant = padding.top
         self.bottomConstraint?.constant = padding.bottom
+        
+        setNeedsLayout()
+        layoutIfNeeded()
+    }
+}
+
+extension TableCell {
+    func setHeight(_ height: CGFloat) {
+        heightConstraint?.constant = height
     }
 }

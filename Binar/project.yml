@@ -39,11 +39,11 @@ targets:
             configs:
                 DEV-Debug:
                     PRODUCT_BUNDLE_IDENTIFIER: com.binaracademy.Binar.dev
-                    PRODUCT_NAME: Binar
+                    PRODUCT_NAME: DEV Binar
                     SWIFT_ACTIVE_COMPILATION_CONDITIONS: "DEV DEBUG"
                 DEV-Release:
                     PRODUCT_BUNDLE_IDENTIFIER: com.binaracademy.Binar.dev
-                    PRODUCT_NAME: Binar
+                    PRODUCT_NAME: DEV Binar
                     SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEV
                 STA-Debug:
                     PRODUCT_BUNDLE_IDENTIFIER: com.binaracademy.Binar.sta

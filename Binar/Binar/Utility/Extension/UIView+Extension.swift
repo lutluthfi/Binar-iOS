@@ -7,13 +7,33 @@
 
 import UIKit
 
+@resultBuilder
+struct ConstraintBuilder {
+    static func buildBlock(_ components: NSLayoutConstraint...) -> [NSLayoutConstraint] {
+        components
+    }
+}
+
 extension UIView {
+    func makeConstraint(@ConstraintBuilder builder: (UIView) -> [NSLayoutConstraint]) {
+        translatesAutoresizingMaskIntoConstraints = false
+        let _constraints: [NSLayoutConstraint] = builder(self)
+        NSLayoutConstraint.activate(_constraints)
+    }
+    
+    func remakeConstraint(@ConstraintBuilder builder: (UIView) -> [NSLayoutConstraint]) {
+        constraints.forEach { $0.isActive = false }
+        makeConstraint(builder: builder)
+    }
+    
+    @available(*, deprecated, message: "Please use makeConstraint(@ConstraintBuilder builder: (UIView) -> [NSLayoutConstraint])")
     func makeConstraint(completion: @escaping (UIView) -> [NSLayoutConstraint]) {
         translatesAutoresizingMaskIntoConstraints = false
         let _constraints: [NSLayoutConstraint] = completion(self)
         NSLayoutConstraint.activate(_constraints)
     }
     
+    @available(*, deprecated, message: "Please use remakeConstraint(@ConstraintBuilder builder: (UIView) -> [NSLayoutConstraint])")
     func remakeConstraint(completion: @escaping (UIView) -> [NSLayoutConstraint]) {
         constraints.forEach { $0.isActive = false }
         makeConstraint(completion: completion)
