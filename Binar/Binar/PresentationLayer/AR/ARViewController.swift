@@ -7,26 +7,26 @@
 
 import UIKit
 
-final class ARViewController: UITableViewController, StoryboardInstantiable {
-    enum Course: String, CaseIterable, TitleEnum {
-        case Challenge4
-        case DelegatePattern
-        case Form
-        case ScrollView
-        case StandardCollectionView
-        case CompositionalCollectionView
-        case ChipsCollectionView
-        case TabBar
-        case Chat
-        case Instagram
-        
-        static var sorted: [Course] {
-            Course.allCases.sorted {
-                $0.rawTitle < $1.rawTitle
-            }.map { $0 }
-        }
-    }
+enum Course: String, CaseIterable, TitleEnum {
+    case Challenge4
+    case DelegatePattern
+    case Form
+    case ScrollView
+    case StandardCollectionView
+    case CompositionalCollectionView
+    case ChipsCollectionView
+    case TabBar
+    case Chat
+    case Instagram
     
+    static var sorted: [Course] {
+        Course.allCases.sorted {
+            $0.rawTitle < $1.rawTitle
+        }.map { $0 }
+    }
+}
+
+final class ARViewController: UITableViewController, StoryboardInstantiable {
     private let name: String
     
     required init?(coder: NSCoder) {
@@ -44,7 +44,10 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
     }
     
     // MARK: TableViewDataSource
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
         let numberOfCourse: Int = Course.sorted.count
         return numberOfCourse
     }

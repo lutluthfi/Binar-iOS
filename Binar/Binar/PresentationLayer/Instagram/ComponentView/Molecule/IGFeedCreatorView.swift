@@ -36,17 +36,17 @@ final class IGFeedCreatorView: UIView {
     }
     
     private func setupConstraint() {
-        avatarImageView.makeConstraint {[
-            $0.widthAnchor.constraint(equalToConstant: self.avatarSizeType.rawValue),
-            $0.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            $0.topAnchor.constraint(equalTo: self.topAnchor),
+        avatarImageView.makeConstraint(builder: {
+            $0.widthAnchor.constraint(equalToConstant: self.avatarSizeType.rawValue)
+            $0.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+            $0.topAnchor.constraint(equalTo: self.topAnchor)
             $0.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ]}
-        usernameLabel.makeConstraint {[
-            $0.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            $0.leadingAnchor.constraint(equalTo: self.avatarImageView.trailingAnchor, constant: 16),
+        })
+        usernameLabel.makeConstraint(builder: {
+            $0.centerYAnchor.constraint(equalTo: self.centerYAnchor)
+            $0.leadingAnchor.constraint(equalTo: self.avatarImageView.trailingAnchor, constant: 16)
             $0.trailingAnchor.constraint(equalTo: self.trailingAnchor)
-        ]}
+        })
     }
     
     func configure(username: String, avatarUrlString: String) {

@@ -42,10 +42,10 @@ final class TableCell<Content>: UITableViewCell where Content: UIView {
     }
     
     private func updateConstraint() {
-        self.leadingConstraint?.constant = padding.left
-        self.trailingConstraint?.constant = padding.right
-        self.topConstraint?.constant = padding.top
-        self.bottomConstraint?.constant = padding.bottom
+        leadingConstraint?.constant = padding.left
+        trailingConstraint?.constant = padding.right * -1
+        topConstraint?.constant = padding.top
+        bottomConstraint?.constant = padding.bottom * -1
         
         setNeedsLayout()
         layoutIfNeeded()
