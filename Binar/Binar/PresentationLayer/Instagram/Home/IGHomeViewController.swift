@@ -55,6 +55,7 @@ final class TryGroupCell: LiteTableGroupCell {
                 cell.setHeight(12)
                 cell.backgroundColor = .systemBlue
             }
+            .setIdentifier("SeparatorBlue")
             loadCell { (cell: TableCell<UILabel>, _) in
                 cell.content.text = "Ini dari Group Cell"
             }
@@ -62,6 +63,7 @@ final class TryGroupCell: LiteTableGroupCell {
                 cell.setHeight(12)
                 cell.backgroundColor = .systemBlue
             }
+            .setIdentifier("SeparatorBlue")
         }
     }
 }

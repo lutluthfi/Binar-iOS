@@ -21,8 +21,9 @@ final class LiteTableCell {
         self.identifier = String(describing: cellType)
     }
     
-    func setIdentifier(_ identifier: String) {
+    func setIdentifier(_ identifier: String) -> LiteTableCell {
         self.identifier = identifier
+        return self
     }
 }
 
