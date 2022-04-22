@@ -115,6 +115,7 @@ final class CarouselView<ItemView, ItemModel>: UIView, UICollectionViewContract 
         view.dataSource = self
         view.delegate = self
         view.showsHorizontalScrollIndicator = false
+        view.alwaysBounceHorizontal = true
         view.registerCell(CarouselCell<ItemView>.self)
         return view
     }

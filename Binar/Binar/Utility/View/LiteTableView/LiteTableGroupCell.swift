@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LiteTableGroupCell {
+class LiteTableGroupCell: LoadTableCellContract {
     required init() {
     }
     
@@ -18,15 +18,5 @@ class LiteTableGroupCell {
     ) -> [LiteTableCell] {
         let cells: [LiteTableCell] = builder()
         return cells
-    }
-    
-    final func loadCell<Cell>(
-        dequeue: @escaping (Cell, IndexPath) -> Void
-    ) -> LiteTableCell where Cell: UITableViewCell {
-        let liteCell = LiteTableCell(cellType: Cell.self) { cell, indexPath in
-            guard let _cell = cell as? Cell else { return }
-            dequeue(_cell, indexPath)
-        }
-        return liteCell
     }
 }

@@ -26,6 +26,7 @@ final class TableCell<Content>: UITableViewCell where Content: UIView {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        selectionStyle = .none
         contentView.addSubview(content)
         leadingConstraint = content.leadingAnchor.constraint(equalTo: contentView.leadingAnchor)
         trailingConstraint = content.trailingAnchor.constraint(equalTo: contentView.trailingAnchor)
@@ -54,6 +55,9 @@ final class TableCell<Content>: UITableViewCell where Content: UIView {
 
 extension TableCell {
     func setHeight(_ height: CGFloat) {
-        heightConstraint?.constant = height
+        heightConstraint?.isActive = false
+        
+        heightConstraint = content.heightAnchor.constraint(equalToConstant: height)
+        heightConstraint?.isActive = true
     }
 }
