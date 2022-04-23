@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BIChallengeViewController: UIViewController {
+final class BIChallengeChapter3VC: UIViewController {
     @IBOutlet weak var challengeImageView: UIImageView!
     @IBOutlet weak var firstNumberTextField: UITextField!
     @IBOutlet weak var secondNumberTextField: UITextField!

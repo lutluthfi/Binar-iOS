@@ -406,10 +406,10 @@
             </objects>
             <point key="canvasLocation" x="253.62318840579712" y="864.50892857142856"/>
         </scene>
-        <!--Challenge View Controller-->
+        <!--Challenge Chapter3VC-->
         <scene sceneID="Stw-ue-Nhu">
             <objects>
-                <viewController storyboardIdentifier="BIChallengeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K7n-v6-TTZ" customClass="BIChallengeViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BIChallengeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K7n-v6-TTZ" customClass="BIChallengeChapter3VC" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hto-G1-PMu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
