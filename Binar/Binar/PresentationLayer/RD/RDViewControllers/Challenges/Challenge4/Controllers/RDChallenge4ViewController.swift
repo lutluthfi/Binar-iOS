@@ -12,6 +12,17 @@ final class RDChallenge4ViewController: UICollectionViewController {
     let apperance = UINavigationBarAppearance()
     private var spotifyData: [RDSpotifyModel] = RDSpotifyModel.dummySpotifyData()
     
+    var sections = [RDSpotifyModel]()
+    
+    let spotifyTitleLabel: UILabel = {
+        let titleLabel  = UILabel()
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont.systemFont(ofSize: 14)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        return titleLabel
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -29,6 +40,8 @@ final class RDChallenge4ViewController: UICollectionViewController {
     private func setupCollectionView() {
         collectionView.backgroundColor = .black
         collectionView.register(RDSpotifyCell.self, forCellWithReuseIdentifier: cellId)
+      
+    
     }
 }
 
@@ -41,6 +54,10 @@ extension RDChallenge4ViewController: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RDSpotifyCell
+        
+        
+        cell.section = spotifyData[indexPath.item]
+        
         return cell
     }
     

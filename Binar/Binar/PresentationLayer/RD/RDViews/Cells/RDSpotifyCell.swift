@@ -13,24 +13,18 @@ final class RDSpotifyCell: UICollectionViewCell {
     let cellId : String = "subCellID"
     private var spotifyData: [RDSpotifyModel] = RDSpotifyModel.dummySpotifyData()
     
-//    var section : Section? {
-//         didSet{
-//            
-//             guard let section = self.section else {return}
-//             self.titleLabel.text = section.title
-//             self.section?.playlists.forEach({ (item) in
-//                 let playlist = PlayList(dictionary: item as! [String : Any])
-//                 self.playlists.append(playlist)
-//
-//             })
-//             self.collectionView.reloadData()
-//             
-//         }
-//     }
+    var section : RDSpotifyModel? {
+           didSet{
+               guard let section = self.section else {return}
+               self.spotifyTitleLabel.text = section.title
+               self.playlist = section.playlist
+           }
+       }
     
+    var playlist = [RDSpotifyPlaylist]()
+        
     let spotifyTitleLabel: UILabel = {
         let titleLabel  = UILabel()
-        titleLabel.text = "Section Title"
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 14)
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
@@ -69,7 +63,8 @@ final class RDSpotifyCell: UICollectionViewCell {
         spotifyCollectionView.dataSource = self
         spotifyCollectionView.delegate = self
         
-        spotifyCollectionView.topAnchor.constraint(equalTo: spotifyTitleLabel.bottomAnchor).isActive = true
+    
+        spotifyCollectionView.topAnchor.constraint(equalTo: spotifyTitleLabel.bottomAnchor,constant: 10).isActive = true
         spotifyCollectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         spotifyCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         spotifyCollectionView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
@@ -86,6 +81,9 @@ extension RDSpotifyCell: UICollectionViewDelegate,UICollectionViewDataSource,UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RDSubSpotifyCell
+        
+        cell.playlist = playlist[indexPath.item]
+        
         return cell
     }
     

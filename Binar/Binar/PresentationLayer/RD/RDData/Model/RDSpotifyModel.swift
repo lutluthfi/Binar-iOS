@@ -10,6 +10,7 @@ import UIKit
 struct RDSpotifyModel: Codable {
     let title: String
     let playlist: [RDSpotifyPlaylist]
+
 }
 
 struct RDSpotifyPlaylist: Codable {
@@ -23,11 +24,11 @@ extension RDSpotifyModel {
         let dummyData = """
                 [
                     {
-                        "title": "Section1",
+                        "title": "Dimas",
                         "playlist": [
                             {
                                 "title": "Justin Bieber",
-                                "image": "SpotifyCover1"
+                                "image": "SpotifyCover1",
                                 "follower": 180
                             },
                             {
@@ -37,17 +38,17 @@ extension RDSpotifyModel {
                             },
                             {
                                 "title": "Justin Bieber",
-                                "image": "SpotifyCover1"
+                                "image": "SpotifyCover1",
                                 "follower": 180
                             },
                         ]
                     },
                     {
-                        "title": "Section2",
+                        "title": "Burhanudin",
                         "playlist": [
                             {
                                 "title": "Justin Bieber",
-                                "image": "SpotifyCover1"
+                                "image": "SpotifyCover1",
                                 "follower": 180
                             },
                             {
@@ -57,17 +58,17 @@ extension RDSpotifyModel {
                             },
                             {
                                 "title": "Justin Bieber",
-                                "image": "SpotifyCover1"
+                                "image": "SpotifyCover1",
                                 "follower": 180
                             },
                         ]
                     },
                     {
-                        "title": "Section3",
+                        "title": "Akbar",
                         "playlist": [
                         {
                             "title": "Justin Bieber",
-                            "image": "SpotifyCover1"
+                            "image": "SpotifyCover1",
                             "follower": 180
                         },
                         {
@@ -77,7 +78,7 @@ extension RDSpotifyModel {
                         },
                         {
                             "title": "Justin Bieber",
-                            "image": "SpotifyCover1"
+                            "image": "SpotifyCover1",
                             "follower": 180
                             },
                         ]

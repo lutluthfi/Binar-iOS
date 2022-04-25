@@ -10,20 +10,17 @@ import UIKit
 
 final class RDSubSpotifyCell: UICollectionViewCell {
     
-//    var playlist : PlayList? {
-//               didSet{
-//                   print("Playlist 🎯",self.playlist)
-//                guard let playlist = self.playlist else {return}
-//                self.ImageView.image = UIImage(named: playlist.image)
-//                self.TitleLabel.text = self.playlist?.title
-//
-//               }
-//        }
+    var playlist: RDSpotifyPlaylist? {
+               didSet {
+                guard let playlist = self.playlist else {return}
+                   self.cellImageView.image = UIImage(named: playlist.image)
+                   self.cellTitleLabel.text = self.playlist?.title
+               }
+        }
     
     private lazy var cellImageView : UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .yellow
-        imageView.image = UIImage(named: "SpotifyCover1")
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -34,7 +31,6 @@ final class RDSubSpotifyCell: UICollectionViewCell {
         titleLabel.textColor = UIColor.lightGray
         titleLabel.font = UIFont.systemFont(ofSize: 14)
         titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
-        titleLabel.text = "Evening Music"
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         return titleLabel
     }()
