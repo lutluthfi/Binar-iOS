@@ -29,4 +29,8 @@ class LiteTableViewController: UIViewController, LoadTableCellContract {
     final func loadTableView(@LiteTableCellBuilder builder: () -> [LiteTableCell]) {
         tableView.load(builder: builder)
     }
+    
+    final func reloadTableView() {
+        tableView.reloadData()
+    }
 }
