@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>48376795055-jqoiof6i5ac3vp0a9hu5jrrunds0lkan.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.48376795055-jqoiof6i5ac3vp0a9hu5jrrunds0lkan</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDy3AkO58ncTnR72ENqLwC6cYDyTjTFuhw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>48376795055</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.binaracademy.Binar.dev</string>
+	<key>PROJECT_ID</key>
+	<string>binar-academy-ca0eb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>binar-academy-ca0eb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:48376795055:ios:bf1aca17be2b063383e95a</string>
+</dict>
+</plist>

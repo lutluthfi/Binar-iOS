@@ -19,7 +19,7 @@ options:
     generateEmptyDirectories : true
     minimumXcodeGenVersion   : '2.18.0'
     preGenCommand            : ./pregencommand.sh
-    postGenCommand           : # pod install
+    postGenCommand           : pod install
 
 ## MARK: - Target Section
 targets:
