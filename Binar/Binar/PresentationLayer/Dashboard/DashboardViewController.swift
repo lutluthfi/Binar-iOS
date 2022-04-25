@@ -197,13 +197,19 @@ extension DashboardViewController {
 
 // MARK: goToDPViewController
 extension DashboardViewController {
+//    func goToDPViewController() {
+//        guard let selectedStudent = selectedStudent else { return }
+//        let storyboard = UIStoryboard(name: "DPAnimalChapter2Main", bundle: nil)
+//        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DPAnimalChallengeCapther2ViewController") as? DPAnimalChallengeCapther2ViewController else {
+//            return
+//        }
+//        viewController.name = selectedStudent.name
+//        navigationController?.pushViewController(viewController, animated: true)
+//    }
     func goToDPViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        let storyboard = UIStoryboard(name: "DPMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DPViewController") as? DPViewController else {
-            return
-        }
-        viewController.name = selectedStudent.name
+        guard let student = selectedStudent else { return }
+        let studentName: String = student.name
+        let viewController = DPViewController(name: studentName)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }

@@ -2,90 +2,130 @@
 //  DPViewController.swift
 //  Binar
 //
-//  Created by Dimas Purnomo on 15/03/22.
+//  Created by Dimas Purnomo on 25/04/22.
 //
 
 import UIKit
 
-final class DPViewController: UIViewController {
+class DPViewController: UITableViewController, StoryboardInstantiable {
     
-    
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var buttonAZ: UIButton!
-    
-    @IBAction func buttonAZ(_ sender: Any) {
-        let title = buttonAZ.titleLabel?.text
+    enum Course: String, CaseIterable, TitleEnum {
+        case Challenge2
+        case Challenge3
         
-        switch title {
-        case "Sort":
-            buttonAZ.setTitle("Z-A", for: .normal)
-            displayAnimals = displayAnimals.sorted().reversed()
-            tableView.reloadData()
-        case "Z-A":
-            buttonAZ.setTitle("A-Z", for: .normal)
-            displayAnimals = displayAnimals.sorted()
-            tableView.reloadData()
-        default:
-            buttonAZ.setTitle("Z-A", for: .normal)
-            displayAnimals = displayAnimals.sorted().reversed()
-            tableView.reloadData()
+        static var sorted: [Course] {
+            Course.allCases.sorted {
+                $0.rawTitle < $1.rawTitle
+            }.map { $0 }
         }
     }
     
-    var displayAnimals: [String] = Animal.listV1()
-    var name: String?
+    private let name: String
+    
+    init(name: String) {
+        self.name = name
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        searchBar.delegate = self
+        tableView.registerCell(UITableViewCell.self)
+        title = self.name + " Challenge"
     }
-}
 
-extension DPViewController: UITableViewDataSource, UITableViewDelegate{
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return displayAnimals.count
+    // MARK: - Table view data source
+
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AnimalsTableCell", for: indexPath)
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let numberOfCourse: Int = Course.sorted.count
+        return numberOfCourse
         
-        cell.textLabel?.text = displayAnimals[indexPath.row]
+    }
+
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
+        
+        let row: Int = indexPath.row
+        let titleCourse: String = Course.sorted[row].rawTitle
+        cell.textLabel?.text = titleCourse
+        
         return cell
     }
-}
-
-extension DPViewController: UISearchBarDelegate{
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row: Int = indexPath.row
+        let course: Course = Course.sorted[row]
+        switch course {
+        case .Challenge2:
+            let storyboard = UIStoryboard(name: "DPAnimalChapter2Main", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(withIdentifier: "DPAnimalChallengeCapther2ViewController") as? DPAnimalChallengeCapther2ViewController else { return }
+            open(viewController)
+        case .Challenge3:
+            
         
     }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        tableView.endEditing(true)
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        let _searchText: String = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-        let isSearchTextNotEmpty = !_searchText.isEmpty
-        let animals: [String] = Animal.listV1().sorted()
-        if isSearchTextNotEmpty {
-            let searchedAnimals: [String] = animals.filter {
-                let _searchText: String = searchText.lowercased()
-                let _name: String = $0.lowercased()
-                return _name.contains(_searchText)
-            }
-            displayAnimals = searchedAnimals
-        } else {
-            displayAnimals = animals
-        }
-        tableView.reloadData()
-    }
 }
+    
+    
+    private func open(_ viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 
 
 
+    /*
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    */
+
+    /*
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }    
+    }
+    */
+
+    /*
+    // Override to support rearranging the table view.
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+
+    }
+    */
+
+    /*
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
+    */
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
