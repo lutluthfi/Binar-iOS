@@ -14,11 +14,17 @@ final class LiteTableCell {
     let cellType: Cell.Type
     var dequeue: DequeueCell
     private(set) var identifier: String
+    private(set) var isHidden = false
     
     init(cellType: Cell.Type, dequeue: @escaping DequeueCell) {
         self.cellType = cellType
         self.dequeue = dequeue
         self.identifier = String(describing: cellType)
+    }
+    
+    @discardableResult func setHidden(_ isHidden: Bool) -> LiteTableCell {
+        self.isHidden = isHidden
+        return self
     }
     
     @discardableResult func setIdentifier(_ identifier: String) -> LiteTableCell {
