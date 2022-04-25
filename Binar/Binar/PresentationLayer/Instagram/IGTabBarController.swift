@@ -8,6 +8,13 @@
 import UIKit
 
 final class IGTabBarController: UITabBarController {
+    lazy var backBarButton = UIBarButtonItem(
+        image: UIImage(systemName: "chevron.backward.2"),
+        style: .done,
+        target: self,
+        action: #selector(onBackBarButtonTap)
+    )
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -18,6 +25,7 @@ final class IGTabBarController: UITabBarController {
         
         let homeViewController = IGHomeViewController()
         homeViewController.title = "Home"
+        homeViewController.navigationItem.leftBarButtonItem = backBarButton
         homeViewController.tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage(systemName: "house"),
@@ -36,5 +44,10 @@ final class IGTabBarController: UITabBarController {
             UINavigationController(rootViewController: $0)
         }
         setViewControllers(viewControllers, animated: false)
+    }
+    
+    @objc private func onBackBarButtonTap() {
+        let navigationController = parent as? UINavigationController
+        navigationController?.popViewController(animated: true)
     }
 }

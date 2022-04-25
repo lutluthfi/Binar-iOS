@@ -9,17 +9,34 @@ import UIKit
 
 final class LiteTableViewAdapter: NSObject, UITableViewDataSource, UITableViewDelegate {
     private var cells: [LiteTableCell] = []
+    private var cellHeights: [IndexPath: CGFloat] = [:]
     
     func setCells(_ cells: [LiteTableCell]) {
         self.cells = cells
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        44
+        guard let liteCell: LiteTableCell = cells[safe: indexPath.row] else { return 0 }
+        let isHidden: Bool = liteCell.isHidden
+        
+        if isHidden {
+            return 0
+        } else if let cellHeight: CGFloat = cellHeights[indexPath] {
+            return cellHeight
+        } else {
+            return UITableView.automaticDimension
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        UITableView.automaticDimension
+        guard let liteCell: LiteTableCell = cells[safe: indexPath.row] else { return 0 }
+        let isHidden: Bool = liteCell.isHidden
+        
+        if isHidden {
+            return 0
+        } else {
+            return UITableView.automaticDimension
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -40,5 +57,13 @@ final class LiteTableViewAdapter: NSObject, UITableViewDataSource, UITableViewDe
         liteCell.dequeue(reusableCell, indexPath)
         
         return reusableCell
+    }
+    
+    func tableView(
+        _ tableView: UITableView,
+        willDisplay cell: UITableViewCell,
+        forRowAt indexPath: IndexPath
+    ) {
+        cellHeights[indexPath] = cell.frame.height
     }
 }

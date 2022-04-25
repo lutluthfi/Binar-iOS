@@ -21,7 +21,7 @@ protocol LoadTableCellContract {
     func rectangle(
         height: CGFloat,
         color: UIColor,
-        identifier: String?
+        identifier: String
     ) -> LiteTableCell
     
     func loadGroupCell<GroupCell>(
@@ -31,7 +31,11 @@ protocol LoadTableCellContract {
 
 extension LoadTableCellContract {
     func emptyCell() -> LiteTableCell {
-        rectangle(height: 0, color: .clear)
+        loadCell { (cell: TableCell<UIView>, _) in
+            cell.backgroundColor = .clear
+        }
+        .setHidden(true)
+        .setIdentifier("LiteEmptyCell")
     }
 }
 
@@ -63,16 +67,13 @@ extension LoadTableCellContract {
     func rectangle(
         height: CGFloat,
         color: UIColor,
-        identifier: String? = nil
+        identifier: String = "LiteRectangleCell"
     ) -> LiteTableCell {
-        let liteCell = loadCell { (cell: TableCell<UIView>, _) in
+        loadCell { (cell: TableCell<UIView>, _) in
             cell.setHeight(height)
             cell.backgroundColor = color
         }
-        if let _identifier = identifier {
-            liteCell.setIdentifier(_identifier)
-        }
-        return liteCell
+        .setIdentifier(identifier)
     }
 }
 
