@@ -44,13 +44,13 @@ final class IGHomeViewController: LiteTableViewController {
     }
     
     private func adBannerCell() -> LiteTableCell {
-        let adBannerVisibility: Bool = RemoteConfigHelper.standard.adBannerVisibility
-        guard adBannerVisibility else { return emptyCell() }
+        let adBanner: AdBannerRCEntity? = RemoteConfigHelper.standard.adBanner
+        guard let _adBanner = adBanner else { return emptyCell() }
         return loadCell { (cell: TableCell<UILabel>, _) in
             cell.padding = UIEdgeInsets(all: 12)
-            cell.backgroundColor = .systemPurple
+            cell.backgroundColor = UIColor(hex: _adBanner.backgroundColor)
             cell.content.textAlignment = .center
-            cell.content.text = "Ad Banner 🎉"
+            cell.content.text = _adBanner.text
         }
     }
 }
