@@ -15,10 +15,26 @@ final class IGHomeViewController: LiteTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        loadFeeds()
+    }
+    
+    private func setupView() {
         tableBackgroundColor = .secondarySystemBackground
+    }
+    
+    private func loadFeeds() {
+        let localFeeds = UserDefaultsHelper.standard.feeds
+        if !localFeeds.isEmpty {
+            render(feeds: localFeeds)
+            return
+        }
+        
         instagramAPI.getFeeds { [weak self] (result) in
             switch result {
             case let .success(data):
+                let feeds: [IGFeedResponse] = data.data
+                UserDefaultsHelper.standard.feeds = feeds
                 self?.render(feeds: data.data)
             case .failure:
                 break
