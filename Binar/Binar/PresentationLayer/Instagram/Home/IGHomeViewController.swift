@@ -32,7 +32,17 @@ final class IGHomeViewController: LiteTableViewController {
             forEachElement(in: feeds) { row, element in
                 loadGroupCell { (groupCell: IGFeedGroupCell) in
                     groupCell.configure(feed: element)
-                    groupCell.onLikesImageViewTap = { isLiked in
+                    groupCell.onBookmarkTap = { feedId in
+                        var feedIds: [String] = UserDefaults.standard.stringArray(forKey: "bookmark_list_feed_id") ?? []
+                        let isFeedIdExist: Bool = feedIds.contains(feedId)
+                        if isFeedIdExist {
+                            feedIds.removeAll(where: { $0 == feedId })
+                        } else {
+                            feedIds.append(feedId)
+                        }
+                        UserDefaults.standard.set(feedIds, forKey: "bookmark_list_feed_id")
+                    }
+                    groupCell.onLikesTap = { isLiked in
                         print(isLiked)
                     }
                 }

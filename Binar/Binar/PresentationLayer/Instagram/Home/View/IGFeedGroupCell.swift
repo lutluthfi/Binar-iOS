@@ -10,7 +10,8 @@ import UIKit
 final class IGFeedGroupCell: LiteTableGroupCell {
     private var feed: IGFeedResponse?
     
-    var onLikesImageViewTap: IGFeedLikesView.OnLikesImageViewTapped?
+    var onBookmarkTap: ((String) -> Void)?
+    var onLikesTap: ((Bool) -> Void)?
     
     func configure(feed: IGFeedResponse) {
         self.feed = feed
@@ -51,10 +52,16 @@ final class IGFeedGroupCell: LiteTableGroupCell {
     private func likeCell() -> LiteTableCell {
         guard let _feed = feed else { return emptyCell() }
         return loadCell { (cell: TableCell<IGFeedLikesView>, _) in
-            print("test --- loadLikeCell")
             cell.padding = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
-            cell.content.configure(numberOfLikes: _feed.likes)
-            cell.content.onLikesImageViewTap = self.onLikesImageViewTap
+            
+            let feedIds: [String] = UserDefaults.standard.stringArray(forKey: "bookmark_list_feed_id") ?? []
+            let isBookmarked: Bool = feedIds.contains(_feed.id)
+            
+            cell.content.configure(numberOfLikes: _feed.likes, isBookmarked: isBookmarked)
+            cell.content.onBookmarkTap = { [weak self] _ in
+                self?.onBookmarkTap?(_feed.id)
+            }
+            cell.content.onLikesTap = self.onLikesTap
         }
         .setIdentifier(_feed.id)
     }
