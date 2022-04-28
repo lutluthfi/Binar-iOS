@@ -33,4 +33,11 @@ class LiteTableViewController: UIViewController, LoadTableCellContract {
     final func reloadTableView() {
         tableView.reloadData()
     }
+    
+    final func reloadCell(at indexPath: IndexPath) {
+        UIView.animate(withDuration: 0.05) {
+            self.tableView.beginUpdates()
+            self.tableView.endUpdates()
+        }
+    }
 }

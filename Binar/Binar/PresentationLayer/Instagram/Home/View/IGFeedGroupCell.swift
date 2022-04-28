@@ -8,13 +8,20 @@
 import UIKit
 
 final class IGFeedGroupCell: LiteTableGroupCell {
-    private var feed: IGFeedResponse?
+    typealias OnBookmarkTap = (String) -> Void
+    typealias OnLikesTap = (Bool) -> Void
+    typealias OnCaptionTap = (IndexPath) -> Void
     
-    var onBookmarkTap: ((String) -> Void)?
-    var onLikesTap: ((Bool) -> Void)?
+    private var feed: IGFeedViewParam?
+    private var isBookmarked = false
     
-    func configure(feed: IGFeedResponse) {
+    var onBookmarkTap: OnBookmarkTap?
+    var onLikesTap: OnLikesTap?
+    var onCaptionTap: OnCaptionTap?
+    
+    func configure(feed: IGFeedViewParam, isBookmarked: Bool) {
         self.feed = feed
+        self.isBookmarked = isBookmarked
     }
     
     override func populateCells() -> [LiteTableCell] {
@@ -31,9 +38,7 @@ final class IGFeedGroupCell: LiteTableGroupCell {
         guard let _feed = feed else { return emptyCell() }
         return loadCell { (cell: TableCell<IGFeedCreatorView>, _) in
             cell.padding = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
-            let username = [_feed.owner.firstName, _feed.owner.lastName].joined(separator: ".")
-            let avatarUrlString = _feed.owner.picture
-            cell.content.configure(username: username, avatarUrlString: avatarUrlString)
+            cell.content.configure(username: _feed.username, avatarUrlString: _feed.avatarUrlString)
         }
     }
     
@@ -45,7 +50,7 @@ final class IGFeedGroupCell: LiteTableGroupCell {
             cell.padding = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
             cell.content.contentMode = .scaleAspectFill
             cell.content.clipsToBounds = true
-            cell.content.loadImage(resource: _feed.image)
+            cell.content.loadImage(resource: _feed.pictureUrlString)
         }
     }
     
@@ -53,25 +58,25 @@ final class IGFeedGroupCell: LiteTableGroupCell {
         guard let _feed = feed else { return emptyCell() }
         return loadCell { (cell: TableCell<IGFeedLikesView>, _) in
             cell.padding = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
-            
-            let feedIds: [String] = UserDefaults.standard.stringArray(forKey: "bookmark_list_feed_id") ?? []
-            let isBookmarked: Bool = feedIds.contains(_feed.id)
-            
-            cell.content.configure(numberOfLikes: _feed.likes, isBookmarked: isBookmarked)
+            cell.content.configure(numberOfLikes: _feed.numberOfLikes, isBookmarked: self.isBookmarked)
             cell.content.onBookmarkTap = { [weak self] _ in
                 self?.onBookmarkTap?(_feed.id)
             }
             cell.content.onLikesTap = self.onLikesTap
         }
-        .setIdentifier(_feed.id)
+        .setIdentifier("FeedLikesViewCell-\(_feed.id)")
     }
     
     private func captionCell() -> LiteTableCell {
         guard let _feed = feed else { return emptyCell() }
-        return loadCell { (cell: TableCell<IGCaptionLabel>, _) in
+        return loadCell { (cell: TableCell<IGCaptionLabel>, indexPath: IndexPath) in
             cell.padding = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
-            cell.content.configure(username: _feed.owner.firstName, caption: _feed.text)
+            cell.content.configure(username: _feed.username, caption: _feed.caption)
+            cell.content.onTap = { [weak self] in
+                self?.onCaptionTap?(indexPath)
+            }
         }
+        .setIdentifier("CaptionLabelCell-\(_feed.id)")
     }
     
     private func separatorCell() -> LiteTableCell {
