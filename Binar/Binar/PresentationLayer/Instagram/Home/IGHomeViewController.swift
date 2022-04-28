@@ -13,12 +13,30 @@ final class IGHomeViewController: LiteTableViewController {
     
     private let instagramAPI = InstagramAPI(appId: "6249791f9296122eca0475be")
     
+    @UserDefaultsArray<String>(key: "bookmark") private var bookmark
+    @UserDefaultsArray<IGFeedResponse>(key: "feeds") private var localFeeds
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        loadFeeds()
+    }
+    
+    private func setupView() {
         tableBackgroundColor = .secondarySystemBackground
+    }
+    
+    private func loadFeeds() {
+        if !localFeeds.isEmpty {
+            render(feeds: localFeeds)
+            return
+        }
+        
         instagramAPI.getFeeds { [weak self] (result) in
             switch result {
             case let .success(data):
+                let feeds: [IGFeedResponse] = data.data
+                UserDefaultsHelper.standard.feeds = feeds
                 self?.render(feeds: data.data)
             case .failure:
                 break
@@ -32,6 +50,12 @@ final class IGHomeViewController: LiteTableViewController {
             forEachElement(in: feeds) { row, element in
                 loadGroupCell { (groupCell: IGFeedGroupCell) in
                     groupCell.configure(feed: element)
+                    groupCell.onBookmarkTap = { feedId in
+                        self.addNewBookmark(feedId: feedId)
+                    }
+                    groupCell.onLikesTap = { isLiked in
+                        print(isLiked)
+                    }
                 }
             }
             loadCell { (cell: TableCell<UILabel>, _) in
@@ -44,73 +68,22 @@ final class IGHomeViewController: LiteTableViewController {
     }
     
     private func adBannerCell() -> LiteTableCell {
-        let adBannerVisibility: Bool = RemoteConfigHelper.standard.adBannerVisibility
-        guard adBannerVisibility else { return emptyCell() }
+        let adBanner: AdBannerRCEntity? = RemoteConfigHelper.standard.adBanner
+        guard let _adBanner = adBanner else { return emptyCell() }
         return loadCell { (cell: TableCell<UILabel>, _) in
             cell.padding = UIEdgeInsets(all: 12)
-            cell.backgroundColor = .systemPurple
+            cell.backgroundColor = UIColor(hex: _adBanner.backgroundColor)
             cell.content.textAlignment = .center
-            cell.content.text = "Ad Banner 🎉"
-        }
-    }
-}
-
-final class IGFeedGroupCell: LiteTableGroupCell {
-    private var feed: IGFeedResponse?
-    
-    func configure(feed: IGFeedResponse) {
-        self.feed = feed
-    }
-    
-    override func populateCells() -> [LiteTableCell] {
-        setCells {
-            creatorCell()
-            imageCell()
-            likeCell()
-            captionCell()
-            separatorCell()
+            cell.content.text = _adBanner.text
         }
     }
     
-    private func creatorCell() -> LiteTableCell {
-        guard let _feed = feed else { return emptyCell() }
-        return loadCell { (cell: TableCell<IGFeedCreatorView>, _) in
-            cell.padding = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 16)
-            let username = [_feed.owner.firstName, _feed.owner.lastName].joined(separator: ".")
-            let avatarUrlString = _feed.owner.picture
-            cell.content.configure(username: username, avatarUrlString: avatarUrlString)
+    private func addNewBookmark(feedId: String) {
+        let isExist: Bool = bookmark.contains(feedId)
+        if isExist {
+            bookmark.removeAll(where: { $0 == feedId })
+        } else {
+            bookmark.append(feedId)
         }
-    }
-    
-    private func imageCell() -> LiteTableCell {
-        guard let _feed = feed else { return emptyCell() }
-        return loadCell { (cell: TableCell<UIImageView>, _) in
-            let screenWidth: CGFloat = UIScreen.main.bounds.width
-            cell.setHeight(screenWidth)
-            cell.padding = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
-            cell.content.contentMode = .scaleAspectFill
-            cell.content.clipsToBounds = true
-            cell.content.loadImage(resource: _feed.image)
-        }
-    }
-    
-    private func likeCell() -> LiteTableCell {
-        guard let _feed = feed else { return emptyCell() }
-        return loadCell { (cell: TableCell<IGLikesLabel>, _) in
-            cell.padding = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
-            cell.content.configure(_feed.likes)
-        }
-    }
-    
-    private func captionCell() -> LiteTableCell {
-        guard let _feed = feed else { return emptyCell() }
-        return loadCell { (cell: TableCell<IGCaptionLabel>, _) in
-            cell.padding = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
-            cell.content.configure(username: _feed.owner.firstName, caption: _feed.text)
-        }
-    }
-    
-    private func separatorCell() -> LiteTableCell {
-        rectangle(height: 16, color: .secondarySystemBackground, identifier: "SeparatorCell")
     }
 }

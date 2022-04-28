@@ -13,7 +13,7 @@ final class RemoteConfigHelper {
     
     private let remoteConfig: RemoteConfig
     
-    var adBannerVisibility: Bool = false
+    var adBanner: AdBannerRCEntity?
     
     private init() {
         remoteConfig = RemoteConfig.remoteConfig()
@@ -28,11 +28,18 @@ final class RemoteConfigHelper {
             if let _error = error {
                 print("RemoteConfigHelper: Error > \(String(describing: _error))")
             } else if status == .successFetchedFromRemote || status == .successUsingPreFetchedData {
-                _self.adBannerVisibility = _self.remoteConfig.boolConfigValue(forKey: "instagram_home_ad_banner_vibility")
+                _self.populateConfigValue()
             } else {
                 print("RemoteConfigHelper: Unknown status > \(status)")
             }
         }
+    }
+    
+    private func populateConfigValue() {
+        let data: Data = remoteConfig.dataConfigValue(forKey: "instagram_home_ad_banner")
+        adBanner = try? data.decode(to: AdBannerRCEntity.self)
+        
+        
     }
 }
 
@@ -43,10 +50,6 @@ extension RemoteConfig {
     
     func dataConfigValue(forKey key: String) -> Data {
         configValue(forKey: key).dataValue
-    }
-    
-    func jsonConfigValue(forKey key: String) -> [String: Any?] {
-        configValue(forKey: key).jsonValue as? [String : Any?] ?? [:]
     }
     
     func intConfigValue(forKey key: String) -> Int {

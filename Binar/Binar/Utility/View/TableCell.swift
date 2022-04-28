@@ -42,6 +42,14 @@ final class TableCell<Content>: UITableViewCell where Content: UIView {
         })
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        print("test --- prepareForReuse")
+        if let reusableCell = content as? ReusableTableCell {
+            reusableCell.onPrepareReuse()
+        }
+    }
+    
     private func updateConstraint() {
         leadingConstraint?.constant = padding.left
         trailingConstraint?.constant = padding.right * -1
