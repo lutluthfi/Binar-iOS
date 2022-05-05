@@ -64,7 +64,7 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
     let binar: Binar = Binar.sorted[row]
     switch binar {
     case .AnimalCellChallenge:
-        open(DBChallange3TableViewController())
+        open(DBChallenge3TableViewController())
    
     }
 }
