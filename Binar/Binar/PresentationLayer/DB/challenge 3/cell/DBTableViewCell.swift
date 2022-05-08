@@ -9,6 +9,8 @@ import UIKit
 
 class DBTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var photoImage: UIImageView!
+    @IBOutlet weak var labelText: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,7 +22,10 @@ class DBTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
     func fill(with animal: Animal) {
+        photoImage.loadImage(resource: animal.photoUrlString)
+        labelText.text = animal.name
         
     }
     

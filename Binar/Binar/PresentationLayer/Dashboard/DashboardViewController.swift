@@ -309,13 +309,9 @@ extension DashboardViewController{
 
 extension DashboardViewController {
     func goToDBViewController() {
-        let storyboard = UIStoryboard(name: "DBMain", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DBViewController") as? DBViewController else {
-            return
-        }
-        
+        guard let student = selectedStudent else { return }
+        let studentName: String = student.name
+        let viewController = DBViewController(name: studentName)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
-
-  

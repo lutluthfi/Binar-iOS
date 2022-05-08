@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DBChallange3TableViewController: UITableViewController {
+class DBChallenge3TableViewController: UITableViewController {
 
     var displayedAnimals: [Animal] = Animal.listV2()
 

@@ -44,7 +44,6 @@ final class TableCell<Content>: UITableViewCell where Content: UIView {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        print("test --- prepareForReuse")
         if let reusableCell = content as? ReusableTableCell {
             reusableCell.onPrepareReuse()
         }
