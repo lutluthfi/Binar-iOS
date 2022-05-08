@@ -38,7 +38,7 @@ final class DPAnimalChallengeCapther2ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = name
+        title = "Challenge 2 - Fasilitator"
         
         tableView.dataSource = self
         tableView.delegate = self

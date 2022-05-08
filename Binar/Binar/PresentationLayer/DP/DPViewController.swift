@@ -10,8 +10,10 @@ import UIKit
 class DPViewController: UITableViewController, StoryboardInstantiable {
     
     enum Course: String, CaseIterable, TitleEnum {
-        case Challenge2
-        case Challenge3
+        case Challenge2Fasilitator
+        case Challenge3Course
+        case Challenge4CourseAndChallenge3Fasilitator
+        case Challenge5Course
         
         static var sorted: [Course] {
             Course.allCases.sorted {
@@ -65,12 +67,20 @@ class DPViewController: UITableViewController, StoryboardInstantiable {
         let row: Int = indexPath.row
         let course: Course = Course.sorted[row]
         switch course {
-        case .Challenge2:
-            let storyboard = UIStoryboard(name: "DPAnimalChapter2Main", bundle: nil)
+        case .Challenge2Fasilitator:
+            let storyboard = UIStoryboard(name: "DPChapter2Main", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "DPAnimalChallengeCapther2ViewController") as? DPAnimalChallengeCapther2ViewController else { return }
             open(viewController)
-        case .Challenge3:
-            
+        case .Challenge3Course:
+            let storyboard = UIStoryboard(name: "DPChapter3Main", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(withIdentifier: "DPChapter3ViewController") as? DPChapter3ViewController else { return }
+            open(viewController)
+        case .Challenge4CourseAndChallenge3Fasilitator:
+            let storyboard = UIStoryboard(name: "DPChapter4Main", bundle: nil)
+            guard let viewController = storyboard.instantiateViewController(withIdentifier: "DPChapter4ViewController") as? DPChapter4ViewController else { return }
+            open(viewController)
+        case .Challenge5Course:
+            open(DPChapther5ViewController())
         
     }
     
