@@ -48,6 +48,10 @@ extension DPChapter4ViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 125 //return height size whichever you want
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let reusableCell: UITableViewCell = tableView.dequeueReusableCell(
             withIdentifier: "DPCostumTableViewCell",
