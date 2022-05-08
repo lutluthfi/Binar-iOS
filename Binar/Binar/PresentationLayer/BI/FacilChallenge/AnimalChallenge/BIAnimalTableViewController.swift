@@ -45,6 +45,7 @@ class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable
         super.viewWillAppear(true)
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Animal List"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(onActionsButtonTouchUpInside))
         
         guard newAnimalName != nil else {return}
         
@@ -61,6 +62,14 @@ class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count: Int = displayedAnimals.count
         return count
+    }
+    
+    override init(style: UITableView.Style) {
+        super.init(style: .insetGrouped)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,6 +91,7 @@ class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable
         }
         
         cell.fill(with: animal)
+        cell.contentView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
         return cell
     }
@@ -111,7 +121,7 @@ class BIAnimalTableViewController: UITableViewController, StoryboardInstantiable
     
     // MARK: More Actions Button
     
-    @IBAction func onActionsButtonTouchUpInside(_ sender: UIButton) {
+    @objc func onActionsButtonTouchUpInside(_ sender: UIButton) {
         var choice: String?
         let actionsAlert = UIAlertController(title: "More Actions", message: "What do you want to do?", preferredStyle: .actionSheet)
         

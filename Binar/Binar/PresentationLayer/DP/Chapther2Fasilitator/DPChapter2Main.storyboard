@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Animal Challenge Capther2 View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="DPViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DPViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DPAnimalChallengeCapther2ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DPAnimalChallengeCapther2ViewController" customModule="Binar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="ButtonAZ" destination="un6-3e-KLQ" id="Zo6-7N-cDm"/>
                         <outlet property="buttonAZ" destination="un6-3e-KLQ" id="XHJ-eH-hxm"/>
                         <outlet property="searchBar" destination="daa-eh-Ih3" id="Xej-v9-PrJ"/>
                         <outlet property="tableView" destination="uba-hj-Q6T" id="vGO-zT-xWx"/>
