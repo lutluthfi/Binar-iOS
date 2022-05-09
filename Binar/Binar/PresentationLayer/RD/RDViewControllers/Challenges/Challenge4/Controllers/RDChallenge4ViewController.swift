@@ -40,8 +40,6 @@ final class RDChallenge4ViewController: UICollectionViewController {
     private func setupCollectionView() {
         collectionView.backgroundColor = .black
         collectionView.register(RDSpotifyCell.self, forCellWithReuseIdentifier: cellId)
-      
-    
     }
 }
 
@@ -63,7 +61,7 @@ extension RDChallenge4ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.width
-        let height = CGFloat(300)
+        let height = CGFloat(275)
         return CGSize(width: width, height: height)
     }
     

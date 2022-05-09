@@ -17,6 +17,7 @@ final class RDSpotifyCell: UICollectionViewCell {
            didSet{
                guard let section = self.section else {return}
                self.spotifyTitleLabel.text = section.title
+               self.spotifySubTitleLabel.text = section.subTitle
                self.playlist = section.playlist
            }
        }
@@ -32,6 +33,16 @@ final class RDSpotifyCell: UICollectionViewCell {
         return titleLabel
     }()
     
+    let spotifySubTitleLabel: UILabel = {
+        let titleLabel  = UILabel()
+        titleLabel.textColor = .white
+        titleLabel.font = UIFont.systemFont(ofSize: 12)
+        titleLabel.numberOfLines = 0
+        titleLabel.textAlignment = .center
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        return titleLabel
+    }()
+    
     let spotifyCollectionView : UICollectionView = {
         let collectionViewFlow = UICollectionViewFlowLayout()
         collectionViewFlow.scrollDirection = .horizontal
@@ -43,13 +54,11 @@ final class RDSpotifyCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(spotifyTitleLabel)
+        contentView.addSubview(spotifySubTitleLabel)
         contentView.backgroundColor = .black
         spotifyCollectionView.register(RDSubSpotifyCell.self, forCellWithReuseIdentifier: cellId)
         spotifyCollectionView.backgroundColor = .black
-        NSLayoutConstraint.activate([
-            spotifyTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-            spotifyTitleLabel.leftAnchor.constraint(equalTo: leftAnchor,constant: 8),
-        ])
+        setupConstraints()
         setupSubCells()
     }
     
@@ -57,17 +66,31 @@ final class RDSpotifyCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    fileprivate  func setupSubCells(){
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            spotifyTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            spotifyTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            spotifyTitleLabel.bottomAnchor.constraint(equalTo: spotifyTitleLabel.topAnchor,constant: 15),
+            spotifySubTitleLabel.topAnchor.constraint(equalTo: spotifyTitleLabel.bottomAnchor, constant: 5),
+            spotifySubTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            spotifySubTitleLabel.heightAnchor.constraint(equalToConstant: 30),
+            spotifySubTitleLabel.widthAnchor.constraint(equalToConstant: 250),
+        ])
+    }
+    
+    
+    private func setupSubCells(){
         addSubview(spotifyCollectionView)
         
         spotifyCollectionView.dataSource = self
         spotifyCollectionView.delegate = self
         
-    
-        spotifyCollectionView.topAnchor.constraint(equalTo: spotifyTitleLabel.bottomAnchor,constant: 10).isActive = true
-        spotifyCollectionView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
-        spotifyCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        spotifyCollectionView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            spotifyCollectionView.topAnchor.constraint(equalTo: spotifySubTitleLabel.bottomAnchor,constant: 10),
+            spotifyCollectionView.leftAnchor.constraint(equalTo: leftAnchor),
+            spotifyCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            spotifyCollectionView.rightAnchor.constraint(equalTo: rightAnchor)
+        ])
     }
 }
 
@@ -92,5 +115,7 @@ extension RDSpotifyCell: UICollectionViewDelegate,UICollectionViewDataSource,UIC
         let height = frame.height
         return CGSize(width: width, height: height)
     }
+    
+
     
 }
