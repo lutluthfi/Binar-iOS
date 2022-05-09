@@ -41,21 +41,21 @@ final class RDTabbarSpotify: UITabBarController {
         let searchViewController = RDSearchSpotifyViewController()
         searchViewController.tabBarItem = UITabBarItem(
             title: "Search",
-            image: UIImage(systemName: "gear"),
-            selectedImage: UIImage(systemName: "gear")
+            image: UIImage(systemName: "magnifyingglass"),
+            selectedImage: UIImage(systemName: "magnifyingglass.circle")
         )
         
         let radioViewController = RDRadioSpotifyViewController()
         radioViewController.tabBarItem = UITabBarItem(
             title: "Radio",
-            image: UIImage(systemName: "gear"),
-            selectedImage: UIImage(systemName: "gear")
+            image: UIImage(systemName: "speaker.3"),
+            selectedImage: UIImage(systemName: "speaker.3.fill")
         )
         let libraryViewController = RDLibrarySpotifyViewController()
         libraryViewController.tabBarItem = UITabBarItem(
             title: "Library",
-            image: UIImage(systemName: "gear"),
-            selectedImage: UIImage(systemName: "gear")
+            image: UIImage(systemName: "tray"),
+            selectedImage: UIImage(systemName: "tray.fill")
         )
         
         let _viewControllers: [UINavigationController] = [

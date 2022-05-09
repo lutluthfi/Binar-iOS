@@ -70,7 +70,7 @@ final class RDSpotifyCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             spotifyTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8),
             spotifyTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            spotifyTitleLabel.bottomAnchor.constraint(equalTo: spotifyTitleLabel.topAnchor,constant: 15),
+            spotifyTitleLabel.bottomAnchor.constraint(equalTo: spotifyTitleLabel.topAnchor,constant: 25),
             spotifySubTitleLabel.topAnchor.constraint(equalTo: spotifyTitleLabel.bottomAnchor, constant: 5),
             spotifySubTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             spotifySubTitleLabel.heightAnchor.constraint(equalToConstant: 30),
