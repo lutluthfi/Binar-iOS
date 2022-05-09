@@ -87,9 +87,9 @@ final class RDSpotifyCell: UICollectionViewCell {
         
         NSLayoutConstraint.activate([
             spotifyCollectionView.topAnchor.constraint(equalTo: spotifySubTitleLabel.bottomAnchor,constant: 10),
-            spotifyCollectionView.leftAnchor.constraint(equalTo: leftAnchor),
+            spotifyCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             spotifyCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            spotifyCollectionView.rightAnchor.constraint(equalTo: rightAnchor)
+            spotifyCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])
     }
 }
