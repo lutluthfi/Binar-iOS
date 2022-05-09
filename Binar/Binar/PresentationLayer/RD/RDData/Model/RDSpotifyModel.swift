@@ -46,7 +46,7 @@ extension RDSpotifyModel {
                         ]
                     },
                     {
-                        "title": "Hello World",
+                        "title": "Get Set For The Day",
                         "subTitle": "Celebrate with a collection of music and lyrics by indigeneous artist.",
                         "playlist": [
                             {
@@ -67,7 +67,7 @@ extension RDSpotifyModel {
                         ]
                     },
                     {
-                        "title": "Hello World",
+                        "title": "Chill For Your Day",
                         "subTitle": "Celebrate with a collection of music and lyrics by indigeneous artist.",
                         "playlist": [
                         {
