@@ -127,7 +127,9 @@ final class ARFormTextFieldTableCell: UITableViewCell {
     private func makeForDateOfBirth(_ date: Date? = nil) {
         let picker = UIDatePicker()
         picker.datePickerMode = .date
-        picker.preferredDatePickerStyle = .wheels
+        if #available(iOS 13.4, *) {
+            picker.preferredDatePickerStyle = .wheels
+        }
         if let date = date {
             picker.date = date
         } else {

@@ -36,12 +36,12 @@ final class CarouselView<ItemView, ItemModel>: UIView, UICollectionViewContract 
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(collectionView)
-        collectionView.makeConstraint {[
-            $0.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            $0.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            $0.topAnchor.constraint(equalTo: self.topAnchor),
+        collectionView.makeConstraint(builder: {
+            $0.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+            $0.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+            $0.topAnchor.constraint(equalTo: self.topAnchor)
             $0.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ]}
+        })
     }
     
     func configure(items: [ItemModel], itemSize: CGSize, _ builderCell: @escaping BuilderCell) {
@@ -115,6 +115,7 @@ final class CarouselView<ItemView, ItemModel>: UIView, UICollectionViewContract 
         view.dataSource = self
         view.delegate = self
         view.showsHorizontalScrollIndicator = false
+        view.alwaysBounceHorizontal = true
         view.registerCell(CarouselCell<ItemView>.self)
         return view
     }
@@ -130,12 +131,12 @@ final class CarouselCell<Component>: UICollectionViewCell where Component: UIVie
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(component)
-        component.makeConstraint {[
-            $0.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-            $0.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-            $0.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+        component.makeConstraint(builder: {
+            $0.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor)
+            $0.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
+            $0.topAnchor.constraint(equalTo: self.contentView.topAnchor)
             $0.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
-        ]}
+        })
     }
     
     override func preferredLayoutAttributesFitting(

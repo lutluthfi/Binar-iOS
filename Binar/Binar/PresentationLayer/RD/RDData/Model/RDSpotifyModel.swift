@@ -9,9 +9,7 @@ import UIKit
 
 struct RDSpotifyModel: Codable {
     let title: String
-    let subTitle: String
     let playlist: [RDSpotifyPlaylist]
-
 }
 
 struct RDSpotifyPlaylist: Codable {
@@ -25,65 +23,62 @@ extension RDSpotifyModel {
         let dummyData = """
                 [
                     {
-                        "title": "Native American Heritage Month",
-                        "subTitle": "Celebrate with a collection of music and lyrics by indigeneous artist.",
+                        "title": "Section1",
                         "playlist": [
                             {
                                 "title": "Justin Bieber",
-                                "image": "SpotifyCover1",
-                                "follower": 1800000
+                                "image": "SpotifyCover1"
+                                "follower": 180
                             },
                             {
                                 "title": "Justin Bieber",
                                 "image": "SpotifyCover1",
-                                "follower": 1360500
+                                "follower": 180
                             },
                             {
                                 "title": "Justin Bieber",
-                                "image": "SpotifyCover1",
-                                "follower": 18980111
+                                "image": "SpotifyCover1"
+                                "follower": 180
                             },
                         ]
                     },
                     {
-                        "title": "Get Set For The Day",
-                        "subTitle": "Celebrate with a collection of music and lyrics by indigeneous artist.",
+                        "title": "Section2",
                         "playlist": [
                             {
                                 "title": "Justin Bieber",
-                                "image": "SpotifyCover1",
-                                "follower": 19011901
+                                "image": "SpotifyCover1"
+                                "follower": 180
                             },
                             {
                                 "title": "Justin Bieber",
                                 "image": "SpotifyCover1",
-                                "follower": 11910190
+                                "follower": 180
                             },
                             {
                                 "title": "Justin Bieber",
-                                "image": "SpotifyCover1",
-                                "follower": 30330222
+                                "image": "SpotifyCover1"
+                                "follower": 180
                             },
                         ]
                     },
                     {
-                        "title": "Chill For Your Day",
-                        "subTitle": "Celebrate with a collection of music and lyrics by indigeneous artist.",
+                        "title": "Section3",
                         "playlist": [
                         {
                             "title": "Justin Bieber",
-                            "image": "SpotifyCover1",
-                            "follower": 404930930
+                            "image": "SpotifyCover1"
+                            "follower": 180
                         },
                         {
                             "title": "Justin Bieber",
                             "image": "SpotifyCover1",
-                            "follower": 290191091
+                            "follower": 180
                         },
                         {
                             "title": "Justin Bieber",
-                            "image": "SpotifyCover1",
-                            "follower": 291019011
+                            "image": "SpotifyCover1"
+                            "follower": 180
                             },
                         ]
                     },

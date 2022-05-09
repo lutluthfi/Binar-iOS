@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DPChapter3ViewController" customModule="Binar" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ValueA" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2GY-rB-VfV">
+                    <rect key="frame" x="170.5" y="138" width="73" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ValueB" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fQD-1T-NXq">
+                    <rect key="frame" x="170.5" y="229" width="73" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yd-2U-qQp">
+                    <rect key="frame" x="202" y="187" width="10.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eB-ZL-wqT">
+                    <rect key="frame" x="173.5" y="309" width="67.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J34-30-x98">
+                    <rect key="frame" x="43" y="464" width="328" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="J34-30-x98" secondAttribute="height" multiplier="1:1" id="eS2-hy-gCl"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="clickResult" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WA5-em-OUd">
+                    <rect key="frame" x="164.5" y="379" width="85" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Calculate"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WA5-em-OUd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6XC-1J-s3a"/>
+                <constraint firstItem="2GY-rB-VfV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6vj-7o-r1U"/>
+                <constraint firstItem="J34-30-x98" firstAttribute="width" secondItem="J34-30-x98" secondAttribute="height" multiplier="1:1" id="eR0-mb-d6l"/>
+                <constraint firstItem="J34-30-x98" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="g2d-7b-Ba6"/>
+                <constraint firstItem="fQD-1T-NXq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r2s-By-QGM"/>
+                <constraint firstItem="7yd-2U-qQp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="s06-7Z-xjT"/>
+                <constraint firstItem="4eB-ZL-wqT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="whz-cL-0G0"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="116"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
