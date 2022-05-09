@@ -61,7 +61,7 @@ extension RDChallenge4ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.width
-        let height = CGFloat(275)
+        let height = CGFloat(350)
         return CGSize(width: width, height: height)
     }
     

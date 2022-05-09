@@ -2,14 +2,16 @@
 //  RDSpotifyModel.swift
 //  Binar
 //
-//  Created by Raden Dimas on 13/04/22.
+//  Created by Raden Dimas on 09/05/22.
 //
 
 import UIKit
 
 struct RDSpotifyModel: Codable {
     let title: String
+    let subTitle: String
     let playlist: [RDSpotifyPlaylist]
+
 }
 
 struct RDSpotifyPlaylist: Codable {
@@ -23,62 +25,65 @@ extension RDSpotifyModel {
         let dummyData = """
                 [
                     {
-                        "title": "Section1",
+                        "title": "Native American Heritage Month",
+                        "subTitle": "Celebrate with a collection of music and lyrics by indigeneous artist.",
                         "playlist": [
                             {
                                 "title": "Justin Bieber",
-                                "image": "SpotifyCover1"
-                                "follower": 180
+                                "image": "SpotifyCover1",
+                                "follower": 1800000
                             },
                             {
                                 "title": "Justin Bieber",
                                 "image": "SpotifyCover1",
-                                "follower": 180
-                            },
-                            {
-                                "title": "Justin Bieber",
-                                "image": "SpotifyCover1"
-                                "follower": 180
-                            },
-                        ]
-                    },
-                    {
-                        "title": "Section2",
-                        "playlist": [
-                            {
-                                "title": "Justin Bieber",
-                                "image": "SpotifyCover1"
-                                "follower": 180
+                                "follower": 1360500
                             },
                             {
                                 "title": "Justin Bieber",
                                 "image": "SpotifyCover1",
-                                "follower": 180
-                            },
-                            {
-                                "title": "Justin Bieber",
-                                "image": "SpotifyCover1"
-                                "follower": 180
+                                "follower": 18980111
                             },
                         ]
                     },
                     {
-                        "title": "Section3",
+                        "title": "Get Set For The Day",
+                        "subTitle": "Celebrate with a collection of music and lyrics by indigeneous artist.",
+                        "playlist": [
+                            {
+                                "title": "Justin Bieber",
+                                "image": "SpotifyCover1",
+                                "follower": 19011901
+                            },
+                            {
+                                "title": "Justin Bieber",
+                                "image": "SpotifyCover1",
+                                "follower": 11910190
+                            },
+                            {
+                                "title": "Justin Bieber",
+                                "image": "SpotifyCover1",
+                                "follower": 30330222
+                            },
+                        ]
+                    },
+                    {
+                        "title": "Chill For Your Day",
+                        "subTitle": "Celebrate with a collection of music and lyrics by indigeneous artist.",
                         "playlist": [
                         {
                             "title": "Justin Bieber",
-                            "image": "SpotifyCover1"
-                            "follower": 180
+                            "image": "SpotifyCover1",
+                            "follower": 404930930
                         },
                         {
                             "title": "Justin Bieber",
                             "image": "SpotifyCover1",
-                            "follower": 180
+                            "follower": 290191091
                         },
                         {
                             "title": "Justin Bieber",
-                            "image": "SpotifyCover1"
-                            "follower": 180
+                            "image": "SpotifyCover1",
+                            "follower": 291019011
                             },
                         ]
                     },
@@ -95,4 +100,3 @@ extension RDSpotifyModel {
     }
     
 }
-

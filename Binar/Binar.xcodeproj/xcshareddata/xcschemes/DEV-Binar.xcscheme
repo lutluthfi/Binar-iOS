@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "99BB8423B6E39F7AD0EA8553"
-               BuildableName = "Binar.app"
+               BuildableName = "DEV Binar.app"
                BlueprintName = "Binar"
                ReferencedContainer = "container:Binar.xcodeproj">
             </BuildableReference>
@@ -31,7 +31,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "99BB8423B6E39F7AD0EA8553"
-            BuildableName = "Binar.app"
+            BuildableName = "DEV Binar.app"
             BlueprintName = "Binar"
             ReferencedContainer = "container:Binar.xcodeproj">
          </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "99BB8423B6E39F7AD0EA8553"
-            BuildableName = "Binar.app"
+            BuildableName = "DEV Binar.app"
             BlueprintName = "Binar"
             ReferencedContainer = "container:Binar.xcodeproj">
          </BuildableReference>
@@ -71,7 +71,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "99BB8423B6E39F7AD0EA8553"
-            BuildableName = "Binar.app"
+            BuildableName = "DEV Binar.app"
             BlueprintName = "Binar"
             ReferencedContainer = "container:Binar.xcodeproj">
          </BuildableReference>

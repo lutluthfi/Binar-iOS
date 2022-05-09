@@ -62,7 +62,8 @@ final class RDSubSpotifyCell: UICollectionViewCell {
             cellImageView.topAnchor.constraint(equalTo: topAnchor),
             cellImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             cellImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            cellImageView.heightAnchor.constraint(equalToConstant: 175),
+            cellImageView.heightAnchor.constraint(equalToConstant: 250),
+            cellImageView.widthAnchor.constraint(equalToConstant: 50),
             cellImageView.bottomAnchor.constraint(equalTo: cellTitleLabel.topAnchor,constant: -15),
             
             cellTitleLabel.topAnchor.constraint(equalTo: cellImageView.bottomAnchor,constant: 20),
