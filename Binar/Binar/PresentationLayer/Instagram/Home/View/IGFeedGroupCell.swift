@@ -5,6 +5,7 @@
 //  Created by Arif Luthfiansyah on 26/04/22.
 //
 
+import Kingfisher
 import UIKit
 
 final class IGFeedGroupCell: LiteTableGroupCell {
@@ -50,7 +51,11 @@ final class IGFeedGroupCell: LiteTableGroupCell {
             cell.padding = UIEdgeInsets(top: 0, left: 0, bottom: 16, right: 0)
             cell.content.contentMode = .scaleAspectFill
             cell.content.clipsToBounds = true
-            cell.content.loadImage(resource: _feed.pictureUrlString)
+            cell.content.kf.indicatorType = .activity
+            cell.content.kf.setImage(
+                with: URL(string: _feed.pictureUrlString),
+                options: [.transition(.fade(1))]
+            )
         }
     }
     
