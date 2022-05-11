@@ -5,6 +5,7 @@
 //  Created by Arif Luthfiansyah on 11/03/22.
 //
 
+import LocalAuthentication
 import UIKit
 
 final class DashboardViewController: UITableViewController {
@@ -96,12 +97,30 @@ final class DashboardViewController: UITableViewController {
         case .DhaniBukhory:
             goToDBViewController()
         case .Instagram:
-            let viewController = IGTabBarController()
-            navigationController?.setNavigationBarHidden(true, animated: true)
-            navigationController?.pushViewController(viewController, animated: true)
+            let context = LAContext()
+            var error: NSError?
+            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                let reason = "Identify yourself!"
+                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { [weak self] (success, authenticationError) in
+                    guard success else { return }
+                    DispatchQueue.main.async {
+                        self?.openInstagram()
+                    }
+                }
+            } else {
+                let alert = UIAlertController(title: "Biometry unavailable", message: "Your device is not configured for biometric authentication.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                present(alert, animated: true)
+            }
         default:
             break
         }
+    }
+    
+    private func openInstagram() {
+        let viewController = IGTabBarController()
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
