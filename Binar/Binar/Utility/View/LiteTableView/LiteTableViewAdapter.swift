@@ -11,6 +11,10 @@ final class LiteTableViewAdapter: NSObject, UITableViewDataSource, UITableViewDe
     private var cells: [LiteTableCell] = []
     private var cellHeights: [IndexPath: CGFloat] = [:]
     
+    func clearCells() {
+        cells.removeAll()
+    }
+    
     func setCells(_ cells: [LiteTableCell]) {
         self.cells = cells
     }

@@ -11,25 +11,25 @@ import UIKit
 final class IGHomeViewController: LiteTableViewController {
     lazy var creatorView = IGFeedCreatorView()
     
-    private let presenter = IGHomePresenter()
+    private let viewModel = IGHomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        presenter.onLoadFeedsSuccess = { [weak self] (feeds) in
-            self?.render(feeds: feeds)
+        viewModel.onLoadFeedsSuccess = { [weak self] (feeds) in
+            self?.renderTableView(with: feeds)
         }
-        presenter.onLoadFeedsFailure = {
+        viewModel.onLoadFeedsFailure = {
             print("OnLoadFeedsFailure")
         }
-        presenter.viewDidLoad()
+        viewModel.viewDidLoad()
     }
     
     private func setupView() {
         tableBackgroundColor = .secondarySystemBackground
     }
     
-    private func render(feeds: [IGFeedViewParam]) {
+    private func renderTableView(with feeds: [IGFeedViewParam]) {
         loadTableView {
             adBannerCell()
             feedGroupCell(populateWith: feeds)
@@ -51,10 +51,10 @@ final class IGHomeViewController: LiteTableViewController {
     private func feedGroupCell(populateWith feeds: [IGFeedViewParam]) -> [LiteTableCell] {
         forEachElement(in: feeds) { row, element in
             loadGroupCell { (groupCell: IGFeedGroupCell) in
-//                let isBookmarked: Bool = self.bookmarkFeedIds.contains(element.id)
-                groupCell.configure(feed: element, isBookmarked: false)
-                groupCell.onBookmarkTap = { feedId in
-//                    self.addNewBookmark(feedId: feedId)
+                let isBookmarked: Bool = self.viewModel.isFeedBookmarked(element)
+                groupCell.configure(feed: element, isBookmarked: isBookmarked)
+                groupCell.onBookmarkTap = { [weak self] feedId in
+                    self?.viewModel.onBookmarkTap(feedId: feedId)
                 }
                 groupCell.onLikesTap = { isLiked in
                     print(isLiked)

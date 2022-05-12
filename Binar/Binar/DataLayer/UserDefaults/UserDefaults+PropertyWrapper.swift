@@ -11,6 +11,10 @@ import Foundation
     let key: String
     var storage: UserDefaults = .standard
     
+    init(key: String) {
+        self.key = key
+    }
+    
     var wrappedValue: Array<Element> {
         get { (storage.value(forKey: key) as? Array<Element>) ?? [] }
         set { storage.setValue(newValue, forKey: key) }

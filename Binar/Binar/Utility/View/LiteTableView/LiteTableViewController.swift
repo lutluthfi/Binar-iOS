@@ -26,6 +26,10 @@ class LiteTableViewController: UIViewController, LoadTableCellContract {
         })
     }
     
+    final func clearCells() {
+        tableView.clearCells()
+    }
+    
     final func loadTableView(@LiteTableCellBuilder builder: () -> [LiteTableCell]) {
         tableView.load(builder: builder)
     }
