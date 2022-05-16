@@ -53,8 +53,8 @@ final class IGHomeViewController: LiteTableViewController {
             loadGroupCell { (groupCell: IGFeedGroupCell) in
                 let isBookmarked: Bool = self.viewModel.isFeedBookmarked(element)
                 groupCell.configure(feed: element, isBookmarked: isBookmarked)
-                groupCell.onBookmarkTap = { [weak self] feedId in
-                    self?.viewModel.onBookmarkTap(feedId: feedId)
+                groupCell.onBookmarkTap = { [weak self] _ in
+                    self?.viewModel.onBookmarkTap(feed: element)
                 }
                 groupCell.onLikesTap = { isLiked in
                     print(isLiked)
