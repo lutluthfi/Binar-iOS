@@ -8,14 +8,25 @@
 import UIKit
 
 final class IGProfileViewController: LiteTableViewController {
-    @UserDefaultsArray<String>(key: "bookmark-feed-id") private var storageBookmarkFeedIds
+    private let feedCoreDataStorage = IGFeedCoreDataStorage()
+    
+    @UserDefaultsArrayObject<IGFeedResponse>(key: "bookmark-feeds") private var cacheBookmarkFeeds
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        renderTableView()
+        feedCoreDataStorage.getFeeds { [weak self] r in
+            switch r {
+            case let .success(result):
+                DispatchQueue.main.async {
+                    self?.renderTableView(fillWith: result)
+                }
+            case .failure:
+                break
+            }
+        }
     }
     
-    private func renderTableView() {
+    private func renderTableView(fillWith responses: [IGFeedResponse]) {
         loadTableView {
             loadCell { (cell: TableCell<UIButton>, _) in
                 cell.padding = UIEdgeInsets(all: 4)
@@ -23,18 +34,16 @@ final class IGProfileViewController: LiteTableViewController {
                 cell.content.backgroundColor = .systemBlue
                 cell.content.addTarget(self, action: #selector(self.onReloadTap), for: .touchUpInside)
             }
-            forEachElement(in: storageBookmarkFeedIds) { row, element in
-                loadCell { (cell: TableCell<UILabel>, _) in
-                    cell.padding = UIEdgeInsets(all: 4)
-                    cell.content.text = element
+            forEachElement(in: responses) { row, element in
+                loadGroupCell { (groupCell: IGFeedGroupCell) in
+                    let viewParam: IGFeedViewParam = element.toViewParam()
+                    groupCell.configure(feed: viewParam, isBookmarked: true)
                 }
-                rectangle(height: 1, color: .gray)
             }
         }
     }
     
     @objc private func onReloadTap() {
         clearCells()
-        renderTableView()
     }
 }
