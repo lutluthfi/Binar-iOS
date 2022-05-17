@@ -92,7 +92,10 @@ final class InstagramAPI {
             .httpMethod(.GET)
             .build()
         
-        URLSession.shared.dataTask(for: IGUserResponse.self, with: request, completion: completion)
-            .resume()
+        URLSession.shared.dataTask(
+            for: IGUserResponse.self,
+            with: request,
+            completion: completion
+        ).resume()
     }
 }

@@ -7,12 +7,17 @@
 
 import Foundation
 
+enum IGHomeRouter {
+    case openHomeCreateFeed
+}
+
 final class IGHomeViewModel {
     typealias OnLoadFeedsSuccess = ([IGFeedViewParam]) -> Void
     typealias OnLoadFeedsFailure = () -> Void
+    typealias OnRouterChanged = (IGHomeRouter) -> Void
     
     private let instagramAPI = InstagramAPI(appId: "6249791f9296122eca0475be")
-    private let feedCoreDataStorage = IGFeedDataStorage()
+    private let feedCoreDataStorage = IGFeedCoreDataStorage()
     
     @UserDefaultsArrayObject<IGFeedResponse>(key: "bookmark-feeds") private var cacheBookmarkFeeds
     @UserDefaultsArrayObject<IGFeedResponse>(key: "feeds") private var cacheFeeds
@@ -21,6 +26,7 @@ final class IGHomeViewModel {
     
     var onLoadFeedsSuccess: OnLoadFeedsSuccess?
     var onLoadFeedsFailure: OnLoadFeedsFailure?
+    var onRouterChanged: OnRouterChanged?
     
     private func loadFeeds() {
         if !localFeeds.isEmpty {
@@ -29,18 +35,12 @@ final class IGHomeViewModel {
             return
         }
         
-//        if !cacheFeeds.isEmpty {
-//            let viewParam = cacheFeeds.map { $0.toViewParam() }
-//            onLoadFeedsSuccess?(viewParam)
-//            return
-//        }
-        
         instagramAPI.getFeeds { [weak self] (result) in
             switch result {
             case let .success(data):
                 let feeds: [IGFeedResponse] = data.data
                 
-                self?.feedCoreDataStorage.saveFeeds(feeds)
+                self?.feedCoreDataStorage.saveClearFeeds(feeds)
                 
                 let viewParam = feeds.map { $0.toViewParam() }
                 self?.onLoadFeedsSuccess?(viewParam)
@@ -51,13 +51,9 @@ final class IGHomeViewModel {
     }
     
     private func loadLocalFeeds() {
-        feedCoreDataStorage.getFeeds { [weak self] r in
-            switch r {
-            case let .success(result):
-                self?.localFeeds = result
-            case .failure:
-                break
-            }
+        feedCoreDataStorage.getFeeds { [weak self] result in
+            guard case let .success(response) = result else { return }
+            self?.localFeeds = response
         }
     }
 }
@@ -79,6 +75,10 @@ extension IGHomeViewModel {
         } else {
             cacheBookmarkFeeds.append(feedResponse)
         }
+    }
+    
+    func onPlusBarButtonTap() {
+        onRouterChanged?(.openHomeCreateFeed)
     }
     
     func isFeedBookmarked(_ feed: IGFeedViewParam) -> Bool {

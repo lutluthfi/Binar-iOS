@@ -15,18 +15,36 @@ final class IGHomeViewController: LiteTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewModel()
         setupView()
+        setupNavBar()
+        viewModel.viewDidLoad()
+    }
+    
+    private func setupNavBar() {
+        let plusBarButton = UIBarButtonItem(image: UIImage(systemName: "plus.app"), style: .done, target: self, action: #selector(onPlusBarButtonTap))
+        navigationItem.rightBarButtonItem = plusBarButton
+    }
+    
+    private func setupView() {
+        tableBackgroundColor = .secondarySystemBackground
+    }
+    
+    private func setupViewModel() {
+        viewModel.onRouterChanged = { [weak self] (router) in
+            switch router {
+            case .openHomeCreateFeed:
+                let viewController = IGHomeCreateFeedViewController()
+                let navigationController = UINavigationController(rootViewController: viewController)
+                self?.present(navigationController, animated: true)
+            }
+        }
         viewModel.onLoadFeedsSuccess = { [weak self] (feeds) in
             self?.renderTableView(with: feeds)
         }
         viewModel.onLoadFeedsFailure = {
             print("OnLoadFeedsFailure")
         }
-        viewModel.viewDidLoad()
-    }
-    
-    private func setupView() {
-        tableBackgroundColor = .secondarySystemBackground
     }
     
     private func renderTableView(with feeds: [IGFeedViewParam]) {
@@ -83,4 +101,8 @@ final class IGHomeViewController: LiteTableViewController {
 //            bookmarkFeedIds.append(feedId)
 //        }
 //    }
+    
+    @objc private func onPlusBarButtonTap() {
+        viewModel.onPlusBarButtonTap()
+    }
 }

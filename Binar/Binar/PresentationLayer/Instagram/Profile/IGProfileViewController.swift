@@ -8,7 +8,7 @@
 import UIKit
 
 final class IGProfileViewController: LiteTableViewController {
-    private let feedCoreDataStorage = IGFeedDataStorage()
+    private let feedCoreDataStorage = IGFeedCoreDataStorage()
     
     @UserDefaultsArrayObject<IGFeedResponse>(key: "bookmark-feeds") private var cacheBookmarkFeeds
     
