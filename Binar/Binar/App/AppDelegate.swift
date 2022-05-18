@@ -7,6 +7,7 @@
 
 import Firebase
 import FirebaseCore
+import IQKeyboardManagerSwift
 import UIKit
 
 @UIApplicationMain
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         FirebaseApp.configure()
+        IQKeyboardManager.shared.enable = true
         
         RemoteConfigHelper.standard.prepareValue()
         

@@ -47,7 +47,7 @@ final class IGHomeViewController: LiteTableViewController {
         }
     }
     
-    private func renderTableView(with feeds: [IGFeedViewParam]) {
+    private func renderTableView(with feeds: [IGHomeFeedViewParam]) {
         loadTableView {
             adBannerCell()
             feedGroupCell(populateWith: feeds)
@@ -66,9 +66,9 @@ final class IGHomeViewController: LiteTableViewController {
         }
     }
     
-    private func feedGroupCell(populateWith feeds: [IGFeedViewParam]) -> [LiteTableCell] {
+    private func feedGroupCell(populateWith feeds: [IGHomeFeedViewParam]) -> [LiteTableCell] {
         forEachElement(in: feeds) { row, element in
-            loadGroupCell { (groupCell: IGFeedGroupCell) in
+            loadGroupCell { (groupCell: IGHomeFeedGroupCell) in
                 let isBookmarked: Bool = self.viewModel.isFeedBookmarked(element)
                 groupCell.configure(feed: element, isBookmarked: isBookmarked)
                 groupCell.onBookmarkTap = { [weak self] _ in
@@ -77,8 +77,8 @@ final class IGHomeViewController: LiteTableViewController {
                 groupCell.onLikesTap = { isLiked in
                     print(isLiked)
                 }
-                groupCell.onCaptionTap = { [weak self] (indexPath) in
-                    self?.reloadCell(at: indexPath)
+                groupCell.onCaptionTap = { [weak self] _ in
+                    self?.updateTableView()
                 }
             }
         }

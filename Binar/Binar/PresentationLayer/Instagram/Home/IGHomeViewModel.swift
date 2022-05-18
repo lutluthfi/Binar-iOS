@@ -7,14 +7,16 @@
 
 import Foundation
 
-enum IGHomeRouter {
-    case openHomeCreateFeed
-}
+typealias IGHomeViewModelRouter = IGHomeViewModel.Router
 
 final class IGHomeViewModel {
-    typealias OnLoadFeedsSuccess = ([IGFeedViewParam]) -> Void
+    enum Router {
+        case openHomeCreateFeed
+    }
+    
+    typealias OnLoadFeedsSuccess = ([IGHomeFeedViewParam]) -> Void
     typealias OnLoadFeedsFailure = () -> Void
-    typealias OnRouterChanged = (IGHomeRouter) -> Void
+    typealias OnRouterChanged = (IGHomeViewModelRouter) -> Void
     
     private let instagramAPI = InstagramAPI(appId: "6249791f9296122eca0475be")
     private let feedCoreDataStorage = IGFeedCoreDataStorage()
@@ -30,7 +32,7 @@ final class IGHomeViewModel {
     
     private func loadFeeds() {
         if !localFeeds.isEmpty {
-            let viewParam: [IGFeedViewParam] = localFeeds.map { $0.toViewParam() }
+            let viewParam: [IGHomeFeedViewParam] = localFeeds.map { $0.toViewParam() }
             onLoadFeedsSuccess?(viewParam)
             return
         }
@@ -65,7 +67,7 @@ extension IGHomeViewModel {
         loadFeeds()
     }
     
-    func onBookmarkTap(feed: IGFeedViewParam) {
+    func onBookmarkTap(feed: IGHomeFeedViewParam) {
         guard let feedResponse: IGFeedResponse = cacheFeeds.first(where: {
             $0.id == feed.id
         }) else { return }
@@ -81,7 +83,7 @@ extension IGHomeViewModel {
         onRouterChanged?(.openHomeCreateFeed)
     }
     
-    func isFeedBookmarked(_ feed: IGFeedViewParam) -> Bool {
+    func isFeedBookmarked(_ feed: IGHomeFeedViewParam) -> Bool {
         cacheBookmarkFeeds.contains(where: { $0.id == feed.id })
     }
 }
