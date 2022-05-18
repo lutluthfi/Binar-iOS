@@ -70,4 +70,13 @@ final class LiteTableViewAdapter: NSObject, UITableViewDataSource, UITableViewDe
     ) {
         cellHeights[indexPath] = cell.frame.height
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let tableCell: LiteTableCell? = cells[safe: indexPath.row]
+        let reusableCell: UITableViewCell? = tableView.cellForRow(at: indexPath)
+        guard let _reusableCell = reusableCell else {
+            return
+        }
+        tableCell?.onSelectCell?(_reusableCell, indexPath)
+    }
 }

@@ -1,5 +1,5 @@
 //
-//  IGFeedGroupCell.swift
+//  IGHomeFeedGroupCell.swift
 //  Binar
 //
 //  Created by Arif Luthfiansyah on 26/04/22.
@@ -8,19 +8,19 @@
 import Kingfisher
 import UIKit
 
-final class IGFeedGroupCell: LiteTableGroupCell {
+final class IGHomeFeedGroupCell: LiteTableGroupCell {
     typealias OnBookmarkTap = (String) -> Void
     typealias OnLikesTap = (Bool) -> Void
     typealias OnCaptionTap = (IndexPath) -> Void
     
-    private var feed: IGFeedViewParam?
+    private var feed: IGHomeFeedViewParam?
     private var isBookmarked = false
     
     var onBookmarkTap: OnBookmarkTap?
     var onLikesTap: OnLikesTap?
     var onCaptionTap: OnCaptionTap?
     
-    func configure(feed: IGFeedViewParam, isBookmarked: Bool) {
+    func configure(feed: IGHomeFeedViewParam, isBookmarked: Bool) {
         self.feed = feed
         self.isBookmarked = isBookmarked
     }

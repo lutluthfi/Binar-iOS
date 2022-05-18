@@ -35,8 +35,8 @@ final class IGProfileViewController: LiteTableViewController {
                 cell.content.addTarget(self, action: #selector(self.onReloadTap), for: .touchUpInside)
             }
             forEachElement(in: responses) { row, element in
-                loadGroupCell { (groupCell: IGFeedGroupCell) in
-                    let viewParam: IGFeedViewParam = element.toViewParam()
+                loadGroupCell { (groupCell: IGHomeFeedGroupCell) in
+                    let viewParam: IGHomeFeedViewParam = element.toViewParam()
                     groupCell.configure(feed: viewParam, isBookmarked: true)
                 }
             }

@@ -1,5 +1,5 @@
 //
-//  IGFeedViewParam.swift
+//  IGHomeFeedViewParam.swift
 //  Binar
 //
 //  Created by Arif Luthfiansyah on 28/04/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct IGFeedViewParam {
+struct IGHomeFeedViewParam {
     let id: String
     let username: String
     let avatarUrlString: String
@@ -17,9 +17,9 @@ struct IGFeedViewParam {
 }
 
 extension IGFeedResponse {
-    func toViewParam() -> IGFeedViewParam {
+    func toViewParam() -> IGHomeFeedViewParam {
         let username: String = [owner.firstName, owner.lastName].joined(separator: ".")
-        return IGFeedViewParam(
+        return IGHomeFeedViewParam(
             id: id,
             username: username,
             avatarUrlString: owner.picture,

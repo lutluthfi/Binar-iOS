@@ -4,5 +4,6 @@ use_frameworks!
 target 'Binar' do
   pod 'Firebase/RemoteConfig'
   pod 'Kingfisher'
+  pod 'IQKeyboardManagerSwift'
 
 end
