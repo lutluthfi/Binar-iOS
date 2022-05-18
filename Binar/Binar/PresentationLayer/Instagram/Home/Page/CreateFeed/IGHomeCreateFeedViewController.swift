@@ -22,6 +22,16 @@ final class IGHomeCreateFeedViewController: LiteTableViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewWillAppear()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        viewModel.viewWillDisappear()
+    }
+    
     private func setupNavBar() {
         let cancelBarButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(onCancelBarButtonTap))
         let nextBarButton = UIBarButtonItem(title: "Next", style: .done, target: self, action: #selector(onNextBarButtonTap))
@@ -36,6 +46,10 @@ final class IGHomeCreateFeedViewController: LiteTableViewController {
         loadTableView {
             loadCell { [weak self] (cell: TableCell<UIImageView>, _) in
                 guard let _self = self else { return }
+                cell.content.contentMode = .scaleAspectFit
+                cell.content.clipsToBounds = true
+                cell.content.backgroundColor = .systemGray
+                
                 _self.newFeedImageView = cell.content
                 
                 var imageViewHeight: CGFloat = _self.view.frame.height / 2
@@ -46,16 +60,33 @@ final class IGHomeCreateFeedViewController: LiteTableViewController {
                     imageViewHeight = _self.feedImageCellHeight
                 }
                 
+                if let imageUrl = _self.viewModel.viewParam.imageUrl,
+                   let imageData = try? Data(contentsOf: imageUrl),
+                   let image = UIImage(data: imageData) {
+                    
+                    cell.content.image = image
+                    
+                    let screenWidth: CGFloat = _self.view.frame.width
+                    let imageHeight: CGFloat = image.heightWithRatio(inWidth: screenWidth)
+                    imageViewHeight = imageHeight
+                    _self.feedImageCellHeight = imageHeight
+                }
+                
                 cell.setHeight(imageViewHeight)
-                cell.content.contentMode = .scaleAspectFit
-                cell.content.clipsToBounds = true
-                cell.content.backgroundColor = .systemGray
             }.onSelectCell { [weak self] _, _ in
                 self?.viewModel.onImageViewTap()
             }
-            loadCell { (cell: TableCell<UITextField>, _) in
-                cell.padding = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
+            loadCell { [weak self] (cell: TableCell<UITextField>, _) in
+                guard let _self = self else { return }
+                cell.padding = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
                 cell.content.placeholder = "Write your caption here"
+                cell.content.addTarget(
+                    self,
+                    action: #selector(_self.onCaptionTextFieldChanged),
+                    for: .editingChanged
+                )
+                let caption: String = _self.viewModel.viewParam.caption
+                cell.content.text = caption
             }
         }
     }
@@ -84,8 +115,9 @@ final class IGHomeCreateFeedViewController: LiteTableViewController {
         viewModel.onNextBarButtonTap()
     }
     
-    @objc private func onImageViewTap() {
-        viewModel.onImageViewTap()
+    @objc private func onCaptionTextFieldChanged(_ textField: UITextField) {
+        let text: String = textField.text ?? ""
+        viewModel.onCaptionTextChange(text: text)
     }
 }
 
@@ -115,9 +147,8 @@ extension IGHomeCreateFeedViewController: UIImagePickerControllerDelegate {
     }
     
     private func onImagePickerFinish(image: UIImage) {
-        let imageRatio: CGFloat = image.size.width / image.size.height
-        var imageHeight: CGFloat = view.frame.width / imageRatio
-        imageHeight = ceil(imageHeight)
+        let screenWidth: CGFloat = view.frame.width
+        let imageHeight: CGFloat = image.heightWithRatio(inWidth: screenWidth)
         
         feedImageCellHeight = imageHeight
         newFeedImageView?.image = image
@@ -126,15 +157,14 @@ extension IGHomeCreateFeedViewController: UIImagePickerControllerDelegate {
     }
 }
 
-extension IGHomeCreateFeedViewController: UITextFieldDelegate {
-    func textField(
-        _ textField: UITextField,
-        shouldChangeCharactersIn range: NSRange,
-        replacementString string: String
-    ) -> Bool {
-        let text = textField.text ?? ""
-        print(">>> text: \(text)")
-        
-        return true
+extension UIImage {
+    func heightWithRatio(_ ratio: CGFloat? = nil, inWidth width: CGFloat) -> CGFloat {
+        var imageRatio: CGFloat = size.width / size.height
+        if let ratio = ratio {
+            imageRatio = ratio
+        }
+        var res: CGFloat = width / imageRatio
+        res = ceil(res)
+        return res
     }
 }

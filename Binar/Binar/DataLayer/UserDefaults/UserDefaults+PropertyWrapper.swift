@@ -73,3 +73,26 @@ import Foundation
         set { storage.setValue(newValue, forKey: key) }
     }
 }
+
+@propertyWrapper struct UserDefaultsObject<Element> where Element: Codable {
+    let key: String
+    var storage: UserDefaults = .standard
+    
+    init(key: String) {
+        self.key = key
+    }
+    
+    var wrappedValue: Element? {
+        get {
+            guard let data = storage.value(forKey: key) as? Data else {
+                return nil
+            }
+            let res = try? data.decode(to: Element.self)
+            return res
+        }
+        set {
+            guard let data = try? newValue.encode() else { return }
+            storage.setValue(data, forKey: key)
+        }
+    }
+}

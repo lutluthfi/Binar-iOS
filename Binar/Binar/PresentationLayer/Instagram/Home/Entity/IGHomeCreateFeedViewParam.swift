@@ -11,3 +11,15 @@ struct IGHomeCreateFeedViewParam {
     var imageUrl: URL?
     var caption: String = ""
 }
+
+extension IGHomeCreateFeedViewParam {
+    func toCache() -> IGHomeCreateFeedCacheEntity {
+        IGHomeCreateFeedCacheEntity(imageUrl: imageUrl, caption: caption)
+    }
+}
+
+extension IGHomeCreateFeedCacheEntity {
+    func toViewParam() -> IGHomeCreateFeedViewParam {
+        IGHomeCreateFeedViewParam(imageUrl: imageUrl, caption: caption)
+    }
+}

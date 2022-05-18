@@ -20,11 +20,29 @@ final class IGHomeCreateFeedViewModel {
     var onRouterChanged: OnRouterChanged?
     
     private(set) var viewParam = IGHomeCreateFeedViewParam()
+    
+    @UserDefaultsObject<IGHomeCreateFeedCacheEntity>(
+        key: "home-create-feed-field-cache"
+    ) private(set) var viewParamCache
 }
 
 extension IGHomeCreateFeedViewModel {
+    func viewWillAppear() {
+        if let _viewParamCache = viewParamCache {
+            viewParam = _viewParamCache.toViewParam()
+        }
+    }
+    
+    func viewWillDisappear() {
+        viewParamCache = viewParam.toCache()
+    }
+    
     func onCancelBarButtonTap() {
         onRouterChanged?(.dismiss)
+    }
+    
+    func onCaptionTextChange(text: String) {
+        viewParam.caption = text
     }
     
     func onImageViewTap() {
