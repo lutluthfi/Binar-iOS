@@ -19,6 +19,7 @@ enum Course: String, CaseIterable, TitleEnum {
     case Chat
     case Instagram
     case Chapter7
+    case PDF
     
     static var sorted: [Course] {
         Course.allCases.sorted {
@@ -96,6 +97,8 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
             open(ARTabBarViewController())
         case .Chapter7:
             open(ARChapter7ViewController())
+        case .PDF:
+            open(ARDisplayPDFViewController())
         }
     }
     
