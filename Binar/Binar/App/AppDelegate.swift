@@ -5,6 +5,7 @@
 //  Created by Arif Luthfiansyah on 11/03/22.
 //
 
+import AVFoundation
 import Firebase
 import FirebaseCore
 import IQKeyboardManagerSwift
@@ -19,9 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         FirebaseApp.configure()
-        IQKeyboardManager.shared.enable = true
-        
         RemoteConfigHelper.standard.prepareValue()
+        IQKeyboardManager.shared.enable = true
         
         return true
     }
