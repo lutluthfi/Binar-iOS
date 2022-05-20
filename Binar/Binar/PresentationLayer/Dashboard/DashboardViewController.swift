@@ -173,7 +173,7 @@ extension DashboardViewController {
 //        guard let viewController = THAnimalTableViewController.initViewController(from: "THMain") else {
 //            return
 //        }
-        navigationController?.pushViewController(THYoutubeTabBarViewController(), animated: true)
+        navigationController?.pushViewController(THLoveAnimal(), animated: true)
     }
 }
 
