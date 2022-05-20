@@ -5,6 +5,7 @@
 //  Created by Arif Luthfiansyah on 11/03/22.
 //
 
+import LocalAuthentication
 import UIKit
 
 final class DashboardViewController: UITableViewController {
@@ -14,6 +15,11 @@ final class DashboardViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -88,9 +94,33 @@ final class DashboardViewController: UITableViewController {
             goToAIViewController()
         case .RandySetiawan:
             goToRNViewController()
+        case .DhaniBukhory:
+            goToDBViewController()
+        case .Instagram:
+            let context = LAContext()
+            var error: NSError?
+            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+                let reason = "Identify yourself!"
+                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { [weak self] (success, authenticationError) in
+                    guard success else { return }
+                    DispatchQueue.main.async {
+                        self?.openInstagram()
+                    }
+                }
+            } else {
+                let alert = UIAlertController(title: "Biometry unavailable", message: "Your device is not configured for biometric authentication.", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default))
+                present(alert, animated: true)
+            }
         default:
             break
         }
+    }
+    
+    private func openInstagram() {
+        let viewController = IGTabBarController()
+        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
@@ -198,9 +228,9 @@ extension DashboardViewController {
 // MARK: goToRDViewController
 extension DashboardViewController {
     func goToRDViewController() {
-        guard let selectedStudent = selectedStudent else { return }
-        let viewController = RDViewController()
-        viewController.name = selectedStudent.name
+        let viewController = RDTabbarViewController()
+//        let viewController = InstagramLikesLabelController()
+        navigationController?.isNavigationBarHidden = true
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -332,3 +362,15 @@ extension DashboardViewController{
     }
 }
 
+extension DashboardViewController {
+    func goToDBViewController() {
+        let storyboard = UIStoryboard(name: "DBMain", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "DBViewController") as? DBViewController else {
+            return
+        }
+        
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+  

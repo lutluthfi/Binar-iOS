@@ -2,11 +2,9 @@
 //  RDView.swift
 //  Binar
 //
-//  Created by Raden Dimas on 03/04/22.
+//  Created by Raden Dimas on 13/04/22.
 //
 
-import Foundation
+import UIKit
 
-class RDView {
-    
-}
+class RDView {}
