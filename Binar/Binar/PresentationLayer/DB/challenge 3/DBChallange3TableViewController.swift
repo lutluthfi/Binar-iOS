@@ -20,6 +20,8 @@ class DBChallenge3TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count: Int = displayedAnimals.count
         return count
+
+    
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let reusableCell: UITableViewCell = tableView.dequeueReusableCell(
@@ -39,3 +41,4 @@ class DBChallenge3TableViewController: UITableViewController {
            return cell
        }
    }
+
