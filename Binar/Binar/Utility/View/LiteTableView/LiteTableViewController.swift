@@ -26,6 +26,10 @@ class LiteTableViewController: UIViewController, LoadTableCellContract {
         })
     }
     
+    final func clearCells() {
+        tableView.clearCells()
+    }
+    
     final func loadTableView(@LiteTableCellBuilder builder: () -> [LiteTableCell]) {
         tableView.load(builder: builder)
     }
@@ -34,7 +38,7 @@ class LiteTableViewController: UIViewController, LoadTableCellContract {
         tableView.reloadData()
     }
     
-    final func reloadCell(at indexPath: IndexPath) {
+    final func updateTableView() {
         UIView.animate(withDuration: 0.05) {
             self.tableView.beginUpdates()
             self.tableView.endUpdates()

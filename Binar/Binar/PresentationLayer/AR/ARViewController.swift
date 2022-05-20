@@ -18,6 +18,9 @@ enum Course: String, CaseIterable, TitleEnum {
     case TabBar
     case Chat
     case Instagram
+    case Chapter7
+    case PDF
+    case Music
     
     static var sorted: [Course] {
         Course.allCases.sorted {
@@ -93,6 +96,12 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
             open(ARChipsViewController())
         case .TabBar:
             open(ARTabBarViewController())
+        case .Chapter7:
+            open(ARChapter7ViewController())
+        case .PDF:
+            open(ARDisplayPDFViewController())
+        case .Music:
+            open(ARDisplayMusicViewController())
         }
     }
     

@@ -11,9 +11,36 @@ import Foundation
     let key: String
     var storage: UserDefaults = .standard
     
+    init(key: String) {
+        self.key = key
+    }
+    
     var wrappedValue: Array<Element> {
         get { (storage.value(forKey: key) as? Array<Element>) ?? [] }
         set { storage.setValue(newValue, forKey: key) }
+    }
+}
+
+@propertyWrapper struct UserDefaultsArrayObject<Element> where Element: Codable {
+    let key: String
+    var storage: UserDefaults = .standard
+    
+    init(key: String) {
+        self.key = key
+    }
+    
+    var wrappedValue: Array<Element> {
+        get {
+            guard let data = storage.value(forKey: key) as? Data else {
+                return []
+            }
+            let res = try? data.decode(to: [Element].self)
+            return res ?? []
+        }
+        set {
+            guard let data = try? newValue.encode() else { return }
+            storage.setValue(data, forKey: key)
+        }
     }
 }
 
@@ -44,5 +71,28 @@ import Foundation
     var wrappedValue: Bool {
         get { (storage.value(forKey: key) as? Bool) ?? false }
         set { storage.setValue(newValue, forKey: key) }
+    }
+}
+
+@propertyWrapper struct UserDefaultsObject<Element> where Element: Codable {
+    let key: String
+    var storage: UserDefaults = .standard
+    
+    init(key: String) {
+        self.key = key
+    }
+    
+    var wrappedValue: Element? {
+        get {
+            guard let data = storage.value(forKey: key) as? Data else {
+                return nil
+            }
+            let res = try? data.decode(to: Element.self)
+            return res
+        }
+        set {
+            guard let data = try? newValue.encode() else { return }
+            storage.setValue(data, forKey: key)
+        }
     }
 }

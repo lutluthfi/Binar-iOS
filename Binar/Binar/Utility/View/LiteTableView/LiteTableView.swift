@@ -22,6 +22,10 @@ final class LiteTableView: UITableView {
         separatorStyle = .none
     }
     
+    func clearCells() {
+        adapter.clearCells()
+    }
+    
     func load(@LiteTableCellBuilder builder: () -> [LiteTableCell]) {
         let liteCells: [LiteTableCell] = builder()
         

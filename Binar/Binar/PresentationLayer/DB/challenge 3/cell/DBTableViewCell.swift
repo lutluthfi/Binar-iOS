@@ -11,9 +11,22 @@ class DBTableViewCell: UITableViewCell {
 
     @IBOutlet weak var photoImage: UIImageView!
     @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var like: UIButton!
+    
+    @IBOutlet weak var outpulLike: UILabel!
+    
+    @IBAction func likeoutput(_ sender: Any) {
+        if runningNumber.count <= 0 {
+            outpulLike.text = runningNumber
+        }
+    }
+    
+    var result = "0"
+    var runningNumber = "0"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+          outpulLike.text = "0"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -28,5 +41,4 @@ class DBTableViewCell: UITableViewCell {
         labelText.text = animal.name
         
     }
-    
 }

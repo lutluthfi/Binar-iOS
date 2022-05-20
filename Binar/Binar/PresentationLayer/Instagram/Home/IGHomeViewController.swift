@@ -11,25 +11,43 @@ import UIKit
 final class IGHomeViewController: LiteTableViewController {
     lazy var creatorView = IGFeedCreatorView()
     
-    private let presenter = IGHomePresenter()
+    private let viewModel = IGHomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewModel()
         setupView()
-        presenter.onLoadFeedsSuccess = { [weak self] (feeds) in
-            self?.render(feeds: feeds)
-        }
-        presenter.onLoadFeedsFailure = {
-            print("OnLoadFeedsFailure")
-        }
-        presenter.viewDidLoad()
+        setupNavBar()
+        viewModel.viewDidLoad()
+    }
+    
+    private func setupNavBar() {
+        let plusBarButton = UIBarButtonItem(image: UIImage(systemName: "plus.app"), style: .done, target: self, action: #selector(onPlusBarButtonTap))
+        navigationItem.rightBarButtonItem = plusBarButton
     }
     
     private func setupView() {
         tableBackgroundColor = .secondarySystemBackground
     }
     
-    private func render(feeds: [IGFeedViewParam]) {
+    private func setupViewModel() {
+        viewModel.onRouterChanged = { [weak self] (router) in
+            switch router {
+            case .openHomeCreateFeed:
+                let viewController = IGHomeCreateFeedViewController()
+                let navigationController = UINavigationController(rootViewController: viewController)
+                self?.present(navigationController, animated: true)
+            }
+        }
+        viewModel.onLoadFeedsSuccess = { [weak self] (feeds) in
+            self?.renderTableView(with: feeds)
+        }
+        viewModel.onLoadFeedsFailure = {
+            print("OnLoadFeedsFailure")
+        }
+    }
+    
+    private func renderTableView(with feeds: [IGHomeFeedViewParam]) {
         loadTableView {
             adBannerCell()
             feedGroupCell(populateWith: feeds)
@@ -48,19 +66,19 @@ final class IGHomeViewController: LiteTableViewController {
         }
     }
     
-    private func feedGroupCell(populateWith feeds: [IGFeedViewParam]) -> [LiteTableCell] {
+    private func feedGroupCell(populateWith feeds: [IGHomeFeedViewParam]) -> [LiteTableCell] {
         forEachElement(in: feeds) { row, element in
-            loadGroupCell { (groupCell: IGFeedGroupCell) in
-//                let isBookmarked: Bool = self.bookmarkFeedIds.contains(element.id)
-                groupCell.configure(feed: element, isBookmarked: false)
-                groupCell.onBookmarkTap = { feedId in
-//                    self.addNewBookmark(feedId: feedId)
+            loadGroupCell { (groupCell: IGHomeFeedGroupCell) in
+                let isBookmarked: Bool = self.viewModel.isFeedBookmarked(element)
+                groupCell.configure(feed: element, isBookmarked: isBookmarked)
+                groupCell.onBookmarkTap = { [weak self] _ in
+                    self?.viewModel.onBookmarkTap(feed: element)
                 }
                 groupCell.onLikesTap = { isLiked in
                     print(isLiked)
                 }
-                groupCell.onCaptionTap = { [weak self] (indexPath) in
-                    self?.reloadCell(at: indexPath)
+                groupCell.onCaptionTap = { [weak self] _ in
+                    self?.updateTableView()
                 }
             }
         }
@@ -83,4 +101,8 @@ final class IGHomeViewController: LiteTableViewController {
 //            bookmarkFeedIds.append(feedId)
 //        }
 //    }
+    
+    @objc private func onPlusBarButtonTap() {
+        viewModel.onPlusBarButtonTap()
+    }
 }
