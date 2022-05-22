@@ -117,9 +117,12 @@ class BITodayViewController: UIViewController, SFSafariViewControllerDelegate {
     var news5MoreButton = UIButton()
     var news5TimeIntervalLabel = UILabel()
     
+    var returnButton = UIButton()
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        tabBarController?.navigationController?.isNavigationBarHidden = true
         navigationController?.isNavigationBarHidden = true
         view.backgroundColor = .systemGroupedBackground
         
@@ -191,6 +194,11 @@ class BITodayViewController: UIViewController, SFSafariViewControllerDelegate {
 
     }
     
+    @objc func onReturnButtonTap() {
+        tabBarController?.navigationController?.popViewController(animated: true)
+        tabBarController?.navigationController?.isNavigationBarHidden = false
+    }
+    
     func createView() {
         
         //        tableView.delegate = self
@@ -250,6 +258,12 @@ class BITodayViewController: UIViewController, SFSafariViewControllerDelegate {
         news5View.addInteraction(UIContextMenuInteraction(delegate: self))
         news5Divider = UIView(frame: CGRect(x: 0, y: 145, width: (view.frame.width - 40), height: 1))
         
+        returnButton.translatesAutoresizingMaskIntoConstraints = false
+        returnButton.backgroundColor = .systemPink
+        returnButton.addTarget(self, action: #selector(onReturnButtonTap), for: .touchUpInside)
+        returnButton.setTitle("Return to challenge page", for: .normal)
+        returnButton.layer.cornerRadius = 8
+        
     }
 
     func setupView() {
@@ -257,7 +271,7 @@ class BITodayViewController: UIViewController, SFSafariViewControllerDelegate {
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         scrollView.backgroundColor = .systemGroupedBackground
-        scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: UIScreen.main.bounds.height * 1.7)
+        scrollView.contentSize = CGSize(width: scrollView.contentSize.width, height: UIScreen.main.bounds.height * 2)
         
         newsView.backgroundColor = .tertiarySystemBackground
         newsView.layer.cornerRadius = 12
@@ -517,6 +531,8 @@ class BITodayViewController: UIViewController, SFSafariViewControllerDelegate {
         news5View.addSubview(news5Label)
         news5View.addSubview(news5MoreButton)
         
+        scrollView.addSubview(returnButton)
+        
     }
     
     func setupConstraints() {
@@ -586,7 +602,12 @@ class BITodayViewController: UIViewController, SFSafariViewControllerDelegate {
             news5Label.leadingAnchor.constraint(equalTo: news5View.leadingAnchor, constant: 10),
             
             news5MoreButton.topAnchor.constraint(equalTo: news5Divider.bottomAnchor, constant: 3),
-            news5MoreButton.trailingAnchor.constraint(equalTo: news5View.trailingAnchor, constant: -15)
+            news5MoreButton.trailingAnchor.constraint(equalTo: news5View.trailingAnchor, constant: -15),
+            
+            returnButton.topAnchor.constraint(equalTo: news5View.bottomAnchor, constant: 10),
+            returnButton.heightAnchor.constraint(equalToConstant: 35),
+            returnButton.widthAnchor.constraint(equalTo: scrollView.layoutMarginsGuide.widthAnchor),
+            returnButton.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor)
             
 //            newsView.topAnchor.constraint(equalTo: button.topAnchor, constant: 50),
 //            newsView.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),

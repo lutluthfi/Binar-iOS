@@ -15,7 +15,8 @@ final class BIListViewController: UITableViewController {
             "Challenge 4"
         ],
         [
-            "Challenge 3"
+            "Challenge 3",
+            "Challenge 4"
         ]
     ]
     
@@ -35,7 +36,7 @@ final class BIListViewController: UITableViewController {
         case 0:
             return 1
         case 1:
-            return 1
+            return 2
         default:
             return 0
         }
@@ -82,6 +83,9 @@ final class BIListViewController: UITableViewController {
             switch row {
             case 0:
                 let vc = BITabBarViewController()
+                navigationController?.pushViewController(vc, animated: true)
+            case 1:
+                let vc = BIAnimalViewController()
                 navigationController?.pushViewController(vc, animated: true)
             default:
                 return
