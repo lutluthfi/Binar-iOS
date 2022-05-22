@@ -69,6 +69,7 @@ class BICharacterDetailViewController: UIViewController {
         characterImage.translatesAutoresizingMaskIntoConstraints = false
         characterImage.clipsToBounds = true
         characterImage.kf.setImage(with: URL(string: detailedCharacter!.imageURLString))
+        characterImage.kf.indicatorType = .activity
         
         characterDetail.translatesAutoresizingMaskIntoConstraints = false
         characterDetail.text = detailedCharacter?.description

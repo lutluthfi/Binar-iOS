@@ -73,6 +73,7 @@ class BICharacterViewController: UITableViewController {
         let row = indexPath.row
         let characterName: String = characterArray[row].fullName
         characterImage.kf.setImage(with: URL(string: characterArray[row].imageURLString))
+        characterImage.kf.indicatorType = .activity
         characterNameLabel.text = characterName
         
         NSLayoutConstraint.activate([

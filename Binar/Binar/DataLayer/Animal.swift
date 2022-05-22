@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct Animal: Decodable {
+struct Animal: Codable {
     var name: String
     let photoUrlString: String
     let description: String
     let typeOfFood: TypeOfFood
     let strength: Int
     
-    enum TypeOfFood: String, Decodable, CaseIterable {
+    enum TypeOfFood: String, Codable, CaseIterable {
         case carnivora = "carnivora"
         case herbivora = "herbivora"
         case omnivora = "omnivora"
