@@ -66,7 +66,11 @@ final class DashboardViewController: UITableViewController {
         case .AdjiFirmansyah:
             goToAFViewController()
         case .BagasIlham:
-            goToBIListVC()
+            if #available(iOS 14.0, *) {
+                goToBIListVC()
+            } else {
+                // Fallback on earlier versions
+            }
         case .NurinBerlianna:
             goToNBViewController()
         case .AkbarIdris:
@@ -263,6 +267,7 @@ extension DashboardViewController {
 }
         
 // MARK: goToBIViewController
+@available(iOS 14.0, *)
 extension DashboardViewController {
     func goToBIListVC() {
         guard let selectedStudent = selectedStudent else {return}

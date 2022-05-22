@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 14.0, *)
 final class BIListViewController: UITableViewController {
     
     let challenges: [[String]] = [
@@ -40,6 +41,17 @@ final class BIListViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Binar Challenge"
+        case 1:
+            return "Facil Challenge"
+        default:
+            return ""
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
         let row = indexPath.row
@@ -69,7 +81,7 @@ final class BIListViewController: UITableViewController {
         case 1:
             switch row {
             case 0:
-                let vc = BICharacterViewController()
+                let vc = BITabBarViewController()
                 navigationController?.pushViewController(vc, animated: true)
             default:
                 return
