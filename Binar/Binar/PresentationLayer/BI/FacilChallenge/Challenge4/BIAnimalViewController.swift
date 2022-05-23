@@ -38,7 +38,10 @@ final class BIAnimalViewController: UITableViewController {
         
         navigationItem.rightBarButtonItem = optionButton
         
-        tableView.register(BIAnimalCell.self, forCellReuseIdentifier: "\(BIAnimalCell.self)")
+        tableView.register(
+            BIAnimalCell.self,
+            forCellReuseIdentifier: "\(BIAnimalCell.self)"
+        )
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 10
         
@@ -93,8 +96,9 @@ final class BIAnimalViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let animalCount = displayedAnimal?.count
-        return "Animals count: \(animalCount ?? 0), Likes count: \(likesCount ?? 0)"
+        guard let animalCount = displayedAnimal?.count else { return nil }
+        guard let likesCount = likesCount else { return nil }
+        return "Animals count: \(animalCount), Likes count: \(likesCount)"
     }
     
     override func tableView(
@@ -108,24 +112,24 @@ final class BIAnimalViewController: UITableViewController {
         ) { action, view, completion in
             
             let ac = UIAlertController(
-                title: "Deleting animal",
-                message: "Are you sure want to delete this animal? You can reset the data later.",
+                title: "Delete animal",
+                message: "Are you sure want to delete this animal? You can bring this animal back by resetting the animal list.",
                 preferredStyle: .alert)
             
             let delete = UIAlertAction(
                 title: "Delete",
                 style: .destructive
             ) { [self] _ in
-                guard !displayedAnimal!.isEmpty else { return }
-                isAnimalLiked.removeValue(forKey: (displayedAnimal?[row].name)!)
-                displayedAnimal?.remove(at: row)
+                guard let displayedAnimal = displayedAnimal else { return }
+                if isAnimalLiked[(displayedAnimal[row].name)] == true {
+                    likesCount! -= 1
+                }
+                isAnimalLiked.removeValue(forKey: (displayedAnimal[row].name))
+                self.displayedAnimal?.remove(at: row)
                 tableView.deleteRows(
                     at: [indexPath],
                     with: .top
                 )
-                if isAnimalLiked[(displayedAnimal?[row].name)!] == true {
-                    likesCount! -= 1
-                }
                 DispatchQueue.main.asyncAfter(
                     deadline: .now() + 1
                 ) {
@@ -174,9 +178,10 @@ final class BIAnimalViewController: UITableViewController {
         if !likedArray.isEmpty {
             isAnimalLiked = likedArray
         } else {
-            for num in 1...displayedAnimal!.count {
+            guard let displayedAnimal = displayedAnimal else { return }
+            for num in 1...displayedAnimal.count {
                 let displayedAnimal = displayedAnimal
-                isAnimalLiked[(displayedAnimal?[num - 1].name)!] = false
+                isAnimalLiked[(displayedAnimal[num - 1].name)] = false
             }
         
         }
@@ -230,9 +235,25 @@ final class BIAnimalViewController: UITableViewController {
         let resetAnimals = UIAction(
             title: "Reset animal list data",
             image: UIImage(systemName: "arrow.clockwise"),
-            identifier: nil
+            identifier: nil,
+            attributes: .destructive
         ) { _ in
-            self.resetDisplayedAnimals()
+            let ac = UIAlertController(
+                title: "Reset Animal List",
+                message: "Are you sure want to reset the animal list? All changes made will be reset.",
+                preferredStyle: .alert
+            )
+            let cancel = UIAlertAction(
+                title: "Cancel",
+                style: .cancel
+            )
+            let reset = UIAlertAction(title: "Reset", style: .destructive) { _ in
+                self.resetDisplayedAnimals()
+            }
+            ac.addAction(cancel)
+            ac.addAction(reset)
+            
+            self.present(ac, animated: true)
         }
         
         menus.append(sortByNameAsc)
