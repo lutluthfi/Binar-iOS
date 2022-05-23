@@ -164,8 +164,12 @@ final class BIAnimalViewController: UITableViewController {
         
         if !(animals?.isEmpty ?? true) {
             self.displayedAnimal = animals
+
         } else {
             self.displayedAnimal = Animal.listV2()
+            for row in 1...displayedAnimal!.count {
+                self.displayedAnimal?[row - 1].photoUrlString = "https://robohash.org/\(row)"
+            }
         }
     }
     
@@ -203,6 +207,9 @@ final class BIAnimalViewController: UITableViewController {
         for num in 1...displayedAnimal!.count {
             let displayedAnimal = displayedAnimal
             isAnimalLiked[(displayedAnimal?[num - 1].name)!] = false
+        }
+        for row in 1...displayedAnimal!.count {
+            self.displayedAnimal?[row - 1].photoUrlString = "https://robohash.org/\(row)"
         }
         likesCount = 0
         UserDefaults.standard.removeObject(forKey: "bi-displayed-animal-array")
@@ -320,6 +327,8 @@ final class BIAnimalCell: UITableViewCell {
         animalImageView.translatesAutoresizingMaskIntoConstraints = false
         animalImageView.clipsToBounds = true
         animalImageView.contentMode = .scaleAspectFit
+        animalImageView.layer.cornerRadius = 8
+        animalImageView.backgroundColor = .secondarySystemBackground
         
         animalNameLabel.translatesAutoresizingMaskIntoConstraints = false
         animalNameLabel.font = .systemFont(ofSize: 18, weight: .semibold)
@@ -347,9 +356,9 @@ final class BIAnimalCell: UITableViewCell {
             
             animalImageView.widthAnchor.constraint(equalToConstant: 100),
             animalImageView.heightAnchor.constraint(equalToConstant: 100),
-            animalImageView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            animalImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            animalImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            animalImageView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+            animalImageView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
+            animalImageView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
             
             animalNameLabel.leadingAnchor.constraint(equalTo: animalImageView.trailingAnchor, constant: 15),
             animalNameLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor, constant: -40),
@@ -371,7 +380,13 @@ final class BIAnimalCell: UITableViewCell {
         with animal: Animal,
         isLiked: Bool
     ) {
-        animalImageView.kf.setImage(with: URL(string: animal.photoUrlString))
+        animalImageView.kf.setImage(
+            with: URL(string: animal.photoUrlString),
+            options: [
+                .cacheOriginalImage,
+                .transition(.fade(0.3))
+            ]
+        )
         animalImageView.kf.indicatorType = .activity
         
         animalNameLabel.text = animal.name
