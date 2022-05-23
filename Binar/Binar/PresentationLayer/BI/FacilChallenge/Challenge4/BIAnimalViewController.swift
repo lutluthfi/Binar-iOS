@@ -123,7 +123,7 @@ final class BIAnimalViewController: UITableViewController {
                     at: [indexPath],
                     with: .top
                 )
-                if likesCount! > 0 {
+                if isAnimalLiked[(displayedAnimal?[row].name)!] == true {
                     likesCount! -= 1
                 }
                 DispatchQueue.main.asyncAfter(
