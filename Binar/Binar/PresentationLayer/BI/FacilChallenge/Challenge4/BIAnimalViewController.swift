@@ -18,7 +18,6 @@ final class BIAnimalViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         likesCount = likesCounter()
-        
     }
     
     override func viewDidLoad() {
@@ -87,9 +86,10 @@ final class BIAnimalViewController: UITableViewController {
         )
         cell.isLiked = isAnimalLiked[animal.name] ?? false
         cell.selectionStyle = .none
-        cell.onLikeTap = { [self] in
-            isAnimalLiked[animal.name]!.toggle()
-            likesCount = likesCounter()
+        cell.onLikeTap = { [weak self] in
+            guard let _self = self else { return }
+            _self.isAnimalLiked[animal.name]!.toggle()
+            _self.likesCount = _self.likesCounter()
         }
         
         return cell
@@ -215,6 +215,8 @@ final class BIAnimalViewController: UITableViewController {
         UserDefaults.standard.removeObject(forKey: "bi-displayed-animal-array")
         UserDefaults.standard.removeObject(forKey: "bi-animal-liked-dict")
         tableView.reloadData()
+        let topIndex = IndexPath(row: 0, section: 0)
+        tableView.scrollToRow(at: topIndex, at: .top, animated: true)
         tableView.beginUpdates()
         tableView.endUpdates()
     }
@@ -388,9 +390,7 @@ final class BIAnimalCell: UITableViewCell {
             ]
         )
         animalImageView.kf.indicatorType = .activity
-        
         animalNameLabel.text = animal.name
-        
         animalfoodLabel.text = animal.typeOfFood.rawValue
         
         if isLiked {
@@ -405,7 +405,6 @@ final class BIAnimalCell: UITableViewCell {
     @objc func onLikeButtonTap() {
         onLikeTap?()
         isLiked.toggle()
-        
         if isLiked {
             likeButton.image = UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate)
             likeButton.tintColor = .systemRed

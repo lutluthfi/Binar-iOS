@@ -19,16 +19,17 @@ class BICharacterDetailViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupNavigationBar()
+        setupAddSubviews()
+        setupConstraints()
+        setupView()
+    }
+    
+    private func setupNavigationBar() {
         title = detailedCharacter?.fullName
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isTranslucent = true
-        
-        setupAddSubviews()
-        setupView()
-        setupConstraints()
-        
     }
     
     private func setupAddSubviews() {

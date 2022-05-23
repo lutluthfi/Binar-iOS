@@ -13,7 +13,6 @@ class BICharacterViewController: UITableViewController {
     var characterArray: [BIGameCharacter] = []
     var selectedCharacter: BIGameCharacter?
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
@@ -29,7 +28,6 @@ class BICharacterViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         let background = UIView()
         let characterImage = UIImageView()
@@ -77,7 +75,6 @@ class BICharacterViewController: UITableViewController {
         characterNameLabel.text = characterName
         
         NSLayoutConstraint.activate([
-            
             cell.contentView.heightAnchor.constraint(equalToConstant: 170),
             
             background.widthAnchor.constraint(equalTo: (cell.contentView.layoutMarginsGuide.widthAnchor)),
@@ -94,21 +91,15 @@ class BICharacterViewController: UITableViewController {
             
             characterNameLabel.leftAnchor.constraint(equalTo: characterImage.rightAnchor, constant: 20),
             characterNameLabel.centerYAnchor.constraint(equalTo: background.centerYAnchor)
-       
         ])
         
         if row == 4 || row == 5 {
             characterImage.heightAnchor.constraint(equalToConstant: 153).isActive = true
         }
-
-
-
-        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let row = indexPath.row
         
         selectedCharacter = characterArray[row]
@@ -116,7 +107,6 @@ class BICharacterViewController: UITableViewController {
         let viewController = BICharacterDetailViewController()
         viewController.detailedCharacter = selectedCharacter
         navigationController?.pushViewController(viewController, animated: true)
-        
     }
 
 }
@@ -124,11 +114,8 @@ class BICharacterViewController: UITableViewController {
 extension BICharacterViewController {
     
     func createGameCharacter(firstName: String, lastName: String, description: String, specialAbility: BISpecialAbility, imageURLString: String, characterColor: BICharacterColor) {
-        
         let character = BIGameCharacter(firstName: firstName, lastName: lastName, description: description, specialAbility: specialAbility, imageURLString: imageURLString, characterColor: characterColor)
-        
         characterArray.append(character)
-        
     }
     
 }

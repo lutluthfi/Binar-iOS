@@ -270,9 +270,9 @@ extension DashboardViewController {
 @available(iOS 14.0, *)
 extension DashboardViewController {
     func goToBIListVC() {
-        guard let selectedStudent = selectedStudent else {return}
+        guard let _selectedStudent = selectedStudent else {return}
         let vc = BIListViewController(style: .insetGrouped)
-        vc.title = selectedStudent.name
+        vc.title = _selectedStudent.name
         navigationController?.pushViewController(vc, animated: true)
     }
 }

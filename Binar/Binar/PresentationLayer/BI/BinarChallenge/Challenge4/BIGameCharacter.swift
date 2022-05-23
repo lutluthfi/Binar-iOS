@@ -26,7 +26,7 @@ struct BIGameCharacter {
     
     let firstName: String
     let lastName: String
-    lazy var fullName: String = firstName + " " + lastName
+    var fullName: String { firstName + " " + lastName }
     let description: String
     let specialAbility: BISpecialAbility
     let imageURLString: String

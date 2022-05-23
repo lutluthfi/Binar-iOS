@@ -12,13 +12,12 @@ import Kingfisher
 class BIGamePaymentController: UIViewController {
     
     var playedCharacter: BIGameCharacter?
-    var playAsCharacterLabel = UILabel()
-    var benefitLabel = UILabel()
-    var paymentChoiceTableView = UITableView(frame: .zero, style: .insetGrouped)
-    var nextButton = UIButton()
+    lazy var playAsCharacterLabel = UILabel()
+    lazy var benefitLabel = UILabel()
+    lazy var paymentChoiceTableView = UITableView(frame: .zero, style: .insetGrouped)
+    lazy var nextButton = UIButton()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         title = "Payment"
         view.backgroundColor = .systemBackground
@@ -31,20 +30,16 @@ class BIGamePaymentController: UIViewController {
         addViews()
         setupViews()
         setupConstraints()
-        
     }
     
-    fileprivate func addViews() {
-        
+    private func addViews() {
         view.addSubview(playAsCharacterLabel)
         view.addSubview(benefitLabel)
         view.addSubview(paymentChoiceTableView)
         view.addSubview(nextButton)
-        
     }
     
-    fileprivate func setupViews() {
-        
+    private func setupViews() {
         playAsCharacterLabel.translatesAutoresizingMaskIntoConstraints = false
         playAsCharacterLabel.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         playAsCharacterLabel.textColor = .label
@@ -68,13 +63,10 @@ class BIGamePaymentController: UIViewController {
         nextButton.backgroundColor = .systemGray6
         nextButton.addTarget(Any.self, action: #selector(payment), for: .touchUpInside)
         nextButton.isEnabled = false
-        
     }
     
     fileprivate func setupConstraints() {
-        
         NSLayoutConstraint.activate([
-        
             playAsCharacterLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
             playAsCharacterLabel.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             playAsCharacterLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -93,11 +85,8 @@ class BIGamePaymentController: UIViewController {
             nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             nextButton.widthAnchor.constraint(equalToConstant: 350),
             nextButton.heightAnchor.constraint(equalToConstant: 40)
-            
         ])
-        
     }
-    
 }
 
 extension BIGamePaymentController: UITableViewDataSource, UITableViewDelegate {
@@ -109,9 +98,11 @@ extension BIGamePaymentController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let methods = ["Apple Card", "Mastercard", "VISA"]
-        let methodImageURL = ["https://help.apple.com/assets/60524663CAC98111BE6AA3F5/60524669CAC98111BE6AA400/en_US/1a01714520928f8f3ddd94b987ebce04.png",
-                              "https://img.icons8.com/color/344/mastercard-logo.png",
-                              "https://img.icons8.com/color/452/visa.png"]
+        let methodImageURL = [
+            "https://help.apple.com/assets/60524663CAC98111BE6AA3F5/60524669CAC98111BE6AA400/en_US/1a01714520928f8f3ddd94b987ebce04.png",
+             "https://img.icons8.com/color/344/mastercard-logo.png",
+             "https://img.icons8.com/color/452/visa.png"
+        ]
         let methodImage = UIImageView()
         let methodLabel = UILabel()
         
@@ -132,7 +123,6 @@ extension BIGamePaymentController: UITableViewDataSource, UITableViewDelegate {
         methodLabel.text = methods[row]
         
         NSLayoutConstraint.activate([
-        
             cell.heightAnchor.constraint(equalToConstant: 70),
             cell.contentView.heightAnchor.constraint(equalToConstant: 70),
             
@@ -143,7 +133,6 @@ extension BIGamePaymentController: UITableViewDataSource, UITableViewDelegate {
             
             methodLabel.leftAnchor.constraint(equalTo: methodImage.rightAnchor, constant: 10),
             methodLabel.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor)
-            
         ])
         
         return cell
@@ -167,21 +156,15 @@ extension BIGamePaymentController: UITableViewDataSource, UITableViewDelegate {
 extension BIGamePaymentController {
     
     @objc func payment() {
-
         let context = LAContext()
         var error: NSError?
         var isSuccess: Bool = false
 
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-
             let reason = "Authenticate your payment with Face ID."
-
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                
                 if success {
                     isSuccess = true
-                } else {
-                    
                 }
             }
         } else {
@@ -194,5 +177,4 @@ extension BIGamePaymentController {
             self.navigationController?.popViewController(animated: true)
         }
     }
-
 }

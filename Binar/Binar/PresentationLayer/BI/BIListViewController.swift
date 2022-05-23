@@ -11,13 +11,8 @@ import UIKit
 final class BIListViewController: UITableViewController {
     
     let challenges: [[String]] = [
-        [
-            "Challenge 4"
-        ],
-        [
-            "Challenge 3",
-            "Challenge 4"
-        ]
+        ["Challenge 4"],
+        ["Challenge 3", "Challenge 4"]
     ]
     
     override func viewDidLoad() {
