@@ -85,7 +85,7 @@ final class BIListViewController: UITableViewController {
                 let vc = BITabBarViewController()
                 navigationController?.pushViewController(vc, animated: true)
             case 1:
-                let vc = BIAnimalViewController()
+                let vc = BIAnimalViewController(style: .insetGrouped)
                 navigationController?.pushViewController(vc, animated: true)
             default:
                 return

@@ -13,6 +13,13 @@ final class BIAnimalViewController: UITableViewController {
     
     var displayedAnimal: [Animal]?
     var isAnimalLiked: [String : Bool] = [:]
+    var likesCount: Int?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        likesCount = likesCounter()
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +40,9 @@ final class BIAnimalViewController: UITableViewController {
         
         tableView.register(BIAnimalCell.self, forCellReuseIdentifier: "\(BIAnimalCell.self)")
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 10
+        
+        view.backgroundColor = .secondarySystemBackground
         
         setupDisplayedAnimals()
         setupIsLikedArray()
@@ -61,21 +70,31 @@ final class BIAnimalViewController: UITableViewController {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         let row = indexPath.row
-        let animal = displayedAnimal?[row]
+        guard let displayedAnimal = displayedAnimal else { return UITableViewCell() }
+        let animal = displayedAnimal[row]
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: "\(BIAnimalCell.self)",
-            for: indexPath)
-                as? BIAnimalCell else {
+            for: indexPath
+        ) as? BIAnimalCell else {
             return UITableViewCell()
         }
-        cell.fill(with: (displayedAnimal?[row])!, isLiked: isAnimalLiked[animal!.name]!)
-        cell.isLiked = isAnimalLiked[animal!.name]!
+        cell.fill(
+            with: displayedAnimal[row],
+            isLiked: isAnimalLiked[animal.name] ?? false
+        )
+        cell.isLiked = isAnimalLiked[animal.name] ?? false
         cell.selectionStyle = .none
-        cell.onLikeTap = {
-            self.isAnimalLiked[animal!.name]!.toggle()
+        cell.onLikeTap = { [self] in
+            isAnimalLiked[animal.name]!.toggle()
+            likesCount = likesCounter()
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let animalCount = displayedAnimal?.count
+        return "Animals count: \(animalCount ?? 0), Likes count: \(likesCount ?? 0)"
     }
     
     override func tableView(
@@ -83,18 +102,42 @@ final class BIAnimalViewController: UITableViewController {
         leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath
     ) -> UISwipeActionsConfiguration? {
         let row = indexPath.row
-        let item = UIContextualAction(style: .destructive, title: "Delete") { action, view, completion in
+        let item = UIContextualAction(
+            style: .destructive,
+            title: "Delete"
+        ) { action, view, completion in
             
             let ac = UIAlertController(
                 title: "Deleting animal",
                 message: "Are you sure want to delete this animal? You can reset the data later.",
                 preferredStyle: .alert)
-            let delete = UIAlertAction(title: "Delete", style: .destructive) { [self] _ in
+            
+            let delete = UIAlertAction(
+                title: "Delete",
+                style: .destructive
+            ) { [self] _ in
+                guard !displayedAnimal!.isEmpty else { return }
+                isAnimalLiked.removeValue(forKey: (displayedAnimal?[row].name)!)
                 displayedAnimal?.remove(at: row)
-                tableView.reloadData()
-                completion(true)
+                tableView.deleteRows(
+                    at: [indexPath],
+                    with: .top
+                )
+                if likesCount! > 0 {
+                    likesCount! -= 1
+                }
+                DispatchQueue.main.asyncAfter(
+                    deadline: .now() + 1
+                ) {
+                    completion(true)
+                    tableView.reloadData()
+                }
             }
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            
+            let cancel = UIAlertAction(
+                title: "Cancel",
+                style: .cancel
+            ) { _ in
                 completion(true)
             }
             
@@ -152,12 +195,16 @@ final class BIAnimalViewController: UITableViewController {
     
     func resetDisplayedAnimals() {
         displayedAnimal = Animal.listV2()
-        isAnimalLiked.forEach { (key: String, value: Bool) in
-            isAnimalLiked[key] = false
+        for num in 1...displayedAnimal!.count {
+            let displayedAnimal = displayedAnimal
+            isAnimalLiked[(displayedAnimal?[num - 1].name)!] = false
         }
+        likesCount = 0
         UserDefaults.standard.removeObject(forKey: "bi-displayed-animal-array")
         UserDefaults.standard.removeObject(forKey: "bi-animal-liked-dict")
         tableView.reloadData()
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
     
     func optionButtonElements() -> [UIMenuElement] {
@@ -188,12 +235,23 @@ final class BIAnimalViewController: UITableViewController {
             self.resetDisplayedAnimals()
         }
         
-        
         menus.append(sortByNameAsc)
         menus.append(sortByNameDesc)
         menus.append(resetAnimals)
         
         return menus
+    }
+    
+    func likesCounter() -> Int {
+        var likeCount = 0
+        for liked in isAnimalLiked.values {
+            if liked {
+                likeCount += 1
+            }
+        }
+        likesCount = likeCount
+        tableView.reloadData()
+        return likeCount
     }
 }
 
@@ -203,13 +261,19 @@ final class BIAnimalCell: UITableViewCell {
     let animalNameLabel = UILabel()
     let animalfoodLabel = UILabel()
     let likeButton = UIImageView()
-    var isLiked: Bool?
+    var isLiked: Bool = false
     
     typealias OnLikeTapped = () -> Void
     var onLikeTap: OnLikeTapped?
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(
+        style: UITableViewCell.CellStyle,
+        reuseIdentifier: String?
+    ) {
+        super.init(
+            style: style,
+            reuseIdentifier: reuseIdentifier
+        )
         defineCellLayout()
     }
     
@@ -246,7 +310,10 @@ final class BIAnimalCell: UITableViewCell {
         animalfoodLabel.numberOfLines = 1
         animalfoodLabel.textColor = .secondaryLabel
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(onLikeButtonTap))
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(onLikeButtonTap)
+        )
         likeButton.addGestureRecognizer(tap)
         likeButton.translatesAutoresizingMaskIntoConstraints = false
         likeButton.clipsToBounds = true
@@ -279,8 +346,10 @@ final class BIAnimalCell: UITableViewCell {
         
     }
     
-    func fill(with animal: Animal, isLiked: Bool) {
-        
+    func fill(
+        with animal: Animal,
+        isLiked: Bool
+    ) {
         animalImageView.kf.setImage(with: URL(string: animal.photoUrlString))
         animalImageView.kf.indicatorType = .activity
         
@@ -295,14 +364,13 @@ final class BIAnimalCell: UITableViewCell {
             likeButton.image = UIImage(systemName: "heart")?.withRenderingMode(.alwaysTemplate)
             likeButton.tintColor = .label
         }
-        
     }
     
     @objc func onLikeButtonTap() {
         onLikeTap?()
-        isLiked?.toggle()
+        isLiked.toggle()
         
-        if isLiked! {
+        if isLiked {
             likeButton.image = UIImage(systemName: "heart.fill")?.withRenderingMode(.alwaysTemplate)
             likeButton.tintColor = .systemRed
         } else {
