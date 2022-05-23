@@ -9,7 +9,9 @@ import UIKit
 
 enum Binar: String, CaseIterable, TitleEnum {
 case AnimalCellChallenge
-
+    case DBBrowser
+case DBPDF
+    case FavoriteMusic
 
 static var sorted: [Binar] {
     Binar.allCases.sorted {
@@ -65,7 +67,12 @@ override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: Inde
     switch binar {
     case .AnimalCellChallenge:
         open(DBChallenge3TableViewController())
-   
+    case .DBBrowser:
+        open(DBWebViewController())
+    case .DBPDF:
+        open(DBPDFViewController())
+    case .FavoriteMusic:
+        open(DBFavoriteMusicViewController())
     }
 }
 
