@@ -87,6 +87,7 @@ targets:
                 UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
                 UIUserInterfaceStyle: Light
                 NSPhotoLibraryUsageDescription: $(PRODUCT_NAME) will helps you to detail your hero by attaching a photo as an attachment
+                NSFaceIDUsageDescription: $(PRODUCT_NAME) need to use Face ID to authtenticate before usage
                 CFBundleURLTypes:
                     - CFBundleTypeRole: Editor
                       CFBundleURLSchemes: [
