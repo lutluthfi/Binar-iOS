@@ -19,6 +19,8 @@ final class IGHomeViewController: LiteTableViewController {
         setupView()
         setupNavBar()
         viewModel.viewDidLoad()
+        
+        openSignIn()
     }
     
     private func setupNavBar() {
@@ -101,6 +103,13 @@ final class IGHomeViewController: LiteTableViewController {
 //            bookmarkFeedIds.append(feedId)
 //        }
 //    }
+    
+    private func openSignIn() {
+        let signInController = IGSignInViewController()
+        signInController.isModalInPresentation = true
+        let navigationController = UINavigationController(rootViewController: signInController)
+        present(navigationController, animated: true)
+    }
     
     @objc private func onPlusBarButtonTap() {
         viewModel.onPlusBarButtonTap()
