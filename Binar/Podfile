@@ -6,5 +6,5 @@ target 'Binar' do
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
   pod 'Alamofire'
-
+  pod 'GoogleSignIn'
 end

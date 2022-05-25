@@ -29,6 +29,7 @@ targets:
         sources: Binar
         settings:
             base:
+                CODE_SIGN_ENTITLEMENTS: Binar/Binar.entitlements
                 CODE_SIGN_STYLE: Automatic
                 DEVELOPMENT_TEAM: 1234567890 # Your development team code
                 EXCLUDED_ARCHS[sdk=iphonesimulator*]: arm64
@@ -86,6 +87,12 @@ targets:
                 UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
                 UIUserInterfaceStyle: Light
                 NSPhotoLibraryUsageDescription: $(PRODUCT_NAME) will helps you to detail your hero by attaching a photo as an attachment
+                NSFaceIDUsageDescription: $(PRODUCT_NAME) need to use Face ID to authtenticate before usage
+                CFBundleURLTypes:
+                    - CFBundleTypeRole: Editor
+                      CFBundleURLSchemes: [
+                        com.googleusercontent.apps.48376795055-jqoiof6i5ac3vp0a9hu5jrrunds0lkan
+                      ]
 
 ## MARK: - Scheme Section
 schemes:
