@@ -4,15 +4,18 @@
 //
 //  Created by Muhammad dhani Bukhory on 04/04/22.
 //
-
+import LocalAuthentication
 import UIKit
+import Alamofire
 
+
+let context = LAContext()
 enum Binar: String, CaseIterable, TitleEnum {
 case AnimalCellChallenge
     case DBBrowser
 case DBPDF
     case FavoriteMusic
-
+  
 static var sorted: [Binar] {
     Binar.allCases.sorted {
         $0.rawTitle < $1.rawTitle
@@ -59,7 +62,37 @@ override func tableView(
     cell.textLabel?.text = titleBinar
     return cell
 }
-
+  func detectFaceID(){
+        let context = LAContext()
+        context.localizedFallbackTitle = "Masukkan passcode"
+        
+        var authError: NSError?
+        let reason = "Dibutuhkan autentikasi untuk mengakses data"
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &authError) {
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { (success, error) in
+                
+                if success {
+                    DispatchQueue.main.async {
+                        let alert = UIAlertController(title: "Success", message: "Berhasil", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                    }
+                    
+                } else {
+                    guard error != nil else {
+                        return
+                    }
+                    print(error!)
+                }
+            }
+        } else {
+            guard authError != nil else {
+                return
+            }
+            print(authError!)
+        }
+    }
 // MARK: TableViewDelegate
 override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let row: Int = indexPath.row
@@ -80,3 +113,5 @@ private func open(_ viewController: UIViewController) {
     navigationController?.pushViewController(viewController, animated: true)
 }
 }
+
+
