@@ -27,3 +27,7 @@ extension Array {
         }
     }
 }
+
+extension Array {
+    var isNotEmpty: Bool { !isEmpty }
+}
