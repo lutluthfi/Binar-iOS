@@ -21,6 +21,7 @@ enum Course: String, CaseIterable, TitleEnum {
     case Chapter7
     case PDF
     case Music
+    case Video
     
     static var sorted: [Course] {
         Course.allCases.sorted {
@@ -102,6 +103,8 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
             open(ARDisplayPDFViewController())
         case .Music:
             open(ARDisplayMusicViewController())
+        case .Video:
+            open(ARVideoViewController())
         }
     }
     
