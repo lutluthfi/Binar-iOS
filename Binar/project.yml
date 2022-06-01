@@ -101,7 +101,8 @@ targets:
         settings:
             # INFOPLIST_FILE: DEV BinarTests/Info.plist
             TEST_TARGET_NAME: DEV-Binar
-            TEST_HOST: $(BUILT_PRODUCTS_DIR)/DEV-Binar.app/DEV-Binar
+            TEST_HOST: $(BUILT_PRODUCTS_DIR)/DEV Binar.app/DEV Binar
+            HEADER_SEARCH_PATHS: "${SRCROOT}/Pods/Firebase/CoreOnly/Sources"
 
 ## MARK: - Scheme Section
 schemes:

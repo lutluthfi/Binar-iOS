@@ -11,11 +11,11 @@ extension Array {
     subscript(safe index: Int) -> Element? {
         get {
             let indexInRange = startIndex <= index && index < endIndex
+            var res: Element?
             if indexInRange {
-                return self[index]
-            } else {
-                return nil
+                res = self[index]
             }
+            return res
         }
         set(newValue) {
             let indexInRange = startIndex <= index && index < endIndex
