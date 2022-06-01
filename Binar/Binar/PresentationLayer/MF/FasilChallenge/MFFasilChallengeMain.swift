@@ -13,6 +13,7 @@ final class MFFasilChallengeMain : UITableViewController {
         case FasilChallenge1
         case FasilChallenge2
         case FasilChallenge3
+        case FasilChallenge4
         
         static var sorted: [FasilChallenge] {
             FasilChallenge.allCases.sorted { $0.rawValue < $1.rawValue }
@@ -67,6 +68,8 @@ final class MFFasilChallengeMain : UITableViewController {
             goToChallenge2()
         case .FasilChallenge3:
             goToChallenge3()
+        case .FasilChallenge4:
+            openVC(MFFasilChallenge4VC())
         default:
             break
         }
@@ -77,6 +80,11 @@ final class MFFasilChallengeMain : UITableViewController {
 
 
 extension MFFasilChallengeMain {
+    
+    private func openVC(_ viewController: UIViewController) {
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     func goToChallenge1(){
         let storyboard = UIStoryboard(name: "MFMain", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "MFFasilChallenge1VC") as? MFFasilChallenge1VC else {

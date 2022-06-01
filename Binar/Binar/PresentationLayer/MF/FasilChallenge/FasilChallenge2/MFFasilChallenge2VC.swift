@@ -39,7 +39,8 @@ final class MFFasilChallenge2VC: UIViewController, UITableViewDataSource, UITabl
         return reuseCell
     }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let swipeDelete = UIContextualAction(style: .destructive, title: "Delete") { action, view, completion in
             self.animalList.remove(at: indexPath.row)
