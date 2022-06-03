@@ -10,10 +10,20 @@ import Kingfisher
 
 @available(iOS 14.0, *)
 final class BIAnimalViewController: UITableViewController {
+    let userDefaults: UserDefaults
     
     var displayedAnimal: [Animal]?
     var isAnimalLiked: [String : Bool] = [:]
     var likesCount: Int?
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    init(userDefaults: UserDefaults = .standard) {
+        self.userDefaults = userDefaults
+        super.init(style: .insetGrouped)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -53,10 +63,10 @@ final class BIAnimalViewController: UITableViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        UserDefaults.standard.set(isAnimalLiked, forKey: "bi-animal-liked-dict")
+        userDefaults.set(isAnimalLiked, forKey: "bi-animal-liked-dict")
         let encoder = JSONEncoder()
         if let animals = try? encoder.encode(displayedAnimal) {
-            UserDefaults.standard.set(animals, forKey: "bi-displayed-animal-array")
+            userDefaults.set(animals, forKey: "bi-displayed-animal-array")
         }
     }
     
@@ -157,7 +167,7 @@ final class BIAnimalViewController: UITableViewController {
     
     func setupDisplayedAnimals() {
         let decoder = JSONDecoder()
-        let data: Data = UserDefaults.standard.object(
+        let data: Data = userDefaults.object(
             forKey: "bi-displayed-animal-array"
         ) as? Data ?? Data()
         let animals = try? decoder.decode([Animal].self, from: data)
@@ -175,7 +185,7 @@ final class BIAnimalViewController: UITableViewController {
     
     func setupIsLikedArray() {
         
-        let likedArray: [String : Bool] = UserDefaults.standard.object(
+        let likedArray: [String : Bool] = userDefaults.object(
             forKey: "bi-animal-liked-dict"
         ) as? [String : Bool] ?? [:]
         
@@ -212,8 +222,8 @@ final class BIAnimalViewController: UITableViewController {
             self.displayedAnimal?[row - 1].photoUrlString = "https://robohash.org/\(row)"
         }
         likesCount = 0
-        UserDefaults.standard.removeObject(forKey: "bi-displayed-animal-array")
-        UserDefaults.standard.removeObject(forKey: "bi-animal-liked-dict")
+        userDefaults.removeObject(forKey: "bi-displayed-animal-array")
+        userDefaults.removeObject(forKey: "bi-animal-liked-dict")
         tableView.reloadData()
         let topIndex = IndexPath(row: 0, section: 0)
         tableView.scrollToRow(at: topIndex, at: .top, animated: true)
