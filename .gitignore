@@ -43,7 +43,7 @@ DerivedData/
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
-Binar.xcworkspace
+# Binar.xcworkspace
 
 # Swift Package Manager
 # Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
@@ -97,7 +97,7 @@ iOSInjectionProject/
 ## Xcode 8 and earlier
 
 ### Xcode Patch ###
-Binar.xcodeproj
+# Binar.xcodeproj
 
 ### Others ###
 .DS_Store
