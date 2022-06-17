@@ -55,7 +55,7 @@ final class ARInstagramViewController: UITableViewController {
             _self.loadingIndicator.stopAnimating()
             switch result {
             case let .success(data):
-                _self.displayedUsers = data.data
+                _self.displayedUsers = data.content
                 _self.tableView.reloadData()
             case let .failure(error):
                 print(String(describing: error))

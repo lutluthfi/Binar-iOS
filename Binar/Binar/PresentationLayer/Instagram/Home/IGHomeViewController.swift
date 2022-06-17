@@ -70,19 +70,25 @@ final class IGHomeViewController: LiteTableViewController {
     
     private func feedGroupCell(populateWith feeds: [IGHomeFeedViewParam]) -> [LiteTableCell] {
         forEachElement(in: feeds) { row, element in
-            loadGroupCell { (groupCell: IGHomeFeedGroupCell) in
-                let isBookmarked: Bool = self.viewModel.isFeedBookmarked(element)
-                groupCell.configure(feed: element, isBookmarked: isBookmarked)
-                groupCell.onBookmarkTap = { [weak self] _ in
-                    self?.viewModel.onBookmarkTap(feed: element)
+            var cells: [LiteTableCell] = []
+            if row == 0 {
+                let newCell = loadCell { (cell: TableCell<UILabel>, _) in
+                    cell.padding = UIEdgeInsets(all: 12)
+                    cell.backgroundColor = .secondarySystemBackground
+                    cell.content.textAlignment = .center
+                    cell.content.text = "End of Content 🎉"
                 }
-                groupCell.onLikesTap = { isLiked in
-                    print(isLiked)
+                cells.append(newCell)
+            } else {
+                let newCell = loadCell { (cell: TableCell<UILabel>, _) in
+                    cell.padding = UIEdgeInsets(all: 12)
+                    cell.backgroundColor = .secondarySystemBackground
+                    cell.content.textAlignment = .center
+                    cell.content.text = "End of Content 🎉"
                 }
-                groupCell.onCaptionTap = { [weak self] _ in
-                    self?.updateTableView()
-                }
+                cells.append(newCell)
             }
+            return cells
         }
     }
     

@@ -83,12 +83,6 @@ class Person: Human {
     }
 }
 
-
-var dimas = Person()
-dimas.name = "Dimas Purnomo"
-dimas.npm = "065118211"
-dimas.aboutPerson()
-
 var akbar = Human()
 //akbar.npm - tidak bisa
 
@@ -105,3 +99,59 @@ enum Number: Int, NumberProtocol {
         
     }
 }
+
+
+class Vehicle {
+    private let key: String = "12345"
+    var color: String = "Light Gray"
+    var numberOfWheel: Int = 4
+    
+    func aboutVehicle() {
+        print("Key is \(key)")
+    }
+    
+    func driveSpeed() {
+        print("Drive speed at 50 km/h")
+    }
+}
+
+class Bicycle: Vehicle {
+    override func driveSpeed() {
+        print("Drive speed at 10 km/h")
+    }
+}
+
+class Car: Vehicle {
+    override func driveSpeed() {
+        print("Drive speed at 60 km/h")
+    }
+}
+
+class Truck: Vehicle {
+}
+
+let jazzCar = Car()
+jazzCar.color = "Black"
+jazzCar.driveSpeed()
+jazzCar.aboutVehicle()
+
+let kijangCar = Car()
+kijangCar.driveSpeed()
+
+let polygonBicycle = Bicycle()
+polygonBicycle.color
+polygonBicycle.driveSpeed()
+
+let mitsubishiTruck = Truck()
+mitsubishiTruck.color
+mitsubishiTruck.driveSpeed()
+
+class Parent {
+    let eyeColor = "Red"
+}
+
+class Child: Parent {
+}
+
+let hannah = Child()
+hannah.eyeColor

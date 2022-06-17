@@ -40,7 +40,7 @@ final class IGHomeViewModel {
         instagramAPI.getFeeds { [weak self] (result) in
             switch result {
             case let .success(data):
-                let feeds: [IGFeedResponse] = data.data
+                let feeds: [IGFeedResponse] = data.content
                 
                 self?.feedCoreDataStorage.saveClearFeeds(feeds)
                 

@@ -64,6 +64,7 @@
 		4EC81EA88649A9DB4E4C48AE /* LiteTableGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DF46CD4AD076BB8DF2515 /* LiteTableGroupCell.swift */; };
 		4F1AE7DF284F8A760041164E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1AE7DE284F8A760041164E /* NotificationService.swift */; };
 		4F1AE7E3284F8A760041164E /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4F1AE7DC284F8A760041164E /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4F1CCB21285CBD80002E72DD /* ARLiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1CCB20285CBD80002E72DD /* ARLiteViewController.swift */; };
 		51630DF365F7B5467E317422 /* NBMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99C0A761BD14DB124A704345 /* NBMain.storyboard */; };
 		5412F4B8B9196AE3681040E8 /* ARHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE66CCAB28BB2D48772A5AF /* ARHomeViewController.swift */; };
 		558C19D8273F9D5B031D9BF8 /* IGProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D132B3C26AC1E8D0390C24C9 /* IGProfileViewController.swift */; };
@@ -304,6 +305,7 @@
 		4F1AE7DC284F8A760041164E /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1AE7DE284F8A760041164E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		4F1AE7E0284F8A760041164E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F1CCB20285CBD80002E72DD /* ARLiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARLiteViewController.swift; sourceTree = "<group>"; };
 		500A3ACFF3FF5BA24BD0E71E /* MFBinarChallengeMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFBinarChallengeMain.swift; sourceTree = "<group>"; };
 		504F2B2A5FF6AC7EA06F3D9C /* PWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWViewController.swift; sourceTree = "<group>"; };
 		51BEA96FC71988991684704D /* InstagramAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
@@ -899,6 +901,14 @@
 				4F1AE7E0284F8A760041164E /* Info.plist */,
 			);
 			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		4F1CCB1F285CBD67002E72DD /* LiteTableView */ = {
+			isa = PBXGroup;
+			children = (
+				4F1CCB20285CBD80002E72DD /* ARLiteViewController.swift */,
+			);
+			path = LiteTableView;
 			sourceTree = "<group>";
 		};
 		4F316C70053F55C65ED28644 /* FacilChallenge */ = {
@@ -1769,6 +1779,7 @@
 		FF056A9089BF812224D44A76 /* AR */ = {
 			isa = PBXGroup;
 			children = (
+				4F1CCB1F285CBD67002E72DD /* LiteTableView */,
 				13232E289A5B9891C3A2EC6F /* ARViewController.swift */,
 				D0FFADFD8561A2FEC055B637 /* Animal */,
 				7B501A3480FF0F54462CF0AB /* Challenge4 */,
@@ -2018,6 +2029,7 @@
 				83DB1028520DC43EF21C29C8 /* ADAnimalViewController.swift in Sources */,
 				15ABAC35B41860D6F0FE2CBF /* ADViewController.swift in Sources */,
 				BE078B874139A5C46F0D281B /* AFViewController.swift in Sources */,
+				4F1CCB21285CBD80002E72DD /* ARLiteViewController.swift in Sources */,
 				CB8673C1762F11FA060BA486 /* AIAnimalTableViewController.swift in Sources */,
 				14CB29118E0592801A74DF2D /* AIViewController.swift in Sources */,
 				6A962DD441A84FC76F94D36E /* AKAnimalTableCell.swift in Sources */,

@@ -82,7 +82,7 @@ final class ARViewController: UITableViewController, StoryboardInstantiable {
         case .Chat:
             open(ARChatViewController())
         case .DelegatePattern:
-            open(ARFirstViewController())
+            open(ARLiteViewController())
         case .Form:
             open(ARFormViewController())
         case .Instagram:

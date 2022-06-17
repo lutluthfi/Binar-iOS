@@ -17,7 +17,7 @@ final class CarouselView<ItemView, ItemModel>: UIView, UICollectionViewContract 
     typealias BuilderCell = (ItemView, ItemModel, IndexPath) -> Void
     typealias DidPageScroll = (ItemView, ItemModel, Page) -> Void
     
-    lazy var collectionView: UICollectionView = makeCollectionView()
+    private(set) lazy var collectionView: UICollectionView = makeCollectionView()
     
     private var items: [ItemModel] = []
     private var builderCell: BuilderCell?
@@ -44,12 +44,14 @@ final class CarouselView<ItemView, ItemModel>: UIView, UICollectionViewContract 
         })
     }
     
-    func configure(items: [ItemModel], itemSize: CGSize, _ builderCell: @escaping BuilderCell) {
+    func configure(sectionInset: UIEdgeInsets = .zero, items: [ItemModel], itemSize: CGSize, _ builderCell: @escaping BuilderCell) {
         self.items = items
         self.builderCell = builderCell
         
         let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.itemSize = itemSize
+        layout?.sectionInset = sectionInset
+        layout?.minimumLineSpacing = 16
         layout?.prepare()
 
         collectionView.reloadData()
